@@ -43,11 +43,12 @@ public class ArtifactRestServiceClientImpl implements ArtifactRestServiceClient 
     
     @Override
 	public List<ArtifactTo> getSpecifiedArtifacts(ArtifactTo artifactTo) {
-    	RequestEntity<ArtifactTo> requestEntity = this.<ArtifactTo> builArtifactsRequest(builSpecifiedArtifactsRequestUri(), artifactTo, HttpMethod.GET);
+    	RequestEntity<ArtifactTo> requestEntity = builArtifactsRequest(builSpecifiedArtifactsRequestUri(), artifactTo, HttpMethod.POST);
 
         ResponseEntity<List<ArtifactTo>> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<List<ArtifactTo>>() {
         });
         return exchange.getBody();
+        
 	}
 
     private <T extends Object> RequestEntity<T> builArtifactsRequest(URI uri, T body, HttpMethod method) {
