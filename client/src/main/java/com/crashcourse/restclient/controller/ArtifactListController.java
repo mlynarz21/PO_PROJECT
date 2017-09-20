@@ -35,6 +35,10 @@ public class ArtifactListController extends ArtifactsBaseController {
     TextField nameInput;
     @FXML
     ComboBox<Category> typeInput;
+    @FXML
+    TextField nameInput2;
+    @FXML
+    ComboBox<Category> typeInput2;
     @Autowired
     private ArtifactRestServiceClient restServiceClient;
     @FXML
@@ -54,6 +58,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         typeColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
+        typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
     }
 
     private void loadAllData() {
@@ -61,7 +66,10 @@ public class ArtifactListController extends ArtifactsBaseController {
         List<ArtifactModel> rows = allArtifacts.stream().map(ArtifactModel::fromArtifactTo).collect(Collectors.toList());
         artifacts.setItems(FXCollections.observableArrayList(rows));
     }
-
+    private void loadSpecifiedData(ArtifactTo to) {
+		// TODO Auto-generated method stub
+		
+	}
     @FXML
     public void close() {
         getDialog().close();
@@ -83,8 +91,18 @@ public class ArtifactListController extends ArtifactsBaseController {
         restServiceClient.addArtifact(to);
         loadAllData();
     }
-
+    
     @FXML
+    public void search() {
+        ArtifactTo to = new ArtifactTo();
+        to.setName(nameInput2.getText());
+        to.setType(typeInput2.getSelectionModel().getSelectedItem());
+        loadSpecifiedData(to);
+    }
+
+
+
+	@FXML
     public void cancel() {
         nameInput.clear();
         descriptionInput.clear();
