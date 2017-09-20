@@ -54,7 +54,7 @@
                   <TextField fx:id="nameInput2" promptText="%artifactList.nameInputPrompt" />
                   <ComboBox fx:id="typeInput2" promptText="%artifactList.typeInputPrompt" />
                   <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="%artifactList.cancelButtonLabel" />
-                  <Button defaultButton="true" mnemonicParsing="false" onAction="#add" text="%artifactList.searchButtonLabel" />
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#search" text="%artifactList.searchButtonLabel" />
                </children>
             </HBox>
             </children>
