@@ -16,5 +16,6 @@ public interface ArtifactApi {
 
     ResponseEntity<ArtifactTo> addNewArtifact(ArtifactTo incomingArtifactTo, String sessionId);
 
+    ResponseEntity<List<ArtifactTo>> getSpecifiedArtifact(ArtifactTo incomingArtifactTo, String sessionId);
 
 }
