@@ -3,6 +3,7 @@ package com.capgemini.common.datatypes.bo;
 import java.util.Date;
 
 import com.capgemini.common.datatypes.enumerations.Category;
+import com.capgemini.common.datatypes.enumerations.Status;
 
 /**
  * Artifact Business Object
@@ -19,8 +20,18 @@ public class ArtifactBo {
     private Category type;
 
     private String description;
+    
+    private Status status;
 
-    public Long getId() {
+    public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public Long getId() {
         return id;
     }
 

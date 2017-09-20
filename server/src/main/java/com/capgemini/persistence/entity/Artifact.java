@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.validation.constraints.Size;
 
 import com.capgemini.common.datatypes.enumerations.Category;
+import com.capgemini.common.datatypes.enumerations.Status;
+
 
 /**
  * Artifact Entity
@@ -32,17 +34,29 @@ public class Artifact {
 
     @Size(max = 128)
     private String description;
+    
+    @Enumerated(EnumType.STRING)
+    private Status status;
 
-    public Artifact() {
+    public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public Artifact() {
 
     }
 
-    public Artifact(Long id, Date creationDate, String name, Category type, String description) {
+    public Artifact(Long id, Date creationDate, String name, Category type, String description, Status status) {
         this.id = id;
         this.creationDate = creationDate;
         this.name = name;
         this.type = type;
         this.description = description;
+        this.status = status;
     }
 
     public Long getId() {

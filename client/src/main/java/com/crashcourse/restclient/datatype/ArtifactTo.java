@@ -3,6 +3,7 @@ package com.crashcourse.restclient.datatype;
 import java.util.Date;
 
 import com.crashcourse.restclient.datatype.enumeration.Category;
+import com.crashcourse.restclient.datatype.enumeration.Status;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 public class ArtifactTo {
@@ -16,8 +17,18 @@ public class ArtifactTo {
     private Category type;
 
     private String description;
+    
+    private Status status;
 
-    public Date getCreationDate() {
+    public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
+
+	public Date getCreationDate() {
         return creationDate;
     }
 
