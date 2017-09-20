@@ -61,7 +61,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         createdDateColumn.setCellValueFactory(celldata -> celldata.getValue().getCreatedDate());
         nameColumn.setCellValueFactory(celldata -> celldata.getValue().getName());
         typeColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
-        //statusColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
+        statusColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
         
@@ -79,8 +79,11 @@ public class ArtifactListController extends ArtifactsBaseController {
         List<ArtifactModel> rows = allArtifacts.stream().map(ArtifactModel::fromArtifactTo).collect(Collectors.toList());
         artifacts.setItems(FXCollections.observableArrayList(rows));
     }
+    
     private void loadSpecifiedData(ArtifactTo to) {
-		// TODO Auto-generated method stub
+    	List<ArtifactTo> specifiedArtifacts = restServiceClient.getSpecifiedArtifacts(to);
+        List<ArtifactModel> rows = specifiedArtifacts.stream().map(ArtifactModel::fromArtifactTo).collect(Collectors.toList());
+        artifacts.setItems(FXCollections.observableArrayList(rows));
 		
 	}
     @FXML
@@ -120,7 +123,7 @@ public class ArtifactListController extends ArtifactsBaseController {
     public void cancel() {
         nameInput.clear();
         descriptionInput.clear();
-        statusInput.getSelectionModel().clearSelection();
+        typeInput2.getSelectionModel().clearSelection();
         typeInput.getSelectionModel().clearSelection();
 
     }

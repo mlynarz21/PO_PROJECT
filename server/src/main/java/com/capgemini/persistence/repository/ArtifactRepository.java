@@ -2,6 +2,7 @@ package com.capgemini.persistence.repository;
 
 import java.util.List;
 
+import com.capgemini.common.datatypes.bo.ArtifactBo;
 import com.capgemini.common.datatypes.enumerations.Category;
 import com.capgemini.persistence.entity.Artifact;
 
@@ -23,4 +24,5 @@ public interface ArtifactRepository {
 
     public boolean deleteArtifactById(long id);
 
+    List<Artifact> findSpecifiedArtifacts(ArtifactBo artifactBo);
 }

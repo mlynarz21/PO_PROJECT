@@ -40,6 +40,15 @@ public class ArtifactRestServiceClientImpl implements ArtifactRestServiceClient 
         });
         return exchange.getBody();
     }
+    
+    @Override
+	public List<ArtifactTo> getSpecifiedArtifacts(ArtifactTo artifactTo) {
+    	RequestEntity<ArtifactTo> requestEntity = this.<ArtifactTo> builArtifactsRequest(builSpecifiedArtifactsRequestUri(), artifactTo, HttpMethod.GET);
+
+        ResponseEntity<List<ArtifactTo>> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<List<ArtifactTo>>() {
+        });
+        return exchange.getBody();
+	}
 
     private <T extends Object> RequestEntity<T> builArtifactsRequest(URI uri, T body, HttpMethod method) {
         HttpHeaders head = buildRequestHeader();
@@ -49,6 +58,10 @@ public class ArtifactRestServiceClientImpl implements ArtifactRestServiceClient 
 
     private URI builAllArtifactsRequestUri() {
         return URI.create(new StringBuilder().append(serviceUrl).append("/artifacts/").toString());
+    }
+    
+    private URI builSpecifiedArtifactsRequestUri() {
+    	return URI.create(new StringBuilder().append(serviceUrl).append("/specifiedArtifacts/").toString());
     }
 
     private HttpHeaders buildRequestHeader() {
