@@ -14,6 +14,7 @@ import com.capgemini.common.datatypes.bo.ArtifactBo;
 import org.springframework.stereotype.Repository;
 
 import com.capgemini.common.datatypes.enumerations.Category;
+import com.capgemini.common.datatypes.enumerations.Status;
 import com.capgemini.persistence.entity.Artifact;
 import com.capgemini.persistence.repository.ArtifactRepository;
 
@@ -24,11 +25,11 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
     static {
         mockedData = new HashMap<Long, Artifact>();
         mockedData.put(1L, new Artifact(1L, new GregorianCalendar(2016, 8, 8).getTime(), "Good Artifact", Category.SEMIPRO,
-                "This artifact was created for customers with the category semipro."));
+                "This artifact was created for customers with the category semipro.", Status.FREE));
         mockedData.put(2L, new Artifact(2L, new GregorianCalendar(2016, 9, 9).getTime(), "Perfect Artifact", Category.PROFESSIONAL,
-                "This artifact was designed by a team o high qualified scientists and field tested by the US Army. It's created for real professionals."));
+                "This artifact was designed by a team o high qualified scientists and field tested by the US Army. It's created for real professionals.", Status.BOOKED));
         mockedData.put(3L, new Artifact(3L, new GregorianCalendar(2016, 10, 10).getTime(), "Sufficient Artifact", Category.AMATEUR,
-                "It works, so it is perfect for all amateurs."));
+                "It works, so it is perfect for all amateurs.", Status.RESERVED));
     }
 
     @Override
