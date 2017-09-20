@@ -57,10 +57,10 @@ public class ArtifactListController extends ArtifactsBaseController {
         createdDateColumn.setCellValueFactory(celldata -> celldata.getValue().getCreatedDate());
         nameColumn.setCellValueFactory(celldata -> celldata.getValue().getName());
         typeColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
-        statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
+        //statusColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
-        statusInput.setItems(FXCollections.observableArrayList(Status.values()));
+        //statusInput.setItems(FXCollections.observableArrayList(Status.values()));
     }
 
     private void loadAllData() {

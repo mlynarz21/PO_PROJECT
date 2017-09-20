@@ -21,6 +21,12 @@ public class ArtifactTo {
 
     private Category type;
 
+
+
+	private String description;
+    
+    private Status status;
+
     public Status getStatus() {
 		return status;
 	}
@@ -28,11 +34,6 @@ public class ArtifactTo {
 	public void setStatus(Status status) {
 		this.status = status;
 	}
-
-	private String description;
-    
-    private Status status;
-
     public Date getCreationDate() {
         return creationDate;
     }

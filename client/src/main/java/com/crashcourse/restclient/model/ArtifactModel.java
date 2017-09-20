@@ -23,7 +23,7 @@ public class ArtifactModel {
 		return status;
 	}
 
-	public void setStatus(SimpleObjectProperty<Status> status) {
+	public void setStatus(SimpleObjectProperty status) {
 		this.status = status;
 	}
 
