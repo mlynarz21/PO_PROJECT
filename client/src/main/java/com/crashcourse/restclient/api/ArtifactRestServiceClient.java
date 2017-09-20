@@ -17,7 +17,15 @@ public interface ArtifactRestServiceClient {
      * @return list of artifacts
      */
     List<ArtifactTo> getAllArtifacts();
-
+    
+    
+    /**
+     * 
+     * @param artifactTo
+     * @return list of artifacts meeting criteria
+     */
+    List<ArtifactTo> getSpecifiedArtifacts(ArtifactTo artifactTo);
+    
     /**
      * Saves a new artifact.
      *

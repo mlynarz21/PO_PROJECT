@@ -79,8 +79,11 @@ public class ArtifactListController extends ArtifactsBaseController {
         List<ArtifactModel> rows = allArtifacts.stream().map(ArtifactModel::fromArtifactTo).collect(Collectors.toList());
         artifacts.setItems(FXCollections.observableArrayList(rows));
     }
+    
     private void loadSpecifiedData(ArtifactTo to) {
-		// TODO Auto-generated method stub
+    	List<ArtifactTo> specifiedArtifacts = restServiceClient.getSpecifiedArtifacts(to);
+        List<ArtifactModel> rows = specifiedArtifacts.stream().map(ArtifactModel::fromArtifactTo).collect(Collectors.toList());
+        artifacts.setItems(FXCollections.observableArrayList(rows));
 		
 	}
     @FXML
