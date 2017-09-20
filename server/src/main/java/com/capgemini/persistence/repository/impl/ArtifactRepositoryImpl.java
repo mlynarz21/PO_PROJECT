@@ -56,7 +56,7 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
                 return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType() && a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
             }
         }
-        return null;
+        return findAllArtifacts();
     }
 
     @Override
