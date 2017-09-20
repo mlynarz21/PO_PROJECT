@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
+import com.capgemini.common.datatypes.bo.ArtifactBo;
 import org.springframework.stereotype.Repository;
 
 import com.capgemini.common.datatypes.enumerations.Category;
@@ -43,6 +44,18 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
     @Override
     public List<Artifact> findArtifactsByType(Category type) {
         return mockedData.values().stream().filter(a -> a.getType() == type).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Artifact> findSpecifiedArtifacts(ArtifactBo artifactBo) {
+        if(artifactBo.getType()!=null) {
+            if (artifactBo.getName() != null) {
+                return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType() && a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
+            } else if (artifactBo.getName() != null) {
+                return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType() && a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
+            }
+        }
+        return null;
     }
 
     @Override

@@ -20,4 +20,5 @@ public interface ArtifactSearchService {
      */
     List<ArtifactBo> findAllArtifacts(String sessionId) throws AuthenticationException;
 
+    List<ArtifactBo> findSpecifiedArtifacts(ArtifactBo artifactBo, String sessionId) throws AuthenticationException;
 }
