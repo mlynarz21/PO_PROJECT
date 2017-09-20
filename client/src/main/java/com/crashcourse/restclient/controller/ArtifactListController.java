@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.crashcourse.restclient.api.ArtifactRestServiceClient;
 import com.crashcourse.restclient.datatype.ArtifactTo;
 import com.crashcourse.restclient.datatype.enumeration.Category;
+import com.crashcourse.restclient.datatype.enumeration.Status;
 import com.crashcourse.restclient.model.ArtifactModel;
 
 import javafx.collections.FXCollections;
@@ -30,11 +31,18 @@ public class ArtifactListController extends ArtifactsBaseController {
     @FXML
     TableColumn<ArtifactModel, String> typeColumn;
     @FXML
+    TableColumn<ArtifactModel, String> statusColumn;
+    @FXML
     TableColumn<ArtifactModel, String> descriptionColumn;
     @FXML
     TextField nameInput;
     @FXML
     ComboBox<Category> typeInput;
+    @FXML
+    TextField nameInput2;
+    @FXML
+    ComboBox<Category> typeInput2;
+    ComboBox<Status> statusInput;
     @Autowired
     private ArtifactRestServiceClient restServiceClient;
     @FXML
@@ -52,8 +60,14 @@ public class ArtifactListController extends ArtifactsBaseController {
         createdDateColumn.setCellValueFactory(celldata -> celldata.getValue().getCreatedDate());
         nameColumn.setCellValueFactory(celldata -> celldata.getValue().getName());
         typeColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
+        //statusColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
+
+        typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
+
+        //statusInput.setItems(FXCollections.observableArrayList(Status.values()));
+
     }
 
     private void loadAllData() {
@@ -61,7 +75,10 @@ public class ArtifactListController extends ArtifactsBaseController {
         List<ArtifactModel> rows = allArtifacts.stream().map(ArtifactModel::fromArtifactTo).collect(Collectors.toList());
         artifacts.setItems(FXCollections.observableArrayList(rows));
     }
-
+    private void loadSpecifiedData(ArtifactTo to) {
+		// TODO Auto-generated method stub
+		
+	}
     @FXML
     public void close() {
         getDialog().close();
@@ -79,15 +96,27 @@ public class ArtifactListController extends ArtifactsBaseController {
         to.setName(nameInput.getText());
         to.setDescription(descriptionInput.getText());
         to.setType(typeInput.getSelectionModel().getSelectedItem());
+        to.setStatus(statusInput.getSelectionModel().getSelectedItem());
         to.setCreationDate(new Date());
         restServiceClient.addArtifact(to);
         loadAllData();
     }
-
+    
     @FXML
+    public void search() {
+        ArtifactTo to = new ArtifactTo();
+        to.setName(nameInput2.getText());
+        to.setType(typeInput2.getSelectionModel().getSelectedItem());
+        loadSpecifiedData(to);
+    }
+
+
+
+	@FXML
     public void cancel() {
         nameInput.clear();
         descriptionInput.clear();
+        statusInput.getSelectionModel().clearSelection();
         typeInput.getSelectionModel().clearSelection();
 
     }

@@ -3,6 +3,7 @@ package com.capgemini.common.datatypes.to;
 import java.util.Date;
 
 import com.capgemini.common.datatypes.enumerations.Category;
+import com.capgemini.common.datatypes.enumerations.Status;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
@@ -20,8 +21,19 @@ public class ArtifactTo {
 
     private Category type;
 
-    private String description;
 
+
+	private String description;
+    
+    private Status status;
+
+    public Status getStatus() {
+		return status;
+	}
+
+	public void setStatus(Status status) {
+		this.status = status;
+	}
     public Date getCreationDate() {
         return creationDate;
     }
