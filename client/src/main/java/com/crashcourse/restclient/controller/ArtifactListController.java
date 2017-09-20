@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.crashcourse.restclient.api.ArtifactRestServiceClient;
 import com.crashcourse.restclient.datatype.ArtifactTo;
 import com.crashcourse.restclient.datatype.enumeration.Category;
+import com.crashcourse.restclient.datatype.enumeration.Status;
 import com.crashcourse.restclient.model.ArtifactModel;
 
 import javafx.collections.FXCollections;
@@ -30,11 +31,15 @@ public class ArtifactListController extends ArtifactsBaseController {
     @FXML
     TableColumn<ArtifactModel, String> typeColumn;
     @FXML
+    TableColumn<ArtifactModel, String> statusColumn;
+    @FXML
     TableColumn<ArtifactModel, String> descriptionColumn;
     @FXML
     TextField nameInput;
     @FXML
     ComboBox<Category> typeInput;
+    @FXML
+    ComboBox<Status> statusInput;
     @Autowired
     private ArtifactRestServiceClient restServiceClient;
     @FXML
@@ -52,8 +57,10 @@ public class ArtifactListController extends ArtifactsBaseController {
         createdDateColumn.setCellValueFactory(celldata -> celldata.getValue().getCreatedDate());
         nameColumn.setCellValueFactory(celldata -> celldata.getValue().getName());
         typeColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
+        statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
+        statusInput.setItems(FXCollections.observableArrayList(Status.values()));
     }
 
     private void loadAllData() {
@@ -79,6 +86,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         to.setName(nameInput.getText());
         to.setDescription(descriptionInput.getText());
         to.setType(typeInput.getSelectionModel().getSelectedItem());
+        to.setStatus(statusInput.getSelectionModel().getSelectedItem());
         to.setCreationDate(new Date());
         restServiceClient.addArtifact(to);
         loadAllData();
@@ -88,6 +96,7 @@ public class ArtifactListController extends ArtifactsBaseController {
     public void cancel() {
         nameInput.clear();
         descriptionInput.clear();
+        statusInput.getSelectionModel().clearSelection();
         typeInput.getSelectionModel().clearSelection();
 
     }
