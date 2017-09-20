@@ -49,12 +49,12 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
 
     @Override
     public List<Artifact> findSpecifiedArtifacts(ArtifactBo artifactBo) {
-        if(artifactBo.getType()!=null) {
-            if (artifactBo.getName() != null) {
+        if(artifactBo.getType()!=null && artifactBo.getName() != null) {
                 return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType() && a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
             } else if (artifactBo.getName() != null) {
-                return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType() && a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
-            }
+                return mockedData.values().stream().filter(a -> a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
+            } else if (artifactBo.getType()!=null) {
+            return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType()).collect(Collectors.toList());
         }
         return findAllArtifacts();
     }
