@@ -42,6 +42,7 @@ public class ArtifactListController extends ArtifactsBaseController {
     TextField nameInput2;
     @FXML
     ComboBox<Category> typeInput2;
+    @FXML
     ComboBox<Status> statusInput;
     @Autowired
     private ArtifactRestServiceClient restServiceClient;
@@ -62,14 +63,14 @@ public class ArtifactListController extends ArtifactsBaseController {
         typeColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         //statusColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
-        //statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
+        statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
         
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
 
 
-        typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
+        //typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
 
-        //statusInput.setItems(FXCollections.observableArrayList(Status.values()));
+        statusInput.setItems(FXCollections.observableArrayList(Status.values()));
 
     }
 
@@ -108,8 +109,8 @@ public class ArtifactListController extends ArtifactsBaseController {
     @FXML
     public void search() {
         ArtifactTo to = new ArtifactTo();
-        to.setName(nameInput2.getText());
-        to.setType(typeInput2.getSelectionModel().getSelectedItem());
+        //to.setName(nameInput2.getText());
+        //to.setType(typeInput2.getSelectionModel().getSelectedItem());
         loadSpecifiedData(to);
     }
 
