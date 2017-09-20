@@ -56,6 +56,25 @@ public class ArtifactApiImpl implements ArtifactApi {
     }
 
     @Override
+    @RequestMapping(value = "/specifiedArtifacts/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<List<ArtifactTo>> getSpecifiedArtifact(@RequestBody ArtifactTo incomingArtifactTo, @RequestHeader(value = "SessionID") String sessionId) {
+        List<ArtifactBo> artifacts = null;
+        try {
+            artifacts = searchService.findSpecifiedArtifacts(modelMapper.map(incomingArtifactTo, ArtifactBo.class), sessionId);
+        } catch (AuthenticationException e) {
+            return new ResponseEntity<List<ArtifactTo>>(HttpStatus.UNAUTHORIZED);
+        }
+
+        List<ArtifactTo> results = new ArrayList<>();
+
+        for (ArtifactBo artifact : artifacts) {
+            results.add(modelMapper.map(artifact, ArtifactTo.class));
+        }
+
+        return new ResponseEntity<List<ArtifactTo>>(results, HttpStatus.OK);
+    }
+
+    @Override
     @RequestMapping(value = "/add-artifact/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ArtifactTo> addNewArtifact(@RequestBody ArtifactTo incomingArtifactTo, @RequestHeader(value = "SessionID") String sessionId) {
         ArtifactBo createdArtifactBo = null;

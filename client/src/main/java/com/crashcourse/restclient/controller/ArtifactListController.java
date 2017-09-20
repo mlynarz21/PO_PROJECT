@@ -62,7 +62,10 @@ public class ArtifactListController extends ArtifactsBaseController {
         typeColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         //statusColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
+        //statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
+        
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
+
 
         typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
 
