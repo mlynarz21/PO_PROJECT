@@ -25,7 +25,7 @@
                         <TableColumn fx:id="nameColumn" minWidth="75.0" text="%artifactList.artifactsCol2" />
                         <TableColumn fx:id="typeColumn" minWidth="75.0" text="%artifactList.artifactsCol3" />
                         <TableColumn fx:id="descriptionColumn" minWidth="75.0" text="%artifactList.artifactsCol4" />
-                  <TableColumn fx:id="descriptionColumn1" minWidth="75.0" text="%artifactList.artifactsCol5" />
+                  		<TableColumn fx:id="statusColumn" minWidth="75.0" text="%artifactList.artifactsCol5" />
                   		
                     </columns>
                     <columnResizePolicy>
