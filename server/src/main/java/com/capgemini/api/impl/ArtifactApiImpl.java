@@ -56,7 +56,7 @@ public class ArtifactApiImpl implements ArtifactApi {
     }
 
     @Override
-    @RequestMapping(value = "/specifiedArtifacts/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/specifiedArtifacts/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ArtifactTo>> getSpecifiedArtifact(@RequestBody ArtifactTo incomingArtifactTo, @RequestHeader(value = "SessionID") String sessionId) {
         List<ArtifactBo> artifacts = null;
         try {
