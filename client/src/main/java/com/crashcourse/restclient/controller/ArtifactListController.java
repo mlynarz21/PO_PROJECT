@@ -117,15 +117,17 @@ public class ArtifactListController extends ArtifactsBaseController {
         loadSpecifiedData(to);
     }
 
-
-
 	@FXML
-    public void cancel() {
+	public void cancel() {
         nameInput.clear();
         descriptionInput.clear();
-        typeInput2.getSelectionModel().clearSelection();
         typeInput.getSelectionModel().clearSelection();
-
+    }
+	
+	@FXML
+	public void clear() {
+        nameInput2.clear();
+        typeInput2.getSelectionModel().clearSelection();
     }
 
 }

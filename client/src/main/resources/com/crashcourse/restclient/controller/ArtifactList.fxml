@@ -41,7 +41,7 @@
                     <TextField fx:id="nameInput" promptText="%artifactList.nameInputPrompt" />
                     <TextField fx:id="descriptionInput" promptText="%artifactList.descriptionInputPrompt" />
                     <ComboBox fx:id="typeInput" promptText="%artifactList.typeInputPrompt" />
-                    <ComboBox fx:id="statusInput" promptText="Status"/>
+                    <ComboBox fx:id="statusInput" promptText="Status" />
                     <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="%artifactList.cancelButtonLabel" />
                     <Button defaultButton="true" mnemonicParsing="false" onAction="#add" text="%artifactList.addButtonLabel" />
                 </HBox>
@@ -54,7 +54,7 @@
                   </Label>
                   <TextField fx:id="nameInput2" promptText="%artifactList.nameInputPrompt" />
                   <ComboBox fx:id="typeInput2" promptText="%artifactList.typeInputPrompt" />
-                  <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="%artifactList.cancelButtonLabel" />
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#clear" text="%artifactList.clearButtonLabel" />
                   <Button defaultButton="true" mnemonicParsing="false" onAction="#search" text="%artifactList.searchButtonLabel" />
                </children>
             </HBox>
