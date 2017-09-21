@@ -68,7 +68,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
 
 
-        //typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
+        typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
 
         statusInput.setItems(FXCollections.observableArrayList(Status.values()));
 
