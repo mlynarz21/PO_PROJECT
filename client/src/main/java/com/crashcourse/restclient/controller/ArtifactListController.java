@@ -122,6 +122,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         nameInput.clear();
         descriptionInput.clear();
         typeInput.getSelectionModel().clearSelection();
+        statusInput.getSelectionModel().clearSelection();
     }
 	
 	@FXML
