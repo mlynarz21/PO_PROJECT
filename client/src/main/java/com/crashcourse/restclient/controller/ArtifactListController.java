@@ -44,6 +44,9 @@ public class ArtifactListController extends ArtifactsBaseController {
     ComboBox<Category> typeInput2;
     @FXML
     ComboBox<Status> statusInput;
+    @FXML
+    ComboBox<Status> statusInput2;
+    
     @Autowired
     private ArtifactRestServiceClient restServiceClient;
     @FXML
@@ -71,6 +74,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
 
         statusInput.setItems(FXCollections.observableArrayList(Status.values()));
+        statusInput2.setItems(FXCollections.observableArrayList(Status.values()));
 
     }
 
@@ -114,6 +118,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         ArtifactTo to = new ArtifactTo();
         to.setName(nameInput2.getText());
         to.setType(typeInput2.getSelectionModel().getSelectedItem());
+        to.setStatus(statusInput2.getSelectionModel().getSelectedItem());
         loadSpecifiedData(to);
     }
 
