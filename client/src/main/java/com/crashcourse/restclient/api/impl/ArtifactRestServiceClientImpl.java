@@ -84,5 +84,13 @@ public class ArtifactRestServiceClientImpl implements ArtifactRestServiceClient 
         restTemplate.exchange(request, new ParameterizedTypeReference<ArtifactTo>() {
         });
     }
+    
+    @Override
+    public void bookArtifact(ArtifactTo artifactTo){
+    	 RequestEntity<ArtifactTo> request = builArtifactsRequest(builAddArtifactRequestUri(), artifactTo, HttpMethod.POST);
+
+         restTemplate.exchange(request, new ParameterizedTypeReference<ArtifactTo>() {
+         });
+    }
 
 }
