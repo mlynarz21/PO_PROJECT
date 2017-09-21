@@ -112,8 +112,8 @@ public class ArtifactListController extends ArtifactsBaseController {
     @FXML
     public void search() {
         ArtifactTo to = new ArtifactTo();
-        //to.setName(nameInput2.getText());
-        //to.setType(typeInput2.getSelectionModel().getSelectedItem());
+        to.setName(nameInput2.getText());
+        to.setType(typeInput2.getSelectionModel().getSelectedItem());
         loadSpecifiedData(to);
     }
 
