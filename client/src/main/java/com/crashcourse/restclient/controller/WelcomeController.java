@@ -37,7 +37,15 @@ public class WelcomeController extends ArtifactsBaseController {
 
         Optional.ofNullable(app.getSession()).orElseThrow(() -> new LoginException());
 
-        FXMLDialog defaultDialog = getScreens().artifactListDialog();
+        FXMLDialog defaultDialog=null;
+        if(app.getSession().getUserType().equals("admin"))
+        		defaultDialog = getScreens().artifactListAdminDialog();
+        else
+        if(app.getSession().getUserType().equals("user"))
+        		defaultDialog = getScreens().artifactListDialog();
+        else
+        	throw new LoginException();
+        
         getDialog().close();
         getScreens().showDialog(defaultDialog);
 
