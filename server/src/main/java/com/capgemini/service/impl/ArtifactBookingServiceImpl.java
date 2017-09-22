@@ -33,4 +33,24 @@ public class ArtifactBookingServiceImpl implements ArtifactBookingService {
             return artifactRepository.bookArtifactById(artifactEntity);
 
     }
+
+    @Override
+    public boolean freeArtifactById(String sessionId, ArtifactBo artifactBo) throws AuthenticationException {
+        if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
+            throw new AuthenticationException();
+        }
+
+        Artifact artifactEntity = modelMapper.map(artifactBo, Artifact.class);
+        return artifactRepository.freeArtifactById(artifactEntity);
+
+    }
+
+    @Override
+    public boolean borrowArtifactById(String sessionId, ArtifactBo artifactBo) throws AuthenticationException {
+        if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
+            throw new AuthenticationException();
+        }
+        Artifact artifactEntity = modelMapper.map(artifactBo, Artifact.class);
+        return artifactRepository.borrowArtifactById(artifactEntity);
+    }
 }

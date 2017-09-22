@@ -20,4 +20,8 @@ public interface ArtifactApi {
 
     ResponseEntity<Boolean> bookArtifactById(ArtifactTo incomingArtifactTo, String sessionId);
 
+    ResponseEntity<Boolean> borrowArtifactById(ArtifactTo incomingArtifactTo, String sessionId);
+
+    ResponseEntity<Boolean> freeArtifactById(ArtifactTo incomingArtifactTo, String sessionId);
+
 }

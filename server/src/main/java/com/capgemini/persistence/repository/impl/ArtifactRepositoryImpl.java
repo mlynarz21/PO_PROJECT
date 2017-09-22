@@ -115,4 +115,36 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
         }
         return false;
     }
+
+    @Override
+    public boolean borrowArtifactById(Artifact artifact) {
+        Iterator<Entry<Long, Artifact>> iterator = mockedData.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Entry<Long, Artifact> next = iterator.next();
+            if (next.getValue().getId().equals(artifact.getId())) {
+                if(next.getValue().getStatus()==Status.BOOKED) {
+                    next.getValue().setStatus(Status.BORROWED);
+                    return true;
+                }
+                else return false;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean freeArtifactById(Artifact artifact) {
+        Iterator<Entry<Long, Artifact>> iterator = mockedData.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Entry<Long, Artifact> next = iterator.next();
+            if (next.getValue().getId().equals(artifact.getId())) {
+                if(next.getValue().getStatus()==Status.BORROWED) {
+                    next.getValue().setStatus(Status.AVALIBLE);
+                    return true;
+                }
+                else return false;
+            }
+        }
+        return false;
+    }
 }

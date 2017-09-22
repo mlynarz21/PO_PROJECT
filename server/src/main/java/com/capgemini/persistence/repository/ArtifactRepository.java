@@ -27,4 +27,8 @@ public interface ArtifactRepository {
     List<Artifact> findSpecifiedArtifacts(ArtifactBo artifactBo);
 
     boolean bookArtifactById(Artifact artifact);
+
+    boolean freeArtifactById(Artifact artifactEntity);
+
+    boolean borrowArtifactById(Artifact artifactEntity);
 }
