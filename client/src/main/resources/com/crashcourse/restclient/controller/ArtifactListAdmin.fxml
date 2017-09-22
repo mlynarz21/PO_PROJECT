@@ -68,7 +68,7 @@
                   <Insets left="10.0" />
                </padding>
                  </Label>
-            <Button defaultButton="true" layoutX="769.0" layoutY="529.0" mnemonicParsing="false" onAction="#borrow" prefHeight="31.0" prefWidth="97.0" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <Button defaultButton="true" layoutX="769.0" layoutY="529.0" mnemonicParsing="false" onAction="#logOut" prefHeight="31.0" prefWidth="97.0" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="3" GridPane.rowIndex="9" />
             <HBox prefHeight="31.0" prefWidth="157.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <children>
                   <Button defaultButton="true" mnemonicParsing="false" onAction="#free" prefHeight="31.0" prefWidth="64.0" text="%artifactList.freeButtonLabel" />
