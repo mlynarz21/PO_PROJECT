@@ -21,8 +21,19 @@ public class User {
 
     @Size(max = 32)
     private String password;
+    
+    @Size(max=32)
+    private String userType;
 
-    public User() {
+    public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
+
+	public User() {
 
     }
 
@@ -30,6 +41,13 @@ public class User {
         this.id = id;
         this.username = username;
         this.password = password;
+    }
+    
+    public User(Long id, String username, String password, String userType) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.userType = userType;
     }
 
     public Long getId() {

@@ -34,5 +34,7 @@ public interface AuthorizationService {
      * @return true if the sessionId is valid
      */
     boolean isUserAuthorized(UUID sessionID);
+    
+    public String getUserType(String userName);
 
 }

@@ -20,9 +20,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class ArtifactListController extends ArtifactsBaseController {
+public class ArtifactListAdminController extends ArtifactsBaseController {
 
-    @FXML
+
+	@FXML
     private TableView<ArtifactModel> artifacts;
     @FXML
     TableColumn<ArtifactModel, Date> createdDateColumn;
@@ -52,7 +53,7 @@ public class ArtifactListController extends ArtifactsBaseController {
     @FXML
     TextField descriptionInput;
 
-    public ArtifactListController(Stage primaryStage) {
+    public ArtifactListAdminController(Stage primaryStage) {
         super(primaryStage);
     }
 
@@ -69,6 +70,8 @@ public class ArtifactListController extends ArtifactsBaseController {
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
         
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
+
+
         typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
 
         statusInput.setItems(FXCollections.observableArrayList(Status.values()));
@@ -110,15 +113,6 @@ public class ArtifactListController extends ArtifactsBaseController {
         restServiceClient.addArtifact(to);
         loadAllData();
     }
-    @FXML
-    public void book() {
-        ArtifactTo to = new ArtifactTo();
-        ArtifactModel artifactModel=artifacts.getSelectionModel().getSelectedItem();
-        to.setName(artifacts.getSelectionModel().getSelectedItem().toString());
-        to.setId(Long.parseLong(artifactModel.getId().toString()));
-        restServiceClient.bookArtifact(to);
-        loadAllData();
-    }
     
     @FXML
     public void search() {
@@ -143,5 +137,21 @@ public class ArtifactListController extends ArtifactsBaseController {
         typeInput2.getSelectionModel().clearSelection();
         statusInput2.getSelectionModel().clearSelection();
     }
+	
+	@FXML 
+	public void free() {
+		//TO-DO skopiować to co zrobi Kasia
+	}
+	
+	@FXML 
+	public void book() {
+		//TO-DO skopiować to co zrobi Kasia
+	}
+	
+	@FXML 
+	public void borrow() {
+		//TO-DO skopiować to co zrobi Kasia
+	}
+	
 
 }
