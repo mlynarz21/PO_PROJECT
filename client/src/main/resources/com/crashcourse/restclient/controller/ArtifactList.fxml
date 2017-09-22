@@ -9,14 +9,24 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.ComboBox?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crashcourse.restclient.controller.ArtifactListController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="909.0" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crashcourse.restclient.controller.ArtifactListController">
     <children>
-        <GridPane id="GridPaneOuter" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <GridPane id="GridPaneOuter" prefWidth="832.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <padding>
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </padding>
             <children>
-                <TableView fx:id="artifacts" prefWidth="310.0" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.vgrow="SOMETIMES">
+            <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <TextField fx:id="nameInput2" prefHeight="31.0" prefWidth="233.0" promptText="%artifactList.nameInputPrompt" />
+                  <ComboBox fx:id="typeInput2" promptText="%artifactList.typeInputPrompt" />
+                  <ComboBox fx:id="statusInput2" promptText="%artifactList.artifactsCol5" />
+      
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#clear" text="%artifactList.clearButtonLabel" />
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#search" text="%artifactList.searchButtonLabel" />
+               </children>
+            </HBox>
+                <TableView fx:id="artifacts" prefHeight="448.0" prefWidth="711.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
                     <placeholder>
                     <Label text="%artifactList.emptyTableLabel" />
                     </placeholder>
@@ -32,53 +42,41 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                 </TableView>
-                <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.vgrow="SOMETIMES">
-                    <Label text="%artifactList.newArtifactLabel">
-                        <font>
-                            <Font size="20.0" />
-                        </font>
-                    </Label>
-                    <TextField fx:id="nameInput" promptText="%artifactList.nameInputPrompt" />
-                    <TextField fx:id="descriptionInput" promptText="%artifactList.descriptionInputPrompt" />
-                    <ComboBox fx:id="typeInput" promptText="%artifactList.typeInputPrompt" />
-
-                    <ComboBox fx:id="statusInput" promptText="%artifactList.artifactsCol5" />
-
-                    <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="%artifactList.cancelButtonLabel" />
-                    <Button defaultButton="true" mnemonicParsing="false" onAction="#add" text="%artifactList.addButtonLabel" />
-                </HBox>
-            <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" GridPane.rowIndex="2">
-               <children>
-                  <Label text="%artifactList.searchArtifactLabel">
-                     <font>
-                        <Font size="20.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="nameInput2" promptText="%artifactList.nameInputPrompt" />
-                  <ComboBox fx:id="typeInput2" promptText="%artifactList.typeInputPrompt" />
-                  <ComboBox fx:id="statusInput2" promptText="%artifactList.artifactsCol5" />
-
-                  <Button cancelButton="true" mnemonicParsing="false" onAction="#clear" text="%artifactList.clearButtonLabel" />
-                  <Button defaultButton="true" mnemonicParsing="false" onAction="#search" text="%artifactList.searchButtonLabel" />
-               </children>
-            </HBox>
-            <Button defaultButton="true" mnemonicParsing="false" onAction="#book" text="%artifactList.bookButtonLabel" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#book" prefHeight="31.0" prefWidth="158.0" text="%artifactList.bookPositionButtonLabel" GridPane.columnIndex="3" GridPane.rowIndex="4">
                <GridPane.margin>
-                  <Insets left="100.0" />
+                  <Insets />
                </GridPane.margin>
             </Button>
+            <Button defaultButton="true" layoutX="663.0" layoutY="445.0" mnemonicParsing="false" onAction="#logOut" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="3" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="%artifactList.searchArtifactLabel" GridPane.rowIndex="4">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="30.0" />
+               </GridPane.margin>
+            </Label>
             </children>
          <columnConstraints>
-            <ColumnConstraints />
-            <ColumnConstraints />
-            <ColumnConstraints />
+            <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints maxWidth="535.0" minWidth="485.0" prefWidth="535.0" />
+            <ColumnConstraints maxWidth="54.0" minWidth="0.0" prefWidth="18.0" />
+            <ColumnConstraints maxWidth="174.0" minWidth="98.0" prefWidth="144.0" />
+            <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
          <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints minHeight="10.0" prefHeight="50.0" />
             <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
          </rowConstraints>
         </GridPane>
     </children>

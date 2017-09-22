@@ -28,7 +28,7 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
     public SessionTo login(String userName, String password) {
         UserTo userTo = buildUserTo(userName, password);
         RequestEntity<UserTo> requestEntity =
-                new RequestEntity<>(userTo, HttpMethod.POST, URI.create(new StringBuilder().append(serviceUrl).append("/login/").toString()));
+                new RequestEntity<>(userTo, HttpMethod.POST, builLoginRequestUri());
         ResponseEntity<SessionTo> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<SessionTo>() {
         });
         SessionTo body = exchange.getBody();
@@ -45,8 +45,18 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
 
     @Override
     public void register(String userName, String password) {
-        // TODO(mgrzesik) provide sensible implementation
-
+    	UserTo userTo = buildUserTo(userName, password);
+        RequestEntity<UserTo> requestEntity =
+                new RequestEntity<>(userTo, HttpMethod.POST, builRegisterRequestUri());
+        restTemplate.exchange(requestEntity, new ParameterizedTypeReference<SessionTo>() {
+        });
     }
-
+    
+    private URI builLoginRequestUri() {
+        return URI.create(new StringBuilder().append(serviceUrl).append("/login/").toString());
+    }
+    
+    private URI builRegisterRequestUri() {
+        return URI.create(new StringBuilder().append(serviceUrl).append("/register/").toString());
+    }
 }
