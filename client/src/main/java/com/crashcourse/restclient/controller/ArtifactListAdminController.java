@@ -99,7 +99,7 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
     @Override
     public String getResourcePath() {
 
-        return "/com/crashcourse/restclient/controller/ArtifactList.fxml";
+        return "/com/crashcourse/restclient/controller/ArtifactListAdmin.fxml";
     }
 
     @FXML

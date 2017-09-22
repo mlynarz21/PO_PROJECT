@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 
+import com.crashcourse.restclient.controller.ArtifactListAdminController;
 import com.crashcourse.restclient.controller.ArtifactListController;
 import com.crashcourse.restclient.controller.ArtifactsBaseController;
 import com.crashcourse.restclient.controller.DefaultDialogController;
@@ -71,6 +72,18 @@ public class ScreensConfiguration {
     @Scope("prototype")
     public FXMLDialog artifactListDialog() {
         return manager.initializeDialog(artifactListController());
+    }
+    
+    @Bean
+    @Scope("prototype")
+    ArtifactsBaseController artifactListAdminController() {
+        return new ArtifactListAdminController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog artifactListAdminDialog() {
+        return manager.initializeDialog(artifactListAdminController());
     }
 
     public void setLocale(Locale locale) {
