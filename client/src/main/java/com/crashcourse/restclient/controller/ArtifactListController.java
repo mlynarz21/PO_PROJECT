@@ -114,7 +114,6 @@ public class ArtifactListController extends ArtifactsBaseController {
     public void book() {
         ArtifactTo to = new ArtifactTo();
         ArtifactModel artifactModel=artifacts.getSelectionModel().getSelectedItem();
-        to.setName(artifacts.getSelectionModel().getSelectedItem().toString());
         to.setId(artifactModel.getId());
         restServiceClient.bookArtifact(to);
         loadAllData();
