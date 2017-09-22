@@ -165,5 +165,9 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
         loadAllData();
 	}
 	
+	@FXML
+	public void logOut() {
+        //TO-DO wladek
+    }
 
 }
