@@ -1,7 +1,7 @@
 package com.capgemini.common.datatypes.enumerations;
 
 public enum Status {
+    AVALIBLE,
     BOOKED,
-    RESERVED,
-    FREE
+    BORROWED
 }
