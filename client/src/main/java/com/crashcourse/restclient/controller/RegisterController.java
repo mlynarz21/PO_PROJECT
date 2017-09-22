@@ -15,7 +15,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class WelcomeController extends ArtifactsBaseController {
+public class RegisterController extends ArtifactsBaseController {
 
     @Autowired
     LibrarySecurityContext app;
@@ -27,12 +27,12 @@ public class WelcomeController extends ArtifactsBaseController {
     @FXML
     TextField username;
 
-    public WelcomeController(Stage primaryStage) {
+    public RegisterController(Stage primaryStage) {
         super(primaryStage);
     }
 
     @FXML
-    public void proceed() throws LoginException {
+    public void register() throws LoginException {
         authorizationRestServiceClient.login(username.getText(), password.getText());
 
         Optional.ofNullable(app.getSession()).orElseThrow(() -> new LoginException());
@@ -49,12 +49,6 @@ public class WelcomeController extends ArtifactsBaseController {
         getDialog().close();
         getScreens().showDialog(defaultDialog);
 
-    }
-    @FXML
-    public void register() {
-        FXMLDialog defaultDialog=getScreens().registerDialog();
-        getDialog().close();
-        getScreens().showDialog(defaultDialog);
     }
 
     @Override
