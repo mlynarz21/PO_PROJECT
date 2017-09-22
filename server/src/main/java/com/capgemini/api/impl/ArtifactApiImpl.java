@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.naming.AuthenticationException;
 
+import com.capgemini.service.ArtifactBookingService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,6 +34,7 @@ public class ArtifactApiImpl implements ArtifactApi {
 
     @Autowired
     private ArtifactCreationService createService;
+    private ArtifactBookingService bookingService;
 
     private ModelMapper modelMapper = new ModelMapper();
 
@@ -89,6 +91,23 @@ public class ArtifactApiImpl implements ArtifactApi {
             return new ResponseEntity<ArtifactTo>(body, HttpStatus.OK);
         } else {
             return new ResponseEntity<ArtifactTo>(HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @Override
+    @RequestMapping(value = "/bookArtifact/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> bookArtifactById(@RequestBody ArtifactTo incomingArtifactTo, @RequestHeader(value = "SessionID") String sessionId) {
+        boolean isbookedArtifact = false;
+        try {
+            isbookedArtifact = bookingService.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
+        } catch (AuthenticationException e) {
+            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
+        }
+
+        if (isbookedArtifact) {
+            return new ResponseEntity<Boolean>(isbookedArtifact, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<Boolean>(HttpStatus.BAD_REQUEST);
         }
     }
 
