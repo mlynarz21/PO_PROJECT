@@ -140,17 +140,29 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
 	
 	@FXML 
 	public void free() {
-		//TO-DO skopiować to co zrobi Kasia
+        ArtifactTo to = new ArtifactTo();
+        ArtifactModel artifactModel=artifacts.getSelectionModel().getSelectedItem();
+        to.setId(artifactModel.getId());
+        restServiceClient.freeArtifact(to);
+        loadAllData();
 	}
 	
 	@FXML 
 	public void book() {
-		//TO-DO skopiować to co zrobi Kasia
+        ArtifactTo to = new ArtifactTo();
+        ArtifactModel artifactModel=artifacts.getSelectionModel().getSelectedItem();
+        to.setId(artifactModel.getId());
+        restServiceClient.bookArtifact(to);
+        loadAllData();
 	}
 	
 	@FXML 
 	public void borrow() {
-		//TO-DO skopiować to co zrobi Kasia
+        ArtifactTo to = new ArtifactTo();
+        ArtifactModel artifactModel=artifacts.getSelectionModel().getSelectedItem();
+        to.setId(artifactModel.getId());
+        restServiceClient.borrowArtifact(to);
+        loadAllData();
 	}
 	
 	@FXML

@@ -33,8 +33,9 @@ public class AuthorizationApiImpl implements AuthorizationApi {
     @RequestMapping(value = "/login/", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<SessionTo> login(@RequestBody UserTo user) {
         UUID sessionId = authorizationService.login(mapper.map(user, UserBo.class));
-        String userType = authorizationService.getUserType((mapper.map(user, UserBo.class)).getUsername());    
-        SessionTo body = new SessionTo(sessionId, userType);
+        String userName = (mapper.map(user, UserBo.class)).getUsername();
+        String userType = authorizationService.getUserType(userName);    
+        SessionTo body = new SessionTo(sessionId, userType, userName);
         if(sessionId != null) {
             return new ResponseEntity<SessionTo>(body, HttpStatus.OK);
         } else {

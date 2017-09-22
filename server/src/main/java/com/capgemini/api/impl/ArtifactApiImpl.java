@@ -113,4 +113,38 @@ public class ArtifactApiImpl implements ArtifactApi {
         }
     }
 
+    @Override
+    @RequestMapping(value = "/freeArtifact/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> freeArtifactById(@RequestBody ArtifactTo incomingArtifactTo, @RequestHeader(value = "SessionID") String sessionId) {
+        boolean isArtifactAvailable = false;
+        try {
+            isArtifactAvailable = bookingService.freeArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
+        } catch (AuthenticationException e) {
+            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
+        }
+
+        if (isArtifactAvailable) {
+            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.BAD_REQUEST);
+        }
+    }
+
+    @Override
+    @RequestMapping(value = "/borrowArtifact/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> borrowArtifactById(@RequestBody ArtifactTo incomingArtifactTo, @RequestHeader(value = "SessionID") String sessionId) {
+        boolean isArtifactAvailable = false;
+        try {
+            isArtifactAvailable = bookingService.borrowArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
+        } catch (AuthenticationException e) {
+            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
+        }
+
+        if (isArtifactAvailable) {
+            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.BAD_REQUEST);
+        }
+    }
+
 }

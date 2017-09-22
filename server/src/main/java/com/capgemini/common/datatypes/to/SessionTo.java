@@ -9,10 +9,20 @@ import java.util.UUID;
 public class SessionTo {
     private UUID sessionId;
     private String userType;
+    private String userName;
 
-    public SessionTo(UUID sessionId, String userType) {
+    public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public SessionTo(UUID sessionId, String userType, String userName) {
         this.sessionId = sessionId;
         this.userType = userType;
+        this.userName = userName;
     }
 
     public String getUserType() {

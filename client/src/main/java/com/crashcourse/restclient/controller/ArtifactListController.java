@@ -67,13 +67,9 @@ public class ArtifactListController extends ArtifactsBaseController {
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
-        
-        typeInput.setItems(FXCollections.observableArrayList(Category.values()));
-
-
+        //typeInput.setItems(FXCollections.observableArrayList(Category.values()));
         typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
-
-        statusInput.setItems(FXCollections.observableArrayList(Status.values()));
+        //statusInput.setItems(FXCollections.observableArrayList(Status.values()));
         statusInput2.setItems(FXCollections.observableArrayList(Status.values()));
 
     }
@@ -105,11 +101,7 @@ public class ArtifactListController extends ArtifactsBaseController {
     public void book() {
         ArtifactTo to = new ArtifactTo();
         ArtifactModel artifactModel=artifacts.getSelectionModel().getSelectedItem();
-        to.setName(artifactModel.getName().toString());
-        to.setDescription(artifactModel.getDescription().toString());
-        to.setType((Category) artifactModel.getType().getBean());
-        to.setStatus((Status) artifactModel.getStatus().getBean());
-        to.setCreationDate((Date) artifactModel.getCreatedDate().getBean());
+        to.setId(artifactModel.getId());
         restServiceClient.bookArtifact(to);
         loadAllData();
     }
