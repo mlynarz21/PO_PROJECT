@@ -34,4 +34,6 @@ public interface UserRepository {
      * @return true if the user was correctly registered
      */
     boolean register(User newUser);
+    
+    String getUserType(String username);
 }
