@@ -16,5 +16,9 @@ public class LibrarySecurityContext {
     public void setSession(SessionTo session) {
         this.session = session;
     }
+    
+    public void deleteSession(){
+    	this.session=null;
+    }
 
 }

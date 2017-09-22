@@ -22,6 +22,7 @@ public class UserRepositoryImpl implements UserRepository {
         mockedUsers = new HashMap<Long, User>();
         mockedUsers.put(1L, new User(1L, "admin", "topsecret", "admin"));
         mockedUsers.put(2L, new User(2L, "user", "user", "user"));
+        mockedUsers.put(3L, new User(3L, "jan", "kowalski", "user"));
     }
 
     @Override

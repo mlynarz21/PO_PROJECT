@@ -10,7 +10,9 @@ import com.crashcourse.restclient.api.ArtifactRestServiceClient;
 import com.crashcourse.restclient.datatype.ArtifactTo;
 import com.crashcourse.restclient.datatype.enumeration.Category;
 import com.crashcourse.restclient.datatype.enumeration.Status;
+import com.crashcourse.restclient.main.config.LibrarySecurityContext;
 import com.crashcourse.restclient.model.ArtifactModel;
+import com.crashcourse.restclient.view.FXMLDialog;
 
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
@@ -50,6 +52,8 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
     
     @Autowired
     private ArtifactRestServiceClient restServiceClient;
+    @Autowired
+    private LibrarySecurityContext context;
     @FXML
     TextField descriptionInput;
 
@@ -167,7 +171,10 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
 	
 	@FXML
 	public void logOut() {
-        //TO-DO wladek
+		context.deleteSession();
+		FXMLDialog defaultDialog = getScreens().loginDialog();
+		getDialog().close();
+        getScreens().showDialog(defaultDialog);
     }
 
 }
