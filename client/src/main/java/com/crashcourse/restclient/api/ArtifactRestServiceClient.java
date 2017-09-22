@@ -34,5 +34,5 @@ public interface ArtifactRestServiceClient {
      */
     void addArtifact(ArtifactTo artifact);
     
-    public void bookArtifact(ArtifactTo artifactTo)
+    public void bookArtifact(ArtifactTo artifactTo);
 }
