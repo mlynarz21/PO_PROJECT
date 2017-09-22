@@ -27,6 +27,10 @@ public class AuthorizationServiceImpl implements AuthorizationService {
         }
         return null;
     }
+    
+    public String getUserType(String userName){
+    	return userRepository.getUserType(userName);
+    }
 
     @Override
     public boolean register(UserBo newUser) {

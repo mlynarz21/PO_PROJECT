@@ -20,8 +20,8 @@ public class UserRepositoryImpl implements UserRepository {
         userSessions = new HashMap<String, UUID>();
 
         mockedUsers = new HashMap<Long, User>();
-        mockedUsers.put(1L, new User(1L, "admin", "topsecret"));
-        mockedUsers.put(2L, new User(2L, "user", "user"));
+        mockedUsers.put(1L, new User(1L, "admin", "topsecret", "admin"));
+        mockedUsers.put(2L, new User(2L, "user", "user", "user"));
     }
 
     @Override
@@ -70,5 +70,10 @@ public class UserRepositoryImpl implements UserRepository {
             }
         }).findFirst().get();
     }
+
+	@Override
+	public String getUserType(String username) {
+        return mockedUsers.values().stream().filter(user -> user.getUsername().equals(username)).findAny().get().getUserType();
+	}
 
 }

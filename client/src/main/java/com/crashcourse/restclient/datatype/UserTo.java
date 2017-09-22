@@ -7,8 +7,18 @@ public class UserTo {
     private String username;
 
     private String password;
+    
+    private String userType;
 
-    public Long getId() {
+    public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
+	}
+
+	public Long getId() {
         return id;
     }
 
