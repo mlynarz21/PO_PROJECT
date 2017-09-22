@@ -106,7 +106,7 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
         while (iterator.hasNext()) {
             Entry<Long, Artifact> next = iterator.next();
             if (next.getValue().getId().equals(artifact.getId())) {
-                if(next.getValue().getStatus()==Status.FREE) {
+                if(next.getValue().getStatus()==Status.AVALIBLE) {
                     next.getValue().setStatus(Status.BOOKED);
                     return true;
                 }
