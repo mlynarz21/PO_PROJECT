@@ -32,21 +32,6 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                 </TableView>
-                <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="4" GridPane.vgrow="SOMETIMES">
-                    <Label text="%artifactList.newArtifactLabel">
-                        <font>
-                            <Font size="20.0" />
-                        </font>
-                    </Label>
-                    <TextField fx:id="nameInput" promptText="%artifactList.nameInputPrompt" />
-                    <TextField fx:id="descriptionInput" promptText="%artifactList.descriptionInputPrompt" />
-                    <ComboBox fx:id="typeInput" promptText="%artifactList.typeInputPrompt" />
-
-                    <ComboBox fx:id="statusInput" promptText="%artifactList.artifactsCol5" />
-
-                    <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" text="%artifactList.cancelButtonLabel" />
-                    <Button defaultButton="true" mnemonicParsing="false" onAction="#add" text="%artifactList.addButtonLabel" />
-                </HBox>
             <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" GridPane.rowIndex="2">
                <children>
                   <Label text="%artifactList.searchArtifactLabel">
