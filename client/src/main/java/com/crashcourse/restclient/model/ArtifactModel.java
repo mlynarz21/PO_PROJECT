@@ -6,6 +6,7 @@ import com.crashcourse.restclient.datatype.ArtifactTo;
 import com.crashcourse.restclient.datatype.enumeration.Category;
 import com.crashcourse.restclient.datatype.enumeration.Status;
 
+import javafx.beans.property.LongProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -13,12 +14,20 @@ import javafx.beans.property.StringProperty;
 
 public class ArtifactModel {
 
-    private StringProperty description;
+	private StringProperty id;
+	private StringProperty description;
     private StringProperty name;
     private SimpleObjectProperty<Category> type;
     private SimpleObjectProperty<Status> status;
     private ObjectProperty<Date> createdDate;
+    
+    public StringProperty getId() {
+		return id;
+	}
 
+	public void setId(StringProperty id) {
+		this.id = id;
+	}
     public SimpleObjectProperty getStatus() {
 		return status;
 	}
@@ -61,6 +70,7 @@ public class ArtifactModel {
 
     public static ArtifactModel fromArtifactTo(ArtifactTo artifactTo) {
         ArtifactModel artifactModel = new ArtifactModel();
+        artifactModel.id=new SimpleStringProperty(artifactTo.getId().toString());
         artifactModel.createdDate = new SimpleObjectProperty<>(artifactTo.getCreationDate());
         artifactModel.name = new SimpleStringProperty(artifactTo.getName());
         artifactModel.description = new SimpleStringProperty(artifactTo.getDescription());
