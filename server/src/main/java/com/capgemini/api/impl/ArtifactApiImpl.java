@@ -34,6 +34,8 @@ public class ArtifactApiImpl implements ArtifactApi {
 
     @Autowired
     private ArtifactCreationService createService;
+
+    @Autowired
     private ArtifactBookingService bookingService;
 
     private ModelMapper modelMapper = new ModelMapper();
@@ -97,17 +99,17 @@ public class ArtifactApiImpl implements ArtifactApi {
     @Override
     @RequestMapping(value = "/bookArtifact/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> bookArtifactById(@RequestBody ArtifactTo incomingArtifactTo, @RequestHeader(value = "SessionID") String sessionId) {
-        boolean isbookedArtifact = false;
+        boolean isArtifactAvailable = false;
         try {
-            isbookedArtifact = bookingService.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
+            isArtifactAvailable = bookingService.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
         } catch (AuthenticationException e) {
             return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
         }
 
-        if (isbookedArtifact) {
-            return new ResponseEntity<Boolean>(isbookedArtifact, HttpStatus.OK);
+        if (isArtifactAvailable) {
+            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.OK);
         } else {
-            return new ResponseEntity<Boolean>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.BAD_REQUEST);
         }
     }
 
