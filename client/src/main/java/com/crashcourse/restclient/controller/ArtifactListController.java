@@ -69,6 +69,8 @@ public class ArtifactListController extends ArtifactsBaseController {
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
         
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
+
+
         typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
 
         statusInput.setItems(FXCollections.observableArrayList(Status.values()));
@@ -97,25 +99,17 @@ public class ArtifactListController extends ArtifactsBaseController {
     public String getResourcePath() {
 
         return "/com/crashcourse/restclient/controller/ArtifactList.fxml";
-    }
-
-    @FXML
-    public void add() {
-        ArtifactTo to = new ArtifactTo();
-        to.setName(nameInput.getText());
-        to.setDescription(descriptionInput.getText());
-        to.setType(typeInput.getSelectionModel().getSelectedItem());
-        to.setStatus(statusInput.getSelectionModel().getSelectedItem());
-        to.setCreationDate(new Date());
-        restServiceClient.addArtifact(to);
-        loadAllData();
-    }
+    } 
+    
     @FXML
     public void book() {
         ArtifactTo to = new ArtifactTo();
         ArtifactModel artifactModel=artifacts.getSelectionModel().getSelectedItem();
-        to.setName(artifacts.getSelectionModel().getSelectedItem().toString());
-        to.setId(artifactModel.getId());
+        to.setName(artifactModel.getName().toString());
+        to.setDescription(artifactModel.getDescription().toString());
+        to.setType((Category) artifactModel.getType().getBean());
+        to.setStatus((Status) artifactModel.getStatus().getBean());
+        to.setCreationDate((Date) artifactModel.getCreatedDate().getBean());
         restServiceClient.bookArtifact(to);
         loadAllData();
     }
@@ -129,19 +123,17 @@ public class ArtifactListController extends ArtifactsBaseController {
         loadSpecifiedData(to);
     }
 
-	@FXML
-	public void cancel() {
-        nameInput.clear();
-        descriptionInput.clear();
-        typeInput.getSelectionModel().clearSelection();
-        statusInput.getSelectionModel().clearSelection();
-    }
 	
 	@FXML
 	public void clear() {
         nameInput2.clear();
         typeInput2.getSelectionModel().clearSelection();
         statusInput2.getSelectionModel().clearSelection();
+    }
+	
+	@FXML
+	public void logOut() {
+        //TO-DO wladek
     }
 
 }

@@ -153,5 +153,9 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
 		//TO-DO skopiować to co zrobi Kasia
 	}
 	
+	@FXML
+	public void logOut() {
+        //TO-DO wladek
+    }
 
 }
