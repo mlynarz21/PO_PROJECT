@@ -33,4 +33,6 @@ public interface ArtifactRestServiceClient {
      * @return saved artifact
      */
     void addArtifact(ArtifactTo artifact);
+    
+    public void bookArtifact(ArtifactTo artifactTo);
 }

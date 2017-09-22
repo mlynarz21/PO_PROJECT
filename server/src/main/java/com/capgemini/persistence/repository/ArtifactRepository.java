@@ -25,4 +25,6 @@ public interface ArtifactRepository {
     public boolean deleteArtifactById(long id);
 
     List<Artifact> findSpecifiedArtifacts(ArtifactBo artifactBo);
+
+    boolean bookArtifactById(Artifact artifact);
 }

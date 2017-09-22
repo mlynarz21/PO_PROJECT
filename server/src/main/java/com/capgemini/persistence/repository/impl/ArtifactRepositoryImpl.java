@@ -99,4 +99,20 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
         }
         return false;
     }
+
+    @Override
+    public boolean bookArtifactById(Artifact artifact) {
+        Iterator<Entry<Long, Artifact>> iterator = mockedData.entrySet().iterator();
+        while (iterator.hasNext()) {
+            Entry<Long, Artifact> next = iterator.next();
+            if (next.getValue().getId().equals(artifact.getId())) {
+                if(next.getValue().getStatus()==Status.FREE) {
+                    next.getValue().setStatus(Status.BOOKED);
+                    return true;
+                }
+                else return false;
+            }
+        }
+        return false;
+    }
 }

@@ -18,4 +18,6 @@ public interface ArtifactApi {
 
     ResponseEntity<List<ArtifactTo>> getSpecifiedArtifact(ArtifactTo incomingArtifactTo, String sessionId);
 
+    ResponseEntity<Boolean> bookArtifactById(ArtifactTo incomingArtifactTo, String sessionId);
+
 }
