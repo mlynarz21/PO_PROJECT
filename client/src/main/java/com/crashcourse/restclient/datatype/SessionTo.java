@@ -6,8 +6,18 @@ public class SessionTo {
     private UUID sessionId;
     
     private String userType;
+    
+    private String userName;
 
-    public String getUserType() {
+    public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getUserType() {
 		return userType;
 	}
 
