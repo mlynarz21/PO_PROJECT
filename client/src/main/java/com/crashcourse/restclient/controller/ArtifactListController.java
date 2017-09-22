@@ -112,6 +112,18 @@ public class ArtifactListController extends ArtifactsBaseController {
         restServiceClient.addArtifact(to);
         loadAllData();
     }
+    @FXML
+    public void book() {
+        ArtifactTo to = new ArtifactTo();
+        ArtifactModel artifactModel=artifacts.getSelectionModel().getSelectedItem();
+        to.setName(artifactModel.getName().toString());
+        to.setDescription(artifactModel.getDescription().toString());
+        to.setType((Category) artifactModel.getType().getBean());
+        to.setStatus((Status) artifactModel.getStatus().getBean());
+        to.setCreationDate((Date) artifactModel.getCreatedDate().getBean());
+        restServiceClient.bookArtifact(to);
+        loadAllData();
+    }
     
     @FXML
     public void search() {
