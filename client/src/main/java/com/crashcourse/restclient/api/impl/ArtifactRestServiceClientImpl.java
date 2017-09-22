@@ -50,6 +50,40 @@ public class ArtifactRestServiceClientImpl implements ArtifactRestServiceClient 
         return exchange.getBody();
         
 	}
+    
+    
+    @Override
+	public void freeArtifact(ArtifactTo artifactTo) {
+		RequestEntity<ArtifactTo> request = builArtifactsRequest(builFreeArtifactRequestUri(), artifactTo, HttpMethod.POST);
+
+        restTemplate.exchange(request, new ParameterizedTypeReference<Boolean>() {
+        });
+	}
+
+	@Override
+	public void borrowArtifact(ArtifactTo artifactTo) {
+		RequestEntity<ArtifactTo> request = builArtifactsRequest(builBorrowArtifactRequestUri(), artifactTo, HttpMethod.POST);
+
+        restTemplate.exchange(request, new ParameterizedTypeReference<Boolean>() {
+        });
+		
+	}
+	
+	@Override
+    public void addArtifact(ArtifactTo artifact) {
+        RequestEntity<ArtifactTo> request = builArtifactsRequest(builAddArtifactRequestUri(), artifact, HttpMethod.POST);
+
+        restTemplate.exchange(request, new ParameterizedTypeReference<ArtifactTo>() {
+        });
+    }
+    
+    @Override
+    public void bookArtifact(ArtifactTo artifactTo){
+    	 RequestEntity<ArtifactTo> request = builArtifactsRequest(builBookArtifactRequestUri(), artifactTo, HttpMethod.POST);
+
+         restTemplate.exchange(request, new ParameterizedTypeReference<Boolean>() {
+         });
+    }
 
     private <T extends Object> RequestEntity<T> builArtifactsRequest(URI uri, T body, HttpMethod method) {
         HttpHeaders head = buildRequestHeader();
@@ -68,6 +102,10 @@ public class ArtifactRestServiceClientImpl implements ArtifactRestServiceClient 
     private URI builBookArtifactRequestUri() {
     	return URI.create(new StringBuilder().append(serviceUrl).append("/bookArtifact/").toString());
     }
+    
+    private URI builFreeArtifactRequestUri() {
+    	return URI.create(new StringBuilder().append(serviceUrl).append("/freeArtifact/").toString());
+    }
 
     private HttpHeaders buildRequestHeader() {
         HttpHeaders head = new HttpHeaders();
@@ -81,21 +119,9 @@ public class ArtifactRestServiceClientImpl implements ArtifactRestServiceClient 
     private URI builAddArtifactRequestUri() {
         return URI.create(new StringBuilder().append(serviceUrl).append("/add-artifact/").toString());
     }
-
-    @Override
-    public void addArtifact(ArtifactTo artifact) {
-        RequestEntity<ArtifactTo> request = builArtifactsRequest(builAddArtifactRequestUri(), artifact, HttpMethod.POST);
-
-        restTemplate.exchange(request, new ParameterizedTypeReference<ArtifactTo>() {
-        });
-    }
     
-    @Override
-    public void bookArtifact(ArtifactTo artifactTo){
-    	 RequestEntity<ArtifactTo> request = builArtifactsRequest(builBookArtifactRequestUri(), artifactTo, HttpMethod.POST);
-
-         restTemplate.exchange(request, new ParameterizedTypeReference<Boolean>() {
-         });
+    private URI builBorrowArtifactRequestUri() {
+        return URI.create(new StringBuilder().append(serviceUrl).append("/borrowArtifact/").toString());
     }
 
 }
