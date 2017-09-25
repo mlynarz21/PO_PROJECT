@@ -20,12 +20,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.capgemini.common.datatypes.bo.ArtifactBo;
+
 import com.capgemini.common.datatypes.enumerations.Category;
 import com.capgemini.persistence.entity.Artifact;
 import com.capgemini.persistence.repository.ArtifactRepository;
 import com.capgemini.persistence.repository.impl.UserRepositoryImpl;
 import com.capgemini.service.ArtifactBookingService;
 import com.capgemini.service.AuthorizationService;
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -110,5 +112,6 @@ public class ArtifactBookingServiceTest {
 
         return artifact;
     }
+
 
 }

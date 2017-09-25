@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crashcourse.restclient.controller.InformationErrorController">
+    <children>
+
+        <Label layoutX="45.0" layoutY="36.0" text="%informationDialog.informationTitle" textFill="#664900">
+            <font>
+                <Font name="System Bold" size="30.0" />
+            </font>
+        </Label>
+      <Button layoutX="358.0" layoutY="178.0" mnemonicParsing="false" onAction="#close" text="%informationDialog.closeButton" />
+      <TextField fx:id="informationText" layoutX="45.0" layoutY="102.0" prefHeight="31.0" prefWidth="381.0" />
+    </children>
+</AnchorPane>

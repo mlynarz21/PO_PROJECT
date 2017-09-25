@@ -12,6 +12,7 @@ import com.crashcourse.restclient.controller.ArtifactListAdminController;
 import com.crashcourse.restclient.controller.ArtifactListController;
 import com.crashcourse.restclient.controller.ArtifactsBaseController;
 import com.crashcourse.restclient.controller.DefaultDialogController;
+import com.crashcourse.restclient.controller.InformationErrorController;
 import com.crashcourse.restclient.controller.RegisterController;
 import com.crashcourse.restclient.controller.WelcomeController;
 import com.crashcourse.restclient.view.FXMLDialog;
@@ -111,6 +112,34 @@ public class ScreensConfiguration {
 
         return locale;
     }
+  
+    @Bean
+    @Scope("prototype")
+    ArtifactsBaseController informationErrorController(String errorType) {
+    	return new InformationErrorController(primaryStage, errorType);
+	}
+    
+    @Bean
+    @Scope("prototype")
+	public FXMLDialog informationErrorDialog(String errorType) {
+		return manager.initializeDialog(informationErrorController(errorType));
+    }
+
+    /*
+    @Bean
+    @Scope("prototype")
+    ArtifactsBaseController informationErrorController() {
+    	return new InformationErrorController(primaryStage);
+	}
+    
+    @Bean
+    @Scope("prototype")
+	public FXMLDialog informationErrorDialog() {
+		return manager.initializeDialog(informationErrorController());
+    }
+    */
+	
+	
 
 
 
