@@ -51,7 +51,7 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
     public List<Artifact> findSpecifiedArtifacts(ArtifactBo artifactBo) {
       
     	List <Artifact> lists = findAllArtifacts();
-    	if(!artifactBo.getName().equals("")){
+    	if(artifactBo.getName()!=null && !artifactBo.getName().equals("") ){
     		lists = lists.stream().filter(a -> a.getName().equals(artifactBo.getName())).collect(Collectors.toList());
     	}
     	if(artifactBo.getStatus()!=null){
@@ -62,7 +62,7 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
     		lists = lists.stream().filter(a -> a.getType().equals(artifactBo.getType())).collect(Collectors.toList());
     	}
 
-    	if(artifactBo.getUsername()!="" && artifactBo.getUsername()!=null){
+    	if( artifactBo.getUsername()!=null && artifactBo.getUsername()!="" ){
     		lists = lists.stream().filter(a -> a.getUsername().equals(artifactBo.getUsername())).collect(Collectors.toList());
     	}
 

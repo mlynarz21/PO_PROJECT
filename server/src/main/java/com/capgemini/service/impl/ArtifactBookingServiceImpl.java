@@ -30,7 +30,6 @@ public class ArtifactBookingServiceImpl implements ArtifactBookingService {
         }
 
         Artifact artifactEntity = modelMapper.map(artifactBo, Artifact.class);
-        System.out.println(artifactEntity.getUsername());
             return artifactRepository.bookArtifactById(artifactEntity);
 
     }
