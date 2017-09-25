@@ -8,23 +8,22 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crashcourse.restclient.controller.WelcomeController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crashcourse.restclient.controller.RegisterController">
     <children>
 
-        <Label layoutX="45.0" layoutY="36.0" text="%welcomeDialog.welcomeTitle" textFill="#664900">
+        <Label layoutX="45.0" layoutY="36.0" text="%welcomeDialog.infoLabel" textFill="#664900">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Label>
-        <Label id="header" layoutX="48.0" layoutY="82.0" text="%welcomeDialog.infoLabel" textFill="GREY" />
+        <Label id="header" layoutX="48.0" layoutY="82.0" text="%registerDialog.infoLabel" textFill="GREY" />
         <GridPane id="GridPane" layoutX="48.0" layoutY="115.0">
             <children>
                 <TextField fx:id="username" prefWidth="200.0" promptText="%welcomeDialog.userPromptText" GridPane.columnIndex="1" GridPane.rowIndex="0" />
                 <PasswordField fx:id="password" prefWidth="200.0" promptText="%welcomeDialog.pwdPromptText" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Label text="%welcomeDialog.usernameLabel" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                 <Label text="%welcomeDialog.pwdLabel" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                <Button alignment="BASELINE_LEFT" defaultButton="true" layoutX="264.0" layoutY="187.0" mnemonicParsing="false" onAction="#proceed" text="%welcomeDialog.proceedButtonLabel" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button alignment="BASELINE_LEFT" defaultButton="true" layoutX="297.0" layoutY="92.0" mnemonicParsing="false" onAction="#register" text="%welcomeDialog.registerButtonLabel" GridPane.rowIndex="2" />
+                <Button alignment="BASELINE_LEFT" defaultButton="true" layoutX="264.0" layoutY="187.0" mnemonicParsing="false" onAction="#register" text="%registerDialog.registerButtonLabel" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />

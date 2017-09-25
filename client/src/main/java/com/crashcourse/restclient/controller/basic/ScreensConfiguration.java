@@ -12,6 +12,7 @@ import com.crashcourse.restclient.controller.ArtifactListAdminController;
 import com.crashcourse.restclient.controller.ArtifactListController;
 import com.crashcourse.restclient.controller.ArtifactsBaseController;
 import com.crashcourse.restclient.controller.DefaultDialogController;
+import com.crashcourse.restclient.controller.RegisterController;
 import com.crashcourse.restclient.controller.WelcomeController;
 import com.crashcourse.restclient.view.FXMLDialog;
 
@@ -85,6 +86,21 @@ public class ScreensConfiguration {
     public FXMLDialog artifactListAdminDialog() {
         return manager.initializeDialog(artifactListAdminController());
     }
+       
+    @Bean
+    @Scope("prototype")
+    ArtifactsBaseController registerController() {
+        return new RegisterController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog registerDialog() {
+        return manager.initializeDialog(registerController());
+    }
+
+
+
 
     public void setLocale(Locale locale) {
         this.locale = locale;
