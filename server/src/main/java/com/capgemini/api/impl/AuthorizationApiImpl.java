@@ -39,19 +39,20 @@ public class AuthorizationApiImpl implements AuthorizationApi {
         if(sessionId != null) {
             return new ResponseEntity<SessionTo>(body, HttpStatus.OK);
         } else {
-            return new ResponseEntity<SessionTo>(body, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<SessionTo>(body, HttpStatus.FOUND);
         }
     }
 
     @Override
     @RequestMapping(value = "/register/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> register(@RequestBody UserTo user) {
-        boolean registered = authorizationService.register(mapper.map(user, UserBo.class));
-
+    	boolean registered = false;
+        registered = authorizationService.register(mapper.map(user, UserBo.class));
+        System.out.println(registered);
         if (registered) {
             return new ResponseEntity<HttpStatus>(HttpStatus.OK);
         } else {
-            return new ResponseEntity<HttpStatus>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<HttpStatus>(HttpStatus.FOUND);
         }
     }
 }

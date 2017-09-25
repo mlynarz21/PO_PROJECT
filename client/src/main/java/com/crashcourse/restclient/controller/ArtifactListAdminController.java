@@ -74,8 +74,6 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
         
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
-
-
         typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
 
         statusInput.setItems(FXCollections.observableArrayList(Status.values()));
@@ -112,7 +110,7 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
         to.setName(nameInput.getText());
         to.setDescription(descriptionInput.getText());
         to.setType(typeInput.getSelectionModel().getSelectedItem());
-        to.setStatus(statusInput.getSelectionModel().getSelectedItem());
+        to.setStatus(Status.AVALIBLE);
         to.setCreationDate(new Date());
         restServiceClient.addArtifact(to);
         loadAllData();

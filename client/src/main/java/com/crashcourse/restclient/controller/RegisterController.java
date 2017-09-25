@@ -33,18 +33,14 @@ public class RegisterController extends ArtifactsBaseController {
 
     @FXML
     public void register() throws LoginException {
-        authorizationRestServiceClient.login(username.getText(), password.getText());
-
-        Optional.ofNullable(app.getSession()).orElseThrow(() -> new LoginException());
-
+        int code = authorizationRestServiceClient.register(username.getText(), password.getText());
+        
+        System.out.println(code);
         FXMLDialog defaultDialog=null;
-        if(app.getSession().getUserType().equals("admin"))
-        		defaultDialog = getScreens().artifactListAdminDialog();
+        if(code == 200)
+         defaultDialog = getScreens().loginDialog();
         else
-        if(app.getSession().getUserType().equals("user"))
-        		defaultDialog = getScreens().artifactListDialog();
-        else
-        	throw new LoginException();
+        	//TODO ada
         
         getDialog().close();
         getScreens().showDialog(defaultDialog);

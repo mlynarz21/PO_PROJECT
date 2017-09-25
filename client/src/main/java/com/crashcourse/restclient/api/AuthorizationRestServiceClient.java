@@ -23,5 +23,5 @@ public interface AuthorizationRestServiceClient {
      * @param user
      * @return true if the user was correctly registered
      */
-    void register(String userName, String password);
+    int register(String userName, String password);
 }
