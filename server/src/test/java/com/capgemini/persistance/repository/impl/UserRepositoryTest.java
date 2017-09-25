@@ -22,6 +22,7 @@ public class UserRepositoryTest {
 		//given
         String name1 = "user";
         String name2 = "admin";
+        
 		//when
 		String type = userRepoMock.getUserType(name1);
 		String type2 = userRepoMock.getUserType(name2);

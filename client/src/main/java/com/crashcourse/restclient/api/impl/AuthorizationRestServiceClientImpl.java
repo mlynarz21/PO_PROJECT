@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
@@ -44,12 +45,18 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
     }
 
     @Override
-    public void register(String userName, String password) {
+    public int register(String userName, String password) {
     	UserTo userTo = buildUserTo(userName, password);
         RequestEntity<UserTo> requestEntity =
                 new RequestEntity<>(userTo, HttpMethod.POST, builRegisterRequestUri());
-        restTemplate.exchange(requestEntity, new ParameterizedTypeReference<SessionTo>() {
+        ResponseEntity exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<SessionTo>() {
         });
+        HttpStatus code = exchange.getStatusCode();
+        if(code.equals(200)){
+        	return 200;
+        }else{
+            return 100;     	
+        }
     }
     
     private URI builLoginRequestUri() {

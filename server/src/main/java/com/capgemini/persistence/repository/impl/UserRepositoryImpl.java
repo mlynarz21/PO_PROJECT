@@ -54,7 +54,7 @@ public class UserRepositoryImpl implements UserRepository {
 
         Long newIndex = getNewIndex();
         newUser.setId(newIndex);
-        mockedUsers.put(newIndex, newUser);
+        mockedUsers.put(newIndex, new User(newIndex, newUser.getUsername(), newUser.getPassword(), "user"));
 
         return true;
     }
@@ -74,7 +74,7 @@ public class UserRepositoryImpl implements UserRepository {
 
 	@Override
 	public String getUserType(String username) {
-        return mockedUsers.values().stream().filter(user -> user.getUsername().equals(username)).findAny().get().getUserType();
+        return mockedUsers.values().stream().filter(user -> user.getUsername().equals(username)).findFirst().get().getUserType();
 	}
 
 }
