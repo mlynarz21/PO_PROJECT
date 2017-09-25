@@ -35,7 +35,7 @@ public class RegisterController extends ArtifactsBaseController {
     public void register() throws LoginException {
         int code = authorizationRestServiceClient.register(username.getText(), password.getText());
         
-        
+        System.out.println(code);
         FXMLDialog defaultDialog=null;
         if(code == 200)
          defaultDialog = getScreens().loginDialog();

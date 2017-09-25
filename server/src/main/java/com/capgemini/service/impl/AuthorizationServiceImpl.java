@@ -34,7 +34,7 @@ public class AuthorizationServiceImpl implements AuthorizationService {
 
     @Override
     public boolean register(UserBo newUser) {
-        if (userValid(newUser) ) {
+        if (userValid(newUser) && newUser.getId()==null ) {
             return userRepository.register(mapper.map(newUser, User.class));
         }
         return false;

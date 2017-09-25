@@ -47,12 +47,17 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
     @Override
     public int register(String userName, String password) {
     	UserTo userTo = buildUserTo(userName, password);
+    	ResponseEntity exchange=null;
         RequestEntity<UserTo> requestEntity =
                 new RequestEntity<>(userTo, HttpMethod.POST, builRegisterRequestUri());
-        ResponseEntity exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<SessionTo>() {
+        try{
+        exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<SessionTo>() {
         });
+        }catch(Exception e){
+        	e.printStackTrace();
+        }
         HttpStatus code = exchange.getStatusCode();
-        if(code.equals(200)){
+        if(code.equals(HttpStatus.OK)){
         	return 200;
         }else{
             return 100;     	
