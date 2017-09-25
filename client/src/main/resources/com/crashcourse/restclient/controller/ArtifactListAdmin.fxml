@@ -16,7 +16,7 @@
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </padding>
             <children>
-                <TableView fx:id="artifacts" prefHeight="421.0" prefWidth="703.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="2" GridPane.vgrow="SOMETIMES">
+                <TableView fx:id="artifacts" prefHeight="421.0" prefWidth="703.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
                     <placeholder>
                     <Label text="%artifactList.emptyTableLabel" />
                     </placeholder>
@@ -32,7 +32,7 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                 </TableView>
-                <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="9" GridPane.vgrow="SOMETIMES">
+                <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="8" GridPane.vgrow="SOMETIMES">
                     <TextField fx:id="nameInput" prefHeight="31.0" prefWidth="247.0" promptText="%artifactList.nameInputPrompt" />
                     <TextField fx:id="descriptionInput" prefHeight="31.0" prefWidth="165.0" promptText="%artifactList.descriptionInputPrompt" />
                     <ComboBox fx:id="typeInput" prefHeight="31.0" prefWidth="100.0" promptText="%artifactList.typeInputPrompt" />
@@ -42,7 +42,7 @@
                     <Button cancelButton="true" mnemonicParsing="false" onAction="#cancel" prefHeight="31.0" prefWidth="70.0" text="%artifactList.cancelButtonLabel" />
                     <Button defaultButton="true" mnemonicParsing="false" onAction="#add" prefHeight="31.0" prefWidth="70.0" text="%artifactList.addButtonLabel" />
                 </HBox>
-            <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="4">
+            <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
                <children>
                   <TextField fx:id="nameInput2" prefHeight="31.0" prefWidth="266.0" promptText="%artifactList.nameInputPrompt" />
                   <ComboBox fx:id="typeInput2" prefHeight="31.0" prefWidth="130.0" promptText="%artifactList.typeInputPrompt" />
@@ -52,7 +52,7 @@
                   <Button defaultButton="true" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="100.0" text="%artifactList.searchButtonLabel" />
                </children>
             </HBox>
-            <Label text="%artifactList.searchArtifactLabel" GridPane.rowIndex="4">
+            <Label text="%artifactList.searchArtifactLabel" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
@@ -60,7 +60,7 @@
                   <Insets left="30.0" />
                </GridPane.margin>
             </Label>
-                 <Label text="%artifactList.newArtifactLabel" GridPane.rowIndex="9">
+                 <Label text="%artifactList.newArtifactLabel" GridPane.rowIndex="8">
                      <font>
                          <Font size="18.0" />
                      </font>
@@ -68,13 +68,11 @@
                   <Insets left="10.0" />
                </padding>
                  </Label>
-<<<<<<< HEAD
-            <Button defaultButton="true" layoutX="769.0" layoutY="529.0" mnemonicParsing="false" onAction="#borrow" prefHeight="31.0" prefWidth="97.0" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="4" />
-            <HBox prefHeight="31.0" prefWidth="157.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
-=======
-            <Button defaultButton="true" layoutX="769.0" layoutY="529.0" mnemonicParsing="false" onAction="#logOut" prefHeight="31.0" prefWidth="97.0" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-            <HBox prefHeight="31.0" prefWidth="157.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
->>>>>>> af1d67ca0308588d2c35f8a5bcae20164429dd41
+            <Button defaultButton="true" layoutX="769.0" layoutY="529.0" mnemonicParsing="false" onAction="#logOut" prefHeight="31.0" prefWidth="97.0" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="3" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets left="550.0" />
+               </GridPane.margin></Button>
+            <HBox prefHeight="31.0" prefWidth="157.0" GridPane.columnIndex="3" GridPane.rowIndex="5">
                <children>
                   <Button defaultButton="true" mnemonicParsing="false" onAction="#free" prefHeight="31.0" prefWidth="70.0" text="%artifactList.freeButtonLabel" />
                   <Button defaultButton="true" mnemonicParsing="false" onAction="#book" prefHeight="31.0" prefWidth="70.0" text="%artifactList.bookButtonLabel" />
@@ -97,13 +95,13 @@
          </columnConstraints>
          <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />

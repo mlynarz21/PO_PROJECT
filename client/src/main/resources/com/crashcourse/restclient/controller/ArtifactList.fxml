@@ -16,7 +16,7 @@
                 <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
             </padding>
             <children>
-            <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" prefHeight="31.0" prefWidth="583.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="5">
+            <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" prefHeight="31.0" prefWidth="583.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
                <children>
                   <TextField fx:id="nameInput2" prefHeight="31.0" prefWidth="300.0" promptText="%artifactList.nameInputPrompt" />
                   <ComboBox fx:id="typeInput2" prefHeight="31.0" prefWidth="120.0" promptText="%artifactList.typeInputPrompt" />
@@ -26,7 +26,7 @@
                   <Button defaultButton="true" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="100.0" text="%artifactList.searchButtonLabel" />
                </children>
             </HBox>
-                <TableView fx:id="artifacts" prefHeight="448.0" prefWidth="711.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="3" GridPane.vgrow="SOMETIMES">
+                <TableView fx:id="artifacts" prefHeight="448.0" prefWidth="711.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.hgrow="SOMETIMES" GridPane.rowIndex="1" GridPane.vgrow="SOMETIMES">
                     <placeholder>
                     <Label text="%artifactList.emptyTableLabel" />
                     </placeholder>
@@ -42,21 +42,17 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                 </TableView>
-            <Button defaultButton="true" mnemonicParsing="false" onAction="#book" prefHeight="31.0" prefWidth="156.0" text="%artifactList.bookPositionButtonLabel" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="7">
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#book" prefHeight="31.0" prefWidth="156.0" text="%artifactList.bookPositionButtonLabel" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
             </Button>
-<<<<<<< HEAD
-            <Button defaultButton="true" layoutX="663.0" layoutY="445.0" mnemonicParsing="false" onAction="#book" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="4">
-=======
             <Button defaultButton="true" layoutX="663.0" layoutY="445.0" mnemonicParsing="false" onAction="#logOut" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="3" GridPane.rowIndex="7">
->>>>>>> af1d67ca0308588d2c35f8a5bcae20164429dd41
                <GridPane.margin>
                   <Insets left="60.0" />
                </GridPane.margin>
             </Button>
-            <Label text="%artifactList.searchArtifactLabel" GridPane.rowIndex="5">
+            <Label text="%artifactList.searchArtifactLabel" GridPane.rowIndex="3">
                <font>
                   <Font size="20.0" />
                </font>
@@ -74,13 +70,12 @@
          </columnConstraints>
          <rowConstraints>
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" />
          </rowConstraints>
         </GridPane>
