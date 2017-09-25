@@ -42,20 +42,20 @@ public class ArtifactListController extends ArtifactsBaseController {
     @FXML
     ComboBox<Category> typeInput;
     @FXML
-    TextField nameInput2;
+    TextField searchNameInput;
     @FXML
-    ComboBox<Category> typeInput2;
+    ComboBox<Category> searchTypeInput;
     @FXML
     ComboBox<Status> statusInput;
     @FXML
-    ComboBox<Status> statusInput2;
+    ComboBox<Status> searchStatusInput;
+    @FXML
+    TextField descriptionInput;
     
     @Autowired
     private ArtifactRestServiceClient restServiceClient;
     @Autowired
     private LibrarySecurityContext context;
-    @FXML
-    TextField descriptionInput;
 
     public ArtifactListController(Stage primaryStage) {
         super(primaryStage);
@@ -72,8 +72,8 @@ public class ArtifactListController extends ArtifactsBaseController {
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
-        typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
-        statusInput2.setItems(FXCollections.observableArrayList(Status.values()));
+        searchTypeInput.setItems(FXCollections.observableArrayList(Category.values()));
+        searchStatusInput.setItems(FXCollections.observableArrayList(Status.values()));
 
     }
 
@@ -105,6 +105,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         ArtifactTo to = new ArtifactTo();
         ArtifactModel artifactModel=artifacts.getSelectionModel().getSelectedItem();
         to.setId(artifactModel.getId());
+        to.setUsername(context.getSession().getUserName());
         restServiceClient.bookArtifact(to);
         loadAllData();
     }
@@ -112,18 +113,18 @@ public class ArtifactListController extends ArtifactsBaseController {
     @FXML
     public void search() {
         ArtifactTo to = new ArtifactTo();
-        to.setName(nameInput2.getText());
-        to.setType(typeInput2.getSelectionModel().getSelectedItem());
-        to.setStatus(statusInput2.getSelectionModel().getSelectedItem());
+        to.setName(searchNameInput.getText());
+        to.setType(searchTypeInput.getSelectionModel().getSelectedItem());
+        to.setStatus(searchStatusInput.getSelectionModel().getSelectedItem());
         loadSpecifiedData(to);
     }
 
 	
 	@FXML
 	public void clear() {
-        nameInput2.clear();
-        typeInput2.getSelectionModel().clearSelection();
-        statusInput2.getSelectionModel().clearSelection();
+        searchNameInput.clear();
+        searchTypeInput.getSelectionModel().clearSelection();
+        searchStatusInput.getSelectionModel().clearSelection();
     }
 	
 	@FXML
