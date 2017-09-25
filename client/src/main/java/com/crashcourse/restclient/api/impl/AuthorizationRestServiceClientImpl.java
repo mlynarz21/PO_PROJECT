@@ -32,9 +32,16 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
                 new RequestEntity<>(userTo, HttpMethod.POST, builLoginRequestUri());
         ResponseEntity<SessionTo> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<SessionTo>() {
         });
-        SessionTo body = exchange.getBody();
-        context.setSession(body);
-        return body;
+        if(exchange.getStatusCode().equals(HttpStatus.OK)){
+            SessionTo body = exchange.getBody();
+            context.setSession(body);
+            return body;
+        }
+        else {
+        	SessionTo s = new SessionTo();
+        	s.setUserName("100");
+        	return s;
+        }
     }
 
     private UserTo buildUserTo(String userName, String password) {
