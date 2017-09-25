@@ -50,10 +50,17 @@ public class RegisterController extends ArtifactsBaseController {
         getScreens().showDialog(defaultDialog);
 
     }
+    
+    @FXML
+    public void back() {
+    	FXMLDialog defaultDialog=getScreens().loginDialog();
+        getDialog().close();
+        getScreens().showDialog(defaultDialog);
+    }
 
     @Override
     public String getResourcePath() {
-        return "/com/crashcourse/restclient/controller/Welcome.fxml";
+        return "/com/crashcourse/restclient/controller/Register.fxml";
     }
 
 }
