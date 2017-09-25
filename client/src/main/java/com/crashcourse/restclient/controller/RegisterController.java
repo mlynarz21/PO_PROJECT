@@ -39,8 +39,11 @@ public class RegisterController extends ArtifactsBaseController {
         FXMLDialog defaultDialog=null;
         if(code == 200)
          defaultDialog = getScreens().loginDialog();
-        else
-        	//TODO ada
+        else {
+        	defaultDialog=getScreens().informationErrorDialog("Register");
+        	//defaultDialog=getScreens().informationErrorDialog();
+        }
+        
         
         getDialog().close();
         getScreens().showDialog(defaultDialog);

@@ -26,7 +26,6 @@ public class UserRepositoryTest {
 		//given
         String name1 = "user";
         String name2 = "admin";
-        
 		//when
 		String type = userRepoMock.getUserType(name1);
 		String type2 = userRepoMock.getUserType(name2);
@@ -72,6 +71,7 @@ public class UserRepositoryTest {
 	@Test
 	public void shouldCheckIfUserCanLogIn(){
 		
+		//NIE DZIAŁA
 		//given
 		String username = "user";
 		String password = "user";
@@ -84,7 +84,6 @@ public class UserRepositoryTest {
 		UUID sessionID = null; 
 		
 
-		
 		//when
 		UUID result = userRepoMock.login(username, password);
 		
