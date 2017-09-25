@@ -112,7 +112,7 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
         to.setName(nameInput.getText());
         to.setDescription(descriptionInput.getText());
         to.setType(typeInput.getSelectionModel().getSelectedItem());
-        to.setStatus(statusInput.getSelectionModel().getSelectedItem());
+        to.setStatus(Status.AVALIBLE);
         to.setCreationDate(new Date());
         restServiceClient.addArtifact(to);
         loadAllData();
