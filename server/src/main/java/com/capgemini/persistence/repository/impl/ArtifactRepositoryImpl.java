@@ -49,7 +49,25 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
 
     @Override
     public List<Artifact> findSpecifiedArtifacts(ArtifactBo artifactBo) {
-        if(!artifactBo.getName().equals("")){
+      
+    	List <Artifact> lists = findAllArtifacts();
+    	if(!artifactBo.getName().equals("")){
+    		lists = lists.stream().filter(a -> a.getName().equals(artifactBo.getName())).collect(Collectors.toList());
+    	}
+    	if(artifactBo.getStatus()!=null){
+    		lists = lists.stream().filter(a -> a.getStatus().equals(artifactBo.getStatus())).collect(Collectors.toList());
+    	}
+
+    	if(artifactBo.getType()!=null){
+    		lists = lists.stream().filter(a -> a.getType().equals(artifactBo.getType())).collect(Collectors.toList());
+    	}
+
+    	if(artifactBo.getUsername()!="" && artifactBo.getUsername()!=null){
+    		lists = lists.stream().filter(a -> a.getUsername().equals(artifactBo.getUsername())).collect(Collectors.toList());
+    	}
+
+    	return lists;
+    /*	if(!artifactBo.getName().equals("")){
             if(artifactBo.getStatus()!=null){
                 if(artifactBo.getType()!=null){
                     return mockedData.values().stream().filter(a -> a.getStatus() == artifactBo.getStatus() && a.getType() == artifactBo.getType() && a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
@@ -65,8 +83,9 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
         } else if(artifactBo.getType()!=null) {
             return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType()).collect(Collectors.toList());
         }
+        
 
-        return findAllArtifacts();
+        return findAllArtifacts();*/
     }
 
     @Override
