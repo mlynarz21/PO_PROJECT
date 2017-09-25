@@ -13,10 +13,18 @@ public class ArtifactModel {
 	private long id;
 	private StringProperty description;
     private StringProperty name;
+    private StringProperty user;
     private SimpleObjectProperty<Category> type;
     private SimpleObjectProperty<Status> status;
     private ObjectProperty<Date> createdDate;
-    
+      
+    public StringProperty getUser() {
+		return user;
+	}
+
+	public void setUser(StringProperty user) {
+		this.user = user;
+	}  
     public long getId() {
 		return id;
 	}
@@ -72,6 +80,7 @@ public class ArtifactModel {
         artifactModel.description = new SimpleStringProperty(artifactTo.getDescription());
         artifactModel.type = new SimpleObjectProperty<>(artifactTo.getType());
         artifactModel.status = new SimpleObjectProperty<>(artifactTo.getStatus());
+        artifactModel.user=new SimpleStringProperty(artifactTo.getUsername());
         return artifactModel;
     }
 }

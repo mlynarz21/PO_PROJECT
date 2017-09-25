@@ -38,6 +38,8 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
     @FXML
     TableColumn<ArtifactModel, String> descriptionColumn;
     @FXML
+    TableColumn<ArtifactModel, String> userColumn;
+    @FXML
     TextField nameInput;
     @FXML
     ComboBox<Category> typeInput;
@@ -72,7 +74,7 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
-        
+        userColumn.setCellValueFactory(celldata -> celldata.getValue().getUser());
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
         typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
 
