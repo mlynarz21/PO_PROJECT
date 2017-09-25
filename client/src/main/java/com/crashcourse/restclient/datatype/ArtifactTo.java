@@ -12,6 +12,7 @@ public class ArtifactTo {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date creationDate;
+    
     private String name;
 
     private Category type;
@@ -19,8 +20,18 @@ public class ArtifactTo {
     private String description;
     
     private Status status;
+    
+    private String username;
 
-    public Status getStatus() {
+    public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public Status getStatus() {
 		return status;
 	}
 
