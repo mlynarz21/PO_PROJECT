@@ -154,7 +154,6 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
             if (next.getValue().getId().equals(artifact.getId())) {
                 if(next.getValue().getStatus()==Status.BOOKED) {
                     next.getValue().setStatus(Status.BORROWED);
-                    next.getValue().setUsername(artifact.getUsername());
                     return true;
                 }
                 else return false;
