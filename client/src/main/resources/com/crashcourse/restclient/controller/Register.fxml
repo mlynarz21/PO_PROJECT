@@ -11,7 +11,7 @@
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="235.0" prefWidth="482.0" xmlns="http://javafx.com/javafx/8.0.66" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crashcourse.restclient.controller.RegisterController">
     <children>
 
-        <Label layoutX="45.0" layoutY="36.0" text="%welcomeDialog.infoLabel" textFill="#664900">
+        <Label layoutX="45.0" layoutY="36.0" text="%registerDialog.registerTitle" textFill="#664900">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>

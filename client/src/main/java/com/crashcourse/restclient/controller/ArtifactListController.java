@@ -74,6 +74,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getType());
         descriptionColumn.setCellValueFactory(celldata -> celldata.getValue().getDescription());
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
+        userColumn.setCellValueFactory(celldata -> celldata.getValue().getUser());
         searchTypeInput.setItems(FXCollections.observableArrayList(Category.values()));
         searchStatusInput.setItems(FXCollections.observableArrayList(Status.values()));
 
@@ -111,7 +112,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         restServiceClient.bookArtifact(to);
         loadAllData();
     }
-    
+  
     @FXML
     public void search() {
         ArtifactTo to = new ArtifactTo();
@@ -120,6 +121,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         to.setStatus(searchStatusInput.getSelectionModel().getSelectedItem());
         loadSpecifiedData(to);
     }
+    
     @FXML
     public void showMyBooks() {
         ArtifactTo to = new ArtifactTo();
