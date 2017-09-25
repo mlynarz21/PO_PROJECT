@@ -49,13 +49,23 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
 
     @Override
     public List<Artifact> findSpecifiedArtifacts(ArtifactBo artifactBo) {
-        if(artifactBo.getType()!=null && artifactBo.getName() != null) {
+        if(!artifactBo.getName().equals("")){
+            if(artifactBo.getStatus()!=null){
+                if(artifactBo.getType()!=null){
+                    return mockedData.values().stream().filter(a -> a.getStatus() == artifactBo.getStatus() && a.getType() == artifactBo.getType() && a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
+                }
+                else return mockedData.values().stream().filter(a -> a.getStatus() == artifactBo.getStatus() && a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
+            } else if (artifactBo.getType()!=null){
                 return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType() && a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
-            } else if (artifactBo.getName() != null) {
-                return mockedData.values().stream().filter(a -> a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
-            } else if (artifactBo.getType()!=null) {
+            } else return mockedData.values().stream().filter(a -> a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
+        } else if(artifactBo.getStatus()!=null){
+            if(artifactBo.getType()!=null) {
+                return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType() && a.getStatus() == artifactBo.getStatus()).collect(Collectors.toList());
+            } else return mockedData.values().stream().filter(a -> a.getStatus() == artifactBo.getStatus()).collect(Collectors.toList());
+        } else if(artifactBo.getType()!=null) {
             return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType()).collect(Collectors.toList());
         }
+
         return findAllArtifacts();
     }
 

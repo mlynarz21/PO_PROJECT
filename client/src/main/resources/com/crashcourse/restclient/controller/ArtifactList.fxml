@@ -47,7 +47,11 @@
                   <Insets />
                </GridPane.margin>
             </Button>
+<<<<<<< HEAD
             <Button defaultButton="true" layoutX="663.0" layoutY="445.0" mnemonicParsing="false" onAction="#book" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="4">
+=======
+            <Button defaultButton="true" layoutX="663.0" layoutY="445.0" mnemonicParsing="false" onAction="#logOut" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="3" GridPane.rowIndex="7">
+>>>>>>> af1d67ca0308588d2c35f8a5bcae20164429dd41
                <GridPane.margin>
                   <Insets left="60.0" />
                </GridPane.margin>

@@ -68,8 +68,13 @@
                   <Insets left="10.0" />
                </padding>
                  </Label>
+<<<<<<< HEAD
             <Button defaultButton="true" layoutX="769.0" layoutY="529.0" mnemonicParsing="false" onAction="#borrow" prefHeight="31.0" prefWidth="97.0" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="4" />
             <HBox prefHeight="31.0" prefWidth="157.0" GridPane.columnIndex="3" GridPane.rowIndex="6">
+=======
+            <Button defaultButton="true" layoutX="769.0" layoutY="529.0" mnemonicParsing="false" onAction="#logOut" prefHeight="31.0" prefWidth="97.0" text="%artifactList.logOutButtonLabel" GridPane.columnIndex="3" GridPane.rowIndex="9" />
+            <HBox prefHeight="31.0" prefWidth="157.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+>>>>>>> af1d67ca0308588d2c35f8a5bcae20164429dd41
                <children>
                   <Button defaultButton="true" mnemonicParsing="false" onAction="#free" prefHeight="31.0" prefWidth="70.0" text="%artifactList.freeButtonLabel" />
                   <Button defaultButton="true" mnemonicParsing="false" onAction="#book" prefHeight="31.0" prefWidth="70.0" text="%artifactList.bookButtonLabel" />
