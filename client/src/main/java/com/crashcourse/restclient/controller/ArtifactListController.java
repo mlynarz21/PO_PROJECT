@@ -38,6 +38,8 @@ public class ArtifactListController extends ArtifactsBaseController {
     @FXML
     TableColumn<ArtifactModel, String> descriptionColumn;
     @FXML
+    TableColumn<ArtifactModel, String> userColumn;
+    @FXML
     TextField nameInput;
     @FXML
     ComboBox<Category> typeInput;
@@ -116,6 +118,12 @@ public class ArtifactListController extends ArtifactsBaseController {
         to.setName(searchNameInput.getText());
         to.setType(searchTypeInput.getSelectionModel().getSelectedItem());
         to.setStatus(searchStatusInput.getSelectionModel().getSelectedItem());
+        loadSpecifiedData(to);
+    }
+    @FXML
+    public void showMyBooks() {
+        ArtifactTo to = new ArtifactTo();
+        to.setUsername(context.getSession().getUserName());
         loadSpecifiedData(to);
     }
 
