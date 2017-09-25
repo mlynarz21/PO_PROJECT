@@ -25,11 +25,11 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
     static {
         mockedData = new HashMap<Long, Artifact>();
         mockedData.put(1L, new Artifact(1L, new GregorianCalendar(2016, 8, 8).getTime(), "Good Artifact", Category.SEMIPRO,
-                "This artifact was created for customers with the category semipro.", Status.AVALIBLE));
+                "This artifact was created for customers with the category semipro.", Status.AVALIBLE, ""));
         mockedData.put(2L, new Artifact(2L, new GregorianCalendar(2016, 9, 9).getTime(), "Perfect Artifact", Category.PROFESSIONAL,
-                "This artifact was designed by a team o high qualified scientists and field tested by the US Army. It's created for real professionals.", Status.BOOKED));
+                "This artifact was designed by a team o high qualified scientists and field tested by the US Army. It's created for real professionals.", Status.BOOKED, "kowalski"));
         mockedData.put(3L, new Artifact(3L, new GregorianCalendar(2016, 10, 10).getTime(), "Sufficient Artifact", Category.AMATEUR,
-                "It works, so it is perfect for all amateurs.", Status.BORROWED));
+                "It works, so it is perfect for all amateurs.", Status.BORROWED, "user"));
     }
 
     @Override
@@ -49,7 +49,25 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
 
     @Override
     public List<Artifact> findSpecifiedArtifacts(ArtifactBo artifactBo) {
-        if(!artifactBo.getName().equals("")){
+      
+    	List <Artifact> lists = findAllArtifacts();
+    	if(artifactBo.getName()!=null && !artifactBo.getName().equals("") ){
+    		lists = lists.stream().filter(a -> a.getName().equals(artifactBo.getName())).collect(Collectors.toList());
+    	}
+    	if(artifactBo.getStatus()!=null){
+    		lists = lists.stream().filter(a -> a.getStatus().equals(artifactBo.getStatus())).collect(Collectors.toList());
+    	}
+
+    	if(artifactBo.getType()!=null){
+    		lists = lists.stream().filter(a -> a.getType().equals(artifactBo.getType())).collect(Collectors.toList());
+    	}
+
+    	if( artifactBo.getUsername()!=null && artifactBo.getUsername()!="" ){
+    		lists = lists.stream().filter(a -> a.getUsername().equals(artifactBo.getUsername())).collect(Collectors.toList());
+    	}
+
+    	return lists;
+    /*	if(!artifactBo.getName().equals("")){
             if(artifactBo.getStatus()!=null){
                 if(artifactBo.getType()!=null){
                     return mockedData.values().stream().filter(a -> a.getStatus() == artifactBo.getStatus() && a.getType() == artifactBo.getType() && a.getName().contains(artifactBo.getName())).collect(Collectors.toList());
@@ -65,8 +83,9 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
         } else if(artifactBo.getType()!=null) {
             return mockedData.values().stream().filter(a -> a.getType() == artifactBo.getType()).collect(Collectors.toList());
         }
+        
 
-        return findAllArtifacts();
+        return findAllArtifacts();*/
     }
 
     @Override
@@ -118,6 +137,7 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
             if (next.getValue().getId().equals(artifact.getId())) {
                 if(next.getValue().getStatus()==Status.AVALIBLE) {
                     next.getValue().setStatus(Status.BOOKED);
+                    next.getValue().setUsername(artifact.getUsername());
                     return true;
                 }
                 else return false;
@@ -150,6 +170,7 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
             if (next.getValue().getId().equals(artifact.getId())) {
                 if(next.getValue().getStatus()==Status.BORROWED) {
                     next.getValue().setStatus(Status.AVALIBLE);
+                    next.getValue().setUsername("");
                     return true;
                 }
                 else return false;

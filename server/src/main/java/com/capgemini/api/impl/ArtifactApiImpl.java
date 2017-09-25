@@ -92,7 +92,7 @@ public class ArtifactApiImpl implements ArtifactApi {
             ArtifactTo body = modelMapper.map(createdArtifactBo, ArtifactTo.class);
             return new ResponseEntity<ArtifactTo>(body, HttpStatus.OK);
         } else {
-            return new ResponseEntity<ArtifactTo>(HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<ArtifactTo>(HttpStatus.FOUND);
         }
     }
 
@@ -109,7 +109,7 @@ public class ArtifactApiImpl implements ArtifactApi {
         if (isArtifactAvailable) {
             return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.OK);
         } else {
-            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.FOUND);
         }
     }
 
@@ -126,7 +126,7 @@ public class ArtifactApiImpl implements ArtifactApi {
         if (isArtifactAvailable) {
             return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.OK);
         } else {
-            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.FOUND);
         }
     }
 
@@ -143,7 +143,7 @@ public class ArtifactApiImpl implements ArtifactApi {
         if (isArtifactAvailable) {
             return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.OK);
         } else {
-            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<Boolean>(isArtifactAvailable, HttpStatus.FOUND);
         }
     }
 
