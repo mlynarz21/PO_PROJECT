@@ -44,9 +44,9 @@
                 </HBox>
             <HBox id="GridPaneInner" alignment="BOTTOM_CENTER" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="3">
                <children>
-                  <TextField fx:id="nameInput2" prefHeight="31.0" prefWidth="266.0" promptText="%artifactList.nameInputPrompt" />
-                  <ComboBox fx:id="typeInput2" prefHeight="31.0" prefWidth="130.0" promptText="%artifactList.typeInputPrompt" />
-                  <ComboBox fx:id="statusInput2" prefHeight="31.0" prefWidth="130.0" promptText="%artifactList.artifactsCol5" />
+                  <TextField fx:id="searchNameInput" prefHeight="31.0" prefWidth="266.0" promptText="%artifactList.nameInputPrompt" />
+                  <ComboBox fx:id="searchTypeInput" prefHeight="31.0" prefWidth="130.0" promptText="%artifactList.typeInputPrompt" />
+                  <ComboBox fx:id="searchStatusInput" prefHeight="31.0" prefWidth="130.0" promptText="%artifactList.artifactsCol5" />
 
                   <Button cancelButton="true" mnemonicParsing="false" onAction="#clear" prefHeight="31.0" prefWidth="99.0" text="%artifactList.clearButtonLabel" />
                   <Button defaultButton="true" mnemonicParsing="false" onAction="#search" prefHeight="31.0" prefWidth="100.0" text="%artifactList.searchButtonLabel" />

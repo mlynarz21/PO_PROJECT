@@ -44,13 +44,13 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
     @FXML
     ComboBox<Category> typeInput;
     @FXML
-    TextField nameInput2;
+    TextField searchNameInput;
     @FXML
-    ComboBox<Category> typeInput2;
+    ComboBox<Category> searchTypeInput;
     @FXML
     ComboBox<Status> statusInput;
     @FXML
-    ComboBox<Status> statusInput2;
+    ComboBox<Status> searchStatusInput;
     
     @Autowired
     private ArtifactRestServiceClient restServiceClient;
@@ -76,10 +76,10 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
         statusColumn.setCellValueFactory(celldata -> celldata.getValue().getStatus());
         userColumn.setCellValueFactory(celldata -> celldata.getValue().getUser());
         typeInput.setItems(FXCollections.observableArrayList(Category.values()));
-        typeInput2.setItems(FXCollections.observableArrayList(Category.values()));
+        searchTypeInput.setItems(FXCollections.observableArrayList(Category.values()));
 
         statusInput.setItems(FXCollections.observableArrayList(Status.values()));
-        statusInput2.setItems(FXCollections.observableArrayList(Status.values()));
+        searchStatusInput.setItems(FXCollections.observableArrayList(Status.values()));
 
     }
 
@@ -121,9 +121,9 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
     @FXML
     public void search() {
         ArtifactTo to = new ArtifactTo();
-        to.setName(nameInput2.getText());
-        to.setType(typeInput2.getSelectionModel().getSelectedItem());
-        to.setStatus(statusInput2.getSelectionModel().getSelectedItem());
+        to.setName(searchNameInput.getText());
+        to.setType(searchTypeInput.getSelectionModel().getSelectedItem());
+        to.setStatus(searchStatusInput.getSelectionModel().getSelectedItem());
         loadSpecifiedData(to);
     }
 
@@ -137,9 +137,9 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
 	
 	@FXML
 	public void clear() {
-        nameInput2.clear();
-        typeInput2.getSelectionModel().clearSelection();
-        statusInput2.getSelectionModel().clearSelection();
+        searchNameInput.clear();
+        searchTypeInput.getSelectionModel().clearSelection();
+        searchStatusInput.getSelectionModel().clearSelection();
     }
 	
 	@FXML 
@@ -156,6 +156,7 @@ public class ArtifactListAdminController extends ArtifactsBaseController {
         ArtifactTo to = new ArtifactTo();
         ArtifactModel artifactModel=artifacts.getSelectionModel().getSelectedItem();
         to.setId(artifactModel.getId());
+        to.setUsername(context.getSession().getUserName());
         restServiceClient.bookArtifact(to);
         loadAllData();
 	}
