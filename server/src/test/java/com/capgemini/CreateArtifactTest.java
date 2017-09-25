@@ -111,7 +111,7 @@ public class CreateArtifactTest {
         artifact.setCreationDate(CREATION_DATE);
         artifact.setDescription(DESCRIPTION);
         artifact.setName(NAME);
-        artifact.setType(Category.PROFESSIONAL);
+        //artifact.setType(Category);
 
         return artifact;
     }

@@ -24,11 +24,11 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
     private static final Map<Long, Artifact> mockedData;
     static {
         mockedData = new HashMap<Long, Artifact>();
-        mockedData.put(1L, new Artifact(1L, new GregorianCalendar(2016, 8, 8).getTime(), "Good Artifact", Category.SEMIPRO,
+        mockedData.put(1L, new Artifact(1L, new GregorianCalendar(2016, 8, 8).getTime(), "Good Artifact", Category.COMEDY,
                 "This artifact was created for customers with the category semipro.", Status.AVALIBLE, ""));
-        mockedData.put(2L, new Artifact(2L, new GregorianCalendar(2016, 9, 9).getTime(), "Perfect Artifact", Category.PROFESSIONAL,
+        mockedData.put(2L, new Artifact(2L, new GregorianCalendar(2016, 9, 9).getTime(), "Perfect Artifact", Category.DRAMA,
                 "This artifact was designed by a team o high qualified scientists and field tested by the US Army. It's created for real professionals.", Status.BOOKED, "kowalski"));
-        mockedData.put(3L, new Artifact(3L, new GregorianCalendar(2016, 10, 10).getTime(), "Sufficient Artifact", Category.AMATEUR,
+        mockedData.put(3L, new Artifact(3L, new GregorianCalendar(2016, 10, 10).getTime(), "Sufficient Artifact", Category.KRIMI,
                 "It works, so it is perfect for all amateurs.", Status.BORROWED, "user"));
     }
 
