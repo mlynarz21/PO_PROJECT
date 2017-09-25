@@ -37,7 +37,10 @@ public class AuthorizationApiImpl implements AuthorizationApi {
         String userType = authorizationService.getUserType(userName);    
         SessionTo body = new SessionTo(sessionId, userType, userName);
         if(sessionId != null) {
+        	if(userType!= null)
             return new ResponseEntity<SessionTo>(body, HttpStatus.OK);
+        	else 
+                return new ResponseEntity<SessionTo>(body, HttpStatus.FOUND);
         } else {
             return new ResponseEntity<SessionTo>(body, HttpStatus.FOUND);
         }

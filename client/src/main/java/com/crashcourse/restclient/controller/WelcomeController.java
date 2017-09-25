@@ -33,11 +33,20 @@ public class WelcomeController extends ArtifactsBaseController {
 
     @FXML
     public void proceed() throws LoginException {
+    	
+    	FXMLDialog defaultDialog=null;
+    	if(username.getText().equals("") || password.getText().equals("")){
+    		defaultDialog=getScreens().informationErrorDialog("Empty");
+    	}
+    	else{
         authorizationRestServiceClient.login(username.getText(), password.getText());
 
-        Optional.ofNullable(app.getSession()).orElseThrow(() -> new LoginException());
+       // Optional.ofNullable(app.getSession()) -> defaultDialog=getScreens().informationErrorDialog("Register"););
 
-        FXMLDialog defaultDialog=null;
+        if(app.getSession()==null){
+        	defaultDialog=getScreens().informationErrorDialog("Login");
+        }else{
+        
         if(app.getSession().getUserType().equals("admin"))
         		defaultDialog = getScreens().artifactListAdminDialog();
         else
@@ -45,7 +54,8 @@ public class WelcomeController extends ArtifactsBaseController {
         		defaultDialog = getScreens().artifactListDialog();
         else
         	throw new LoginException();
-        
+        }
+    	}
         getDialog().close();
         getScreens().showDialog(defaultDialog);
 

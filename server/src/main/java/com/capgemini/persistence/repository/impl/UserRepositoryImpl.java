@@ -74,7 +74,13 @@ public class UserRepositoryImpl implements UserRepository {
 
 	@Override
 	public String getUserType(String username) {
+		if(existsUser(username))
         return mockedUsers.values().stream().filter(user -> user.getUsername().equals(username)).findFirst().get().getUserType();
+	    return null;
+	}
+	public boolean existsUser(String userName){
+		//return true;
+		return mockedUsers.values().stream().filter(u -> u.getUsername().equals(userName)).count()>0;
 	}
 
 }

@@ -52,13 +52,15 @@ public class InformationErrorController extends ArtifactsBaseController {
 	 @FXML
 	   void initialize() {
 		System.out.println(text);
-		if (text.equals("Register")) {
-				informationText.setText("Enter the password or another user name");
-		}
-		
-		else {
+		if (text.equals("Register")) 
+				informationText.setText("User name already exists or empty fields");
+		else if(text.equals("Empty"))
+			informationText.setText("Empty username or password");
+		else if(text.equals("Login"))
+			informationText.setText("Incorrect username or password");
+		else 
 			 informationText.setText("Another exception");
-			}
+			
 		 
 		 
 		 
