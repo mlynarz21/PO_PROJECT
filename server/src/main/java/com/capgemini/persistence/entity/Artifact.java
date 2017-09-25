@@ -37,8 +37,19 @@ public class Artifact {
     
     @Enumerated(EnumType.STRING)
     private Status status;
+    
+    @Size(max = 32)
+    private String username;
 
-    public Status getStatus() {
+    public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public Status getStatus() {
 		return status;
 	}
 
@@ -49,6 +60,15 @@ public class Artifact {
 	public Artifact() {
 
     }
+	public Artifact(Long id, Date creationDate, String name, Category type, String description, Status status, String username){
+        this.id = id;
+        this.creationDate = creationDate;
+        this.name = name;
+        this.type = type;
+        this.description = description;
+        this.status = status;
+        this.username = username;
+	}
 
     public Artifact(Long id, Date creationDate, String name, Category type, String description, Status status) {
         this.id = id;

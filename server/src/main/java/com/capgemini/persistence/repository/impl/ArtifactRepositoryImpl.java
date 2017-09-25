@@ -25,11 +25,11 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
     static {
         mockedData = new HashMap<Long, Artifact>();
         mockedData.put(1L, new Artifact(1L, new GregorianCalendar(2016, 8, 8).getTime(), "Good Artifact", Category.SEMIPRO,
-                "This artifact was created for customers with the category semipro.", Status.AVALIBLE));
+                "This artifact was created for customers with the category semipro.", Status.AVALIBLE, ""));
         mockedData.put(2L, new Artifact(2L, new GregorianCalendar(2016, 9, 9).getTime(), "Perfect Artifact", Category.PROFESSIONAL,
-                "This artifact was designed by a team o high qualified scientists and field tested by the US Army. It's created for real professionals.", Status.BOOKED));
+                "This artifact was designed by a team o high qualified scientists and field tested by the US Army. It's created for real professionals.", Status.BOOKED, "kowalski"));
         mockedData.put(3L, new Artifact(3L, new GregorianCalendar(2016, 10, 10).getTime(), "Sufficient Artifact", Category.AMATEUR,
-                "It works, so it is perfect for all amateurs.", Status.BORROWED));
+                "It works, so it is perfect for all amateurs.", Status.BORROWED, "user"));
     }
 
     @Override
@@ -118,6 +118,7 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
             if (next.getValue().getId().equals(artifact.getId())) {
                 if(next.getValue().getStatus()==Status.AVALIBLE) {
                     next.getValue().setStatus(Status.BOOKED);
+                    next.getValue().setUsername(artifact.getUsername());
                     return true;
                 }
                 else return false;
@@ -134,6 +135,7 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
             if (next.getValue().getId().equals(artifact.getId())) {
                 if(next.getValue().getStatus()==Status.BOOKED) {
                     next.getValue().setStatus(Status.BORROWED);
+                    next.getValue().setUsername(artifact.getUsername());
                     return true;
                 }
                 else return false;
@@ -150,6 +152,7 @@ public class ArtifactRepositoryImpl implements ArtifactRepository {
             if (next.getValue().getId().equals(artifact.getId())) {
                 if(next.getValue().getStatus()==Status.BORROWED) {
                     next.getValue().setStatus(Status.AVALIBLE);
+                    next.getValue().setUsername("");
                     return true;
                 }
                 else return false;

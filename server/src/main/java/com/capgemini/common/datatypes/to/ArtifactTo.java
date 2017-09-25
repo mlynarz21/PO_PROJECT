@@ -21,13 +21,21 @@ public class ArtifactTo {
 
     private Category type;
 
-
-
 	private String description;
     
     private Status status;
+    
+    private String username;
 
-    public Status getStatus() {
+    public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public Status getStatus() {
 		return status;
 	}
 
