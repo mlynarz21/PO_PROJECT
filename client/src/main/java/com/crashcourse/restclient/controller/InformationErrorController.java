@@ -53,7 +53,7 @@ public class InformationErrorController extends ArtifactsBaseController {
 	   void initialize() {
 		System.out.println(text);
 		if (text.equals("Register")) {
-				informationText.setText("This user name already exists");
+				informationText.setText("Enter the password or another user name");
 		}
 		
 		else {

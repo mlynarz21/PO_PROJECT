@@ -16,11 +16,7 @@
                 <Font name="System Bold" size="30.0" />
             </font>
         </Label>
-        <Label id="header" layoutX="45.0" layoutY="107.0" text="%welcomeDialog.infoLabel" textFill="GREY">
-         <font>
-            <Font size="20.0" />
-         </font></Label>
       <Button layoutX="358.0" layoutY="178.0" mnemonicParsing="false" onAction="#close" text="%informationDialog.closeButton" />
-      <TextField fx:id="informationText" layoutX="45.0" layoutY="137.0" />
+      <TextField fx:id="informationText" layoutX="45.0" layoutY="102.0" prefHeight="31.0" prefWidth="381.0" />
     </children>
 </AnchorPane>
