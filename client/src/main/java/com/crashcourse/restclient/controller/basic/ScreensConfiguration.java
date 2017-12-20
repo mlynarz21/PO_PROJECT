@@ -33,6 +33,16 @@ public class ScreensConfiguration {
         primaryStage.show();
     }
 
+    public void setLocale(Locale locale) {
+        this.locale = locale;
+
+    }
+
+    public Locale getLocale() {
+
+        return locale;
+    }
+
     @Bean
     @Scope("prototype")
     public FXMLDialog loginDialog() {
@@ -46,7 +56,60 @@ public class ScreensConfiguration {
         return new LoginController(primaryStage);
     }
 
+
     @Bean
+    @Scope("prototype")
+    ArtifactsBaseController informationErrorController(String errorType) {
+        return new InformationErrorController(primaryStage, errorType);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog informationErrorDialog(String errorType) {
+        return manager.initializeDialog(informationErrorController(errorType));
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog mainScreenDialog() {
+
+        return manager.initializeDialog(mainScreenController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    MainScreenController mainScreenController() {
+        return new MainScreenController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog monthPickupDialog() {
+        return manager.initializeDialog(monthPickupController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public MonthPickupController monthPickupController() {
+        return new MonthPickupController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog orderPickupDialog() {
+        return manager.initializeDialog(orderPickupController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public OrderPickupController orderPickupController() {
+        return new OrderPickupController(primaryStage);
+    }
+
+
+
+
+/*    @Bean
     @Scope("prototype")
     WelcomeController welcomeController() {
         return new WelcomeController(primaryStage);
@@ -75,7 +138,7 @@ public class ScreensConfiguration {
     public FXMLDialog artifactListDialog() {
         return manager.initializeDialog(artifactListController());
     }
-    
+
     @Bean
     @Scope("prototype")
     ArtifactsBaseController artifactListAdminController() {
@@ -87,7 +150,7 @@ public class ScreensConfiguration {
     public FXMLDialog artifactListAdminDialog() {
         return manager.initializeDialog(artifactListAdminController());
     }
-       
+
     @Bean
     @Scope("prototype")
     ArtifactsBaseController registerController() {
@@ -98,32 +161,10 @@ public class ScreensConfiguration {
     @Scope("prototype")
     public FXMLDialog registerDialog() {
         return manager.initializeDialog(registerController());
-    }
+    }*/
 
 
 
-
-    public void setLocale(Locale locale) {
-        this.locale = locale;
-
-    }
-
-    public Locale getLocale() {
-
-        return locale;
-    }
-  
-    @Bean
-    @Scope("prototype")
-    ArtifactsBaseController informationErrorController(String errorType) {
-    	return new InformationErrorController(primaryStage, errorType);
-	}
-    
-    @Bean
-    @Scope("prototype")
-	public FXMLDialog informationErrorDialog(String errorType) {
-		return manager.initializeDialog(informationErrorController(errorType));
-    }
 
     /*
     @Bean
