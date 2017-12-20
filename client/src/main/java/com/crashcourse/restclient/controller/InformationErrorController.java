@@ -3,13 +3,13 @@ package com.crashcourse.restclient.controller;
 import com.crashcourse.restclient.view.FXMLDialog;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 public class InformationErrorController extends ArtifactsBaseController {
 
 	@FXML
-    TextField informationText;
+	Label informationText;
 	private String errorType;
 	private String text;
 	
@@ -60,10 +60,6 @@ public class InformationErrorController extends ArtifactsBaseController {
 			informationText.setText("Incorrect username or password");
 		else 
 			 informationText.setText("Another exception");
-			
-		 
-		 
-		 
 	 }
 	
 	

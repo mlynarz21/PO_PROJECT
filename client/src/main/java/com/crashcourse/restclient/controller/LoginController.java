@@ -1,21 +1,17 @@
 package com.crashcourse.restclient.controller;
 
-import java.util.Optional;
-
-import javax.security.auth.login.LoginException;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.crashcourse.restclient.api.AuthorizationRestServiceClient;
 import com.crashcourse.restclient.main.config.LibrarySecurityContext;
 import com.crashcourse.restclient.view.FXMLDialog;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
 
-public class WelcomeController extends ArtifactsBaseController {
+import javax.security.auth.login.LoginException;
+
+public class LoginController extends ArtifactsBaseController {
 
     @Autowired
     LibrarySecurityContext app;
@@ -27,7 +23,7 @@ public class WelcomeController extends ArtifactsBaseController {
     @FXML
     TextField username;
 
-    public WelcomeController(Stage primaryStage) {
+    public LoginController(Stage primaryStage) {
         super(primaryStage);
     }
 
@@ -59,12 +55,6 @@ public class WelcomeController extends ArtifactsBaseController {
         getDialog().close();
         getScreens().showDialog(defaultDialog);
 
-    }
-    @FXML
-    public void register() {
-        FXMLDialog defaultDialog=getScreens().registerDialog();
-        getDialog().close();
-        getScreens().showDialog(defaultDialog);
     }
     @Override
     public String getResourcePath() {

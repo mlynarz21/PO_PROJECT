@@ -44,7 +44,7 @@ public class LibraryApplication extends Application {
         Locale locale = Optional.ofNullable(string).map(Locale::forLanguageTag).orElse(Locale.getDefault());
         screens.setLocale(locale);
 
-        stage.setTitle("Library Application");
+        stage.setTitle("StoreX Application");
         screens.setPrimaryStage(stage);
         screens.loginDialog().show();
     }

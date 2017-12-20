@@ -2,19 +2,13 @@ package com.crashcourse.restclient.controller.basic;
 
 import java.util.Locale;
 
+import com.crashcourse.restclient.controller.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 
-import com.crashcourse.restclient.controller.ArtifactListAdminController;
-import com.crashcourse.restclient.controller.ArtifactListController;
-import com.crashcourse.restclient.controller.ArtifactsBaseController;
-import com.crashcourse.restclient.controller.DefaultDialogController;
-import com.crashcourse.restclient.controller.InformationErrorController;
-import com.crashcourse.restclient.controller.RegisterController;
-import com.crashcourse.restclient.controller.WelcomeController;
 import com.crashcourse.restclient.view.FXMLDialog;
 
 import javafx.stage.Stage;
@@ -43,7 +37,13 @@ public class ScreensConfiguration {
     @Scope("prototype")
     public FXMLDialog loginDialog() {
 
-        return manager.initializeDialog(welcomeController());
+        return manager.initializeDialog(loginController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    LoginController loginController() {
+        return new LoginController(primaryStage);
     }
 
     @Bean

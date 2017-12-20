@@ -144,5 +144,4 @@ public class ArtifactListController extends ArtifactsBaseController {
 		getDialog().close();
         getScreens().showDialog(defaultDialog);
     }
-
 }
