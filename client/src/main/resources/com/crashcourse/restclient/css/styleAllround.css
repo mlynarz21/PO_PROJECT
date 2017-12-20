@@ -1,0 +1,29 @@
+.root{
+-fx-background-image: url("tapeta.png");
+-fx-background-color: black;
+-fx-background-blend-mode: screen;
+-fx-background-size: cover;
+-fx-font-style:italic;
+-fx-blend-mode: darken
+}
+.button{
+    -fx-background-radius: 15;
+}
+
+.label{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.text-field{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 10 10 10 10;
+}
+
+.column-header {
+    -fx-text-fill: white;
+    -fx-background-color:  #9500ff;
+    -fx-blend-mode: color-burn;
+    -fx-opacity: 0.95;
+    -fx-font-size: 26;
+}

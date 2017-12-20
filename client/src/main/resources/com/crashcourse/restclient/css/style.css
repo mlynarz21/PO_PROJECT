@@ -1,14 +1,10 @@
 .root{
--fx-background-image: url("booksinst.jpg");
+-fx-background-image: url("warhouse_login.jpg");
 -fx-background-size: cover, auto;
 -fx-font-style:italic;
--fx-font-size: 16px
-
-
+-fx-opacity: 0.9
 }
-
-.button {
-    -fx-background-color: #ffebcd;
-    -fx-font-size:18px
+.button{
+    -fx-background-radius: 15;
 }
 

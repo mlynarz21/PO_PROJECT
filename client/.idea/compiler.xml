@@ -9,7 +9,7 @@
         <module name="ArtifactLibrary.client" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="ArtifactLibrary.client" target="1.8" />
     </bytecodeTargetLevel>
   </component>

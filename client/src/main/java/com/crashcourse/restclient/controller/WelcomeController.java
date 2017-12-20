@@ -69,7 +69,7 @@ public class WelcomeController extends ArtifactsBaseController {
 
     @Override
     public String getResourcePath() {
-        return "/com/crashcourse/restclient/controller/Welcome.fxml";
+        return "/com/crashcourse/restclient/controller/ConfirmationDialog.fxml";
     }
 
 }

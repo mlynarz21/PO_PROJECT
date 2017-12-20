@@ -1,0 +1,18 @@
+.root{
+-fx-background-image: url("tapeta.png");
+-fx-background-color: black;
+-fx-background-blend-mode: screen;
+-fx-background-size: cover;
+-fx-font-style:italic;
+-fx-blend-mode: darken
+}
+.button{
+    -fx-background-radius: 15;
+}
+.column-header {
+    -fx-text-fill: white;
+    -fx-background-color:  #9500ff;
+    -fx-blend-mode: color-burn;
+    -fx-opacity: 0.95;
+    -fx-font-size: 26;
+}
