@@ -22,7 +22,6 @@ import javafx.stage.Window;
  */
 public class FXMLDialog extends Stage {
     private String baseName = "com/crashcourse/restclient/bundle/base";
-    private String pathToCss = "com/crashcourse/restclient/css/style.css";
 
     public FXMLDialog(DialogController controller, URL fxml, Window owner, StageStyle undecorated, Locale locale) throws IOException {
         this(controller, fxml, owner, StageStyle.DECORATED);
@@ -30,7 +29,6 @@ public class FXMLDialog extends Stage {
         FXMLLoader loader = new FXMLLoader(fxml, bundle);
         loader.setControllerFactory(aClass -> controller);
         Scene scene = new Scene((Parent) loader.load());
-        scene.getStylesheets().add(pathToCss);
         setScene(scene);
     }
 
@@ -38,8 +36,7 @@ public class FXMLDialog extends Stage {
         super(style);
         initOwner(owner);
         initModality(Modality.WINDOW_MODAL);
-        setResizable(true);
-
+        setResizable(false);
     }
 
 }

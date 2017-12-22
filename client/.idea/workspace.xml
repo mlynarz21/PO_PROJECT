@@ -2,19 +2,75 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f31e1de3-36f0-4a41-917e-a7e76ea92651" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/KAMLYNAR.xml" afterPath="" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LocalizationPickupController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MonthPickupController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/QuantityProductController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/AlertDialog.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/alert.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/BilansRepository.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/impl/BilansRepositoryImpl.java" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/ArtifactLibrary.client.iml" afterPath="$PROJECT_DIR$/ArtifactLibrary.client.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/ArtifactRestServiceClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/ArtifactRestServiceClient.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/AuthorizationRestServiceClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/AuthorizationRestServiceClient.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/ArtifactRestServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/ArtifactRestServiceClientImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/AuthorizationRestServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/AuthorizationRestServiceClientImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactListAdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactListAdminController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactListController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactListController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactsBaseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactsBaseController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/DefaultDialogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/DefaultDialogController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/InformationErrorController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/InformationErrorController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LoginController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/RegisterController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/RegisterController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/WelcomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/WelcomeController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogManager.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ArtifactTo.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/ArtifactTo.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/SessionTo.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/SessionTo.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/UserTo.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/UserTo.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/Category.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/Category.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/Status.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/Status.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/LibraryApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/StoreXApplication.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/config/LibraryAppConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/config/StoreXAppConfiguration.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/config/LibrarySecurityContext.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/config/StoreXSecurityContext.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ArtifactModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ArtifactModel.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/BalanceWarningController.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/FXMLDialog.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/FXMLDialog.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base.properties" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Register.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Register.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Welcome.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Welcome.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/BalanceAcceptance.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/BalanceAcceptance.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MainScreen.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MainScreen.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OrderPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OrderPickup.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ShipmentData.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ShipmentData.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/bilans.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/booksinst.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/dostawa.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/edprzestrz.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/kompletuj.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/przegladaj.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/przyjmij.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/relokuj.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/../server/src/test/java/com/capgemini/service/impl/ArtifactBookingServiceTest.java" afterPath="$PROJECT_DIR$/../server/src/test/java/com/capgemini/service/impl/ArtifactBookingServiceTest.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/tapeta.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/tapeta2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/warhouse_login.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/wydaj.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/wyloguj.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/StoreXApplication.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/StoreXApplication.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/impl/UserRepositoryImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/impl/UserRepositoryImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,41 +82,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="InformationErrorController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/InformationErrorController.java">
+      <file leaf-file-name="AlertDialog.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/AlertDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+            <state relative-caret-position="289">
+              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1795#1796#0" expanded="true" />
+                <element signature="e#1830#1831#0" expanded="true" />
+                <element signature="e#1869#1870#0" expanded="true" />
+                <element signature="e#1900#1901#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="ScreensConfiguration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="24">
+              <caret line="166" column="5" lean-forward="true" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
+              <folding>
+                <element signature="e#3344#3345#0" expanded="true" />
+                <element signature="e#3420#3421#0" expanded="true" />
+                <element signature="e#3522#3523#0" expanded="true" />
+                <element signature="e#3588#3589#0" expanded="true" />
+                <element signature="e#3668#3669#0" expanded="true" />
+                <element signature="e#3741#3742#0" expanded="true" />
+                <element signature="e#3837#3838#0" expanded="true" />
+                <element signature="e#3900#3901#0" expanded="true" />
+                <element signature="e#3985#3986#0" expanded="true" />
+                <element signature="e#4063#4064#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArtifactsBaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactsBaseController.java">
+      <file leaf-file-name="ProductPickupController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+            <state relative-caret-position="382">
+              <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#762#763#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
+                <element signature="e#834#835#0" expanded="true" />
+                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#922#923#0" expanded="true" />
+                <element signature="e#1004#1005#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -70,6 +152,52 @@
       <projects_view />
     </option>
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ConfirmationDialog.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/InformationError.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/InformationErrorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/LibraryApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/ArtifactRestServiceClient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/UserTo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/config/StoreXAppConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/StoreXApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreen.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactListController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/WelcomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/BalanceAcceptance.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OrderPickup.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LocalizationPickupController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/QuantityProductController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/FXMLDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ShipmentData.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/alert.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceWarningController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MonthPickupController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MainScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/BalanceWarningController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/AlertDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactsBaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/IssueConfirmationController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/IssueConfirmarionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -77,10 +205,34 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1940" />
-    <option name="height" value="1100" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SpringJavaAutowiredMembersInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -98,7 +250,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,7 +292,35 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="client" type="b2602c69:ProjectViewProjectNode" />
@@ -177,22 +358,37 @@
             <path>
               <item name="client" type="b2602c69:ProjectViewProjectNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mlynarz\Desktop\PO_MAGAZYN\client\src\main\resources\com\crashcourse\restclient\images" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.crashcourse.restclient.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mlynarz\Desktop\PO_MAGAZYN\client\src\main\resources\com\crashcourse\restclient\css" />
+      <recent name="C:\Users\mlynarz\Desktop\PO_MAGAZYN\client\src\main\resources\com\crashcourse\restclient\controller" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -214,14 +410,14 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="LibraryApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="StoreXApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.crashcourse.restclient.main.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.crashcourse.restclient.main.LibraryApplication" />
+      <option name="MAIN_CLASS_NAME" value="com.crashcourse.restclient.main.StoreXApplication" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -309,7 +505,7 @@
     </configuration>
     <recent_temporary>
       <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.LibraryApplication" />
+        <item index="0" class="java.lang.String" itemvalue="Application.StoreXApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -326,44 +522,76 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513789152481</updated>
-      <workItem from="1513789157563" duration="1605000" />
+      <workItem from="1513789157563" duration="3605000" />
+      <workItem from="1513797546057" duration="8299000" />
+      <workItem from="1513864837011" duration="8666000" />
+      <workItem from="1513885599403" duration="2222000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <created>1513790968539</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1513790968539</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial commit">
+      <created>1513802960797</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1513802960797</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dodano nowe ekrany, funkcjonalnosc anuluj">
+      <created>1513809396305</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1513809396305</updated>
+    </task>
+    <task id="LOCAL-00004" summary="polaczone ekrany, gui funkcjonalne">
+      <created>1513877153454</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1513877153454</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1605000" />
+    <option name="totallyTimeSpent" value="22792000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2916225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13891834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -373,26 +601,265 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="dodano nowe ekrany, funkcjonalnosc anuluj" />
+    <MESSAGE value="polaczone ekrany, gui funkcjonalne" />
+    <option name="LAST_COMMIT_MESSAGE" value="polaczone ekrany, gui funkcjonalne" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="10" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactsBaseController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreen.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactListAdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="46" lean-forward="true" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1895#1896#0" expanded="false" />
+            <element signature="e#1930#1931#0" expanded="false" />
+            <element signature="e#3645#3646#0" expanded="false" />
+            <element signature="e#3680#3681#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="7" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="144" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1883#1884#0" expanded="false" />
+            <element signature="e#1918#1919#0" expanded="false" />
+            <element signature="e#3462#3463#0" expanded="false" />
+            <element signature="e#3497#3498#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="1772" column="0" lean-forward="false" selection-start-line="1772" selection-start-column="0" selection-end-line="1772" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="42" />
+          <folding>
+            <element signature="e#815#816#0" expanded="false" />
+            <element signature="e#850#851#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/config/StoreXAppConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="109" lean-forward="true" selection-start-line="27" selection-start-column="109" selection-end-line="27" selection-end-column="109" />
+          <folding>
+            <element signature="e#1225#1250#0" expanded="false" />
+            <element signature="e#1407#1408#0" expanded="false" />
+            <element signature="e#1470#1471#0" expanded="false" />
+            <element signature="e#1530#1531#0" expanded="false" />
+            <element signature="e#1580#1581#0" expanded="false" />
+            <element signature="e#1630#1631#0" expanded="false" />
+            <element signature="e#1672#1673#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/ArtifactRestServiceClientImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" column="33" lean-forward="true" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/WelcomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/DefaultDialogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="68" lean-forward="false" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LocalizationPickupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/QuantityProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="46" column="61" lean-forward="true" selection-start-line="46" selection-start-column="61" selection-end-line="46" selection-end-column="61" />
+          <folding>
+            <element signature="e#1276#1277#0" expanded="false" />
+            <element signature="e#1355#1356#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <caret line="34" column="56" lean-forward="false" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#842#843#0" expanded="false" />
+            <element signature="e#1979#1980#0" expanded="false" />
+            <element signature="e#2053#2054#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Welcome.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Register.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/QuantityProduct.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Login.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKDialog.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Default.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base_PL.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -407,23 +874,247 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ConfirmationDialog.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/InformationError.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ArtifactModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
+        <state relative-caret-position="501">
+          <caret line="85" column="1" lean-forward="true" selection-start-line="85" selection-start-column="1" selection-end-line="85" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/FXMLDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="19" column="2" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ConfirmationDialog.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="289">
           <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="27" column="67" lean-forward="false" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/StoreXApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="70" column="12" lean-forward="false" selection-start-line="70" selection-start-column="12" selection-end-line="70" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ShipmentData.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OrderPickup.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="66" column="12" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/alert.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="47" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MainScreen.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="193" column="12" lean-forward="true" selection-start-line="193" selection-start-column="12" selection-end-line="193" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MonthPickupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="44" column="63" lean-forward="false" selection-start-line="44" selection-start-column="63" selection-end-line="44" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/InformationErrorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+        <state relative-caret-position="867">
+          <caret line="61" column="58" lean-forward="false" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/AlertDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
+            <element signature="e#1830#1831#0" expanded="true" />
+            <element signature="e#1869#1870#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactsBaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#958#959#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/IssueConfirmarionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" lean-forward="true" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="166" column="5" lean-forward="true" selection-start-line="166" selection-start-column="5" selection-end-line="166" selection-end-column="5" />
+          <folding>
+            <element signature="e#3344#3345#0" expanded="true" />
+            <element signature="e#3420#3421#0" expanded="true" />
+            <element signature="e#3522#3523#0" expanded="true" />
+            <element signature="e#3588#3589#0" expanded="true" />
+            <element signature="e#3668#3669#0" expanded="true" />
+            <element signature="e#3741#3742#0" expanded="true" />
+            <element signature="e#3837#3838#0" expanded="true" />
+            <element signature="e#3900#3901#0" expanded="true" />
+            <element signature="e#3985#3986#0" expanded="true" />
+            <element signature="e#4063#4064#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="51" column="9" lean-forward="true" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+          <folding>
+            <element signature="e#762#763#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+            <element signature="e#834#835#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
           </folding>
         </state>
       </provider>

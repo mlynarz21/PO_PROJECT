@@ -7,11 +7,10 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.crashcourse.restclient.api.ArtifactRestServiceClient;
-import com.crashcourse.restclient.api.AuthorizationRestServiceClient;
-import com.crashcourse.restclient.datatype.ArtifactTo;
+import com.crashcourse.restclient.datatype.enumeration.ArtifactTo;
 import com.crashcourse.restclient.datatype.enumeration.Category;
 import com.crashcourse.restclient.datatype.enumeration.Status;
-import com.crashcourse.restclient.main.config.LibrarySecurityContext;
+import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.model.ArtifactModel;
 import com.crashcourse.restclient.view.FXMLDialog;
 
@@ -53,11 +52,11 @@ public class ArtifactListController extends ArtifactsBaseController {
     ComboBox<Status> searchStatusInput;
     @FXML
     TextField descriptionInput;
-    
+
     @Autowired
     private ArtifactRestServiceClient restServiceClient;
     @Autowired
-    private LibrarySecurityContext context;
+    private StoreXSecurityContext context;
 
     public ArtifactListController(Stage primaryStage) {
         super(primaryStage);
@@ -85,12 +84,12 @@ public class ArtifactListController extends ArtifactsBaseController {
         List<ArtifactModel> rows = allArtifacts.stream().map(ArtifactModel::fromArtifactTo).collect(Collectors.toList());
         artifacts.setItems(FXCollections.observableArrayList(rows));
     }
-    
+
     private void loadSpecifiedData(ArtifactTo to) {
     	List<ArtifactTo> specifiedArtifacts = restServiceClient.getSpecifiedArtifacts(to);
         List<ArtifactModel> rows = specifiedArtifacts.stream().map(ArtifactModel::fromArtifactTo).collect(Collectors.toList());
         artifacts.setItems(FXCollections.observableArrayList(rows));
-		
+
 	}
     @FXML
     public void close() {
@@ -101,8 +100,8 @@ public class ArtifactListController extends ArtifactsBaseController {
     public String getResourcePath() {
 
         return "/com/crashcourse/restclient/controller/ArtifactList.fxml";
-    } 
-    
+    }
+
     @FXML
     public void book() {
         ArtifactTo to = new ArtifactTo();
@@ -112,7 +111,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         restServiceClient.bookArtifact(to);
         loadAllData();
     }
-  
+
     @FXML
     public void search() {
         ArtifactTo to = new ArtifactTo();
@@ -121,7 +120,7 @@ public class ArtifactListController extends ArtifactsBaseController {
         to.setStatus(searchStatusInput.getSelectionModel().getSelectedItem());
         loadSpecifiedData(to);
     }
-    
+
     @FXML
     public void showMyBooks() {
         ArtifactTo to = new ArtifactTo();
@@ -129,14 +128,14 @@ public class ArtifactListController extends ArtifactsBaseController {
         loadSpecifiedData(to);
     }
 
-	
+
 	@FXML
 	public void clear() {
         searchNameInput.clear();
         searchTypeInput.getSelectionModel().clearSelection();
         searchStatusInput.getSelectionModel().clearSelection();
     }
-	
+
 	@FXML
 	public void logOut() {
 		context.deleteSession();

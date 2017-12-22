@@ -20,7 +20,7 @@ import com.crashcourse.restclient.controller.basic.ScreensConfiguration;
 @ComponentScan(basePackages = { "com.crashcourse.restclient.api.impl" })
 @Import(ScreensConfiguration.class)
 @PropertySource("classpath:/config.properties")
-public class LibraryAppConfiguration {
+public class StoreXAppConfiguration {
 
     @Bean
     RestTemplate restTemplate() {
@@ -35,8 +35,8 @@ public class LibraryAppConfiguration {
     }
 
     @Bean
-    LibrarySecurityContext getSecurityContext() {
-        return new LibrarySecurityContext();
+    StoreXSecurityContext getSecurityContext() {
+        return new StoreXSecurityContext();
     }
 
     @Bean

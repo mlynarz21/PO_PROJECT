@@ -106,6 +106,65 @@ public class ScreensConfiguration {
         return new OrderPickupController(primaryStage);
     }
 
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog productPickupDialog() {
+        return manager.initializeDialog(productPickupController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public ProductPickupController productPickupController() {
+        return new ProductPickupController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog localizationPickupDialog() {
+        return manager.initializeDialog(localizationPickupController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public LocalizationPickupController localizationPickupController() {
+        return new LocalizationPickupController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog quantityProductDialog() {
+        return manager.initializeDialog(quantityProductController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public QuantityProductController quantityProductController() {
+        return new QuantityProductController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog shipmentDataDialog() {
+        return manager.initializeDialog(shipmentDataController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public ShipmentDataController shipmentDataController() {
+        return new ShipmentDataController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog balanceAcceptanceDialog() {
+        return manager.initializeDialog(balanceAcceptanceController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public BalanceAcceptanceController balanceAcceptanceController() {
+        return new BalanceAcceptanceController(primaryStage);
+    }
 
 
 

@@ -1,13 +1,11 @@
 package com.crashcourse.restclient.controller;
 
-import java.util.Optional;
-
 import javax.security.auth.login.LoginException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.crashcourse.restclient.api.AuthorizationRestServiceClient;
-import com.crashcourse.restclient.main.config.LibrarySecurityContext;
+import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.view.FXMLDialog;
 
 import javafx.fxml.FXML;
@@ -18,7 +16,7 @@ import javafx.stage.Stage;
 public class WelcomeController extends ArtifactsBaseController {
 
     @Autowired
-    LibrarySecurityContext app;
+    StoreXSecurityContext app;
 
     @Autowired
     private AuthorizationRestServiceClient authorizationRestServiceClient;
@@ -31,7 +29,7 @@ public class WelcomeController extends ArtifactsBaseController {
         super(primaryStage);
     }
 
-    @FXML
+/*    @FXML
     public void proceed() throws LoginException {
     	
     	FXMLDialog defaultDialog=null;
@@ -65,10 +63,10 @@ public class WelcomeController extends ArtifactsBaseController {
         FXMLDialog defaultDialog=getScreens().registerDialog();
         getDialog().close();
         getScreens().showDialog(defaultDialog);
-    }
+    }*/
     @Override
     public String getResourcePath() {
-        return "/com/crashcourse/restclient/controller/Login.fxml";
+        return "/com/crashcourse/restclient/controller/Welcome.fxml";
     }
 
 }

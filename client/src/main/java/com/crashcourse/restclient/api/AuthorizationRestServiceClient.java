@@ -1,6 +1,6 @@
 package com.crashcourse.restclient.api;
 
-import com.crashcourse.restclient.datatype.SessionTo;
+import com.crashcourse.restclient.datatype.enumeration.SessionTo;
 
 /**
  * REST client for the artifact REST service.

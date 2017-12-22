@@ -18,7 +18,6 @@ public class UserRepositoryImpl implements UserRepository {
     private static final Map<Long, User> mockedUsers;
     static {
         userSessions = new HashMap<String, UUID>();
-
         mockedUsers = new HashMap<Long, User>();
         mockedUsers.put(1L, new User(1L, "admin", "topsecret", "admin"));
         mockedUsers.put(2L, new User(2L, "user", "user", "user"));

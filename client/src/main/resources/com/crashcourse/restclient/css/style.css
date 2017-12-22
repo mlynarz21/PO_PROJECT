@@ -6,5 +6,7 @@
 }
 .button{
     -fx-background-radius: 15;
+    -fx-cursor:hand;
 }
+
 

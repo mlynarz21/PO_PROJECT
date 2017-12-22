@@ -1,4 +1,4 @@
-package com.crashcourse.restclient.datatype;
+package com.crashcourse.restclient.datatype.enumeration;
 
 import java.util.Date;
 

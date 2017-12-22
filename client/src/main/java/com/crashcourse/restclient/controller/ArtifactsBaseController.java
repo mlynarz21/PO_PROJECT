@@ -22,7 +22,6 @@ public abstract class ArtifactsBaseController implements DialogController {
     }
 
     protected FXMLDialog getDialog() {
-
         return dialog;
     }
 

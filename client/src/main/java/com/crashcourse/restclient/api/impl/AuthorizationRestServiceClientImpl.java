@@ -12,9 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import com.crashcourse.restclient.api.AuthorizationRestServiceClient;
-import com.crashcourse.restclient.datatype.SessionTo;
-import com.crashcourse.restclient.datatype.UserTo;
-import com.crashcourse.restclient.main.config.LibrarySecurityContext;
+import com.crashcourse.restclient.datatype.enumeration.SessionTo;
+import com.crashcourse.restclient.datatype.enumeration.UserTo;
+import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 
 public class AuthorizationRestServiceClientImpl implements AuthorizationRestServiceClient {
     @Value("${application.authorization.url}")
@@ -23,7 +23,7 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
     @Autowired
     private RestTemplate restTemplate;
     @Autowired
-    private LibrarySecurityContext context;
+    private StoreXSecurityContext context;
 
     @Override
     public SessionTo login(String userName, String password) {

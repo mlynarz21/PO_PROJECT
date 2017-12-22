@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.stereotype.Component;
 
 import com.crashcourse.restclient.controller.basic.ScreensConfiguration;
-import com.crashcourse.restclient.main.config.LibraryAppConfiguration;
+import com.crashcourse.restclient.main.config.StoreXAppConfiguration;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -20,9 +20,9 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 @Component
-public class LibraryApplication extends Application {
+public class StoreXApplication extends Application {
 
-    private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(LibraryApplication.class);
+    private static final org.slf4j.Logger LOGGER = org.slf4j.LoggerFactory.getLogger(StoreXApplication.class);
 
     private ApplicationContext context;
 
@@ -49,7 +49,7 @@ public class LibraryApplication extends Application {
         screens.loginDialog().show();
     }
 
-    void showErrorScreen(Thread t, Throwable e) {
+    private void showErrorScreen(Thread t, Throwable e) {
         LOGGER.error("UncaughtException!:", e);
         if (Platform.isFxApplicationThread()) {
             LOGGER.info("FX thread detected. Showing error dialog");
@@ -80,7 +80,7 @@ public class LibraryApplication extends Application {
     @Override
     public void init() throws Exception {
         LOGGER.info("Setting up context...");
-        context = new AnnotationConfigApplicationContext(LibraryAppConfiguration.class);
+        context = new AnnotationConfigApplicationContext(StoreXAppConfiguration.class);
         LOGGER.info("Context startup done.");
         screens = context.getBean(ScreensConfiguration.class);
 

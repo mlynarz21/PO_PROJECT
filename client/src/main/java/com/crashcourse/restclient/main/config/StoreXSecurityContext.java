@@ -1,11 +1,11 @@
 package com.crashcourse.restclient.main.config;
 
-import com.crashcourse.restclient.datatype.SessionTo;
+import com.crashcourse.restclient.datatype.enumeration.SessionTo;
 
 /**
  * Context holding the security information of the client.
  */
-public class LibrarySecurityContext {
+public class StoreXSecurityContext {
 
     private SessionTo session = null;
 

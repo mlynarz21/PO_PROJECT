@@ -1,7 +1,7 @@
 package com.crashcourse.restclient.controller;
 
 import com.crashcourse.restclient.api.AuthorizationRestServiceClient;
-import com.crashcourse.restclient.main.config.LibrarySecurityContext;
+import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.view.FXMLDialog;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -14,7 +14,7 @@ import javax.security.auth.login.LoginException;
 public class LoginController extends ArtifactsBaseController {
 
     @Autowired
-    LibrarySecurityContext app;
+    StoreXSecurityContext app;
 
     @Autowired
     private AuthorizationRestServiceClient authorizationRestServiceClient;
@@ -29,33 +29,32 @@ public class LoginController extends ArtifactsBaseController {
 
     @FXML
     public void proceed() throws LoginException {
-    	
-    	FXMLDialog defaultDialog=null;
-    	if(username.getText().equals("") || password.getText().equals("")){
-    		defaultDialog=getScreens().informationErrorDialog("Empty");
-    	}
-    	else{
-        authorizationRestServiceClient.login(username.getText(), password.getText());
 
-       // Optional.ofNullable(app.getSession()) -> defaultDialog=getScreens().informationErrorDialog("Register"););
+        FXMLDialog defaultDialog = null;
+        if (username.getText().equals("") || password.getText().equals("")) {
+            defaultDialog = getScreens().informationErrorDialog("Empty");
+        } else {
+            authorizationRestServiceClient.login(username.getText(), password.getText());
 
-        if(app.getSession()==null){
-        	defaultDialog=getScreens().informationErrorDialog("Login");
-        }else{
-        
-        if(app.getSession().getUserType().equals("admin"))
-        		defaultDialog = getScreens().artifactListAdminDialog();
-        else
-        if(app.getSession().getUserType().equals("user"))
-        		defaultDialog = getScreens().artifactListDialog();
-        else
-        	throw new LoginException();
+            // Optional.ofNullable(app.getSession()) -> defaultDialog=getScreens().informationErrorDialog("Register"););
+
+            if (app.getSession() == null) {
+                defaultDialog = getScreens().informationErrorDialog("Login");
+            } else {
+
+                if (app.getSession().getUserType().equals("admin"))
+                    defaultDialog = getScreens().mainScreenDialog();
+                else if (app.getSession().getUserType().equals("user"))
+                    defaultDialog = getScreens().mainScreenDialog();
+                else
+                    throw new LoginException();
+            }
         }
-    	}
         getDialog().close();
         getScreens().showDialog(defaultDialog);
 
     }
+
     @Override
     public String getResourcePath() {
         return "/com/crashcourse/restclient/controller/Login.fxml";
