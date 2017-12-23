@@ -1,10 +1,15 @@
 package com.crashcourse.restclient.model;
 
+import com.crashcourse.restclient.datatype.ZamowienieDostawyTO;
 import com.crashcourse.restclient.datatype.ZamowienieTO;
+import com.crashcourse.restclient.datatype.ZamowienieZakupuTO;
 import com.crashcourse.restclient.datatype.enumeration.StatusWydania;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.SimpleStringProperty;
 
-public class ZamowienieDostawyModel extends ZamowienieTO{
+import java.util.Date;
+
+public class ZamowienieDostawyModel extends ZamowienieModel{
 
     private SimpleObjectProperty<StatusWydania> status;
 
@@ -14,5 +19,15 @@ public class ZamowienieDostawyModel extends ZamowienieTO{
 
     public void setStatus(SimpleObjectProperty<StatusWydania> status) {
         this.status = status;
+    }
+
+    public static ZamowienieDostawyModel fromZamowienieDostawyTo(ZamowienieDostawyTO zamowienieDostawyTO) {
+        ZamowienieDostawyModel zamowienieDostawyModel = new ZamowienieDostawyModel();
+        zamowienieDostawyModel.status = new SimpleObjectProperty<>(zamowienieDostawyTO.getStatus());
+        zamowienieDostawyModel.setDataZlozenia(new SimpleObjectProperty<Date>(zamowienieDostawyTO.getDataZlozenia()));
+        zamowienieDostawyModel.setID(zamowienieDostawyTO.getID());
+        zamowienieDostawyModel.setKod(new SimpleStringProperty(zamowienieDostawyTO.getKod()));
+        zamowienieDostawyModel.setPozycjeZamowienia(zamowienieDostawyTO.getPozycjeZamowienia());
+        return zamowienieDostawyModel;
     }
 }

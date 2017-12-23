@@ -1,8 +1,10 @@
 package com.crashcourse.restclient.model;
 
+import com.crashcourse.restclient.datatype.PozycjaPrzyjeciaTO;
 import com.crashcourse.restclient.datatype.PrzyjecieZamowieniaTO;
 import com.crashcourse.restclient.datatype.TowarTO;
 import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class PozycjaPrzyjeciaModel {
@@ -41,5 +43,14 @@ public class PozycjaPrzyjeciaModel {
 
     public void setPrzyjecieZamowienia(SimpleObjectProperty<PrzyjecieZamowieniaModel> przyjecieZamowienia) {
         this.przyjecieZamowienia = przyjecieZamowienia;
+    }
+
+    public static PozycjaPrzyjeciaModel fromPozycjaPrzyjeciaTo(PozycjaPrzyjeciaTO pozycjaPrzyjeciaTO) {
+        PozycjaPrzyjeciaModel pozycjaPrzyjeciaModel = new PozycjaPrzyjeciaModel();
+        pozycjaPrzyjeciaModel.przyjecieZamowienia = new SimpleObjectProperty<>(PrzyjecieZamowieniaModel.fromZamowienieZakupuTo(pozycjaPrzyjeciaTO.getPrzyjecieZamowienia()));;
+        pozycjaPrzyjeciaModel.ID = pozycjaPrzyjeciaTO.getID();
+        pozycjaPrzyjeciaModel.ilosc = new SimpleDoubleProperty(pozycjaPrzyjeciaTO.getIlosc());
+        pozycjaPrzyjeciaModel.towar = new SimpleObjectProperty<>(TowarModel.fromTowarTo(pozycjaPrzyjeciaTO.getTowar()));;
+        return pozycjaPrzyjeciaModel;
     }
 }

@@ -1,5 +1,10 @@
 package com.crashcourse.restclient.datatype;
 
+import com.crashcourse.restclient.model.BilansModel;
+import com.crashcourse.restclient.model.JednostkaModel;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.beans.property.StringProperty;
+
 public class JednostkaTO {
     private int ID;
     private String rodzaj;

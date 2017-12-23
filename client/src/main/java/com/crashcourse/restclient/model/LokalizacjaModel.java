@@ -1,10 +1,11 @@
 package com.crashcourse.restclient.model;
 
+import com.crashcourse.restclient.datatype.KategoriaTO;
+import com.crashcourse.restclient.datatype.LokalizacjaTO;
 import com.crashcourse.restclient.datatype.UmieszczenieTO;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
+
+import java.util.List;
 
 public class LokalizacjaModel {
     private int ID;
@@ -69,6 +70,18 @@ public class LokalizacjaModel {
 
     public void setUmieszczenie(SimpleObjectProperty<UmieszczenieModel> umieszczenie) {
         this.umieszczenie = umieszczenie;
+    }
+
+    public static LokalizacjaModel fromLokalizacjaTo(LokalizacjaTO lokalizacjaTO) {
+        LokalizacjaModel lokalizacjaModel = new LokalizacjaModel();
+        lokalizacjaModel.ID = lokalizacjaTO.getID();
+        lokalizacjaModel.kod = new SimpleStringProperty(lokalizacjaTO.getKod());
+        lokalizacjaModel.numerRegalu = new SimpleIntegerProperty(lokalizacjaTO.getNumerRegalu());
+        lokalizacjaModel.numerRzedu = new SimpleIntegerProperty(lokalizacjaTO.getNumerRzedu());
+        lokalizacjaModel.numerSektora = new SimpleIntegerProperty(lokalizacjaTO.getNumerSektora());
+        lokalizacjaModel.zajete = new SimpleBooleanProperty(lokalizacjaTO.isZajete());
+        lokalizacjaModel.umieszczenie = new SimpleObjectProperty<>(UmieszczenieModel.fromUmieszenieTo(lokalizacjaTO.getUmieszczenie()));
+        return lokalizacjaModel;
     }
 }
 

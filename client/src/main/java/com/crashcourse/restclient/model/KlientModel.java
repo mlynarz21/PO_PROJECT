@@ -1,5 +1,8 @@
 package com.crashcourse.restclient.model;
 
+import com.crashcourse.restclient.datatype.KategoriaTO;
+import com.crashcourse.restclient.datatype.KlientTO;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class KlientModel {
@@ -74,5 +77,18 @@ public class KlientModel {
 
     public void setNumerDomu(StringProperty numerDomu) {
         this.numerDomu = numerDomu;
+    }
+
+    public static KlientModel fromKlientTo(KlientTO klientTO) {
+        KlientModel klientModel = new KlientModel();
+        klientModel.ID = klientTO.getID();
+        klientModel.login = new SimpleStringProperty(klientTO.getLogin());
+        klientModel.imie = new SimpleStringProperty(klientTO.getImie());
+        klientModel.kodPocztowy = new SimpleStringProperty(klientTO.getKodPocztowy());
+        klientModel.miasto = new SimpleStringProperty(klientTO.getMiasto());
+        klientModel.nazwisko = new SimpleStringProperty(klientTO.getNazwisko());
+        klientModel.numerDomu = new SimpleStringProperty(klientTO.getNumerDomu());
+        klientModel.ulica = new SimpleStringProperty(klientTO.getUlica());
+        return klientModel;
     }
 }

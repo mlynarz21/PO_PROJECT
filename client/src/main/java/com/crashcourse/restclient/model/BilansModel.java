@@ -1,16 +1,21 @@
 package com.crashcourse.restclient.model;
 
+
+import com.crashcourse.restclient.datatype.BilansTO;
 import com.crashcourse.restclient.datatype.PozycjaBilansuTO;
 import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleListProperty;
+import javafx.beans.property.SimpleObjectProperty;
+
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class BilansModel {
 
     private int ID;
     private ObjectProperty<Date> dataWykonania;
     private ObjectProperty<Date> dataBilansu;
-    private SimpleListProperty<PozycjaBilansuModel> pozycjeBilansu = new SimpleListProperty<>();
+    private List<PozycjaBilansuTO> pozycjeBilansu = new ArrayList<>();
 
     public int getID() {
         return ID;
@@ -24,7 +29,7 @@ public class BilansModel {
         return dataBilansu;
     }
 
-    public SimpleListProperty<PozycjaBilansuModel> getPozycjeBilansu() {
+    public List<PozycjaBilansuTO> getPozycjeBilansu() {
         return pozycjeBilansu;
     }
 
@@ -40,7 +45,16 @@ public class BilansModel {
         this.dataBilansu = dataBilansu;
     }
 
-    public void setPozycjeBilansu(SimpleListProperty<PozycjaBilansuModel> pozycjeBilansu) {
+    public void setPozycjeBilansu(List<PozycjaBilansuTO> pozycjeBilansu) {
         this.pozycjeBilansu = pozycjeBilansu;
+    }
+
+    public static BilansModel fromBilansTo(BilansTO bilansTO) {
+        BilansModel bilansModel = new BilansModel();
+        bilansModel.ID=bilansTO.getID();
+        bilansModel.dataBilansu= new SimpleObjectProperty<>(bilansTO.getDataBilansu());
+        bilansModel.dataWykonania=new SimpleObjectProperty<>(bilansTO.getDataWykonania());
+        bilansModel.pozycjeBilansu=bilansTO.getPozycjeBilansu();
+        return bilansModel;
     }
 }

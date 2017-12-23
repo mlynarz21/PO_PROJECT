@@ -1,5 +1,7 @@
 package com.crashcourse.restclient.model;
 
+import com.crashcourse.restclient.datatype.KategoriaTO;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class KategoriaModel {
@@ -20,5 +22,11 @@ public class KategoriaModel {
 
     public void setKategoria(StringProperty kategoria) {
         this.kategoria = kategoria;
+    }
+    public static KategoriaModel fromKategoriaTo(KategoriaTO kategoriaTO) {
+        KategoriaModel kategoriaModel = new KategoriaModel();
+        kategoriaModel.ID = kategoriaTO.getID();
+        kategoriaModel.kategoria = new SimpleStringProperty(kategoriaTO.getKategoria());
+        return kategoriaModel;
     }
 }

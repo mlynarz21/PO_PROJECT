@@ -3,6 +3,7 @@ package com.crashcourse.restclient.model;
 import com.crashcourse.restclient.datatype.PozycjaZamowieniaTO;
 import javafx.beans.property.ListProperty;
 import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.StringProperty;
 
 import java.util.Date;
@@ -11,8 +12,8 @@ import java.util.List;
 public abstract class ZamowienieModel {
     private int ID;
     private StringProperty kod;
-    private StringProperty dataZlozenia;
-    private ListProperty<PozycjaZamowieniaModel> pozycjeZamowienia;
+    private ObjectProperty<Date> dataZlozenia;
+    private List<PozycjaZamowieniaTO> pozycjeZamowienia;
 
     public int getID() {
         return ID;
@@ -30,19 +31,19 @@ public abstract class ZamowienieModel {
         this.kod = kod;
     }
 
-    public StringProperty getDataZlozenia() {
+    public ObjectProperty<Date> getDataZlozenia() {
         return dataZlozenia;
     }
 
-    public void setDataZlozenia(StringProperty dataZlozenia) {
+    public void setDataZlozenia(ObjectProperty<Date> dataZlozenia) {
         this.dataZlozenia = dataZlozenia;
     }
 
-    public ListProperty<PozycjaZamowieniaModel> getPozycjeZamowienia() {
+    public List<PozycjaZamowieniaTO> getPozycjeZamowienia() {
         return pozycjeZamowienia;
     }
 
-    public void setPozycjeZamowienia(ListProperty<PozycjaZamowieniaModel> pozycjeZamowienia) {
+    public void setPozycjeZamowienia(List<PozycjaZamowieniaTO> pozycjeZamowienia) {
         this.pozycjeZamowienia = pozycjeZamowienia;
     }
 }

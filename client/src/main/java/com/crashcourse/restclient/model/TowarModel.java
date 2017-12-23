@@ -2,9 +2,11 @@ package com.crashcourse.restclient.model;
 
 import com.crashcourse.restclient.datatype.JednostkaTO;
 import com.crashcourse.restclient.datatype.KategoriaTO;
+import com.crashcourse.restclient.datatype.TowarTO;
 import com.crashcourse.restclient.datatype.UmieszczenieTO;
 import javafx.beans.property.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TowarModel {
@@ -19,7 +21,7 @@ public class TowarModel {
     private BooleanProperty potrzebujeZamowienia;
     private SimpleObjectProperty<JednostkaModel> jednostka;
     private SimpleObjectProperty<KategoriaModel> kategoria;
-    private ListProperty<UmieszczenieModel> umieszczenia;
+    private List<UmieszczenieTO> umieszczenia;
 
     public int getID() {
         return ID;
@@ -109,11 +111,28 @@ public class TowarModel {
         this.kategoria = kategoria;
     }
 
-    public ListProperty<UmieszczenieModel> getUmieszczenia() {
+    public  List<UmieszczenieTO> getUmieszczenia() {
         return umieszczenia;
     }
 
-    public void setUmieszczenia(ListProperty<UmieszczenieModel> umieszczenia) {
+    public void setUmieszczenia(List<UmieszczenieTO> umieszczenia) {
         this.umieszczenia = umieszczenia;
+    }
+
+    public static TowarModel fromTowarTo(TowarTO towarTO) {
+        TowarModel towarModel = new TowarModel();
+        towarModel.ID = towarModel.getID();
+        towarModel.czasZalegania = new SimpleIntegerProperty(towarTO.getCzasZalegania());
+        towarModel.iloscMinimalna = new SimpleDoubleProperty(towarTO.getIloscMinimalna());
+        towarModel.iloscZablokowana = new SimpleDoubleProperty(towarTO.getIloscZablokowana());
+        towarModel.ilostan = new SimpleDoubleProperty(towarTO.getIlostan());
+        towarModel.jednostka = new SimpleObjectProperty<>(JednostkaModel.fromJednostkaTo(towarTO.getJednostka()));
+        towarModel.kategoria = new SimpleObjectProperty<>(KategoriaModel.fromKategoriaTo(towarTO.getKategoria()));
+        towarModel.kod = new SimpleStringProperty(towarTO.getKod());
+        towarModel.potrzebujeZamowienia = new SimpleBooleanProperty(towarTO.isPotrzebujeZamowienia());
+        towarModel.nazwa = new SimpleStringProperty(towarTO.getNazwa());
+        towarModel.zalega = new SimpleBooleanProperty(towarTO.isZalega());
+        towarModel.umieszczenia = new ArrayList<>(towarTO.getUmieszczenia());
+        return towarModel;
     }
 }

@@ -1,8 +1,8 @@
 package com.crashcourse.restclient.model;
 
-import com.crashcourse.restclient.datatype.TowarTO;
-import com.crashcourse.restclient.datatype.ZamowienieTO;
+import com.crashcourse.restclient.datatype.*;
 import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class PozycjaZamowieniaModel {
@@ -50,5 +50,17 @@ public class PozycjaZamowieniaModel {
 
     public void setZrealizowano(DoubleProperty zrealizowano) {
         this.zrealizowano = zrealizowano;
+    }
+
+    public static PozycjaZamowieniaModel fromPozycjaZamowieniaTo(PozycjaZamowieniaTO pozycjaZamowieniaTO) {
+        PozycjaZamowieniaModel pozycjaZamowieniaModel = new PozycjaZamowieniaModel();
+        if(pozycjaZamowieniaTO.getZamowienie() instanceof ZamowienieDostawyTO)
+            pozycjaZamowieniaModel.zamowienie = new SimpleObjectProperty<>(ZamowienieDostawyModel.fromZamowienieDostawyTo((ZamowienieDostawyTO) pozycjaZamowieniaTO.getZamowienie()));
+        else pozycjaZamowieniaModel.zamowienie = new SimpleObjectProperty<>(ZamowienieZakupuModel.fromZamowienieZakupuTo((ZamowienieZakupuTO) pozycjaZamowieniaTO.getZamowienie()));
+        pozycjaZamowieniaModel.ID = pozycjaZamowieniaTO.getID();
+        pozycjaZamowieniaModel.ilosc = new SimpleDoubleProperty(pozycjaZamowieniaTO.getIlosc());
+        pozycjaZamowieniaModel.towar = new SimpleObjectProperty<>(TowarModel.fromTowarTo(pozycjaZamowieniaTO.getTowar()));;
+        pozycjaZamowieniaModel.zrealizowano = new SimpleDoubleProperty(pozycjaZamowieniaTO.getZrealizowano());
+        return pozycjaZamowieniaModel;
     }
 }
