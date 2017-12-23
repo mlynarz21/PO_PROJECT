@@ -34,9 +34,9 @@ public interface ArtifactRestServiceClient {
      */
     void addArtifact(ArtifactTo artifact);
     
-    public void bookArtifact(ArtifactTo artifactTo);
+    void bookArtifact(ArtifactTo artifactTo);
     
-    public void freeArtifact(ArtifactTo artifactto);
+    void freeArtifact(ArtifactTo artifactto);
     
-    public void borrowArtifact(ArtifactTo artifactTo);
+    void borrowArtifact(ArtifactTo artifactTo);
 }

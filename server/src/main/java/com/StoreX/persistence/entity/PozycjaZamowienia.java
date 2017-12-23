@@ -3,13 +3,15 @@ package com.StoreX.persistence.entity;
 public class PozycjaZamowienia {
     private int ID;
     private double ilosc;
+    private double zrealizowano;
     private Towar towar;
     private Zamowienie zamowienie;
 
-    public PozycjaZamowienia(int ID, double ilosc, Towar towar, Zamowienie zamowienie){
+    public PozycjaZamowienia(int ID, double ilosc,double zrealizowano, Towar towar, Zamowienie zamowienie){
         this.ID=ID;
         this.ilosc=ilosc;
         this.towar=towar;
+        this.zrealizowano=zrealizowano;
         this.zamowienie=zamowienie;
     }
 
@@ -43,5 +45,13 @@ public class PozycjaZamowienia {
 
     public void setZamowienie(Zamowienie zamowienie) {
         this.zamowienie = zamowienie;
+    }
+
+    public double getZrealizowano() {
+        return zrealizowano;
+    }
+
+    public void setZrealizowano(double zrealizowano) {
+        this.zrealizowano = zrealizowano;
     }
 }

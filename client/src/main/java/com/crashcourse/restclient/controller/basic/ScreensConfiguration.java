@@ -166,6 +166,68 @@ public class ScreensConfiguration {
         return new BalanceAcceptanceController(primaryStage);
     }
 
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog okEmailDialog() {
+        return manager.initializeDialog(okEmailController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public OKEmailController okEmailController() {
+        return new OKEmailController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog okWrongQuantityDialog() {
+        return manager.initializeDialog(okWrongQuantityController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public OKWrongQuantityController okWrongQuantityController() {
+        return new OKWrongQuantityController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog okWrongDateDialog() {
+        return manager.initializeDialog(okWrongDateController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public OKWrongDateController okWrongDateController() {
+        return new OKWrongDateController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog okOutOFProductDialog() {
+        return manager.initializeDialog(okOutOfProductController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public OKOutOfProductController okOutOfProductController() {
+        return new OKOutOfProductController(primaryStage);
+    }
+
+    @Bean
+    @Scope("prototype")
+    public FXMLDialog okNoWaitingOrdersDialog() {
+        return manager.initializeDialog(okNoWaitingOrdersController());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public OKNoWaitingOrdersController okNoWaitingOrdersController() {
+        return new OKNoWaitingOrdersController(primaryStage);
+    }
+
+
+
 
 
 /*    @Bean
