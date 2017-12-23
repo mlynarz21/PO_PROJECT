@@ -1,13 +1,8 @@
-package com.StoreX.persistence.entity;
+package com.crashcourse.restclient.datatype;
 
-public class Kategoria {
+public class KategoriaTO {
     private int ID;
     private String kategoria;
-
-    public Kategoria(int ID, String kategoria){
-        this.ID=ID;
-        this.kategoria=kategoria;
-    }
 
     public int getID() {
         return ID;

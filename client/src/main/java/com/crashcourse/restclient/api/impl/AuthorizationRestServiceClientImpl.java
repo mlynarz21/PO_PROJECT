@@ -9,6 +9,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.crashcourse.restclient.api.AuthorizationRestServiceClient;
@@ -16,6 +17,7 @@ import com.crashcourse.restclient.datatype.enumeration.SessionTo;
 import com.crashcourse.restclient.datatype.enumeration.UserTo;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 
+@Component
 public class AuthorizationRestServiceClientImpl implements AuthorizationRestServiceClient {
     @Value("${application.authorization.url}")
     private String serviceUrl;

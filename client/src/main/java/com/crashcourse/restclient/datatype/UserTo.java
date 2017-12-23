@@ -1,4 +1,4 @@
-package com.crashcourse.restclient.datatype.enumeration;
+package com.crashcourse.restclient.datatype;
 
 public class UserTo {
 

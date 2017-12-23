@@ -1,9 +1,8 @@
-package com.StoreX.persistence.entity;
+package com.crashcourse.restclient.datatype;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class Towar {
+public class TowarTO {
     private int ID;
     private String nazwa;
     private String kod;
@@ -13,20 +12,9 @@ public class Towar {
     private boolean zalega=false;
     private boolean potrzebujeZamowienia=false;
     private double iloscMinimalna;
-    private Jednostka jednostka;
-    private Kategoria kategoria;
-    private List<Umieszczenie> umieszczenia;
-
-    public Towar(int ID,String kod,String nazwa, int czasZalegania, double iloscMinimalna,Jednostka jednostka,Kategoria kategoria){
-        this.ID=ID;
-        this.kod=kod;
-        this.nazwa=nazwa;
-        this.czasZalegania=czasZalegania;
-        this.iloscMinimalna=iloscMinimalna;
-        this.jednostka=jednostka;
-        this.kategoria=kategoria;
-        umieszczenia= new ArrayList<>();
-    }
+    private JednostkaTO jednostka;
+    private KategoriaTO kategoria;
+    private List<UmieszczenieTO> umieszczenia;
 
     public int getID() {
         return ID;
@@ -100,27 +88,27 @@ public class Towar {
         this.iloscMinimalna = iloscMinimalna;
     }
 
-    public Jednostka getJednostka() {
+    public JednostkaTO getJednostka() {
         return jednostka;
     }
 
-    public void setJednostka(Jednostka jednostka) {
+    public void setJednostka(JednostkaTO jednostka) {
         this.jednostka = jednostka;
     }
 
-    public Kategoria getKategoria() {
+    public KategoriaTO getKategoria() {
         return kategoria;
     }
 
-    public void setKategoria(Kategoria kategoria) {
+    public void setKategoria(KategoriaTO kategoria) {
         this.kategoria = kategoria;
     }
 
-    public List<Umieszczenie> getUmieszczenia() {
+    public List<UmieszczenieTO> getUmieszczenia() {
         return umieszczenia;
     }
 
-    public void setUmieszczenia(List<Umieszczenie> umieszczenia) {
+    public void setUmieszczenia(List<UmieszczenieTO> umieszczenia) {
         this.umieszczenia = umieszczenia;
     }
 }

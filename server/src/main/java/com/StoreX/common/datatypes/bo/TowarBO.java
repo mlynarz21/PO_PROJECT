@@ -1,9 +1,13 @@
-package com.StoreX.persistence.entity;
+package com.StoreX.common.datatypes.bo;
+
+import com.StoreX.persistence.entity.Jednostka;
+import com.StoreX.persistence.entity.Kategoria;
+import com.StoreX.persistence.entity.Umieszczenie;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Towar {
+public class TowarBO {
     private int ID;
     private String nazwa;
     private String kod;
@@ -13,20 +17,9 @@ public class Towar {
     private boolean zalega=false;
     private boolean potrzebujeZamowienia=false;
     private double iloscMinimalna;
-    private Jednostka jednostka;
-    private Kategoria kategoria;
-    private List<Umieszczenie> umieszczenia;
-
-    public Towar(int ID,String kod,String nazwa, int czasZalegania, double iloscMinimalna,Jednostka jednostka,Kategoria kategoria){
-        this.ID=ID;
-        this.kod=kod;
-        this.nazwa=nazwa;
-        this.czasZalegania=czasZalegania;
-        this.iloscMinimalna=iloscMinimalna;
-        this.jednostka=jednostka;
-        this.kategoria=kategoria;
-        umieszczenia= new ArrayList<>();
-    }
+    private JednostkaBO jednostka;
+    private KategoriaBO kategoria;
+    private List<UmieszczenieBO> umieszczenia;
 
     public int getID() {
         return ID;
@@ -100,27 +93,27 @@ public class Towar {
         this.iloscMinimalna = iloscMinimalna;
     }
 
-    public Jednostka getJednostka() {
+    public JednostkaBO getJednostka() {
         return jednostka;
     }
 
-    public void setJednostka(Jednostka jednostka) {
+    public void setJednostka(JednostkaBO jednostka) {
         this.jednostka = jednostka;
     }
 
-    public Kategoria getKategoria() {
+    public KategoriaBO getKategoria() {
         return kategoria;
     }
 
-    public void setKategoria(Kategoria kategoria) {
+    public void setKategoria(KategoriaBO kategoria) {
         this.kategoria = kategoria;
     }
 
-    public List<Umieszczenie> getUmieszczenia() {
+    public List<UmieszczenieBO> getUmieszczenia() {
         return umieszczenia;
     }
 
-    public void setUmieszczenia(List<Umieszczenie> umieszczenia) {
+    public void setUmieszczenia(List<UmieszczenieBO> umieszczenia) {
         this.umieszczenia = umieszczenia;
     }
 }

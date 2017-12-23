@@ -2,7 +2,7 @@ package com.crashcourse.restclient.model;
 
 import java.util.Date;
 
-import com.crashcourse.restclient.datatype.enumeration.ArtifactTo;
+import com.crashcourse.restclient.datatype.ArtifactTo;
 import com.crashcourse.restclient.datatype.enumeration.Category;
 import com.crashcourse.restclient.datatype.enumeration.Status;
 

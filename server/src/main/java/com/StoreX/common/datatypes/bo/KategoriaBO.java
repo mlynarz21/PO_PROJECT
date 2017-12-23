@@ -1,13 +1,8 @@
-package com.StoreX.persistence.entity;
+package com.StoreX.common.datatypes.bo;
 
-public class Kategoria {
+public class KategoriaBO {
     private int ID;
     private String kategoria;
-
-    public Kategoria(int ID, String kategoria){
-        this.ID=ID;
-        this.kategoria=kategoria;
-    }
 
     public int getID() {
         return ID;
