@@ -1,7 +1,5 @@
 package com.crashcourse.restclient.model;
 
-import com.crashcourse.restclient.datatype.JednostkaTO;
-import com.crashcourse.restclient.datatype.KategoriaTO;
 import com.crashcourse.restclient.datatype.TowarTO;
 import com.crashcourse.restclient.datatype.UmieszczenieTO;
 import javafx.beans.property.*;

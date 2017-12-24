@@ -1,11 +1,14 @@
 package com.crashcourse.restclient.datatype;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 import java.util.List;
 
 public abstract class ZamowienieTO {
     private int ID;
     private String kod;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date dataZlozenia;
     private List<PozycjaZamowieniaTO> pozycjeZamowienia;
 

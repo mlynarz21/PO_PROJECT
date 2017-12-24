@@ -1,12 +1,8 @@
 package com.crashcourse.restclient.model;
 
 
-import com.crashcourse.restclient.datatype.BilansTO;
-import com.crashcourse.restclient.datatype.KlientTO;
-import com.crashcourse.restclient.datatype.ZamowienieTO;
 import com.crashcourse.restclient.datatype.ZamowienieZakupuTO;
 import com.crashcourse.restclient.datatype.enumeration.StatusDostawy;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 

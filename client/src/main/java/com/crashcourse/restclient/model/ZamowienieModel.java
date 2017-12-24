@@ -1,9 +1,7 @@
 package com.crashcourse.restclient.model;
 
 import com.crashcourse.restclient.datatype.PozycjaZamowieniaTO;
-import javafx.beans.property.ListProperty;
 import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.StringProperty;
 
 import java.util.Date;

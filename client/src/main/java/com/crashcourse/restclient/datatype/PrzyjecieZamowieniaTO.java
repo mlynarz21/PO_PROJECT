@@ -1,9 +1,12 @@
 package com.crashcourse.restclient.datatype;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class PrzyjecieZamowieniaTO {
     private int ID;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date data;
     private ZamowienieDostawyTO zamowienie;
 

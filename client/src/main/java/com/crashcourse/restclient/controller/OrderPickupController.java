@@ -4,13 +4,8 @@ import com.crashcourse.restclient.api.ArtifactRestServiceClient;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.view.FXMLDialog;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import javax.swing.text.html.ImageView;
 
 public class OrderPickupController extends ArtifactsBaseController {
 

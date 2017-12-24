@@ -1,11 +1,8 @@
 package com.crashcourse.restclient.model;
 
 import com.crashcourse.restclient.datatype.WydanieZamowieniaTO;
-import com.crashcourse.restclient.datatype.ZamowienieDostawyTO;
-import com.crashcourse.restclient.datatype.ZamowienieZakupuTO;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
 
 import java.util.Date;
 

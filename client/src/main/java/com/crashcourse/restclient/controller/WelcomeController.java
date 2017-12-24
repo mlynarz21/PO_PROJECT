@@ -1,17 +1,12 @@
 package com.crashcourse.restclient.controller;
 
-import javax.security.auth.login.LoginException;
-
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.crashcourse.restclient.api.AuthorizationRestServiceClient;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
-import com.crashcourse.restclient.view.FXMLDialog;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class WelcomeController extends ArtifactsBaseController {
 

@@ -1,11 +1,7 @@
 package com.crashcourse.restclient.model;
 
-import com.crashcourse.restclient.datatype.KategoriaTO;
 import com.crashcourse.restclient.datatype.LokalizacjaTO;
-import com.crashcourse.restclient.datatype.UmieszczenieTO;
 import javafx.beans.property.*;
-
-import java.util.List;
 
 public class LokalizacjaModel {
     private int ID;
