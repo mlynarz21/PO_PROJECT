@@ -1,6 +1,6 @@
 package com.crashcourse.restclient.api.impl;
 
-import com.crashcourse.restclient.api.BilansRestServiceClient;
+import com.crashcourse.restclient.api.PrzyjecieZamowieniaRestServiceClient;
 import com.crashcourse.restclient.datatype.BilansTO;
 import com.crashcourse.restclient.datatype.SessionTo;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
@@ -19,7 +19,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Component
-public class BilansRestServiceClientImpl implements BilansRestServiceClient {
+public class PrzyjecieRestServiceClientImpl implements PrzyjecieZamowieniaRestServiceClient {
 
     @Value("${application.service.url}")
     private String serviceUrl;
@@ -28,31 +28,6 @@ public class BilansRestServiceClientImpl implements BilansRestServiceClient {
 
     @Autowired
     private StoreXSecurityContext app;
-
-    @Override
-    public BilansTO getLastBilans(){
-        RequestEntity<BilansTO> requestEntity = buildRequest(builGetLastBilansRequestUri(), null, HttpMethod.GET);
-
-        ResponseEntity<BilansTO> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<BilansTO>() {
-        });
-        return exchange.getBody();
-    }
-
-    private URI builGetLastBilansRequestUri() {
-        return URI.create(new StringBuilder().append(serviceUrl).append("/getLastBilans/").toString());
-    }
-
-    @Override
-    public void addBilans(BilansTO bilans){
-        RequestEntity<BilansTO> request = buildRequest(builAddBilansRequestUri(), bilans, HttpMethod.POST);
-
-        restTemplate.exchange(request, new ParameterizedTypeReference<BilansTO>() {
-        });
-    }
-
-    private URI builAddBilansRequestUri() {
-        return URI.create(new StringBuilder().append(serviceUrl).append("/addBilans/").toString());
-    }
 
     private <T extends Object> RequestEntity<T> buildRequest(URI uri, T body, HttpMethod method) {
         HttpHeaders head = buildRequestHeader();
