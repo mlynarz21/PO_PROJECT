@@ -14,10 +14,13 @@ public class PozycjaBilansu {
     @ManyToOne
     private Bilans bilans;
 
+    private Towar towar;
+
     public PozycjaBilansu(int ID, double iosc, Towar towar, Bilans bilans){
         this.ID=ID;
         this.ilosc=iosc;
         this.bilans= bilans;
+        this.towar=towar;
     }
 
     public int getID() {
@@ -36,7 +39,13 @@ public class PozycjaBilansu {
         this.ilosc = ilosc;
     }
 
+    public Towar getTowar() {
+               return towar;
+           }
 
+    public void setTowar(Towar towar) {
+                this.towar = towar;
+           }
 
     public Bilans getBilans() {
         return bilans;
