@@ -1,16 +1,26 @@
 package com.StoreX.persistence.entity;
 
+import javax.persistence.*;
+
+@Entity
 public class PozycjaBilansu {
+
+    @Id
+    @GeneratedValue
     private int ID;
+
     private double ilosc;
-    private Towar towar;
+
+    @ManyToOne
     private Bilans bilans;
+
+    private Towar towar;
 
     public PozycjaBilansu(int ID, double iosc, Towar towar, Bilans bilans){
         this.ID=ID;
         this.ilosc=iosc;
-        this.towar=towar;
         this.bilans= bilans;
+        this.towar=towar;
     }
 
     public int getID() {
@@ -30,12 +40,12 @@ public class PozycjaBilansu {
     }
 
     public Towar getTowar() {
-        return towar;
-    }
+               return towar;
+           }
 
     public void setTowar(Towar towar) {
-        this.towar = towar;
-    }
+                this.towar = towar;
+           }
 
     public Bilans getBilans() {
         return bilans;

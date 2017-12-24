@@ -1,6 +1,14 @@
 package com.StoreX.persistence.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Klient {
+
+    @Id
+    @GeneratedValue
     private int ID;
     private String login;
     private String imie;

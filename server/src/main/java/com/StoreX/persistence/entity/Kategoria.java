@@ -1,6 +1,14 @@
 package com.StoreX.persistence.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Kategoria {
+
+    @Id
+    @GeneratedValue
     private int ID;
     private String kategoria;
 

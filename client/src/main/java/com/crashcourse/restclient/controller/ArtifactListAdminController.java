@@ -4,10 +4,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.crashcourse.restclient.datatype.ArtifactTo;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.crashcourse.restclient.api.ArtifactRestServiceClient;
-import com.crashcourse.restclient.datatype.ArtifactTo;
+
 import com.crashcourse.restclient.datatype.enumeration.Category;
 import com.crashcourse.restclient.datatype.enumeration.Status;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;

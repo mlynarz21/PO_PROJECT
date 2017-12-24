@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.crashcourse.restclient.api.AuthorizationRestServiceClient;
+
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 
 @Component
