@@ -1,6 +1,5 @@
 package com.crashcourse.restclient.model;
 
-import com.crashcourse.restclient.datatype.KategoriaTO;
 import com.crashcourse.restclient.datatype.KlientTO;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;

@@ -1,8 +1,6 @@
 package com.crashcourse.restclient.model;
 
 import com.crashcourse.restclient.datatype.PozycjaPrzyjeciaTO;
-import com.crashcourse.restclient.datatype.PrzyjecieZamowieniaTO;
-import com.crashcourse.restclient.datatype.TowarTO;
 import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;

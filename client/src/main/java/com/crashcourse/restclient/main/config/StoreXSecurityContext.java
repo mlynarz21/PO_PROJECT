@@ -1,6 +1,6 @@
 package com.crashcourse.restclient.main.config;
 
-import com.crashcourse.restclient.datatype.enumeration.SessionTo;
+import com.crashcourse.restclient.datatype.SessionTo;
 
 /**
  * Context holding the security information of the client.

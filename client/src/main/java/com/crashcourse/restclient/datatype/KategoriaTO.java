@@ -1,9 +1,5 @@
 package com.crashcourse.restclient.datatype;
 
-import com.crashcourse.restclient.model.JednostkaModel;
-import com.crashcourse.restclient.model.KategoriaModel;
-import javafx.beans.property.SimpleStringProperty;
-
 public class KategoriaTO {
     private int ID;
     private String kategoria;

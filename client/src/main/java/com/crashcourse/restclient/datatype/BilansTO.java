@@ -1,5 +1,7 @@
 package com.crashcourse.restclient.datatype;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -7,7 +9,9 @@ import java.util.List;
 public class BilansTO {
 
     private int ID;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date dataWykonania;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date dataBilansu;
     private List<PozycjaBilansuTO> pozycjeBilansu = new ArrayList<>();
 
