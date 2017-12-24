@@ -2,7 +2,7 @@ package com.crashcourse.restclient.api;
 
 import java.util.List;
 
-import com.crashcourse.restclient.datatype.enumeration.ArtifactTo;
+import com.crashcourse.restclient.datatype.ArtifactTo;
 
 /**
  * REST client for the artifact REST service.

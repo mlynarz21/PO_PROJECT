@@ -16,8 +16,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.crashcourse.restclient.api.ArtifactRestServiceClient;
-import com.crashcourse.restclient.datatype.enumeration.ArtifactTo;
-import com.crashcourse.restclient.datatype.enumeration.SessionTo;
+import com.crashcourse.restclient.datatype.ArtifactTo;
+import com.crashcourse.restclient.datatype.SessionTo;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 
 @Component

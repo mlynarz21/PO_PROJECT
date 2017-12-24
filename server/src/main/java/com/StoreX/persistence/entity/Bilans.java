@@ -1,14 +1,23 @@
 package com.StoreX.persistence.entity;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Entity
+@Table(name = "Bilans")
 public class Bilans {
 
+    @Id
+    @GeneratedValue
     private int ID;
+
     private Date dataWykonania;
+
     private Date dataBilansu;
+
+    @OneToMany(mappedBy = "bilans")
     private List<PozycjaBilansu> pozycjeBilansu = new ArrayList<>();
 
     public Bilans(int ID, Date dataWykonania, Date dataBilansu){

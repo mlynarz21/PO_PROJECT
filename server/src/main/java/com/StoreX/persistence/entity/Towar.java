@@ -1,9 +1,15 @@
 package com.StoreX.persistence.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Towar {
+
+
     private int ID;
     private String nazwa;
     private String kod;
