@@ -2,6 +2,8 @@ package com.crashcourse.restclient.api.impl;
 
 import java.net.URI;
 
+import com.crashcourse.restclient.datatype.SessionTo;
+import com.crashcourse.restclient.datatype.UserTo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.ParameterizedTypeReference;
@@ -13,8 +15,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import com.crashcourse.restclient.api.AuthorizationRestServiceClient;
-import com.crashcourse.restclient.datatype.enumeration.SessionTo;
-import com.crashcourse.restclient.datatype.enumeration.UserTo;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 
 @Component

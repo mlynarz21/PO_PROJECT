@@ -18,6 +18,7 @@ public class LoginController extends ArtifactsBaseController {
 
     @Autowired
     private AuthorizationRestServiceClient authorizationRestServiceClient;
+
     @FXML
     PasswordField password;
     @FXML

@@ -2,7 +2,7 @@ package com.crashcourse.restclient.api;
 
 import com.crashcourse.restclient.datatype.BilansTO;
 
-public interface BilansRestServiceClient {
+public interface WydanieRestServiceClient {
 
     BilansTO getLastBilans();
 
