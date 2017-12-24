@@ -1,9 +1,22 @@
 package com.StoreX.persistence.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
 public class PozycjaPrzyjecia {
+
+    @Id
+    @GeneratedValue
     private int ID;
     private double ilosc;
+
+    @ManyToOne
     private Towar towar;
+
+    @ManyToOne
     private PrzyjecieZamowienia przyjecieZamowienia;
 
     public PozycjaPrzyjecia(int ID, double ilosc, Towar towar, PrzyjecieZamowienia przyjecieZamowienia){

@@ -14,6 +14,7 @@ public class PozycjaBilansu {
     @ManyToOne
     private Bilans bilans;
 
+    @ManyToOne
     private Towar towar;
 
     public PozycjaBilansu(int ID, double iosc, Towar towar, Bilans bilans){

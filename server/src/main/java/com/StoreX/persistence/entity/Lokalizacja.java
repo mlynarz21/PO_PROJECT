@@ -1,12 +1,23 @@
 package com.StoreX.persistence.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Lokalizacja {
+
+    @Id
+    @GeneratedValue
     private int ID;
     private String kod;
     private int numerRzedu;
     private int numerRegalu;
     private int numerSektora;
     private boolean zajete;
+
+    @OneToOne
     private Umieszczenie umieszczenie;
 
     public Lokalizacja(int ID, String kod,int numerRegalu, int numerRzedu, int numerSektora, boolean zajete, Umieszczenie umieszczenie){

@@ -1,19 +1,24 @@
 package com.StoreX.persistence.entity;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 public class Umieszczenie {
+
+    @Id
+    @GeneratedValue
     private int ID;
     private double iloscWLokalizacji;
+
+   @ManyToOne
     private Towar towar;
-    private Lokalizacja lokalizacja;
 
     public Umieszczenie(int ID, double iloscWLokalizacji, Towar towar, Lokalizacja lokalizacja){
         this.ID=ID;
         this.iloscWLokalizacji=iloscWLokalizacji;
         this.towar=towar;
-        this.lokalizacja=lokalizacja;
     }
 
     public int getID() {
@@ -40,11 +45,5 @@ public class Umieszczenie {
         this.towar = towar;
     }
 
-    public Lokalizacja getLokalizacja() {
-        return lokalizacja;
-    }
 
-    public void setLokalizacja(Lokalizacja lokalizacja) {
-        this.lokalizacja = lokalizacja;
-    }
 }

@@ -1,15 +1,14 @@
 package com.StoreX.persistence.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Entity
 public class Towar {
 
-
+    @Id
+    @GeneratedValue
     private int ID;
     private String nazwa;
     private String kod;
@@ -19,9 +18,21 @@ public class Towar {
     private boolean zalega=false;
     private boolean potrzebujeZamowienia=false;
     private double iloscMinimalna;
+
+    @ManyToOne
     private Jednostka jednostka;
+
+    @ManyToOne
     private Kategoria kategoria;
+
+    @OneToMany(mappedBy = "towar")
     private List<Umieszczenie> umieszczenia;
+
+    @OneToMany(mappedBy = "towar")
+    private  List<PozycjaPrzyjecia> pozycjaPrzyjeciaList;
+
+    @OneToMany(mappedBy = "towar")
+    private  List<PozycjaZamowienia> pozycjaZamowieniaList;
 
     public Towar(int ID,String kod,String nazwa, int czasZalegania, double iloscMinimalna,Jednostka jednostka,Kategoria kategoria){
         this.ID=ID;

@@ -1,13 +1,20 @@
 package com.StoreX.persistence.entity;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Entity
 public abstract class Zamowienie {
+
+    @Id
+    @GeneratedValue
     private int ID;
     private String kod;
     private Date dataZlozenia;
+
+    @OneToMany(mappedBy = "zamowienie")
     private List<PozycjaZamowienia> pozycjeZamowienia;
 
     public Zamowienie(int ID, String kod, Date dataZlozenia){
