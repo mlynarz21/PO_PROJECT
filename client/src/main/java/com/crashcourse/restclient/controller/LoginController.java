@@ -8,6 +8,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import javax.security.auth.login.LoginException;
 
@@ -16,6 +17,7 @@ public class LoginController extends ArtifactsBaseController {
     @Autowired
     StoreXSecurityContext app;
 
+    @Qualifier("authorizationRestServiceClientImpl")
     @Autowired
     private AuthorizationRestServiceClient authorizationRestServiceClient;
 
