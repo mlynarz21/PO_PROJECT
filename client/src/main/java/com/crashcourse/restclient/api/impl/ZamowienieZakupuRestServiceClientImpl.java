@@ -40,7 +40,7 @@ public class ZamowienieZakupuRestServiceClientImpl implements ZamowienieZakupuRe
     }
 
     private URI builGetAllZaakceptowaneRequstUri() {
-        return URI.create(new StringBuilder().append(serviceUrl).append("/getZaakceptowaneZamowienia/").toString());
+        return URI.create(new StringBuilder().append(serviceUrl).append("/getAllZaakceptowane/").toString());
     }
 
     public void updateStatusZamowienieZakupu(ZamowienieZakupuTO zamowienie){

@@ -3,7 +3,6 @@ package com.StoreX;
 import com.StoreX.persistence.entity.Bilans;
 import com.StoreX.persistence.entity.PozycjaBilansu;
 import com.StoreX.persistence.repository.BilansRepository;
-import com.StoreX.persistence.repository.UserRepository;
 import com.StoreX.persistence.repository.impl.BilansRepositoryImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
