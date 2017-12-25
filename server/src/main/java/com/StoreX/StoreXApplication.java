@@ -1,5 +1,7 @@
 package com.StoreX;
 
+import com.StoreX.persistence.entity.Bilans;
+import com.StoreX.persistence.entity.PozycjaBilansu;
 import com.StoreX.persistence.repository.BilansRepository;
 import com.StoreX.persistence.repository.UserRepository;
 import com.StoreX.persistence.repository.impl.BilansRepositoryImpl;
@@ -15,5 +17,11 @@ public class StoreXApplication {
 		BilansRepository b = new BilansRepositoryImpl();
 		System.out.println("Uwaga");
 		System.out.println(b.getMissingBalanceDates().toString());
+
+		Bilans bilans = new Bilans();
+		PozycjaBilansu pb = new PozycjaBilansu();
+
+
+
 	}
 }

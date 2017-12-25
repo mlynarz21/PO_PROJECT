@@ -18,12 +18,13 @@ public class Towar {
     private boolean zalega=false;
     private boolean potrzebujeZamowienia=false;
     private double iloscMinimalna;
-
     @ManyToOne
     private Jednostka jednostka;
-
     @ManyToOne
     private Kategoria kategoria;
+
+    @OneToMany(mappedBy = "towar")
+    private List<PozycjaBilansu> pozycjeBilansu = new ArrayList<>();
 
     @OneToMany(mappedBy = "towar")
     private List<Umieszczenie> umieszczenia;

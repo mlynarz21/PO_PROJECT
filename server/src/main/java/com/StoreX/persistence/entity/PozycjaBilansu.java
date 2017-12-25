@@ -17,6 +17,10 @@ public class PozycjaBilansu {
     @ManyToOne
     private Towar towar;
 
+    public PozycjaBilansu(){
+
+    }
+
     public PozycjaBilansu(int ID, double iosc, Towar towar, Bilans bilans){
         this.ID=ID;
         this.ilosc=iosc;

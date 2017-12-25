@@ -19,6 +19,9 @@ public class Bilans {
     @OneToMany(mappedBy = "bilans")
     private List<PozycjaBilansu> pozycjeBilansu = new ArrayList<>();
 
+    public Bilans(){
+
+    }
     public Bilans(int ID, Date dataWykonania, Date dataBilansu){
         this.ID=ID;
         this.dataWykonania=dataWykonania;
