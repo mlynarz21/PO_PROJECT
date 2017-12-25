@@ -4,6 +4,6 @@ import com.crashcourse.restclient.datatype.KlientTO;
 
 public interface KlientRestServiceClient {
 
-    KlientTO getClient(int ID);
+    KlientTO getKlient(KlientTO klient);
 
 }

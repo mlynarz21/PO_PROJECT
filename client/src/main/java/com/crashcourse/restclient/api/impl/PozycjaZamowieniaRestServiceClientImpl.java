@@ -1,8 +1,7 @@
 package com.crashcourse.restclient.api.impl;
 
-import com.crashcourse.restclient.api.BilansRestServiceClient;
-import com.crashcourse.restclient.datatype.BilansTO;
-import com.crashcourse.restclient.datatype.SessionTo;
+import com.crashcourse.restclient.api.PozycjaZamowieniaRestServiceClient;
+import com.crashcourse.restclient.datatype.*;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,12 +14,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
-import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 @Component
-public class BilansRestServiceClientImpl implements BilansRestServiceClient {
+public class PozycjaZamowieniaRestServiceClientImpl implements PozycjaZamowieniaRestServiceClient {
 
     @Value("${application.service.url}")
     private String serviceUrl;
@@ -30,30 +29,32 @@ public class BilansRestServiceClientImpl implements BilansRestServiceClient {
     @Autowired
     private StoreXSecurityContext app;
 
-    @Override
-    public BilansTO getLastBilans(){
-        RequestEntity<BilansTO> requestEntity = buildRequest(builGetLastBilansRequestUri(), null, HttpMethod.GET);
 
-        ResponseEntity<BilansTO> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<BilansTO>() {
+    @Override
+    public List<PozycjaZamowieniaTO> getPozycjeZamowienia(ZamowienieTO zamowienie) {
+        RequestEntity<ZamowienieTO> requestEntity = buildRequest(buildGetPozycjeZamowieniaRequestUri(), zamowienie, HttpMethod.POST);
+
+        ResponseEntity<List<PozycjaZamowieniaTO>> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<List<PozycjaZamowieniaTO>>() {
         });
         return exchange.getBody();
     }
 
-    private URI builGetLastBilansRequestUri() {
-        return URI.create(new StringBuilder().append(serviceUrl).append("/getLastBilans/").toString());
+    private URI buildGetPozycjeZamowieniaRequestUri() {
+        return URI.create(new StringBuilder().append(serviceUrl).append("/getPozycjeZamowienia/").toString());
     }
 
     @Override
-    public void addBilans(Date dataBilansowana){
-        RequestEntity<Date> request = buildRequest(builAddBilansRequestUri(), dataBilansowana, HttpMethod.POST);
+    public void updatePozycjaZamowienia(PozycjaZamowieniaTO pozycjaZamowienia) {
+        RequestEntity<PozycjaZamowieniaTO> request = buildRequest(builPozycjaZamowieniaRequestUri(), pozycjaZamowienia, HttpMethod.POST);
 
-        restTemplate.exchange(request, new ParameterizedTypeReference<Date>() {
+        restTemplate.exchange(request, new ParameterizedTypeReference<Boolean>() {
         });
     }
 
-    private URI builAddBilansRequestUri() {
-        return URI.create(new StringBuilder().append(serviceUrl).append("/addBilans/").toString());
+    private URI builPozycjaZamowieniaRequestUri() {
+        return URI.create(new StringBuilder().append(serviceUrl).append("/updatePozycjaZamowienia/").toString());
     }
+
 
     private <T extends Object> RequestEntity<T> buildRequest(URI uri, T body, HttpMethod method) {
         HttpHeaders head = buildRequestHeader();

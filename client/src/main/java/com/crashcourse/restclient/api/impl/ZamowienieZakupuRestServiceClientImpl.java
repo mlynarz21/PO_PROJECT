@@ -1,8 +1,7 @@
 package com.crashcourse.restclient.api.impl;
 
-import com.crashcourse.restclient.api.PrzyjecieZamowieniaRestServiceClient;
-import com.crashcourse.restclient.datatype.BilansTO;
-import com.crashcourse.restclient.datatype.SessionTo;
+import com.crashcourse.restclient.api.ZamowienieZakupuRestServiceClient;
+import com.crashcourse.restclient.datatype.*;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -15,11 +14,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 @Component
-public class PrzyjecieRestServiceClientImpl implements PrzyjecieZamowieniaRestServiceClient {
+public class ZamowienieZakupuRestServiceClientImpl implements ZamowienieZakupuRestServiceClient {
 
     @Value("${application.service.url}")
     private String serviceUrl;
@@ -28,6 +28,31 @@ public class PrzyjecieRestServiceClientImpl implements PrzyjecieZamowieniaRestSe
 
     @Autowired
     private StoreXSecurityContext app;
+
+
+    public List<ZamowienieTO> getAllZaakceptowane(){
+
+        RequestEntity<Void> requestEntity = this.<Void> buildRequest(builGetAllZaakceptowaneRequstUri(), null, HttpMethod.GET);
+
+        ResponseEntity<List<ZamowienieTO>> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<List<ZamowienieTO>>() {
+        });
+        return exchange.getBody();
+    }
+
+    private URI builGetAllZaakceptowaneRequstUri() {
+        return URI.create(new StringBuilder().append(serviceUrl).append("/getZaakceptowaneZamowienia/").toString());
+    }
+
+    public void updateStatusZamowienieZakupu(ZamowienieZakupuTO zamowienie){
+        RequestEntity<ZamowienieZakupuTO> request = buildRequest(builUpdateStatusZamowienieZakupuRequestUri(), zamowienie, HttpMethod.POST);
+
+        restTemplate.exchange(request, new ParameterizedTypeReference<Boolean>() {
+        });
+    }
+
+    private URI builUpdateStatusZamowienieZakupuRequestUri() {
+        return URI.create(new StringBuilder().append(serviceUrl).append("/updateStatusZamowienieZakupu/").toString());
+    }
 
     private <T extends Object> RequestEntity<T> buildRequest(URI uri, T body, HttpMethod method) {
         HttpHeaders head = buildRequestHeader();

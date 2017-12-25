@@ -1,7 +1,7 @@
 package com.crashcourse.restclient.api.impl;
 
-import com.crashcourse.restclient.api.BilansRestServiceClient;
-import com.crashcourse.restclient.datatype.BilansTO;
+import com.crashcourse.restclient.api.KlientRestServiceClient;
+import com.crashcourse.restclient.datatype.KlientTO;
 import com.crashcourse.restclient.datatype.SessionTo;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,12 +15,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
-import java.util.Date;
 import java.util.Optional;
 import java.util.UUID;
 
 @Component
-public class BilansRestServiceClientImpl implements BilansRestServiceClient {
+public class KlientRestServiceClientImpl implements KlientRestServiceClient {
 
     @Value("${application.service.url}")
     private String serviceUrl;
@@ -30,29 +29,19 @@ public class BilansRestServiceClientImpl implements BilansRestServiceClient {
     @Autowired
     private StoreXSecurityContext app;
 
-    @Override
-    public BilansTO getLastBilans(){
-        RequestEntity<BilansTO> requestEntity = buildRequest(builGetLastBilansRequestUri(), null, HttpMethod.GET);
 
-        ResponseEntity<BilansTO> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<BilansTO>() {
+    @Override
+    public KlientTO getKlient(KlientTO klient) {
+        RequestEntity<KlientTO> requestEntity = buildRequest(builGetKlientRequestUri(), klient, HttpMethod.POST);
+
+        ResponseEntity<KlientTO> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<KlientTO>() {
         });
         return exchange.getBody();
+
     }
 
-    private URI builGetLastBilansRequestUri() {
-        return URI.create(new StringBuilder().append(serviceUrl).append("/getLastBilans/").toString());
-    }
-
-    @Override
-    public void addBilans(Date dataBilansowana){
-        RequestEntity<Date> request = buildRequest(builAddBilansRequestUri(), dataBilansowana, HttpMethod.POST);
-
-        restTemplate.exchange(request, new ParameterizedTypeReference<Date>() {
-        });
-    }
-
-    private URI builAddBilansRequestUri() {
-        return URI.create(new StringBuilder().append(serviceUrl).append("/addBilans/").toString());
+    private URI builGetKlientRequestUri() {
+        return URI.create(new StringBuilder().append(serviceUrl).append("/getKlient/").toString());
     }
 
     private <T extends Object> RequestEntity<T> buildRequest(URI uri, T body, HttpMethod method) {
