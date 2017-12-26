@@ -10,25 +10,24 @@ public class Bilans {
 
     @Id
     @GeneratedValue
-    private int ID;
+    private Long ID;
 
     private Date dataWykonania;
 
     private Date dataBilansu;
 
-    @OneToMany(mappedBy = "bilans")
-    private List<PozycjaBilansu> pozycjeBilansu;
+
 
     public Bilans(){
 
     }
-    public Bilans(int ID, Date dataWykonania, Date dataBilansu){
+    public Bilans(Long ID, Date dataWykonania, Date dataBilansu){
         this.ID=ID;
         this.dataWykonania=dataWykonania;
         this.dataBilansu=dataBilansu;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
@@ -40,11 +39,8 @@ public class Bilans {
         return dataBilansu;
     }
 
-    public List<PozycjaBilansu> getPozycjeBilansu() {
-        return pozycjeBilansu;
-    }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -56,7 +52,4 @@ public class Bilans {
         this.dataBilansu = dataBilansu;
     }
 
-    public void setPozycjeBilansu(List<PozycjaBilansu> pozycjeBilansu) {
-        this.pozycjeBilansu = pozycjeBilansu;
-    }
 }

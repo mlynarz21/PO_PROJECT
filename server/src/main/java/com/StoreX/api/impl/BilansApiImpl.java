@@ -25,17 +25,20 @@ import java.util.Date;
 @RequestMapping("/rest/artifactlibrary/component/v1")
 public class BilansApiImpl implements BilansApi{
 
+    @Autowired
+    private BilansService bilansService;
+
     private ModelMapper modelMapper = new ModelMapper();
 
     @Override
     @RequestMapping(value = "/getLastBilans/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<BilansTO> getLastBilans(@RequestHeader(value = "SessionID") String sessionId){
         BilansBO bilansBO = null;
-//        try {
-//            bilansBO = searchService.findAllArtifacts(sessionId);
-//        } catch (AuthenticationException e) {
-//            return new ResponseEntity<BilansTO>(HttpStatus.UNAUTHORIZED);
-//        }
+        try {
+            bilansBO = bilansService.findLast(sessionId);
+        } catch (Exception e) {
+            return new ResponseEntity<BilansTO>(HttpStatus.UNAUTHORIZED);
+        }
 
         BilansTO result = modelMapper.map(bilansBO, BilansTO.class);
 
@@ -63,22 +66,26 @@ public class BilansApiImpl implements BilansApi{
     /*
     Created for test purposes, to be removed
      */
-    @Autowired
-    private BilansService bilansService;
+
     @Autowired
     TowarService towarService;
     @Autowired
     PozycjaBilansuService pozycjaBilansuService;
     @Override
     @RequestMapping(value = "/addBilansTest/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Boolean> addBilansTest(Date dataBilansowana, String sessionId) {
+    public ResponseEntity<Long> addBilansTest(Date dataBilansowana, String sessionId) {
         Bilans b = new Bilans();
+        Bilans b2 = new Bilans();
+        Bilans b3 = new Bilans();
+        b.setDataBilansu(new Date(1996,12,12));
+        b2.setDataBilansu(new Date(1991,12,12));
+        b3.setDataBilansu(new Date(1995,12,12));
         bilansService.saveBilans(b);
-        Towar t = new Towar();
-        towarService.saveTowar(t);
-        PozycjaBilansu p = new PozycjaBilansu(1, 10,t,b);
-        pozycjaBilansuService.savePozycjaBilansu(p);
-        return new ResponseEntity<Boolean>(true,HttpStatus.OK);
+        bilansService.saveBilans(b2);
+        bilansService.saveBilans(b3);
+        //Bilans b4 = bilansService.findLast();
+
+        return new ResponseEntity<Long>(b3.getID(),HttpStatus.OK);
 
     }
 

@@ -7,7 +7,7 @@ public class PozycjaBilansu {
 
     @Id
     @GeneratedValue
-    private int ID;
+    private Long ID;
 
     private double ilosc;
 
@@ -21,18 +21,18 @@ public class PozycjaBilansu {
 
     }
 
-    public PozycjaBilansu(int ID, double iosc, Towar towar, Bilans bilans){
+    public PozycjaBilansu(Long ID, double iosc, Towar towar, Bilans bilans){
         this.ID=ID;
         this.ilosc=iosc;
         this.bilans= bilans;
         this.towar=towar;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
