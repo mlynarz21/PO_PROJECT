@@ -46,6 +46,10 @@ public class Towar {
         umieszczenia= new ArrayList<>();
     }
 
+    public Towar() {
+
+    }
+
     public int getID() {
         return ID;
     }

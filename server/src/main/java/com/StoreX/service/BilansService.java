@@ -4,5 +4,5 @@ import com.StoreX.persistence.entity.Bilans;
 
 public interface BilansService {
 
-    public Bilans saveUser(Bilans user);
+    public Bilans saveBilans(Bilans bilans);
 }

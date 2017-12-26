@@ -4,7 +4,13 @@ import com.StoreX.api.BilansApi;
 import com.StoreX.common.datatypes.bo.BilansBO;
 import com.StoreX.common.datatypes.to.BilansTO;
 import com.StoreX.persistence.entity.Bilans;
+import com.StoreX.persistence.entity.PozycjaBilansu;
+import com.StoreX.persistence.entity.Towar;
+import com.StoreX.persistence.repository.PozycjaBilansuRepository;
+import com.StoreX.persistence.repository.TowarRepository;
 import com.StoreX.service.BilansService;
+import com.StoreX.service.PozycjaBilansuService;
+import com.StoreX.service.TowarService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -59,11 +65,19 @@ public class BilansApiImpl implements BilansApi{
      */
     @Autowired
     private BilansService bilansService;
+    @Autowired
+    TowarService towarService;
+    @Autowired
+    PozycjaBilansuService pozycjaBilansuService;
     @Override
     @RequestMapping(value = "/addBilansTest/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> addBilansTest(Date dataBilansowana, String sessionId) {
         Bilans b = new Bilans();
-        bilansService.saveUser(b);
+        bilansService.saveBilans(b);
+        Towar t = new Towar();
+        towarService.saveTowar(t);
+        PozycjaBilansu p = new PozycjaBilansu(1, 10,t,b);
+        pozycjaBilansuService.savePozycjaBilansu(p);
         return new ResponseEntity<Boolean>(true,HttpStatus.OK);
 
     }

@@ -8,15 +8,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
-public class BilansServ implements BilansService {
+public class BilansServiceImplementation implements BilansService {
 
     @Autowired
     BilansRepository bilansRepository;
 
 
     @Override
-    public Bilans saveUser(Bilans user) {
-            return getBilansRepository().save(user);
+    public Bilans saveBilans(Bilans bilans) {
+            return getBilansRepository().save(bilans);
     }
 
     public BilansRepository getBilansRepository() {
