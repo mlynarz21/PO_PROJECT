@@ -3,6 +3,10 @@ import com.StoreX.persistence.entity.Bilans;
 import com.StoreX.persistence.repository.BilansRepository;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.orm.hibernate3.AbstractSessionFactoryBean;
+import org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean;
 import org.springframework.stereotype.Repository;
 
 import java.text.DateFormat;
@@ -10,14 +14,26 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Repository("bilansDAO")
-public class BilansRepositoryImpl implements BilansRepository{
+public class BilansRepositoryImpl {//implements BilansRepository{
+//    @Bean
+//    public AbstractSessionFactoryBean sessionFactoryBean(){
+//        AnnotationSessionFactoryBean sessionFactoryBean = new AnnotationSessionFactoryBean();
+//        sessionFactoryBean.setConfigLocation(new ClassPathResource("hibernate.cfg.xml"));
+//        return sessionFactoryBean;
+//    }
+//
+//    public SessionFactory sessionFactory() {
+//        return sessionFactoryBean().getObject();
+//    }
 
-    @Autowired
-    private SessionFactory sessionFactory;
 
-    public List<Bilans> findAllBilans(){
 
-    }
+//    public List<Bilans> findAllBilans(){
+//        return (List<Bilans>)sessionFactory().getCurrentSession().createCriteria(Bilans.class).list();
+//    }
+//    public void addBilans(Bilans employee) {
+//        sessionFactory().getCurrentSession().saveOrUpdate(employee);
+//    }
 //    private static final List<Bilans> mockedData;
 //    static {
 //        mockedData = new ArrayList<>();

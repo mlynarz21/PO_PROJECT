@@ -11,4 +11,5 @@ public interface BilansApi {
 
     ResponseEntity<Boolean> addBilans(Date dataBilansowana, String sessionId);
 
+    ResponseEntity<Boolean> addBilansTest(Date dataBilansowana, String sessionId);
 }

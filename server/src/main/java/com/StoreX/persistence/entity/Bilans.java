@@ -17,7 +17,7 @@ public class Bilans {
     private Date dataBilansu;
 
     @OneToMany(mappedBy = "bilans")
-    private List<PozycjaBilansu> pozycjeBilansu = new ArrayList<>();
+    private List<PozycjaBilansu> pozycjeBilansu;
 
     public Bilans(){
 

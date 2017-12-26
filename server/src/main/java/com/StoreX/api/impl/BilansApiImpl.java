@@ -3,7 +3,10 @@ package com.StoreX.api.impl;
 import com.StoreX.api.BilansApi;
 import com.StoreX.common.datatypes.bo.BilansBO;
 import com.StoreX.common.datatypes.to.BilansTO;
+import com.StoreX.persistence.entity.Bilans;
+import com.StoreX.service.BilansService;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -49,6 +52,20 @@ public class BilansApiImpl implements BilansApi{
         } else {
             return new ResponseEntity<Boolean>(added, HttpStatus.FOUND);
         }
+    }
+
+    /*
+    Created for test purposes, to be removed
+     */
+    @Autowired
+    private BilansService bilansService;
+    @Override
+    @RequestMapping(value = "/addBilansTest/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> addBilansTest(Date dataBilansowana, String sessionId) {
+        Bilans b = new Bilans();
+        bilansService.saveUser(b);
+        return new ResponseEntity<Boolean>(true,HttpStatus.OK);
+
     }
 
 }
