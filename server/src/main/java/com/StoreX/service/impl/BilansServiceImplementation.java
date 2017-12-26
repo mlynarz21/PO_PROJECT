@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.naming.AuthenticationException;
+import java.util.Date;
 import java.util.UUID;
 
 @Service
@@ -28,23 +29,34 @@ public class BilansServiceImplementation implements BilansService {
 
 
     @Override
-    public Bilans saveBilans(Bilans bilans) {
-            return getBilansRepository().save(bilans);
+    public BilansBO addBilans(String sessionId, Date dataBilansowana)throws AuthenticationException {
+        if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
+           // throw new AuthenticationException();
+        }
+
+        Bilans bilansToAdd = new Bilans();
+        bilansToAdd.setDataBilansu(dataBilansowana);
+        bilansToAdd.setDataWykonania(new Date());
+
+        Bilans bilansAdded = bilansRepository.save(bilansToAdd);
+
+        return modelMapper.map(bilansAdded, BilansBO.class);
     }
 
-    @Override
-    public Bilans findOne(Long id) {
-        return getBilansRepository().findOne(id);
-    }
 
     @Override
     public BilansBO findLast(String sessionId)throws AuthenticationException {
         if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
-            throw new AuthenticationException();
+            //throw new AuthenticationException();
             }
         Bilans lastBilans =  getBilansRepository().findLastBilansByDate();
 
         return modelMapper.map(lastBilans, BilansBO.class);
+    }
+
+    @Override
+    public void saveBilans(Bilans b2) {
+        getBilansRepository().save(b2);
     }
 
     public BilansRepository getBilansRepository() {

@@ -8,12 +8,12 @@ import java.util.List;
 
 public class BilansBO {
 
-    private int ID;
+    private Long ID;
     private Date dataWykonania;
     private Date dataBilansu;
     private List<PozycjaBilansuBO> pozycjeBilansu = new ArrayList<>();
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
@@ -29,7 +29,7 @@ public class BilansBO {
         return pozycjeBilansu;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

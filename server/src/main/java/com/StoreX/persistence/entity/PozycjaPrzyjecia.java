@@ -10,7 +10,7 @@ public class PozycjaPrzyjecia {
 
     @Id
     @GeneratedValue
-    private int ID;
+    private Long ID;
     private double ilosc;
 
     @ManyToOne
@@ -19,18 +19,18 @@ public class PozycjaPrzyjecia {
     @ManyToOne
     private PrzyjecieZamowienia przyjecieZamowienia;
 
-    public PozycjaPrzyjecia(int ID, double ilosc, Towar towar, PrzyjecieZamowienia przyjecieZamowienia){
+    public PozycjaPrzyjecia(Long ID, double ilosc, Towar towar, PrzyjecieZamowienia przyjecieZamowienia){
         this.ID=ID;
         this.ilosc=ilosc;
         this.towar=towar;
         this.przyjecieZamowienia=przyjecieZamowienia;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

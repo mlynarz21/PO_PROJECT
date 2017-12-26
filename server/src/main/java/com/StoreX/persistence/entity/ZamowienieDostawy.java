@@ -13,8 +13,7 @@ public class ZamowienieDostawy extends Zamowienie{
     @Enumerated(EnumType.STRING)
     private StatusWydania status;
 
-
-    public ZamowienieDostawy(int ID, String kod, Date dataZlozenia, StatusWydania status){
+    public ZamowienieDostawy(Long ID, String kod, Date dataZlozenia, StatusWydania status){
         super(ID,kod,dataZlozenia);
         this.status=status;
     }

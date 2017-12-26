@@ -18,6 +18,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.naming.AuthenticationException;
 import java.util.Date;
 
 @CrossOrigin
@@ -41,7 +42,6 @@ public class BilansApiImpl implements BilansApi{
         }
 
         BilansTO result = modelMapper.map(bilansBO, BilansTO.class);
-
         return new ResponseEntity<BilansTO>(result, HttpStatus.OK);
 
     }
@@ -49,18 +49,14 @@ public class BilansApiImpl implements BilansApi{
     @Override
     @RequestMapping(value = "/addBilans/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> addBilans(@RequestBody Date dataBilansowana, @RequestHeader(value = "SessionID") String sessionId){
-        boolean added = false;
-//        try {
-//            added = bookingService.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
-//        } catch (AuthenticationException e) {
-//            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
-//        }
-
-        if (added) {
-            return new ResponseEntity<Boolean>(added, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<Boolean>(added, HttpStatus.FOUND);
+        BilansBO bilansBO;
+        try {
+            bilansBO  = bilansService.addBilans(sessionId,dataBilansowana);
+        } catch (AuthenticationException e) {
+            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
         }
+
+        return new ResponseEntity<Boolean>(bilansBO != null, HttpStatus.OK);
     }
 
     /*
@@ -80,10 +76,10 @@ public class BilansApiImpl implements BilansApi{
         b.setDataBilansu(new Date(1996,12,12));
         b2.setDataBilansu(new Date(1991,12,12));
         b3.setDataBilansu(new Date(1995,12,12));
-        bilansService.saveBilans(b);
-        bilansService.saveBilans(b2);
-        bilansService.saveBilans(b3);
-        //Bilans b4 = bilansService.findLast();
+//        bilansService.saveBilans(b);
+//       bilansService.saveBilans(b2);
+//       bilansService.saveBilans(b3);
+//        Bilans b4 = bilansService.findLast();
 
         return new ResponseEntity<Long>(b3.getID(),HttpStatus.OK);
 

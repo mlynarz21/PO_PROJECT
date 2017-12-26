@@ -1,23 +1,32 @@
 package com.StoreX.persistence.entity;
 
+import javax.persistence.*;
+
+@Entity
 public class PozycjaWydania {
-    private int ID;
+
+    @Id
+    @GeneratedValue
+    private Long ID;
     private double ilosc;
+
+    @ManyToOne
     private Towar towar;
+    @ManyToOne
     private WydanieZamowienia wydanieZamowienia;
 
-    public PozycjaWydania(int ID, double ilosc, Towar towar, WydanieZamowienia wydanieZamowienia){
+    public PozycjaWydania(Long ID, double ilosc, Towar towar, WydanieZamowienia wydanieZamowienia){
         this.ID=ID;
         this.ilosc=ilosc;
         this.towar=towar;
         this.wydanieZamowienia=wydanieZamowienia;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

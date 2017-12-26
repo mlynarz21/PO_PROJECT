@@ -9,19 +9,19 @@ public class Kategoria {
 
     @Id
     @GeneratedValue
-    private int ID;
+    private Long ID;
     private String kategoria;
 
-    public Kategoria(int ID, String kategoria){
+    public Kategoria(Long ID, String kategoria){
         this.ID=ID;
         this.kategoria=kategoria;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

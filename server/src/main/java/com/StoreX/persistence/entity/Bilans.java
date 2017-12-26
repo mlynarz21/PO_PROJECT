@@ -16,8 +16,6 @@ public class Bilans {
 
     private Date dataBilansu;
 
-
-
     public Bilans(){
 
     }
@@ -38,7 +36,6 @@ public class Bilans {
     public Date getDataBilansu() {
         return dataBilansu;
     }
-
 
     public void setID(Long ID) {
         this.ID = ID;

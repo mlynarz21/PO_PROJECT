@@ -11,21 +11,21 @@ public class Jednostka {
 
     @Id
     @GeneratedValue
-    private int ID;
+    private Long ID;
 
     @Size(max = 32)
     private String rodzaj;
 
-    public Jednostka(int ID, String rodzaj){
+    public Jednostka(Long ID, String rodzaj){
         this.ID=ID;
         this.rodzaj=rodzaj;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

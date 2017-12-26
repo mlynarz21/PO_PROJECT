@@ -5,12 +5,14 @@ import com.StoreX.persistence.entity.Bilans;
 import com.sun.xml.internal.bind.v2.model.core.ID;
 
 import javax.naming.AuthenticationException;
+import java.util.Date;
 
 public interface BilansService {
 
-    public Bilans saveBilans(Bilans bilans);
+    public BilansBO addBilans(String sessionId, Date dataBilansowana) throws AuthenticationException;
 
-    public Bilans findOne(Long id);
+    public BilansBO findLast(String sessionId) throws AuthenticationException;
 
-    public BilansBO findLast(String sessionId) throws AuthenticationException;;
+
+    void saveBilans(Bilans b2);
 }

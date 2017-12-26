@@ -9,7 +9,7 @@ public class Towar {
 
     @Id
     @GeneratedValue
-    private int ID;
+    private Long ID;
     private String nazwa;
     private String kod;
     private double ilostan=0;
@@ -23,19 +23,8 @@ public class Towar {
     @ManyToOne
     private Kategoria kategoria;
 
-    @OneToMany(mappedBy = "towar")
-    private List<PozycjaBilansu> pozycjeBilansu = new ArrayList<>();
 
-    @OneToMany(mappedBy = "towar")
-    private List<Umieszczenie> umieszczenia;
-
-    @OneToMany(mappedBy = "towar")
-    private  List<PozycjaPrzyjecia> pozycjaPrzyjeciaList;
-
-    @OneToMany(mappedBy = "towar")
-    private  List<PozycjaZamowienia> pozycjaZamowieniaList;
-
-    public Towar(int ID,String kod,String nazwa, int czasZalegania, double iloscMinimalna,Jednostka jednostka,Kategoria kategoria){
+    public Towar(Long ID,String kod,String nazwa, int czasZalegania, double iloscMinimalna,Jednostka jednostka,Kategoria kategoria){
         this.ID=ID;
         this.kod=kod;
         this.nazwa=nazwa;
@@ -43,18 +32,17 @@ public class Towar {
         this.iloscMinimalna=iloscMinimalna;
         this.jednostka=jednostka;
         this.kategoria=kategoria;
-        umieszczenia= new ArrayList<>();
     }
 
     public Towar() {
 
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -136,13 +124,5 @@ public class Towar {
 
     public void setKategoria(Kategoria kategoria) {
         this.kategoria = kategoria;
-    }
-
-    public List<Umieszczenie> getUmieszczenia() {
-        return umieszczenia;
-    }
-
-    public void setUmieszczenia(List<Umieszczenie> umieszczenia) {
-        this.umieszczenia = umieszczenia;
     }
 }

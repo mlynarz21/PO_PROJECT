@@ -10,31 +10,28 @@ public class Lokalizacja {
 
     @Id
     @GeneratedValue
-    private int ID;
+    private Long ID;
     private String kod;
     private int numerRzedu;
     private int numerRegalu;
     private int numerSektora;
     private boolean zajete;
 
-    @OneToOne
-    private Umieszczenie umieszczenie;
 
-    public Lokalizacja(int ID, String kod,int numerRegalu, int numerRzedu, int numerSektora, boolean zajete, Umieszczenie umieszczenie){
+    public Lokalizacja(Long ID, String kod,int numerRegalu, int numerRzedu, int numerSektora, boolean zajete){
         this.ID=ID;
         this.kod=kod;
         this.numerRzedu=numerRzedu;
         this.numerRegalu=numerRegalu;
         this.numerSektora=numerSektora;
         this.zajete=zajete;
-        this.umieszczenie=umieszczenie;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -78,12 +75,6 @@ public class Lokalizacja {
         this.zajete = zajete;
     }
 
-    public Umieszczenie getUmieszczenie() {
-        return umieszczenie;
-    }
 
-    public void setUmieszczenie(Umieszczenie umieszczenie) {
-        this.umieszczenie = umieszczenie;
-    }
 }
 

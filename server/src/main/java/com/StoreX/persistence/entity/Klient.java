@@ -9,7 +9,7 @@ public class Klient {
 
     @Id
     @GeneratedValue
-    private int ID;
+    private Long ID;
     private String login;
     private String imie;
     private String nazwisko;
@@ -18,7 +18,7 @@ public class Klient {
     private String miasto;
     private String numerDomu;
 
-    public Klient(int ID, String login, String imie, String nazwisko, String kodPocztowy, String ulica, String miasto, String numerDomu){
+    public Klient(Long ID, String login, String imie, String nazwisko, String kodPocztowy, String ulica, String miasto, String numerDomu){
         this.ID=ID;
         this.login=login;
         this.imie=imie;
@@ -29,11 +29,11 @@ public class Klient {
         this.numerDomu=numerDomu;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

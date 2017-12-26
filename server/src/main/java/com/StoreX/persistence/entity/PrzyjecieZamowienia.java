@@ -10,26 +10,23 @@ public class PrzyjecieZamowienia {
 
     @Id
     @GeneratedValue
-    private int ID;
+    private Long ID;
     private Date data;
 
     @OneToOne
     private ZamowienieDostawy zamowienie;
 
-    @OneToMany(mappedBy = "przyjecieZamowienia")
-    private List<PozycjaPrzyjecia> pozycjePrzyjecia = new ArrayList<>();
-
-    public PrzyjecieZamowienia(int ID, Date data, ZamowienieDostawy zamowienie){
+    public PrzyjecieZamowienia(Long ID, Date data, ZamowienieDostawy zamowienie){
         this.ID=ID;
         this.data=data;
         this.zamowienie=zamowienie;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

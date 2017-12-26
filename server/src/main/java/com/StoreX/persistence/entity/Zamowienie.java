@@ -10,25 +10,21 @@ public abstract class Zamowienie {
 
     @Id
     @GeneratedValue
-    private int ID;
+    private Long ID;
     private String kod;
     private Date dataZlozenia;
 
-    @OneToMany(mappedBy = "zamowienie")
-    private List<PozycjaZamowienia> pozycjeZamowienia;
-
-    public Zamowienie(int ID, String kod, Date dataZlozenia){
-        pozycjeZamowienia= new ArrayList<>();
+    public Zamowienie(Long ID, String kod, Date dataZlozenia){
         this.ID=ID;
         this.kod=kod;
         this.dataZlozenia=dataZlozenia;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -46,13 +42,5 @@ public abstract class Zamowienie {
 
     public void setDataZlozenia(Date dataZlozenia) {
         this.dataZlozenia = dataZlozenia;
-    }
-
-    public List<PozycjaZamowienia> getPozycjeZamowienia() {
-        return pozycjeZamowienia;
-    }
-
-    public void setPozycjeZamowienia(List<PozycjaZamowienia> pozycjeZamowienia) {
-        this.pozycjeZamowienia = pozycjeZamowienia;
     }
 }

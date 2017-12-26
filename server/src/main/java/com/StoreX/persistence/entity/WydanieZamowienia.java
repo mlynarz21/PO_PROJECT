@@ -1,22 +1,32 @@
 package com.StoreX.persistence.entity;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.util.Date;
 
+@Entity
 public class WydanieZamowienia {
-    private int ID;
+
+    @Id
+    @GeneratedValue
+    private Long ID;
     private Date data;
+
+    @OneToOne
     private ZamowienieZakupu zamowienie;
 
-    public WydanieZamowienia(int ID, Date data, ZamowienieZakupu zamowienie){
+    public WydanieZamowienia(Long ID, Date data, ZamowienieZakupu zamowienie){
         this.ID=ID;
         this.data=data;
         this.zamowienie=zamowienie;
     }
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
