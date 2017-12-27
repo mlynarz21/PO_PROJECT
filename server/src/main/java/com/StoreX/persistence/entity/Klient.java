@@ -18,6 +18,7 @@ public class Klient {
     private String miasto;
     private String numerDomu;
 
+    public Klient(){}
     public Klient(Long ID, String login, String imie, String nazwisko, String kodPocztowy, String ulica, String miasto, String numerDomu){
         this.ID=ID;
         this.login=login;

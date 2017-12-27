@@ -1,0 +1,6 @@
+1. Czy coœ oprócz bilansu dodajemy do bazy?
+2. Jakie(czego) s¹ mo¿liwe updaty?
+
+Pytania 1 i 2 s¹ wa¿ne dlatego, ¿e jak np. wprowadzamy zamowienie to mozemy mu dopisaæ klienta tylko, jeœli jest w bazie. Nie wiem, jak to dzia³a jak przypiszemy do zamowienia referencje do klienta i zapiszemy do bazy, a w bazie nie ma klienta(taki przyklad tylko)
+Edit: Tak jak myslalem, nie zadziala.
+

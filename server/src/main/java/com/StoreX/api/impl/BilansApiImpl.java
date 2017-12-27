@@ -5,10 +5,7 @@ import com.StoreX.common.datatypes.bo.BilansBO;
 import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
 import com.StoreX.common.datatypes.to.BilansTO;
-import com.StoreX.persistence.entity.Bilans;
-import com.StoreX.persistence.entity.PozycjaBilansu;
-import com.StoreX.persistence.entity.Towar;
-import com.StoreX.persistence.entity.ZamowienieZakupu;
+import com.StoreX.persistence.entity.*;
 import com.StoreX.persistence.repository.PozycjaBilansuRepository;
 import com.StoreX.persistence.repository.TowarRepository;
 import com.StoreX.service.BilansService;
@@ -97,6 +94,8 @@ public class BilansApiImpl implements BilansApi{
         z1.setStatus(StatusWydania.Zaakceptowane);
         ZamowienieZakupu z2 = new ZamowienieZakupu();
         z2.setStatus(StatusWydania.Oczekujące);
+        z2.setKlient(new Klient());
+
 
         ZamowienieZakupuBO z3 = modelMapper.map(z2, ZamowienieZakupuBO.class);
         z3.setStatus(StatusWydania.Gotowe);
@@ -104,11 +103,9 @@ public class BilansApiImpl implements BilansApi{
 //        zamowienieZakupuService.addZamowienie(sessionId,z);
 //        zamowienieZakupuService.addZamowienie(sessionId,z1);
 //        zamowienieZakupuService.addZamowienie(sessionId,z2);
-        try {
-            zamowienieZakupuService.updateStatusZamowienia(sessionId, z3.getID());
-        }catch(AuthenticationException x){
+            zamowienieZakupuService.addZamowienie(sessionId,z2);
 
-        }
+
         return new ResponseEntity<Long>(z3.getID(),HttpStatus.OK);
 
     }
