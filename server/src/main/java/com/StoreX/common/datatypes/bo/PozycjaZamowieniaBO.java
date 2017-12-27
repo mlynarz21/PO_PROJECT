@@ -2,19 +2,20 @@ package com.StoreX.common.datatypes.bo;
 
 import com.StoreX.persistence.entity.Towar;
 import com.StoreX.persistence.entity.Zamowienie;
+import com.StoreX.persistence.entity.ZamowienieZakupu;
 
 public class PozycjaZamowieniaBO {
-    private int ID;
+    private Long ID;
     private double ilosc;
     private double zrealizowano;
     private TowarBO towar;
-    private ZamowienieBO zamowienie;
+    private ZamowienieZakupuBO zamowienie;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -38,7 +39,7 @@ public class PozycjaZamowieniaBO {
         return zamowienie;
     }
 
-    public void setZamowienie(ZamowienieBO zamowienie) {
+    public void setZamowienie(ZamowienieZakupuBO zamowienie) {
         this.zamowienie = zamowienie;
     }
 

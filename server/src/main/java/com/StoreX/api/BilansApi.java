@@ -1,9 +1,11 @@
 package com.StoreX.api;
 
 import com.StoreX.common.datatypes.to.BilansTO;
+import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Date;
+import java.util.List;
 
 public interface BilansApi {
 
@@ -14,5 +16,5 @@ public interface BilansApi {
     /*
     To be removed, created for test purposes
      */
-    ResponseEntity<Long> addBilansTest(Date dataBilansowana, String sessionId);
+    ResponseEntity<List<PozycjaZamowieniaTO>> addBilansTest(Date dataBilansowana, String sessionId);
 }
