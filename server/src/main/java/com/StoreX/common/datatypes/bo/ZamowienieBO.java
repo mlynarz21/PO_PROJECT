@@ -10,7 +10,6 @@ public abstract class ZamowienieBO {
     private Long ID;
     private String kod;
     private Date dataZlozenia;
-    private List<PozycjaZamowieniaBO> pozycjeZamowienia;
 
     public Long getID() {
         return ID;
@@ -34,13 +33,5 @@ public abstract class ZamowienieBO {
 
     public void setDataZlozenia(Date dataZlozenia) {
         this.dataZlozenia = dataZlozenia;
-    }
-
-    public List<PozycjaZamowieniaBO> getPozycjeZamowienia() {
-        return pozycjeZamowienia;
-    }
-
-    public void setPozycjeZamowienia(List<PozycjaZamowieniaBO> pozycjeZamowienia) {
-        this.pozycjeZamowienia = pozycjeZamowienia;
     }
 }

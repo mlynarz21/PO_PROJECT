@@ -9,7 +9,6 @@ public class LokalizacjaBO {
     private int numerRegalu;
     private int numerSektora;
     private boolean zajete;
-    private UmieszczenieBO umieszczenie;
 
     public int getID() {
         return ID;
@@ -59,12 +58,5 @@ public class LokalizacjaBO {
         this.zajete = zajete;
     }
 
-    public UmieszczenieBO getUmieszczenie() {
-        return umieszczenie;
-    }
-
-    public void setUmieszczenie(UmieszczenieBO umieszczenie) {
-        this.umieszczenie = umieszczenie;
-    }
 }
 
