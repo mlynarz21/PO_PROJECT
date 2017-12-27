@@ -18,5 +18,5 @@ public interface ZamowienieZakupuRepository extends JpaRepository<ZamowienieZaku
 
     @Modifying
     @Query(value = "update Zamowienie set status = ?2 where id = ?1", nativeQuery = true)
-    void updateStatusZamowienia(Long ID, StatusWydania statusWydania);
+    void updateStatusZamowienia(Long ID, String statusWydania);
 }

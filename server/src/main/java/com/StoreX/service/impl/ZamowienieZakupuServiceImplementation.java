@@ -53,7 +53,7 @@ public class ZamowienieZakupuServiceImplementation implements ZamowienieZakupuSe
             // throw new AuthenticationException();
       //  }
 
-        zamowienieZakupuRepository.updateStatusZamowienia(ID, StatusWydania.Gotowe);
+        zamowienieZakupuRepository.updateStatusZamowienia(ID, StatusWydania.Gotowe.toString());
     }
 
     @Override
