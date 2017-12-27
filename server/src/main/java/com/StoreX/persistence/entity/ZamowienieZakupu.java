@@ -18,6 +18,8 @@ public class ZamowienieZakupu extends Zamowienie{
     @OneToOne
     private Klient klient;
 
+    public ZamowienieZakupu(){}
+
     public ZamowienieZakupu(Long ID, String kod, Date dataZlozenia, StatusWydania status, Klient klient){
         super(ID,kod,dataZlozenia);
         this.status=status;
