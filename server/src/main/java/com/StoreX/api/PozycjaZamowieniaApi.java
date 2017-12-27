@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface PozycjaZamowieniaApi {
 
-    ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(ZamowienieZakupuTO zamowienie, String sessionId);
+    ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(Long ID, String sessionId);
 
     ResponseEntity<Boolean> updatePozycjaZamowienia(PozycjaZamowieniaTO pozycjaZamowienia, String sessionId);
 

@@ -31,11 +31,10 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
 
     @Override
     @RequestMapping(value = "/getPozycjeZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(@RequestBody ZamowienieZakupuTO zamowienie, @RequestHeader(value = "SessionID") String sessionId){
+    public ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(@RequestBody Long ID, @RequestHeader(value = "SessionID") String sessionId){
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
-        ZamowienieZakupuBO zamowienieBO = modelMapper.map(zamowienie, ZamowienieZakupuBO.class);
         try {
-            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(zamowienieBO);
+            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(ID);
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }

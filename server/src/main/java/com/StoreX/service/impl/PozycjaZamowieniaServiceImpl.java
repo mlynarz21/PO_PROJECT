@@ -25,8 +25,8 @@ public class PozycjaZamowieniaServiceImpl implements PozycjaZamowieniaService {
     private ModelMapper modelMapper = new ModelMapper();
 
     @Override
-    public List<PozycjaZamowieniaBO> findAllforZamowienie(ZamowienieZakupuBO zamowienieBO) throws AuthenticationException{
-        List<PozycjaZamowienia> pozycjaZamowieniaList = getPozycjaZamowieniaRepository().findAllForZamowienie(zamowienieBO.getID());
+    public List<PozycjaZamowieniaBO> findAllforZamowienie(Long ID) throws AuthenticationException{
+        List<PozycjaZamowienia> pozycjaZamowieniaList = getPozycjaZamowieniaRepository().findAllForZamowienie(ID);
         List<PozycjaZamowieniaBO> resultBO = new ArrayList<>();
 
         for (PozycjaZamowienia pozycjaZamowienia : pozycjaZamowieniaList) {
