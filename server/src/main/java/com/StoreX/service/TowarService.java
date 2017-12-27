@@ -4,5 +4,5 @@ import com.StoreX.persistence.entity.Bilans;
 import com.StoreX.persistence.entity.Towar;
 
 public interface TowarService {
-    public Towar saveTowar(Towar bilans);
+    public Towar saveTowar(Towar towar);
 }

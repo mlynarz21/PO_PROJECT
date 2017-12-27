@@ -12,3 +12,4 @@ Edit: Tak jak myslalem, nie zadziala.
 TODO:
 1. Wyszukiwanie listy pozycji po ID
 2. Przygotowaæ "insert script" do wykonania po starcie bazy
+3. Add Transactions

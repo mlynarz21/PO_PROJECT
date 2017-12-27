@@ -8,10 +8,7 @@ import com.StoreX.common.datatypes.to.BilansTO;
 import com.StoreX.persistence.entity.*;
 import com.StoreX.persistence.repository.PozycjaBilansuRepository;
 import com.StoreX.persistence.repository.TowarRepository;
-import com.StoreX.service.BilansService;
-import com.StoreX.service.PozycjaBilansuService;
-import com.StoreX.service.TowarService;
-import com.StoreX.service.ZamowienieZakupuService;
+import com.StoreX.service.*;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -74,6 +71,8 @@ public class BilansApiImpl implements BilansApi{
     PozycjaBilansuService pozycjaBilansuService;
     @Autowired
     ZamowienieZakupuService zamowienieZakupuService;
+    @Autowired
+    PozycjaZamowieniaService pozycjaZamowieniaService;
     @Override
     @RequestMapping(value = "/addBilansTest/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Long> addBilansTest(Date dataBilansowana, String sessionId) {
@@ -108,6 +107,23 @@ public class BilansApiImpl implements BilansApi{
 
         return new ResponseEntity<Long>(z3.getID(),HttpStatus.OK);
 
+    }
+
+    @Override
+    @RequestMapping(value = "/addTest/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Long> addTest(String sessionId) {
+        ZamowienieZakupu z = new ZamowienieZakupu();
+        Towar t = new Towar();
+        PozycjaZamowienia pz = new PozycjaZamowienia();
+
+
+        zamowienieZakupuService.addZamowienie(sessionId, z);
+        towarService.saveTowar(t);
+        pz.setTowar(t);
+        pz.setZamowienie(z);
+        pozycjaZamowieniaService.add(pz);
+
+        return new ResponseEntity<Long>(pz.getID(), HttpStatus.OK);
     }
 
 }

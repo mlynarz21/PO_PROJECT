@@ -17,4 +17,6 @@ public interface BilansApi {
     To be removed, created for test purposes
      */
     ResponseEntity<Long> addBilansTest(Date dataBilansowana, String sessionId);
+
+    ResponseEntity<Long> addTest(String sessionId);
 }
