@@ -46,12 +46,14 @@ public class BilansServiceImplementation implements BilansService {
 
     @Override
     public BilansBO findLast(String sessionId)throws AuthenticationException {
-        if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
+        if (!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
             //throw new AuthenticationException();
-            }
-        Bilans lastBilans =  getBilansRepository().findLastBilansByDate();
+        }
+        Bilans lastBilans = getBilansRepository().findLastBilansByDate();
 
-        return modelMapper.map(lastBilans, BilansBO.class);
+        if (lastBilans != null)
+            return modelMapper.map(lastBilans, BilansBO.class);
+        else return null;
     }
 
     @Override

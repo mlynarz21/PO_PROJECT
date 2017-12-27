@@ -44,11 +44,11 @@ public class MonthPickupController extends ArtifactsBaseController {
         List<String> toReturn= new ArrayList<>();
         Calendar currentDate = Calendar.getInstance();
         Calendar bilansDate = Calendar.getInstance();
-        bilansDate.setTime(bilans.getDataBilansu());
         DateFormat df = new SimpleDateFormat("MM/yyyy");
 
-        if(bilans==null)
-            toReturn.add(new StringBuilder().append(getMonth(currentDate.get(Calendar.MONTH))).append(" ").append(currentDate.get(Calendar.YEAR)).toString());
+        if(bilans==null) {
+            toReturn.add(new StringBuilder().append(getMonth(currentDate.get(Calendar.MONTH)-1)).append(" ").append(currentDate.get(Calendar.YEAR)).toString());
+        }
         else {
             bilansDate.setTime(bilans.getDataBilansu());
             bilansDate.add(Calendar.MONTH, 1);
