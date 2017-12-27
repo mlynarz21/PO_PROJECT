@@ -1,6 +1,7 @@
 package com.StoreX.service.impl;
 
 import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
+import com.StoreX.common.datatypes.enumerations.StatusWydania;
 import com.StoreX.common.datatypes.to.ZamowienieZakupuTO;
 import com.StoreX.persistence.entity.Bilans;
 import com.StoreX.persistence.entity.ZamowienieZakupu;
@@ -10,6 +11,8 @@ import com.StoreX.service.ZamowienieZakupuService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.naming.AuthenticationException;
 import java.util.ArrayList;
@@ -41,5 +44,22 @@ public class ZamowienieZakupuServiceImplementation implements ZamowienieZakupuSe
         }
 
         return resultBO;
+    }
+
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
+    public void updateStatusZamowienia(String sessionId, ZamowienieZakupuBO zamowienieZakupuBO) throws AuthenticationException {
+      //  if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
+            // throw new AuthenticationException();
+      //  }
+        ZamowienieZakupu zamowienieZakupu = modelMapper.map(zamowienieZakupuBO, ZamowienieZakupu.class);
+
+        zamowienieZakupuRepository.updateStatusZamowienia(zamowienieZakupu.getID(), zamowienieZakupu.getStatus().toString());
+    }
+
+    @Override
+    public Boolean addZamowienie(String sessionId, ZamowienieZakupu zamowienieZakupu) {
+        ZamowienieZakupu b = zamowienieZakupuRepository.save(zamowienieZakupu);
+        return b != null;
     }
 }

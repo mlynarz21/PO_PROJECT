@@ -1,19 +1,21 @@
 package com.StoreX.common.datatypes.bo;
 
+import com.StoreX.common.datatypes.enumerations.StatusDostawy;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
 import com.StoreX.persistence.entity.Zamowienie;
 
+import javax.xml.transform.sax.SAXTransformerFactory;
 import java.util.Date;
 
 public class ZamowienieDostawyBO extends ZamowienieBO{
 
-    private StatusWydania status;
+    private StatusDostawy status;
 
-    public StatusWydania getStatus() {
+    public StatusDostawy getStatus() {
         return status;
     }
 
-    public void setStatus(StatusWydania status) {
+    public void setStatus(StatusDostawy status) {
         this.status = status;
     }
 }

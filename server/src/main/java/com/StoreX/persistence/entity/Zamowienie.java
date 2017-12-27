@@ -14,6 +14,7 @@ public abstract class Zamowienie {
     private String kod;
     private Date dataZlozenia;
 
+    public Zamowienie(){}
     public Zamowienie(Long ID, String kod, Date dataZlozenia){
         this.ID=ID;
         this.kod=kod;

@@ -2,15 +2,19 @@ package com.StoreX.api.impl;
 
 import com.StoreX.api.BilansApi;
 import com.StoreX.common.datatypes.bo.BilansBO;
+import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
+import com.StoreX.common.datatypes.enumerations.StatusWydania;
 import com.StoreX.common.datatypes.to.BilansTO;
 import com.StoreX.persistence.entity.Bilans;
 import com.StoreX.persistence.entity.PozycjaBilansu;
 import com.StoreX.persistence.entity.Towar;
+import com.StoreX.persistence.entity.ZamowienieZakupu;
 import com.StoreX.persistence.repository.PozycjaBilansuRepository;
 import com.StoreX.persistence.repository.TowarRepository;
 import com.StoreX.service.BilansService;
 import com.StoreX.service.PozycjaBilansuService;
 import com.StoreX.service.TowarService;
+import com.StoreX.service.ZamowienieZakupuService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -67,8 +71,10 @@ public class BilansApiImpl implements BilansApi{
     TowarService towarService;
     @Autowired
     PozycjaBilansuService pozycjaBilansuService;
+    @Autowired
+    ZamowienieZakupuService zamowienieZakupuService;
     @Override
-    @RequestMapping(value = "/addBilansTest/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/addBilansTest/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Long> addBilansTest(Date dataBilansowana, String sessionId) {
         Bilans b = new Bilans();
         Bilans b2 = new Bilans();
@@ -81,7 +87,25 @@ public class BilansApiImpl implements BilansApi{
 //       bilansService.saveBilans(b3);
 //        Bilans b4 = bilansService.findLast();
 
-        return new ResponseEntity<Long>(b3.getID(),HttpStatus.OK);
+        ZamowienieZakupu z = new ZamowienieZakupu();
+        z.setStatus(StatusWydania.Zaakceptowane);
+        ZamowienieZakupu z1 = new ZamowienieZakupu();
+        z1.setStatus(StatusWydania.Zaakceptowane);
+        ZamowienieZakupu z2 = new ZamowienieZakupu();
+        z2.setStatus(StatusWydania.Oczekujące);
+
+        ZamowienieZakupuBO z3 = modelMapper.map(z2, ZamowienieZakupuBO.class);
+        z3.setStatus(StatusWydania.Gotowe);
+        z3.setID(new Long(4));
+//        zamowienieZakupuService.addZamowienie(sessionId,z);
+//        zamowienieZakupuService.addZamowienie(sessionId,z1);
+//        zamowienieZakupuService.addZamowienie(sessionId,z2);
+        try {
+            zamowienieZakupuService.updateStatusZamowienia(sessionId, z3);
+        }catch(AuthenticationException x){
+
+        }
+        return new ResponseEntity<Long>(z3.getID(),HttpStatus.OK);
 
     }
 

@@ -54,16 +54,17 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
     @RequestMapping(value = "/updateStatusZamowienieZakupu/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> updateStatusZamowienieZakupu(@RequestBody ZamowienieZakupuTO zamowienieZakupu, @RequestHeader(value = "SessionID") String sessionId) {
         boolean updated = false;
-//        try {
-//            updated = bookingService.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
-//        } catch (AuthenticationException e) {
-//            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
-//        }
+        ZamowienieZakupuBO zamowienieZakupuBO = modelMapper.map(zamowienieZakupu, ZamowienieZakupuBO.class);
+        try {
+            zamowienieZakupuService.updateStatusZamowienia(sessionId, zamowienieZakupuBO);  //.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
+        } catch (AuthenticationException e) {
+            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
+        }
 
         if (updated) {
-            return new ResponseEntity<Boolean>(updated, HttpStatus.OK);
+            return new ResponseEntity<Boolean>(true, HttpStatus.OK);
         } else {
-            return new ResponseEntity<Boolean>(updated, HttpStatus.FOUND);
+            return new ResponseEntity<Boolean>(true, HttpStatus.FOUND);
         }
     }
 
