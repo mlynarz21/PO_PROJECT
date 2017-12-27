@@ -15,6 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import sun.util.calendar.BaseCalendar;
 
 import javax.naming.AuthenticationException;
 import java.util.Date;
@@ -109,19 +110,59 @@ public class BilansApiImpl implements BilansApi{
 
     }
 
+    @Autowired
+    KategoriaService kategoriaService;
+    @Autowired
+    JednostkaService jednostkaService;
+
     @Override
     @RequestMapping(value = "/addTest/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Long> addTest(String sessionId) {
         ZamowienieZakupu z = new ZamowienieZakupu();
         Towar t = new Towar();
+        Kategoria k = new Kategoria(new Long(2), "Picie");
+        Jednostka j = new Jednostka(new Long(1),"Litry");
+        kategoriaService.add(k);
+        jednostkaService.add(j);
+        t.setNazwa("NazwaTowaru1");
+        t.setIloscMinimalna(10);
+        t.setKategoria(k);
+        t.setKod("kodTowaru");
+        t.setIlostan(100);
+        t.setJednostka(j);
+        t.setPotrzebujeZamowienia(false);
+
+        z.setStatus(StatusWydania.Zaakceptowane);
+
+        z.setTerminRealizacji(new Date(118,11,11));
+        z.setDataZlozenia(new Date(116,11,11));
         PozycjaZamowienia pz = new PozycjaZamowienia();
 
-
+        Towar t2 = new Towar();
+        t2.setNazwa("NazwaTowaru2");
+        t2.setIloscMinimalna(10);
+        t2.setKategoria(k);
+        t2.setKod("drugiTwoar");
+        t2.setIlostan(20);
+        t2.setJednostka(j);
+        t2.setPotrzebujeZamowienia(false);
         zamowienieZakupuService.addZamowienie(sessionId, z);
+
+        try {
+            zamowienieZakupuService.updateStatusZamowienia(sessionId, new Long(21));
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        }
         towarService.saveTowar(t);
+        towarService.saveTowar(t2);
         pz.setTowar(t);
         pz.setZamowienie(z);
         pozycjaZamowieniaService.add(pz);
+
+        PozycjaZamowienia pz2 = new PozycjaZamowienia();
+        pz2.setZamowienie(z);
+        pz2.setTowar(t2);
+        pozycjaZamowieniaService.add(pz2);
 
         return new ResponseEntity<Long>(pz.getID(), HttpStatus.OK);
     }

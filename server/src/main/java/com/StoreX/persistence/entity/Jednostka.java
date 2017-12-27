@@ -16,6 +16,8 @@ public class Jednostka {
     @Size(max = 32)
     private String rodzaj;
 
+
+    public Jednostka(){}
     public Jednostka(Long ID, String rodzaj){
         this.ID=ID;
         this.rodzaj=rodzaj;

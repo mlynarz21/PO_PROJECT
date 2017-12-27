@@ -2,8 +2,6 @@ package com.StoreX.service.impl;
 
 import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
-import com.StoreX.common.datatypes.to.ZamowienieZakupuTO;
-import com.StoreX.persistence.entity.Bilans;
 import com.StoreX.persistence.entity.ZamowienieZakupu;
 import com.StoreX.persistence.repository.ZamowienieZakupuRepository;
 import com.StoreX.service.AuthorizationService;
@@ -36,7 +34,7 @@ public class ZamowienieZakupuServiceImplementation implements ZamowienieZakupuSe
             // throw new AuthenticationException();
         }
 
-        List<ZamowienieZakupu> result = zamowienieZakupuRepository.findAllAccepted();
+        List<ZamowienieZakupu> result = zamowienieZakupuRepository.findByStatus(StatusWydania.Zaakceptowane.toString());
         List<ZamowienieZakupuBO> resultBO = new ArrayList<>();
 
         for (ZamowienieZakupu zamowienie : result) {
