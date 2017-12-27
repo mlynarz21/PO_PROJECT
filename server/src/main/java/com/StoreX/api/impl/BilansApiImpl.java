@@ -60,7 +60,7 @@ public class BilansApiImpl implements BilansApi{
             return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
         }
 
-        return new ResponseEntity<Boolean>(bilansBO != null, HttpStatus.OK);
+        return new ResponseEntity<Boolean>(HttpStatus.OK);
     }
 
     /*

@@ -51,6 +51,7 @@ public class MonthPickupController extends ArtifactsBaseController {
             toReturn.add(new StringBuilder().append(getMonth(currentDate.get(Calendar.MONTH))).append(" ").append(currentDate.get(Calendar.YEAR)).toString());
         else {
             bilansDate.setTime(bilans.getDataBilansu());
+            bilansDate.add(Calendar.MONTH, 1);
             while (bilansDate.get(Calendar.YEAR) != currentDate.get(Calendar.YEAR) || bilansDate.get(Calendar.MONTH) < currentDate.get(Calendar.MONTH) && bilansDate.get(Calendar.YEAR) == currentDate.get(Calendar.YEAR)) {
                 toReturn.add(new StringBuilder().append(getMonth(bilansDate.get(Calendar.MONTH))).append(" ").append(bilansDate.get(Calendar.YEAR)).toString());
                 bilansDate.add(Calendar.MONTH, 1);
@@ -61,29 +62,29 @@ public class MonthPickupController extends ArtifactsBaseController {
 
     private String getMonth(int month){
         switch (month){
-            case 1:
+            case 0:
                 return "Styczeń";
-            case 2:
+            case 1:
                 return "Luty";
-            case 3:
+            case 2:
                 return "Marzec";
-            case 4:
+            case 3:
                 return "Kwiecień";
-            case 5:
+            case 4:
                 return "Maj";
-            case 6:
+            case 5:
                 return "Czerwiec";
-            case 7:
+            case 6:
                 return "Lipiec";
-            case 8:
+            case 7:
                 return "Sierpień";
-            case 9:
+            case 8:
                 return "Wrzesień";
-            case 10:
+            case 9:
                 return "Październik";
-            case 11:
+            case 10:
                 return "Listopad";
-            case 12:
+            case 11:
                 return "Grudzień";
             default:
                 return "Blad";
