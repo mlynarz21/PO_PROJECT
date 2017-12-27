@@ -11,7 +11,6 @@ public class BilansBO {
     private Long ID;
     private Date dataWykonania;
     private Date dataBilansu;
-    private List<PozycjaBilansuBO> pozycjeBilansu = new ArrayList<>();
 
     public Long getID() {
         return ID;
@@ -25,9 +24,6 @@ public class BilansBO {
         return dataBilansu;
     }
 
-    public List<PozycjaBilansuBO> getPozycjeBilansu() {
-        return pozycjeBilansu;
-    }
 
     public void setID(Long ID) {
         this.ID = ID;
@@ -41,7 +37,4 @@ public class BilansBO {
         this.dataBilansu = dataBilansu;
     }
 
-    public void setPozycjeBilansu(List<PozycjaBilansuBO> pozycjeBilansu) {
-        this.pozycjeBilansu = pozycjeBilansu;
-    }
 }
