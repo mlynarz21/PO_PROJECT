@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ZamowienieZakupuRestServiceClient {
 
-    List<ZamowienieTO> getAllZaakceptowane();
+    List<ZamowienieZakupuTO> getAllZaakceptowane();
 
     void updateStatusZamowienieZakupu(ZamowienieZakupuTO zamowienie);
 }

@@ -11,6 +11,7 @@ public class ZamowienieZakupuBO extends ZamowienieBO{
 
     private StatusWydania status;
     private KlientBO klient;
+    private Date terminRealizacji;
 
     public StatusWydania getStatus() {
         return status;
@@ -27,5 +28,14 @@ public class ZamowienieZakupuBO extends ZamowienieBO{
     public void setKlient(KlientBO klient) {
         this.klient = klient;
     }
+
+    public Date getTerminRealizacji() {
+        return terminRealizacji;
+    }
+
+    public void setTerminRealizacji(Date terminRealizacji) {
+        this.terminRealizacji = terminRealizacji;
+    }
 }
+
 

@@ -14,6 +14,7 @@ public class ZamowienieZakupu extends Zamowienie{
 
     @Enumerated(EnumType.STRING)
     private StatusWydania status;
+    private Date terminRealizacji;
 
     @OneToOne
     private Klient klient;
@@ -40,6 +41,14 @@ public class ZamowienieZakupu extends Zamowienie{
 
     public void setKlient(Klient klient) {
         this.klient = klient;
+    }
+
+    public Date getTerminRealizacji() {
+        return terminRealizacji;
+    }
+
+    public void setTerminRealizacji(Date terminRealizacji) {
+        this.terminRealizacji = terminRealizacji;
     }
 }
 

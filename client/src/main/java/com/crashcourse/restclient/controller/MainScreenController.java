@@ -1,6 +1,7 @@
 package com.crashcourse.restclient.controller;
 
 import com.crashcourse.restclient.api.ArtifactRestServiceClient;
+import com.crashcourse.restclient.api.ZamowienieZakupuRestServiceClient;
 import com.crashcourse.restclient.datatype.ArtifactTo;
 import com.crashcourse.restclient.datatype.enumeration.Category;
 import com.crashcourse.restclient.datatype.enumeration.Status;
@@ -26,6 +27,8 @@ public class MainScreenController extends ArtifactsBaseController {
     private ArtifactRestServiceClient restServiceClient;
     @Autowired
     private StoreXSecurityContext context;
+    @Autowired
+    private ZamowienieZakupuRestServiceClient zamowienieZakupuRestServiceClient;
 
     public MainScreenController(Stage primaryStage) {
         super(primaryStage);
@@ -57,7 +60,14 @@ public class MainScreenController extends ArtifactsBaseController {
     }
     @FXML
     public void completeOrder() {
-        FXMLDialog defaultDialog = getScreens().orderPickupDialog();
+        FXMLDialog defaultDialog;
+
+        if(zamowienieZakupuRestServiceClient.getAllZaakceptowane().size()!=0) {
+            defaultDialog = getScreens().orderPickupDialog();
+        }
+        else{
+            defaultDialog = getScreens().okNoWaitingOrdersDialog();
+        }
         getDialog().close();
         getScreens().showDialog(defaultDialog);
     }

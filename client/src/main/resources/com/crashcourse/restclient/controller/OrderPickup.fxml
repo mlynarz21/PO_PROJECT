@@ -18,11 +18,11 @@
                   <Font size="52.0" />
                </font>
             </Label>
-            <TableView prefHeight="769.0" prefWidth="1310.0" style="-fx-background-color: #78bfff; -fx-opacity: 0.4;">
+            <TableView fx:id="ordersTable" prefHeight="769.0" prefWidth="1310.0" style="-fx-background-color: #78bfff; -fx-opacity: 0.4;">
               <columns>
-                <TableColumn prefWidth="75.0" text="%OrderPickup.noColumn" />
-                <TableColumn prefWidth="75.0" text="%OrderPickup.orderDateColumn" />
-                  <TableColumn prefWidth="75.0" text="%OrderPickup.realizationDateColumn" />
+                <TableColumn fx:id="numerZamowieniaColumn" prefWidth="75.0" text="%OrderPickup.noColumn" />
+                <TableColumn fx:id="dataZamowieniaColumn" prefWidth="75.0" text="%OrderPickup.orderDateColumn" />
+                  <TableColumn fx:id="terminRealizacjiColumn" prefWidth="75.0" text="%OrderPickup.realizationDateColumn" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

@@ -30,11 +30,11 @@ public class ZamowienieZakupuRestServiceClientImpl implements ZamowienieZakupuRe
     private StoreXSecurityContext app;
 
 
-    public List<ZamowienieTO> getAllZaakceptowane(){
+    public List<ZamowienieZakupuTO> getAllZaakceptowane(){
 
         RequestEntity<Void> requestEntity = this.<Void> buildRequest(builGetAllZaakceptowaneRequstUri(), null, HttpMethod.GET);
 
-        ResponseEntity<List<ZamowienieTO>> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<List<ZamowienieTO>>() {
+        ResponseEntity<List<ZamowienieZakupuTO>> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<List<ZamowienieZakupuTO>>() {
         });
         return exchange.getBody();
     }

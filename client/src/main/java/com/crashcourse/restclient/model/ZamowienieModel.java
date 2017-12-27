@@ -11,7 +11,6 @@ public abstract class ZamowienieModel {
     private int ID;
     private StringProperty kod;
     private ObjectProperty<Date> dataZlozenia;
-    private List<PozycjaZamowieniaTO> pozycjeZamowienia;
 
     public int getID() {
         return ID;
@@ -35,13 +34,5 @@ public abstract class ZamowienieModel {
 
     public void setDataZlozenia(ObjectProperty<Date> dataZlozenia) {
         this.dataZlozenia = dataZlozenia;
-    }
-
-    public List<PozycjaZamowieniaTO> getPozycjeZamowienia() {
-        return pozycjeZamowienia;
-    }
-
-    public void setPozycjeZamowienia(List<PozycjaZamowieniaTO> pozycjeZamowienia) {
-        this.pozycjeZamowienia = pozycjeZamowienia;
     }
 }

@@ -25,7 +25,6 @@ public class ZamowienieDostawyModel extends ZamowienieModel{
         zamowienieDostawyModel.setDataZlozenia(new SimpleObjectProperty<Date>(zamowienieDostawyTO.getDataZlozenia()));
         zamowienieDostawyModel.setID(zamowienieDostawyTO.getID());
         zamowienieDostawyModel.setKod(new SimpleStringProperty(zamowienieDostawyTO.getKod()));
-        zamowienieDostawyModel.setPozycjeZamowienia(zamowienieDostawyTO.getPozycjeZamowienia());
         return zamowienieDostawyModel;
     }
 }
