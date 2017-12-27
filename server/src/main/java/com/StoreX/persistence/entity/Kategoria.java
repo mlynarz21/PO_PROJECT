@@ -12,6 +12,8 @@ public class Kategoria {
     private Long ID;
     private String kategoria;
 
+
+    public  Kategoria(){}
     public Kategoria(Long ID, String kategoria){
         this.ID=ID;
         this.kategoria=kategoria;

@@ -1,6 +1,7 @@
 package com.StoreX.common.datatypes.to;
 
 import com.StoreX.persistence.entity.PozycjaZamowienia;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 import java.util.List;
@@ -8,8 +9,8 @@ import java.util.List;
 public abstract class ZamowienieTO {
     private int ID;
     private String kod;
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
     private Date dataZlozenia;
-    private List<PozycjaZamowieniaTO> pozycjeZamowienia;
 
     public int getID() {
         return ID;
@@ -35,11 +36,5 @@ public abstract class ZamowienieTO {
         this.dataZlozenia = dataZlozenia;
     }
 
-    public List<PozycjaZamowieniaTO> getPozycjeZamowienia() {
-        return pozycjeZamowienia;
-    }
 
-    public void setPozycjeZamowienia(List<PozycjaZamowieniaTO> pozycjeZamowienia) {
-        this.pozycjeZamowienia = pozycjeZamowienia;
-    }
 }

@@ -13,8 +13,8 @@ public interface ZamowienieZakupuRepository extends JpaRepository<ZamowienieZaku
     /*
     todo query statements needs to be changed probably
      */
-    @Query(value = "select * from Zamowienie where dtype = 'ZamowienieZakupu' and  status = 'Zaakceptowane'", nativeQuery = true)
-    List<ZamowienieZakupu> findAllAccepted();
+    @Query(value = "select * from Zamowienie where dtype = 'ZamowienieZakupu' and  status = ?1", nativeQuery = true)
+    List<ZamowienieZakupu> findByStatus(String status);
 
     @Modifying
     @Query(value = "update Zamowienie set status = ?2 where id = ?1", nativeQuery = true)
