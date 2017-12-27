@@ -9,12 +9,16 @@ import com.StoreX.common.datatypes.to.KlientTO;
 import com.StoreX.common.datatypes.to.UmieszczenieTO;
 import com.StoreX.common.datatypes.to.ZamowienieTO;
 import com.StoreX.common.datatypes.to.ZamowienieZakupuTO;
+import com.StoreX.persistence.repository.ZamowienieZakupuRepository;
+import com.StoreX.service.ZamowienieZakupuService;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.naming.AuthenticationException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,15 +29,17 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
 
     private ModelMapper modelMapper = new ModelMapper();
 
+    @Autowired
+    ZamowienieZakupuService zamowienieZakupuService;
     @Override
     @RequestMapping(value = "/getAllZaakceptowane/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ZamowienieZakupuTO>> getAllZaakceptowane(@RequestHeader(value = "SessionID") String sessionId){
         List<ZamowienieZakupuBO> zamowieniaBO = null;
-//        try {
-//            zamowieniaBO = searchService.findAllArtifacts(sessionId);
-//        } catch (AuthenticationException e) {
-//            return new ResponseEntity<List<ZamowienieZakupuTO>>(HttpStatus.UNAUTHORIZED);
-//        }
+        try {
+            zamowieniaBO = zamowienieZakupuService.findAllAccepted(sessionId);
+        } catch (AuthenticationException e) {
+            return new ResponseEntity<List<ZamowienieZakupuTO>>(HttpStatus.UNAUTHORIZED);
+        }
 
         List<ZamowienieZakupuTO> results = new ArrayList<>();
 

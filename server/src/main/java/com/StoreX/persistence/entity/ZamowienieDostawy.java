@@ -1,5 +1,6 @@
 package com.StoreX.persistence.entity;
 
+import com.StoreX.common.datatypes.enumerations.StatusDostawy;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
 
 import javax.persistence.Entity;
@@ -11,18 +12,18 @@ import java.util.Date;
 public class ZamowienieDostawy extends Zamowienie{
 
     @Enumerated(EnumType.STRING)
-    private StatusWydania status;
+    private StatusDostawy status;
 
-    public ZamowienieDostawy(Long ID, String kod, Date dataZlozenia, StatusWydania status){
+    public ZamowienieDostawy(Long ID, String kod, Date dataZlozenia, StatusDostawy status){
         super(ID,kod,dataZlozenia);
         this.status=status;
     }
 
-    public StatusWydania getStatus() {
+    public StatusDostawy getStatus() {
         return status;
     }
 
-    public void setStatus(StatusWydania status) {
+    public void setStatus(StatusDostawy status) {
         this.status = status;
     }
 }
