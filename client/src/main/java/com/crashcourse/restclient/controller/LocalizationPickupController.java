@@ -30,7 +30,7 @@ public class LocalizationPickupController extends ArtifactsBaseController {
 
     @FXML
     public void back() {
-        FXMLDialog defaultDialog=getScreens().productPickupDialog();
+        FXMLDialog defaultDialog=getScreens().productPickupDialog(null);
         getDialog().close();
         getScreens().showDialog(defaultDialog);
     }

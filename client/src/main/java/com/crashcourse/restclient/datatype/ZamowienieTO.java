@@ -6,17 +6,17 @@ import java.util.Date;
 import java.util.List;
 
 public abstract class ZamowienieTO {
-    private int ID;
+    private Long ID;
     private String kod;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date dataZlozenia;
     private List<PozycjaZamowieniaTO> pozycjeZamowienia;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface ZamowienieZakupuService {
     public List<ZamowienieZakupuBO> findAllAccepted(String sessionId) throws AuthenticationException;
-    public void updateStatusZamowienia(String sessionId, ZamowienieZakupuBO zamowienieZakupuBO) throws AuthenticationException;
+    public void updateStatusZamowienia(String sessionId, Long ID) throws AuthenticationException;
 
     /*
     test method, to be removed

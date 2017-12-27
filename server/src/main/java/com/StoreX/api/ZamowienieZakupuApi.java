@@ -10,6 +10,6 @@ public interface ZamowienieZakupuApi {
 
     ResponseEntity<List<ZamowienieZakupuTO>> getAllZaakceptowane(String sessionId);
 
-    ResponseEntity<Boolean> updateStatusZamowienieZakupu(ZamowienieZakupuTO zamowienie, String sessionId);
+    ResponseEntity<Boolean> updateStatusZamowienieZakupu(Long ID, String sessionId);
 
 }

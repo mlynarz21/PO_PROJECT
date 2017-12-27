@@ -43,8 +43,8 @@ public class ZamowienieZakupuRestServiceClientImpl implements ZamowienieZakupuRe
         return URI.create(new StringBuilder().append(serviceUrl).append("/getAllZaakceptowane/").toString());
     }
 
-    public void updateStatusZamowienieZakupu(ZamowienieZakupuTO zamowienie){
-        RequestEntity<ZamowienieZakupuTO> request = buildRequest(builUpdateStatusZamowienieZakupuRequestUri(), zamowienie, HttpMethod.POST);
+    public void updateStatusZamowienieZakupu(Long ID){
+        RequestEntity<Long> request = buildRequest(builUpdateStatusZamowienieZakupuRequestUri(), ID, HttpMethod.POST);
 
         restTemplate.exchange(request, new ParameterizedTypeReference<Boolean>() {
         });

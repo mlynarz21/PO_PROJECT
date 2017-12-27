@@ -9,5 +9,5 @@ public interface ZamowienieZakupuRestServiceClient {
 
     List<ZamowienieZakupuTO> getAllZaakceptowane();
 
-    void updateStatusZamowienieZakupu(ZamowienieZakupuTO zamowienie);
+    void updateStatusZamowienieZakupu(Long ID);
 }

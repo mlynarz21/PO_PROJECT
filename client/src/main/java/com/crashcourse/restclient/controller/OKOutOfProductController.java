@@ -30,7 +30,7 @@ public class OKOutOfProductController extends ArtifactsBaseController {
 
     @FXML
     public void proceed() {
-        FXMLDialog defaultDialog=getScreens().productPickupDialog();
+        FXMLDialog defaultDialog=getScreens().productPickupDialog(null);
         getDialog().close();
         getScreens().showDialog(defaultDialog);
     }

@@ -8,15 +8,15 @@ import java.util.Date;
 import java.util.List;
 
 public abstract class ZamowienieModel {
-    private int ID;
+    private Long ID;
     private StringProperty kod;
     private ObjectProperty<Date> dataZlozenia;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

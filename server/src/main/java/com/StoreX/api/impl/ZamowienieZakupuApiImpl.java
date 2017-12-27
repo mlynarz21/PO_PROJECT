@@ -52,11 +52,10 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
 
     @Override
     @RequestMapping(value = "/updateStatusZamowienieZakupu/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Boolean> updateStatusZamowienieZakupu(@RequestBody ZamowienieZakupuTO zamowienieZakupu, @RequestHeader(value = "SessionID") String sessionId) {
+    public ResponseEntity<Boolean> updateStatusZamowienieZakupu(@RequestBody Long ID, @RequestHeader(value = "SessionID") String sessionId) {
         boolean updated = false;
-        ZamowienieZakupuBO zamowienieZakupuBO = modelMapper.map(zamowienieZakupu, ZamowienieZakupuBO.class);
         try {
-            zamowienieZakupuService.updateStatusZamowienia(sessionId, zamowienieZakupuBO);  //.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
+            zamowienieZakupuService.updateStatusZamowienia(sessionId, ID);  //.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
         } catch (AuthenticationException e) {
             return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
         }

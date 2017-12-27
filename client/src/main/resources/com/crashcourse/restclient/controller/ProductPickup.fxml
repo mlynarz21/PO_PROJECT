@@ -14,7 +14,7 @@
     <children>
       <VBox alignment="TOP_CENTER" layoutX="42.0" layoutY="65.0" prefHeight="846.0" prefWidth="1573.0" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="2300.0" style="-fx-background-color: #FF0000; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="randomText" textFill="WHITE">
+            <Label fx:id="pickUpLabel" alignment="CENTER" contentDisplay="CENTER" prefWidth="2300.0" style="-fx-background-color: #FF0000; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="randomText" textFill="WHITE">
                <font>
                   <Font size="52.0" />
                </font>

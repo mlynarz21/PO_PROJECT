@@ -1,12 +1,8 @@
 package com.crashcourse.restclient.controller;
 
-import com.crashcourse.restclient.api.ArtifactRestServiceClient;
 import com.crashcourse.restclient.api.ZamowienieZakupuRestServiceClient;
-import com.crashcourse.restclient.datatype.ArtifactTo;
-import com.crashcourse.restclient.datatype.ZamowienieTO;
 import com.crashcourse.restclient.datatype.ZamowienieZakupuTO;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
-import com.crashcourse.restclient.model.ArtifactModel;
 import com.crashcourse.restclient.model.ZamowienieZakupuModel;
 import com.crashcourse.restclient.view.FXMLDialog;
 import javafx.collections.FXCollections;
@@ -72,9 +68,13 @@ public class OrderPickupController extends ArtifactsBaseController {
 
     @FXML
     public void proceed() {
-        FXMLDialog defaultDialog=getScreens().productPickupDialog();
-        getDialog().close();
-        getScreens().showDialog(defaultDialog);
+
+        if(ordersTable.getSelectionModel().getSelectedItem()!=null) {
+            ZamowienieZakupuModel zamowienieZakupu = ordersTable.getSelectionModel().getSelectedItem();
+            FXMLDialog defaultDialog = getScreens().productPickupDialog(zamowienieZakupu);
+            getDialog().close();
+            getScreens().showDialog(defaultDialog);
+        }
     }
 
 }

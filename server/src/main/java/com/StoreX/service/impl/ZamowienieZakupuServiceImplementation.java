@@ -48,13 +48,12 @@ public class ZamowienieZakupuServiceImplementation implements ZamowienieZakupuSe
 
     @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
-    public void updateStatusZamowienia(String sessionId, ZamowienieZakupuBO zamowienieZakupuBO) throws AuthenticationException {
+    public void updateStatusZamowienia(String sessionId, Long ID) throws AuthenticationException {
       //  if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
             // throw new AuthenticationException();
       //  }
-        ZamowienieZakupu zamowienieZakupu = modelMapper.map(zamowienieZakupuBO, ZamowienieZakupu.class);
 
-        zamowienieZakupuRepository.updateStatusZamowienia(zamowienieZakupu.getID(), zamowienieZakupu.getStatus().toString());
+        zamowienieZakupuRepository.updateStatusZamowienia(ID, StatusWydania.Gotowe);
     }
 
     @Override

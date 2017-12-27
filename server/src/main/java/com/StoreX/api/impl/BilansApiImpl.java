@@ -105,7 +105,7 @@ public class BilansApiImpl implements BilansApi{
 //        zamowienieZakupuService.addZamowienie(sessionId,z1);
 //        zamowienieZakupuService.addZamowienie(sessionId,z2);
         try {
-            zamowienieZakupuService.updateStatusZamowienia(sessionId, z3);
+            zamowienieZakupuService.updateStatusZamowienia(sessionId, z3.getID());
         }catch(AuthenticationException x){
 
         }
