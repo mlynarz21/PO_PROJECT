@@ -97,19 +97,13 @@ public class BilansApiImpl implements BilansApi{
         z1.setStatus(StatusWydania.Zaakceptowane);
         ZamowienieZakupu z2 = new ZamowienieZakupu();
         z2.setStatus(StatusWydania.Oczekujące);
-        z1.setKod("3144veg");
-        z2.setKod("56g5y");
-        z1.setDataZlozenia(new Date());
-        z1.setTerminRealizacji(new Date());
-        z2.setDataZlozenia(new Date());
-        z2.setTerminRealizacji(new Date());
 
         ZamowienieZakupuBO z3 = modelMapper.map(z2, ZamowienieZakupuBO.class);
         z3.setStatus(StatusWydania.Gotowe);
         z3.setID(new Long(4));
-        zamowienieZakupuService.addZamowienie(sessionId,z);
-        zamowienieZakupuService.addZamowienie(sessionId,z1);
-        zamowienieZakupuService.addZamowienie(sessionId,z2);
+//        zamowienieZakupuService.addZamowienie(sessionId,z);
+//        zamowienieZakupuService.addZamowienie(sessionId,z1);
+//        zamowienieZakupuService.addZamowienie(sessionId,z2);
         try {
             zamowienieZakupuService.updateStatusZamowienia(sessionId, z3);
         }catch(AuthenticationException x){

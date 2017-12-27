@@ -2,14 +2,21 @@ package com.StoreX.api.impl;
 
 import com.StoreX.api.PozycjaZamowieniaApi;
 import com.StoreX.common.datatypes.bo.PozycjaZamowieniaBO;
+import com.StoreX.common.datatypes.bo.ZamowienieBO;
+import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
 import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
 import com.StoreX.common.datatypes.to.ZamowienieTO;
+import com.StoreX.common.datatypes.to.ZamowienieZakupuTO;
+import com.StoreX.persistence.entity.Zamowienie;
+import com.StoreX.service.PozycjaZamowieniaService;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.naming.AuthenticationException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,16 +26,19 @@ import java.util.List;
 public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
 
     private ModelMapper modelMapper = new ModelMapper();
+    @Autowired
+    PozycjaZamowieniaService pozycjaZamowieniaService;
 
     @Override
     @RequestMapping(value = "/getPozycjeZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(@RequestBody ZamowienieTO zamowienie, @RequestHeader(value = "SessionID") String sessionId){
+    public ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(@RequestBody ZamowienieZakupuTO zamowienie, @RequestHeader(value = "SessionID") String sessionId){
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
-//        try {
-//            pozycjaZamowieniaBO = searchService.findAllArtifacts(sessionId);
-//        } catch (AuthenticationException e) {
-//            return new ResponseEntity<List<PozycjaZamowieniaTO>>(HttpStatus.UNAUTHORIZED);
-//        }
+        ZamowienieZakupuBO zamowienieBO = modelMapper.map(zamowienie, ZamowienieZakupuBO.class);
+        try {
+            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(zamowienieBO);
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        }
 
         List<PozycjaZamowieniaTO> results = new ArrayList<>();
 

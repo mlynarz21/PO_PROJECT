@@ -17,9 +17,11 @@ public class PozycjaZamowienia {
     @ManyToOne
     private Towar towar;
     @ManyToOne
-    private Zamowienie zamowienie;
+    private ZamowienieZakupu zamowienie;
 
-    public PozycjaZamowienia(Long ID, double ilosc,double zrealizowano, Towar towar, Zamowienie zamowienie){
+    public PozycjaZamowienia(){}
+
+    public PozycjaZamowienia(Long ID, double ilosc,double zrealizowano, Towar towar, ZamowienieZakupu zamowienie){
         this.ID=ID;
         this.ilosc=ilosc;
         this.towar=towar;
@@ -55,7 +57,7 @@ public class PozycjaZamowienia {
         return zamowienie;
     }
 
-    public void setZamowienie(Zamowienie zamowienie) {
+    public void setZamowienie(ZamowienieZakupu zamowienie) {
         this.zamowienie = zamowienie;
     }
 
