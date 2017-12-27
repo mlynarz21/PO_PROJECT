@@ -230,7 +230,7 @@ public class ScreensConfiguration {
 
 
 
-/*    @Bean
+    @Bean
     @Scope("prototype")
     WelcomeController welcomeController() {
         return new WelcomeController(primaryStage);
@@ -282,7 +282,7 @@ public class ScreensConfiguration {
     @Scope("prototype")
     public FXMLDialog registerDialog() {
         return manager.initializeDialog(registerController());
-    }*/
+    }
 
 
 

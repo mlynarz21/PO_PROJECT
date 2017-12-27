@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 
 public interface BilansRepository extends JpaRepository<Bilans, Long> {
 
-    @Query(value = "select * from Bilans  order by data_bilansu limit 1 ", nativeQuery = true)
+    @Query(value = "select * from Bilans  order by data_bilansu desc limit 1 ", nativeQuery = true)
     Bilans findLastBilansByDate();
 }

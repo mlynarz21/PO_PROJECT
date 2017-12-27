@@ -17,7 +17,7 @@
                   <Font size="52.0" />
                </font>
             </Label>
-            <ListView prefWidth="1000.0" style="-fx-background-color: #78bfff; -fx-opacity: 0.4;">
+            <ListView fx:id="datesList" prefWidth="1000.0" style="-fx-background-color: #78bfff; -fx-opacity: 0.4;">
                <padding>
                   <Insets top="100.0" />
                </padding>

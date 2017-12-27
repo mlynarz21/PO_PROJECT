@@ -8,9 +8,5 @@ public class StoreXApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(StoreXApplication.class, args);
-
-		System.out.println("Uwaga");
-
-
 	}
 }
