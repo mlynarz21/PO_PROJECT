@@ -44,10 +44,14 @@ public class BilansApiImpl implements BilansApi{
         } catch (Exception e) {
             return new ResponseEntity<BilansTO>(HttpStatus.UNAUTHORIZED);
         }
-
-        BilansTO result = modelMapper.map(bilansBO, BilansTO.class);
-        return new ResponseEntity<BilansTO>(result, HttpStatus.OK);
-
+        if (bilansBO!=null) {
+            BilansTO result = modelMapper.map(bilansBO, BilansTO.class);
+            return new ResponseEntity<BilansTO>(result, HttpStatus.OK);
+        }
+        else {
+            BilansTO result = null;
+            return new ResponseEntity<BilansTO>(result, HttpStatus.OK);
+        }
     }
 
     @Override
