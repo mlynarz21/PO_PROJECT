@@ -4,6 +4,7 @@ import com.crashcourse.restclient.api.PozycjaZamowieniaRestServiceClient;
 import com.crashcourse.restclient.api.UmieszczenieRestServiceClient;
 import com.crashcourse.restclient.api.ZamowienieZakupuRestServiceClient;
 import com.crashcourse.restclient.datatype.PozycjaZamowieniaTO;
+import com.crashcourse.restclient.datatype.enumeration.TypOdbioru;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
 import com.crashcourse.restclient.model.ZamowienieZakupuModel;
@@ -93,7 +94,13 @@ public class ProductPickupController extends ArtifactsBaseController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get().equals(alertDialog.getButtonOK())) {
             zamowienieZakupuRestServiceClient.updateStatusZamowienieZakupu(zamowienieZakupu.getID());
-            FXMLDialog defaultDialog = getScreens().shipmentDataDialog(zamowienieZakupu);
+            FXMLDialog defaultDialog;
+            if(zamowienieZakupu.getTypOdbioru().get()== TypOdbioru.Osobiscie) {
+                defaultDialog = getScreens().shipmentDataDialog(zamowienieZakupu);
+            }
+            else{
+                defaultDialog = getScreens().okEmailDialog();
+            }
             getDialog().close();
             getScreens().showDialog(defaultDialog);
         }

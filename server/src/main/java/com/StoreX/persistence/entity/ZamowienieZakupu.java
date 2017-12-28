@@ -2,6 +2,7 @@ package com.StoreX.persistence.entity;
 
 import com.StoreX.common.datatypes.enumerations.StatusDostawy;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
+import com.StoreX.common.datatypes.enumerations.TypOdbioru;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -17,15 +18,18 @@ public class ZamowienieZakupu extends Zamowienie{
     @OneToOne
     private Klient klient;
     private Date terminRealizacji;
+    @Enumerated(EnumType.STRING)
+    private TypOdbioru typOdbioru;
 
 
 
     public ZamowienieZakupu(){}
 
-    public ZamowienieZakupu(Long ID, String kod, Date dataZlozenia, StatusWydania status, Klient klient){
+    public ZamowienieZakupu(Long ID, String kod, Date dataZlozenia, StatusWydania status, Klient klient, TypOdbioru typOdbioru){
         super(ID,kod,dataZlozenia);
         this.status=status;
         this.klient=klient;
+        this.typOdbioru = typOdbioru;
     }
 
     public StatusWydania getStatus() {
@@ -50,6 +54,14 @@ public class ZamowienieZakupu extends Zamowienie{
 
     public void setTerminRealizacji(Date terminRealizacji) {
         this.terminRealizacji = terminRealizacji;
+    }
+
+    public TypOdbioru getTypOdbioru() {
+        return typOdbioru;
+    }
+
+    public void setTypOdbioru(TypOdbioru typOdbioru) {
+        this.typOdbioru = typOdbioru;
     }
 }
 

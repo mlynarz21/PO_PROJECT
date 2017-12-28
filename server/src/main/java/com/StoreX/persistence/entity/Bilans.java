@@ -1,9 +1,9 @@
 package com.StoreX.persistence.entity;
 
-import javax.persistence.*;
-import java.util.ArrayList;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 public class Bilans {

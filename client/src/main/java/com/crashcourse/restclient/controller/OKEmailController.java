@@ -1,6 +1,5 @@
 package com.crashcourse.restclient.controller;
 
-import com.crashcourse.restclient.api.ArtifactRestServiceClient;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.view.FXMLDialog;
 import javafx.fxml.FXML;
@@ -9,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class OKEmailController extends ArtifactsBaseController {
 
-    @Autowired
-    private ArtifactRestServiceClient restServiceClient;
     @Autowired
     private StoreXSecurityContext context;
 

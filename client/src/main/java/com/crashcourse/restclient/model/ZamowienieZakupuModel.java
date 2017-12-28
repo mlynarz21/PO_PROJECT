@@ -3,6 +3,7 @@ package com.crashcourse.restclient.model;
 
 import com.crashcourse.restclient.datatype.ZamowienieZakupuTO;
 import com.crashcourse.restclient.datatype.enumeration.StatusDostawy;
+import com.crashcourse.restclient.datatype.enumeration.TypOdbioru;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -14,6 +15,7 @@ public class ZamowienieZakupuModel extends ZamowienieModel{
     private SimpleObjectProperty<StatusDostawy> status;
     private SimpleObjectProperty<KlientModel> klient;
     private ObjectProperty<Date> terminRealizacji;
+    private SimpleObjectProperty<TypOdbioru> typOdbioru;
 
     public SimpleObjectProperty<StatusDostawy> getStatus() {
         return status;
@@ -55,6 +57,15 @@ public class ZamowienieZakupuModel extends ZamowienieModel{
         terminRealizacji =terminRealizacji;
     }
 
+    public SimpleObjectProperty<TypOdbioru> getTypOdbioru() {
+        return typOdbioru;
+    }
+
+    public void setTypOdbioru(SimpleObjectProperty<TypOdbioru> typOdbioru) {
+        this.typOdbioru = typOdbioru;
+    }
+
+
     public static ZamowienieZakupuModel fromZamowienieZakupuTo(ZamowienieZakupuTO zamowienieZakupuTO) {
         ZamowienieZakupuModel zamowienieZakupuModel = new ZamowienieZakupuModel();
         if(zamowienieZakupuTO.getKlient()!=null)
@@ -64,6 +75,7 @@ public class ZamowienieZakupuModel extends ZamowienieModel{
         zamowienieZakupuModel.setID(zamowienieZakupuTO.getID());
         zamowienieZakupuModel.setKod(new SimpleStringProperty(zamowienieZakupuTO.getKod()));
         zamowienieZakupuModel.terminRealizacji = new SimpleObjectProperty<Date>(zamowienieZakupuTO.getTerminRealizacji());
+        zamowienieZakupuModel.typOdbioru = new SimpleObjectProperty<>(zamowienieZakupuTO.getTypOdbioru());
         return zamowienieZakupuModel;
     }
 }

@@ -2,6 +2,7 @@ package com.StoreX.common.datatypes.bo;
 
 import com.StoreX.common.datatypes.enumerations.StatusDostawy;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
+import com.StoreX.common.datatypes.enumerations.TypOdbioru;
 import com.StoreX.persistence.entity.Klient;
 import com.StoreX.persistence.entity.Zamowienie;
 
@@ -12,6 +13,7 @@ public class ZamowienieZakupuBO extends ZamowienieBO{
     private StatusWydania status;
     private KlientBO klient;
     private Date terminRealizacji;
+    private TypOdbioru typOdbioru;
 
     public StatusWydania getStatus() {
         return status;
@@ -36,6 +38,15 @@ public class ZamowienieZakupuBO extends ZamowienieBO{
     public void setTerminRealizacji(Date terminRealizacji) {
         this.terminRealizacji = terminRealizacji;
     }
+
+    public TypOdbioru getTypOdbioru() {
+        return typOdbioru;
+    }
+
+    public void setTypOdbioru(TypOdbioru typOdbioru) {
+        this.typOdbioru = typOdbioru;
+    }
 }
+
 
 
