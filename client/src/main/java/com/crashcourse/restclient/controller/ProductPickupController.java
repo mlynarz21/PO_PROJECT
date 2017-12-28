@@ -1,17 +1,12 @@
 package com.crashcourse.restclient.controller;
 
-import com.crashcourse.restclient.api.ArtifactRestServiceClient;
 import com.crashcourse.restclient.api.PozycjaZamowieniaRestServiceClient;
 import com.crashcourse.restclient.api.ZamowienieZakupuRestServiceClient;
-import com.crashcourse.restclient.datatype.PozycjaZamowieniaTO;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
 import com.crashcourse.restclient.model.ZamowienieZakupuModel;
 import com.crashcourse.restclient.view.AlertDialog;
 import com.crashcourse.restclient.view.FXMLDialog;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.ReadOnlyObjectWrapper;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -20,7 +15,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;

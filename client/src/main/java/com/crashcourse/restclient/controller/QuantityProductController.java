@@ -30,7 +30,7 @@ public class QuantityProductController extends ArtifactsBaseController {
 
     @FXML
     public void back() {
-        FXMLDialog defaultDialog=getScreens().localizationPickupDialog();
+        FXMLDialog defaultDialog=getScreens().localizationPickupDialog(null,null);
         getDialog().close();
         getScreens().showDialog(defaultDialog);
     }
