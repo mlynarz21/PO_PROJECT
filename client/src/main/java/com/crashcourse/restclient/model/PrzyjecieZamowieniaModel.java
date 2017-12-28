@@ -7,15 +7,15 @@ import javafx.beans.property.SimpleObjectProperty;
 import java.util.Date;
 
 public class PrzyjecieZamowieniaModel {
-    private int ID;
+    private Long ID;
     private ObjectProperty<Date> data;
     private SimpleObjectProperty<ZamowienieDostawyModel> zamowienie;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

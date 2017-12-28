@@ -1,11 +1,9 @@
 package com.crashcourse.restclient.model;
 
-import com.crashcourse.restclient.datatype.PozycjaZamowieniaTO;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.StringProperty;
 
 import java.util.Date;
-import java.util.List;
 
 public abstract class ZamowienieModel {
     private Long ID;

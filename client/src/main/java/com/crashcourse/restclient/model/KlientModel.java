@@ -5,7 +5,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class KlientModel {
-    private int ID;
+    private Long ID;
     private StringProperty login;
     private StringProperty imie;
     private StringProperty nazwisko;
@@ -13,12 +13,13 @@ public class KlientModel {
     private StringProperty ulica;
     private StringProperty miasto;
     private StringProperty numerDomu;
+    private StringProperty email;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -78,6 +79,14 @@ public class KlientModel {
         this.numerDomu = numerDomu;
     }
 
+    public StringProperty getEmail() {
+        return email;
+    }
+
+    public void setEmail(StringProperty email) {
+        this.email = email;
+    }
+
     public static KlientModel fromKlientTo(KlientTO klientTO) {
         KlientModel klientModel = new KlientModel();
         klientModel.ID = klientTO.getID();
@@ -88,6 +97,7 @@ public class KlientModel {
         klientModel.nazwisko = new SimpleStringProperty(klientTO.getNazwisko());
         klientModel.numerDomu = new SimpleStringProperty(klientTO.getNumerDomu());
         klientModel.ulica = new SimpleStringProperty(klientTO.getUlica());
+        klientModel.email = new SimpleStringProperty(klientTO.getEmail());
         return klientModel;
     }
 }
