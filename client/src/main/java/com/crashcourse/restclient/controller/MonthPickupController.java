@@ -1,6 +1,7 @@
 package com.crashcourse.restclient.controller;
 
 import com.crashcourse.restclient.api.BilansRestServiceClient;
+import com.crashcourse.restclient.datatype.BilansTO;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.view.FXMLDialog;
 import javafx.collections.FXCollections;

@@ -19,7 +19,6 @@ public class TowarModel {
     private BooleanProperty potrzebujeZamowienia;
     private SimpleObjectProperty<JednostkaModel> jednostka;
     private SimpleObjectProperty<KategoriaModel> kategoria;
-    private List<UmieszczenieTO> umieszczenia;
 
     public int getID() {
         return ID;
@@ -109,14 +108,6 @@ public class TowarModel {
         this.kategoria = kategoria;
     }
 
-    public  List<UmieszczenieTO> getUmieszczenia() {
-        return umieszczenia;
-    }
-
-    public void setUmieszczenia(List<UmieszczenieTO> umieszczenia) {
-        this.umieszczenia = umieszczenia;
-    }
-
     public static TowarModel fromTowarTo(TowarTO towarTO) {
         TowarModel towarModel = new TowarModel();
         towarModel.ID = towarModel.getID();
@@ -130,7 +121,6 @@ public class TowarModel {
         towarModel.potrzebujeZamowienia = new SimpleBooleanProperty(towarTO.isPotrzebujeZamowienia());
         towarModel.nazwa = new SimpleStringProperty(towarTO.getNazwa());
         towarModel.zalega = new SimpleBooleanProperty(towarTO.isZalega());
-        towarModel.umieszczenia = new ArrayList<>(towarTO.getUmieszczenia());
         return towarModel;
     }
 }

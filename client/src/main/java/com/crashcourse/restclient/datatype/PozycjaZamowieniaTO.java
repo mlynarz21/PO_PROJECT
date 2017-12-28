@@ -5,7 +5,7 @@ public class PozycjaZamowieniaTO {
     private double ilosc;
     private double zrealizowano;
     private TowarTO towar;
-    private ZamowienieTO zamowienie;
+    private ZamowienieZakupuTO zamowienie;
 
     public int getID() {
         return ID;
@@ -35,7 +35,7 @@ public class PozycjaZamowieniaTO {
         return zamowienie;
     }
 
-    public void setZamowienie(ZamowienieTO zamowienie) {
+    public void setZamowienie(ZamowienieZakupuTO zamowienie) {
         this.zamowienie = zamowienie;
     }
 
