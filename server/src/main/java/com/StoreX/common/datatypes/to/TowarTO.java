@@ -1,11 +1,5 @@
 package com.StoreX.common.datatypes.to;
 
-import com.StoreX.persistence.entity.Jednostka;
-import com.StoreX.persistence.entity.Kategoria;
-import com.StoreX.persistence.entity.Umieszczenie;
-
-import java.util.List;
-
 public class TowarTO {
     private Long ID;
     private String nazwa;
@@ -18,7 +12,6 @@ public class TowarTO {
     private double iloscMinimalna;
     private JednostkaTO jednostka;
     private KategoriaTO kategoria;
-    private List<UmieszczenieTO> umieszczenia;
 
     public Long getID() {
         return ID;
@@ -106,13 +99,5 @@ public class TowarTO {
 
     public void setKategoria(KategoriaTO kategoria) {
         this.kategoria = kategoria;
-    }
-
-    public List<UmieszczenieTO> getUmieszczenia() {
-        return umieszczenia;
-    }
-
-    public void setUmieszczenia(List<UmieszczenieTO> umieszczenia) {
-        this.umieszczenia = umieszczenia;
     }
 }

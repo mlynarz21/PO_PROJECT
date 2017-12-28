@@ -1,12 +1,5 @@
 package com.StoreX.common.datatypes.bo;
 
-import com.StoreX.persistence.entity.Jednostka;
-import com.StoreX.persistence.entity.Kategoria;
-import com.StoreX.persistence.entity.Umieszczenie;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class TowarBO {
     private Long ID;
     private String nazwa;
@@ -19,7 +12,6 @@ public class TowarBO {
     private double iloscMinimalna;
     private JednostkaBO jednostka;
     private KategoriaBO kategoria;
-    private List<UmieszczenieBO> umieszczenia;
 
     public Long getID() {
         return ID;
@@ -107,13 +99,5 @@ public class TowarBO {
 
     public void setKategoria(KategoriaBO kategoria) {
         this.kategoria = kategoria;
-    }
-
-    public List<UmieszczenieBO> getUmieszczenia() {
-        return umieszczenia;
-    }
-
-    public void setUmieszczenia(List<UmieszczenieBO> umieszczenia) {
-        this.umieszczenia = umieszczenia;
     }
 }

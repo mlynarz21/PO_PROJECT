@@ -15,17 +15,15 @@ public class Lokalizacja {
     private int numerRzedu;
     private int numerRegalu;
     private int numerSektora;
-    private boolean zajete;
 
     public Lokalizacja(){}
 
-    public Lokalizacja(Long ID, String kod,int numerRegalu, int numerRzedu, int numerSektora, boolean zajete){
+    public Lokalizacja(Long ID, String kod,int numerRegalu, int numerRzedu, int numerSektora){
         this.ID=ID;
         this.kod=kod;
         this.numerRzedu=numerRzedu;
         this.numerRegalu=numerRegalu;
         this.numerSektora=numerSektora;
-        this.zajete=zajete;
     }
 
     public Long getID() {
@@ -67,15 +65,5 @@ public class Lokalizacja {
     public void setNumerSektora(int numerSektora) {
         this.numerSektora = numerSektora;
     }
-
-    public boolean isZajete() {
-        return zajete;
-    }
-
-    public void setZajete(boolean zajete) {
-        this.zajete = zajete;
-    }
-
-
 }
 

@@ -1,19 +1,16 @@
 package com.StoreX.common.datatypes.bo;
 
-import com.StoreX.persistence.entity.Bilans;
-import com.StoreX.persistence.entity.Towar;
-
 public class PozycjaBilansuBO {
-    private int ID;
+    private Long ID;
     private double ilosc;
     private TowarBO towar;
     private BilansBO bilans;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

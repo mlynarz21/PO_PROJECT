@@ -4,16 +4,16 @@ import com.StoreX.persistence.entity.PrzyjecieZamowienia;
 import com.StoreX.persistence.entity.Towar;
 
 public class PozycjaPrzyjeciaTO {
-    private int ID;
+    private Long ID;
     private double ilosc;
     private TowarTO towar;
     private PrzyjecieZamowieniaTO przyjecieZamowienia;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

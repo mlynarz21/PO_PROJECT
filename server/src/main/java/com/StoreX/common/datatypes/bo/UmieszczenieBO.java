@@ -1,8 +1,5 @@
 package com.StoreX.common.datatypes.bo;
 
-import com.StoreX.persistence.entity.Lokalizacja;
-import com.StoreX.persistence.entity.Towar;
-
 public class UmieszczenieBO {
     private Long ID;
     private double iloscWLokalizacji;

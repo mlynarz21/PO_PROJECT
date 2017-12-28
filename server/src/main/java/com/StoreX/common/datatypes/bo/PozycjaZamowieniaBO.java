@@ -1,9 +1,5 @@
 package com.StoreX.common.datatypes.bo;
 
-import com.StoreX.persistence.entity.Towar;
-import com.StoreX.persistence.entity.Zamowienie;
-import com.StoreX.persistence.entity.ZamowienieZakupu;
-
 public class PozycjaZamowieniaBO {
     private Long ID;
     private double ilosc;

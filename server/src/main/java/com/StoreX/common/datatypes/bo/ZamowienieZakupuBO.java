@@ -1,10 +1,7 @@
 package com.StoreX.common.datatypes.bo;
 
-import com.StoreX.common.datatypes.enumerations.StatusDostawy;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
 import com.StoreX.common.datatypes.enumerations.TypOdbioru;
-import com.StoreX.persistence.entity.Klient;
-import com.StoreX.persistence.entity.Zamowienie;
 
 import java.util.Date;
 

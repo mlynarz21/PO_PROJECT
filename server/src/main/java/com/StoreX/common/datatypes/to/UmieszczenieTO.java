@@ -1,8 +1,5 @@
 package com.StoreX.common.datatypes.to;
 
-import com.StoreX.persistence.entity.Lokalizacja;
-import com.StoreX.persistence.entity.Towar;
-
 public class UmieszczenieTO {
     private Long ID;
     private double iloscWLokalizacji;
