@@ -65,11 +65,16 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
 //    }
 
     @Override
-    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Boolean> proceedPozycjaZamowienia( @RequestHeader(value = "SessionID") String sessionId) {
+    @RequestMapping(value = "/proceedPozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody List<Double> transferList, @RequestHeader(value = "SessionID") String sessionId) {
+
+        Long idPozycji = transferList.get(0).longValue();
+        Long idUmieszcznia = transferList.get(1).longValue();
+        double ilosc = transferList.get(2);
+
         boolean wykonano = false;
         try {
-            pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId,new Long(48) ,new Long(16), 100);
+            pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszcznia, ilosc);
         } catch (AuthenticationException e) {
             return new ResponseEntity<Boolean>(wykonano, HttpStatus.UNAUTHORIZED);
         }catch (Exception e){
