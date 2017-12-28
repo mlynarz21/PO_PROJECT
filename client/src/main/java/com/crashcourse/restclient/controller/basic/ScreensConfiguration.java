@@ -3,6 +3,7 @@ package com.crashcourse.restclient.controller.basic;
 import java.util.Locale;
 
 import com.crashcourse.restclient.controller.*;
+import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
 import com.crashcourse.restclient.model.ZamowienieZakupuModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -121,14 +122,14 @@ public class ScreensConfiguration {
 
     @Bean
     @Scope("prototype")
-    public FXMLDialog localizationPickupDialog() {
-        return manager.initializeDialog(localizationPickupController());
+    public FXMLDialog localizationPickupDialog(ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia) {
+        return manager.initializeDialog(localizationPickupController(zamowienieZakupu, pozycjaZamowienia));
     }
 
     @Bean
     @Scope("prototype")
-    public LocalizationPickupController localizationPickupController() {
-        return new LocalizationPickupController(primaryStage);
+    public LocalizationPickupController localizationPickupController(ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia) {
+        return new LocalizationPickupController(primaryStage, zamowienieZakupu, pozycjaZamowienia);
     }
 
     @Bean

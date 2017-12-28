@@ -31,8 +31,8 @@ public class PozycjaZamowieniaRestServiceClientImpl implements PozycjaZamowienia
 
 
     @Override
-    public List<PozycjaZamowieniaTO> getPozycjeZamowienia(ZamowienieTO zamowienie) {
-        RequestEntity<ZamowienieTO> requestEntity = buildRequest(buildGetPozycjeZamowieniaRequestUri(), zamowienie, HttpMethod.POST);
+    public List<PozycjaZamowieniaTO> getPozycjeZamowienia(Long ID) {
+        RequestEntity<Long> requestEntity = buildRequest(buildGetPozycjeZamowieniaRequestUri(), ID, HttpMethod.POST);
 
         ResponseEntity<List<PozycjaZamowieniaTO>> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<List<PozycjaZamowieniaTO>>() {
         });

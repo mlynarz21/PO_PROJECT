@@ -2,6 +2,8 @@ package com.crashcourse.restclient.controller;
 
 import com.crashcourse.restclient.api.ArtifactRestServiceClient;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
+import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
+import com.crashcourse.restclient.model.ZamowienieZakupuModel;
 import com.crashcourse.restclient.view.FXMLDialog;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
@@ -14,8 +16,13 @@ public class LocalizationPickupController extends ArtifactsBaseController {
     @Autowired
     private StoreXSecurityContext context;
 
-    public LocalizationPickupController(Stage primaryStage) {
+    private ZamowienieZakupuModel zamowienieZakupu;
+    private PozycjaZamowieniaModel pozycjaZamowienia;
+
+    public LocalizationPickupController(Stage primaryStage, ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia) {
         super(primaryStage);
+        this.zamowienieZakupu = zamowienieZakupu;
+        this.pozycjaZamowienia = pozycjaZamowienia;
     }
 
     @FXML
@@ -30,7 +37,7 @@ public class LocalizationPickupController extends ArtifactsBaseController {
 
     @FXML
     public void back() {
-        FXMLDialog defaultDialog=getScreens().productPickupDialog(null);
+        FXMLDialog defaultDialog=getScreens().productPickupDialog(zamowienieZakupu);
         getDialog().close();
         getScreens().showDialog(defaultDialog);
     }

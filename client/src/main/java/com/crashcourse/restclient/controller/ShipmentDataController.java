@@ -29,13 +29,6 @@ public class ShipmentDataController extends ArtifactsBaseController {
     }
 
     @FXML
-    public void back() {
-        FXMLDialog defaultDialog=getScreens().localizationPickupDialog();
-        getDialog().close();
-        getScreens().showDialog(defaultDialog);
-    }
-
-    @FXML
     public void proceed() {
         FXMLDialog defaultDialog=getScreens().productPickupDialog(null);
         getDialog().close();

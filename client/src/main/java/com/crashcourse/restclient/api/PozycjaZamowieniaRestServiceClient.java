@@ -9,7 +9,7 @@ public interface PozycjaZamowieniaRestServiceClient {
 
     void updatePozycjaZamowienia(PozycjaZamowieniaTO pozycjaZamowienia);
 
-    List<PozycjaZamowieniaTO> getPozycjeZamowienia(ZamowienieTO zamowienie);
+    List<PozycjaZamowieniaTO> getPozycjeZamowienia(Long ID);
 
 
 }
