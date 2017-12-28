@@ -51,12 +51,40 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
     }
 
     
+<<<<<<< HEAD
     @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idUmieszczenia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
+=======
+//    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+//    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idUmieszczenia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
+//
+//
+//        try {
+//           pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozyjcji, idUmieszczenia, ilosc);
+//        } catch (AuthenticationException e) {
+//            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
+//        }
+//        boolean updated = true;
+//        return new ResponseEntity<Boolean>(updated, HttpStatus.OK);
+//    }
+
+    @Override
+    @RequestMapping(value = "/proceedPozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody List<Double> transferList, @RequestHeader(value = "SessionID") String sessionId) {
+
+        Long idPozycji = transferList.get(0).longValue();
+        Long idUmieszcznia = transferList.get(1).longValue();
+        double ilosc = transferList.get(2);
+
+>>>>>>> 081f5fc2b39fe6147f3efd31793773f2188285f9
         boolean wykonano = false;
 
         try {
+<<<<<<< HEAD
            pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozyjcji, idUmieszczenia, ilosc);
+=======
+            pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszcznia, ilosc);
+>>>>>>> 081f5fc2b39fe6147f3efd31793773f2188285f9
         } catch (AuthenticationException e) {
             return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
         }catch (Exception e){

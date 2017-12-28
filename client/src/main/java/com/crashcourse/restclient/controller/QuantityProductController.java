@@ -1,5 +1,6 @@
 package com.crashcourse.restclient.controller;
 
+import com.crashcourse.restclient.api.UmieszczenieRestServiceClient;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
 import com.crashcourse.restclient.model.UmieszczenieModel;
@@ -27,6 +28,9 @@ public class QuantityProductController extends ArtifactsBaseController {
     private Label localizationLabel;
     @FXML
     private TextField quantityTextField;
+
+    @Autowired
+    private UmieszczenieRestServiceClient umieszczenieRestServiceClient;
 
     public QuantityProductController(Stage primaryStage, ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie) {
         super(primaryStage);

@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface PozycjaZamowieniaRestServiceClient {
 
-    void updatePozycjaZamowienia(PozycjaZamowieniaTO pozycjaZamowienia);
+    void proceedPozycjaZamowienia(Long idPozycji, Long idUmieszcznia, double ilosc);
 
     List<PozycjaZamowieniaTO> getPozycjeZamowienia(Long ID);
 

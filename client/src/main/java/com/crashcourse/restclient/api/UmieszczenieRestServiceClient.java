@@ -8,5 +8,4 @@ public interface UmieszczenieRestServiceClient {
 
     List<UmieszczenieTO> getUmieszczenieTowaru(Long IDTowaru);
 
-    void updateUmieszczenie(UmieszczenieTO umieszczenie);
 }

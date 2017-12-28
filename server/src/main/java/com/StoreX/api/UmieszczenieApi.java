@@ -1,6 +1,5 @@
 package com.StoreX.api;
 
-import com.StoreX.common.datatypes.to.TowarTO;
 import com.StoreX.common.datatypes.to.UmieszczenieTO;
 import org.springframework.http.ResponseEntity;
 
