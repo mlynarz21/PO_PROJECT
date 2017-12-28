@@ -10,7 +10,6 @@ public class LokalizacjaModel {
     private IntegerProperty numerRegalu;
     private IntegerProperty numerSektora;
     private BooleanProperty zajete;
-    private SimpleObjectProperty<UmieszczenieModel> umieszczenie;
 
     public int getID() {
         return ID;
@@ -60,14 +59,6 @@ public class LokalizacjaModel {
         this.zajete = zajete;
     }
 
-    public SimpleObjectProperty<UmieszczenieModel> getUmieszczenie() {
-        return umieszczenie;
-    }
-
-    public void setUmieszczenie(SimpleObjectProperty<UmieszczenieModel> umieszczenie) {
-        this.umieszczenie = umieszczenie;
-    }
-
     public static LokalizacjaModel fromLokalizacjaTo(LokalizacjaTO lokalizacjaTO) {
         LokalizacjaModel lokalizacjaModel = new LokalizacjaModel();
         lokalizacjaModel.ID = lokalizacjaTO.getID();
@@ -76,7 +67,6 @@ public class LokalizacjaModel {
         lokalizacjaModel.numerRzedu = new SimpleIntegerProperty(lokalizacjaTO.getNumerRzedu());
         lokalizacjaModel.numerSektora = new SimpleIntegerProperty(lokalizacjaTO.getNumerSektora());
         lokalizacjaModel.zajete = new SimpleBooleanProperty(lokalizacjaTO.isZajete());
-        lokalizacjaModel.umieszczenie = new SimpleObjectProperty<>(UmieszczenieModel.fromUmieszenieTo(lokalizacjaTO.getUmieszczenie()));
         return lokalizacjaModel;
     }
 }

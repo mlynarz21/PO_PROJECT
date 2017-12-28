@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import com.crashcourse.restclient.controller.*;
 import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
+import com.crashcourse.restclient.model.UmieszczenieModel;
 import com.crashcourse.restclient.model.ZamowienieZakupuModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -134,26 +135,26 @@ public class ScreensConfiguration {
 
     @Bean
     @Scope("prototype")
-    public FXMLDialog quantityProductDialog() {
-        return manager.initializeDialog(quantityProductController());
+    public FXMLDialog quantityProductDialog(ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie) {
+        return manager.initializeDialog(quantityProductController(zamowienieZakupu, pozycjaZamowienia, umieszczenie));
     }
 
     @Bean
     @Scope("prototype")
-    public QuantityProductController quantityProductController() {
-        return new QuantityProductController(primaryStage);
+    public QuantityProductController quantityProductController(ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie) {
+        return new QuantityProductController(primaryStage, zamowienieZakupu, pozycjaZamowienia, umieszczenie);
     }
 
     @Bean
     @Scope("prototype")
-    public FXMLDialog shipmentDataDialog() {
-        return manager.initializeDialog(shipmentDataController());
+    public FXMLDialog shipmentDataDialog(ZamowienieZakupuModel zamowienieZakupu) {
+        return manager.initializeDialog(shipmentDataController(zamowienieZakupu));
     }
 
     @Bean
     @Scope("prototype")
-    public ShipmentDataController shipmentDataController() {
-        return new ShipmentDataController(primaryStage);
+    public ShipmentDataController shipmentDataController(ZamowienieZakupuModel zamowienieZakupu) {
+        return new ShipmentDataController(primaryStage, zamowienieZakupu);
     }
 
     @Bean
@@ -182,14 +183,14 @@ public class ScreensConfiguration {
 
     @Bean
     @Scope("prototype")
-    public FXMLDialog okWrongQuantityDialog() {
-        return manager.initializeDialog(okWrongQuantityController());
+    public FXMLDialog okWrongQuantityDialog(ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie) {
+        return manager.initializeDialog(okWrongQuantityController(zamowienieZakupu, pozycjaZamowienia, umieszczenie));
     }
 
     @Bean
     @Scope("prototype")
-    public OKWrongQuantityController okWrongQuantityController() {
-        return new OKWrongQuantityController(primaryStage);
+    public OKWrongQuantityController okWrongQuantityController(ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie) {
+        return new OKWrongQuantityController(primaryStage, zamowienieZakupu, pozycjaZamowienia, umieszczenie);
     }
 
     @Bean

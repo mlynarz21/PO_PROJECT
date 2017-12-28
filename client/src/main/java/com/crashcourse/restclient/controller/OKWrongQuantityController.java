@@ -2,6 +2,9 @@ package com.crashcourse.restclient.controller;
 
 import com.crashcourse.restclient.api.ArtifactRestServiceClient;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
+import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
+import com.crashcourse.restclient.model.UmieszczenieModel;
+import com.crashcourse.restclient.model.ZamowienieZakupuModel;
 import com.crashcourse.restclient.view.FXMLDialog;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
@@ -10,12 +13,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class OKWrongQuantityController extends ArtifactsBaseController {
 
     @Autowired
-    private ArtifactRestServiceClient restServiceClient;
-    @Autowired
     private StoreXSecurityContext context;
 
-    public OKWrongQuantityController(Stage primaryStage) {
+    private ZamowienieZakupuModel zamowienieZakupu;
+    private PozycjaZamowieniaModel pozycjaZamowienia;
+    private UmieszczenieModel umieszczenie;
+
+    public OKWrongQuantityController(Stage primaryStage, ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie) {
         super(primaryStage);
+        this.zamowienieZakupu=zamowienieZakupu;
+        this.pozycjaZamowienia=pozycjaZamowienia;
+        this.umieszczenie=umieszczenie;
     }
 
     @FXML
@@ -30,7 +38,7 @@ public class OKWrongQuantityController extends ArtifactsBaseController {
 
     @FXML
     public void proceed() {
-        FXMLDialog defaultDialog=getScreens().quantityProductDialog();
+        FXMLDialog defaultDialog=getScreens().quantityProductDialog(zamowienieZakupu,pozycjaZamowienia,umieszczenie);
         getDialog().close();
         getScreens().showDialog(defaultDialog);
     }

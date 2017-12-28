@@ -93,7 +93,7 @@ public class ProductPickupController extends ArtifactsBaseController {
         Optional<ButtonType> result = alert.showAndWait();
         if (result.get().equals(alertDialog.getButtonOK())) {
             zamowienieZakupuRestServiceClient.updateStatusZamowienieZakupu(zamowienieZakupu.getID());
-            FXMLDialog defaultDialog = getScreens().shipmentDataDialog();
+            FXMLDialog defaultDialog = getScreens().shipmentDataDialog(zamowienieZakupu);
             getDialog().close();
             getScreens().showDialog(defaultDialog);
         }

@@ -14,7 +14,7 @@
     <children>
       <VBox alignment="TOP_CENTER" layoutX="42.0" layoutY="65.0" prefHeight="846.0" prefWidth="1573.0" AnchorPane.bottomAnchor="175.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="2300.0" style="-fx-background-color: #FF0000; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="randomText" textFill="WHITE">
+            <Label fx:id="localizationLabel" alignment="CENTER" contentDisplay="CENTER" prefWidth="2300.0" style="-fx-background-color: #FF0000; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="randomText" textFill="WHITE">
                <font>
                   <Font size="52.0" />
                </font>
@@ -26,10 +26,10 @@
             </Label>
             <VBox alignment="TOP_CENTER">
                <children>
-                  <TableView prefHeight="761.0" prefWidth="1831.0" style="-fx-background-color: #78bfff; -fx-opacity: 0.4;">
+                  <TableView fx:id="localizationTable" prefHeight="761.0" prefWidth="1831.0" style="-fx-background-color: #78bfff; -fx-opacity: 0.4;">
                     <columns>
-                      <TableColumn prefWidth="75.0" text="%LocalizationPickup.codeColumn" />
-                        <TableColumn prefWidth="75.0" text="%LocalizationPickup.quantityColumn" />
+                      <TableColumn fx:id="codeColumn" prefWidth="75.0" text="%LocalizationPickup.codeColumn" />
+                        <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="%LocalizationPickup.quantityColumn" />
                     </columns>
                      <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
