@@ -36,7 +36,7 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
     public ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(@RequestBody Long ID, @RequestHeader(value = "SessionID") String sessionId){
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
         try {
-            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(ID);
+            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(sessionId, ID);
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }
@@ -51,27 +51,14 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
     }
 
     
-//    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idUmieszczenia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
-//
-//
-//        try {
-//           pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozyjcji, idUmieszczenia, ilosc);
-//        } catch (AuthenticationException e) {
-//            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
-//        }
-//        boolean updated = true;
-//        return new ResponseEntity<Boolean>(updated, HttpStatus.OK);
-//    }
-
-    @Override
-    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Boolean> proceedPozycjaZamowienia( @RequestHeader(value = "SessionID") String sessionId) {
+    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idUmieszczenia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
         boolean wykonano = false;
+
         try {
-            pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId,new Long(48) ,new Long(16), 100);
+           pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozyjcji, idUmieszczenia, ilosc);
         } catch (AuthenticationException e) {
-            return new ResponseEntity<Boolean>(wykonano, HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
         }catch (Exception e){
             return new ResponseEntity<Boolean>(wykonano, HttpStatus.NOT_ACCEPTABLE);
         }
@@ -80,5 +67,22 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
         wykonano = true;
         return new ResponseEntity<Boolean>(wykonano, HttpStatus.OK);
     }
+
+//    @Override
+//    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+//    public ResponseEntity<Boolean> proceedPozycjaZamowienia( @RequestHeader(value = "SessionID") String sessionId) {
+//        boolean wykonano = false;
+//        try {
+//            pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId,new Long(48) ,new Long(16), 100);
+//        } catch (AuthenticationException e) {
+//            return new ResponseEntity<Boolean>(wykonano, HttpStatus.UNAUTHORIZED);
+//        }catch (Exception e){
+//            return new ResponseEntity<Boolean>(wykonano, HttpStatus.NOT_ACCEPTABLE);
+//        }
+//
+//
+//        wykonano = true;
+//        return new ResponseEntity<Boolean>(wykonano, HttpStatus.OK);
+//    }
 
 }

@@ -10,8 +10,5 @@ public interface UmieszczenieApi {
 
     ResponseEntity<List<UmieszczenieTO>> getUmieszczenieTowaru(Long id, String sessionId);
 
-    ResponseEntity<Boolean> updateUmieszczenie(UmieszczenieTO umieszczenie, String sessionId);
-
-
 
 }

@@ -219,7 +219,7 @@ public class BilansApiImpl implements BilansApi{
 
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
         try {
-            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(new Long(41));
+            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(sessionId,new Long(41));
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }
