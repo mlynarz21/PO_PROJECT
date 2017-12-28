@@ -18,5 +18,5 @@ public interface BilansApi {
      */
     ResponseEntity<Long> addBilansTest(Date dataBilansowana, String sessionId);
 
-    ResponseEntity<Long> addTest(String sessionId);
+    ResponseEntity<List<PozycjaZamowieniaTO>> addTest(String sessionId);
 }

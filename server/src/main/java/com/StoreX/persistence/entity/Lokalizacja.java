@@ -17,6 +17,7 @@ public class Lokalizacja {
     private int numerSektora;
     private boolean zajete;
 
+    public Lokalizacja(){}
 
     public Lokalizacja(Long ID, String kod,int numerRegalu, int numerRzedu, int numerSektora, boolean zajete){
         this.ID=ID;

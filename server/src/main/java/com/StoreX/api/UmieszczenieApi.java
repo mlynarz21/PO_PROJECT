@@ -8,8 +8,10 @@ import java.util.List;
 
 public interface UmieszczenieApi {
 
-    ResponseEntity<List<UmieszczenieTO>> getUmieszczenieTowaru(TowarTO zamowienie, String sessionId);
+    ResponseEntity<List<UmieszczenieTO>> getUmieszczenieTowaru(Long id, String sessionId);
 
     ResponseEntity<Boolean> updateUmieszczenie(UmieszczenieTO umieszczenie, String sessionId);
+
+
 
 }

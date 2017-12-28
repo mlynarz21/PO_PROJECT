@@ -16,6 +16,7 @@ public class Umieszczenie {
    @OneToOne
    private Lokalizacja lokalizacja;
 
+   public Umieszczenie(){}
     public Umieszczenie(Long ID, double iloscWLokalizacji, Towar towar, Lokalizacja lokalizacja, Lokalizacja lokalizacja1){
         this.ID=ID;
         this.iloscWLokalizacji=iloscWLokalizacji;
