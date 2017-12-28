@@ -6,17 +6,17 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class PozycjaZamowieniaModel {
-    private int ID;
+    private Long ID;
     private DoubleProperty ilosc;
     private DoubleProperty zrealizowano;
     private SimpleObjectProperty<TowarModel> towar;
     private SimpleObjectProperty<ZamowienieModel> zamowienie;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

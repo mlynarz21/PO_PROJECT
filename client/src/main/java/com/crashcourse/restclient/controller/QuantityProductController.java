@@ -1,5 +1,6 @@
 package com.crashcourse.restclient.controller;
 
+import com.crashcourse.restclient.api.PozycjaZamowieniaRestServiceClient;
 import com.crashcourse.restclient.api.UmieszczenieRestServiceClient;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
@@ -19,6 +20,8 @@ public class QuantityProductController extends ArtifactsBaseController {
 
     @Autowired
     private StoreXSecurityContext context;
+    @Autowired
+    private PozycjaZamowieniaRestServiceClient pozycjaZamowieniaRestServiceClient;
 
     private ZamowienieZakupuModel zamowienieZakupu;
     private PozycjaZamowieniaModel pozycjaZamowienia;
@@ -69,6 +72,7 @@ public class QuantityProductController extends ArtifactsBaseController {
         try {
             double number = decimalFormat.parse(quantityTextField.getText()).doubleValue();
             if(number <= umieszczenie.getIloscWLokalizacji().get() && number<=pozycjaZamowienia.getIlosc().get()-pozycjaZamowienia.getZrealizowano().get()){
+                pozycjaZamowieniaRestServiceClient.proceedPozycjaZamowienia(pozycjaZamowienia.getID(), umieszczenie.getID(), number);
                 defaultDialog=getScreens().productPickupDialog(zamowienieZakupu);
             }
             else {

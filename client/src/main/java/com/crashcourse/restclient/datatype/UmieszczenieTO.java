@@ -1,16 +1,16 @@
 package com.crashcourse.restclient.datatype;
 
 public class UmieszczenieTO {
-    private int ID;
+    private Long ID;
     private double iloscWLokalizacji;
     private TowarTO towar;
     private LokalizacjaTO lokalizacja;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
