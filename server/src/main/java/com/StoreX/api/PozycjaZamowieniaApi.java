@@ -13,7 +13,7 @@ public interface PozycjaZamowieniaApi {
 
     //ResponseEntity<Boolean> updatePozycjaZamowienia(PozycjaZamowieniaTO pozycjaZamowienia, String sessionId);
 
-    ResponseEntity<Boolean> proceedPozycjaZamowienia(  Long idPozycji, Long idUmieszczniea, double ilosc, String sessionId);
-//ResponseEntity<Boolean> proceedPozycjaZamowienia(  String sessionId);
+//    ResponseEntity<Boolean> proceedPozycjaZamowienia(  Long idPozycji, Long idUmieszczniea, double ilosc, String sessionId);
+ResponseEntity<Boolean> proceedPozycjaZamowienia(  String sessionId);
 }
 

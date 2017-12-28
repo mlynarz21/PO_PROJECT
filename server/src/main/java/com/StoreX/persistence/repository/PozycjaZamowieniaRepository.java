@@ -18,4 +18,7 @@ public interface PozycjaZamowieniaRepository extends JpaRepository<PozycjaZamowi
     @Modifying
     @Query(value = "update pozycja_zamowienia set zrealizowano = ?2 where id = ?1", nativeQuery = true)
     int realizacjaPozycjiZmowienia(Long id, double ilosc);
+
+    @Query(value = "select  zamowienie.dtype from pozycja_Zamowienia join zamowienie on zamowienie.id = pozycja_zamowienia.zamowienie_id where pozycja_zamowienia.id = ?1", nativeQuery = true)
+    String getType(Long id);
 }

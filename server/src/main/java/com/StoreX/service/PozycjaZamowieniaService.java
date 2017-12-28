@@ -17,7 +17,7 @@ public interface PozycjaZamowieniaService {
 
     List<PozycjaZamowieniaBO> findAllforZamowienie(Long ID) throws AuthenticationException;
 
-    boolean ProceedPozycjaZamowienia(String sessionId, Long idPozycji, Long idUmieszczenia, double ilosc) throws AuthenticationException;
+    boolean ProceedPozycjaZamowienia(String sessionId, Long idPozycji, Long idUmieszczenia, double ilosc) throws AuthenticationException, Exception;
     /*
     to be deleted
      */

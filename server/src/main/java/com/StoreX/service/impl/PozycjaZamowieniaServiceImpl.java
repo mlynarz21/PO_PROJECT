@@ -4,6 +4,7 @@ import com.StoreX.common.datatypes.bo.PozycjaZamowieniaBO;
 import com.StoreX.common.datatypes.bo.ZamowienieBO;
 import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
 import com.StoreX.persistence.entity.PozycjaZamowienia;
+import com.StoreX.persistence.entity.Umieszczenie;
 import com.StoreX.persistence.entity.ZamowienieZakupu;
 import com.StoreX.persistence.repository.PozycjaBilansuRepository;
 import com.StoreX.persistence.repository.PozycjaZamowieniaRepository;
@@ -51,20 +52,31 @@ public class PozycjaZamowieniaServiceImpl implements PozycjaZamowieniaService {
     //todo add alternative threads, check transactional
     @Override
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
-    public boolean ProceedPozycjaZamowienia(String sessionId, Long idPozycji, Long idUmieszczenia, double ilosc) throws AuthenticationException{
+    public boolean ProceedPozycjaZamowienia(String sessionId, Long idPozycji, Long idUmieszczenia, double iloscRealizowana) throws AuthenticationException, Exception{
 
         //if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
             // throw new AuthenticationException();
         //}
 
+        String type = getPozycjaZamowieniaRepository().getType(idPozycji);
+        if(!type.equalsIgnoreCase("zamowieniezakupu"))
+            return false;
+        PozycjaZamowienia pozycjaZamowienia = getPozycjaZamowieniaRepository().findOne(idPozycji);
+        Umieszczenie umieszczenie = getUmieszczenieRepository().findOne(idUmieszczenia);
+        double iloscJuzZrealizowana = pozycjaZamowienia.getZrealizowano();
+        double iloscAktualnaUmieszczenia = umieszczenie.getIloscWLokalizacji();
+        double iloscCalkowita = pozycjaZamowienia.getIlosc();
 
-        double iloscAktualnaPozycji = getPozycjaZamowieniaRepository().findOne(idPozycji).getZrealizowano();
-        double iloscAktualnaUmieszczenia = getUmieszczenieRepository().findOne(idUmieszczenia).getIloscWLokalizacji();
+        if(iloscJuzZrealizowana + iloscRealizowana > iloscCalkowita)
+            throw new Exception("Podano za duzą ilosc");
+        if(iloscAktualnaUmieszczenia - iloscRealizowana < 0)
+            throw new Exception("Podano za duzą ilosc Nie ma tyle w lokalizacji");
+
         //todo alternatywa, jesli ilosc jest za duza
-        getPozycjaZamowieniaRepository().realizacjaPozycjiZmowienia(idPozycji, iloscAktualnaPozycji + ilosc);
-        getUmieszczenieRepository().realizacjaPozycjiZmowienia(idUmieszczenia, iloscAktualnaUmieszczenia - ilosc);
-        double iloscPo = getUmieszczenieRepository().findOne(idUmieszczenia).getIloscWLokalizacji();
-        if(iloscPo == 0)
+        getPozycjaZamowieniaRepository().realizacjaPozycjiZmowienia(idPozycji, iloscJuzZrealizowana + iloscRealizowana);
+        getUmieszczenieRepository().realizacjaPozycjiZmowienia(idUmieszczenia, iloscAktualnaUmieszczenia - iloscRealizowana);
+
+        if(iloscAktualnaUmieszczenia - iloscRealizowana == 0)
         {
             getUmieszczenieRepository().delete(idUmieszczenia);
         }
