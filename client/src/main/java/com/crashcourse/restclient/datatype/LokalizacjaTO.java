@@ -1,19 +1,17 @@
 package com.crashcourse.restclient.datatype;
 
 public class LokalizacjaTO {
-    private int ID;
+    private Long ID;
     private String kod;
     private int numerRzedu;
     private int numerRegalu;
     private int numerSektora;
-    private boolean zajete;
-    private UmieszczenieTO umieszczenie;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -48,21 +46,6 @@ public class LokalizacjaTO {
     public void setNumerSektora(int numerSektora) {
         this.numerSektora = numerSektora;
     }
-
-    public boolean isZajete() {
-        return zajete;
-    }
-
-    public void setZajete(boolean zajete) {
-        this.zajete = zajete;
-    }
-
-    public UmieszczenieTO getUmieszczenie() {
-        return umieszczenie;
-    }
-
-    public void setUmieszczenie(UmieszczenieTO umieszczenie) {
-        this.umieszczenie = umieszczenie;
-    }
 }
+
 

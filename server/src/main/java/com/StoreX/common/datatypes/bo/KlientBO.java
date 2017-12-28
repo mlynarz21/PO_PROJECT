@@ -9,9 +9,10 @@ public class KlientBO {
     private String ulica;
     private String miasto;
     private String numerDomu;
+    private String email;
 
     public KlientBO(){}
-    public KlientBO(Long ID, String login, String imie, String nazwisko, String kodPocztowy, String ulica, String miasto, String numerDomu){
+    public KlientBO(Long ID, String login, String imie, String nazwisko, String kodPocztowy, String ulica, String miasto, String numerDomu, String email){
         this.ID=ID;
         this.login=login;
         this.imie=imie;
@@ -20,6 +21,7 @@ public class KlientBO {
         this.ulica=ulica;
         this.miasto=miasto;
         this.numerDomu=numerDomu;
+        this.email = email;
     }
     public Long getID() {
         return ID;
@@ -83,5 +85,13 @@ public class KlientBO {
 
     public void setNumerDomu(String numerDomu) {
         this.numerDomu = numerDomu;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

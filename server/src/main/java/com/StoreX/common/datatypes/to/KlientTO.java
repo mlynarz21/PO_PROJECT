@@ -1,7 +1,7 @@
 package com.StoreX.common.datatypes.to;
 
 public class KlientTO {
-    private int ID;
+    private Long ID;
     private String login;
     private String imie;
     private String nazwisko;
@@ -9,12 +9,13 @@ public class KlientTO {
     private String ulica;
     private String miasto;
     private String numerDomu;
+    private String email;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -72,5 +73,13 @@ public class KlientTO {
 
     public void setNumerDomu(String numerDomu) {
         this.numerDomu = numerDomu;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

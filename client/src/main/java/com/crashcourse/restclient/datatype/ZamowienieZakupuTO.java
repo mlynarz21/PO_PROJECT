@@ -3,6 +3,7 @@ package com.crashcourse.restclient.datatype;
 
 import com.crashcourse.restclient.datatype.enumeration.StatusDostawy;
 import com.crashcourse.restclient.datatype.enumeration.TypOdbioru;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
@@ -10,6 +11,7 @@ public class ZamowienieZakupuTO extends ZamowienieTO{
 
     private StatusDostawy status;
     private KlientTO klient;
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
     private Date terminRealizacji;
     private TypOdbioru typOdbioru;
 

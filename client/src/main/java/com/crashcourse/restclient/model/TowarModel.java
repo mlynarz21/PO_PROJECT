@@ -1,11 +1,7 @@
 package com.crashcourse.restclient.model;
 
 import com.crashcourse.restclient.datatype.TowarTO;
-import com.crashcourse.restclient.datatype.UmieszczenieTO;
 import javafx.beans.property.*;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class TowarModel {
     private Long ID;

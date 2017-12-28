@@ -4,18 +4,17 @@ import com.crashcourse.restclient.datatype.LokalizacjaTO;
 import javafx.beans.property.*;
 
 public class LokalizacjaModel {
-    private int ID;
+    private Long ID;
     private StringProperty kod;
     private IntegerProperty numerRzedu;
     private IntegerProperty numerRegalu;
     private IntegerProperty numerSektora;
-    private BooleanProperty zajete;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -51,14 +50,6 @@ public class LokalizacjaModel {
         this.numerSektora = numerSektora;
     }
 
-    public BooleanProperty isZajete() {
-        return zajete;
-    }
-
-    public void setZajete(BooleanProperty zajete) {
-        this.zajete = zajete;
-    }
-
     public static LokalizacjaModel fromLokalizacjaTo(LokalizacjaTO lokalizacjaTO) {
         LokalizacjaModel lokalizacjaModel = new LokalizacjaModel();
         lokalizacjaModel.ID = lokalizacjaTO.getID();
@@ -66,7 +57,6 @@ public class LokalizacjaModel {
         lokalizacjaModel.numerRegalu = new SimpleIntegerProperty(lokalizacjaTO.getNumerRegalu());
         lokalizacjaModel.numerRzedu = new SimpleIntegerProperty(lokalizacjaTO.getNumerRzedu());
         lokalizacjaModel.numerSektora = new SimpleIntegerProperty(lokalizacjaTO.getNumerSektora());
-        lokalizacjaModel.zajete = new SimpleBooleanProperty(lokalizacjaTO.isZajete());
         return lokalizacjaModel;
     }
 }

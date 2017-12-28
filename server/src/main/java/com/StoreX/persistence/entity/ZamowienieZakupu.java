@@ -1,6 +1,5 @@
 package com.StoreX.persistence.entity;
 
-import com.StoreX.common.datatypes.enumerations.StatusDostawy;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
 import com.StoreX.common.datatypes.enumerations.TypOdbioru;
 

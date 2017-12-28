@@ -2,8 +2,6 @@ package com.StoreX.common.datatypes.to;
 
 import com.StoreX.common.datatypes.enumerations.StatusDostawy;
 import com.StoreX.common.datatypes.enumerations.TypOdbioru;
-import com.StoreX.persistence.entity.Klient;
-import com.StoreX.persistence.entity.Zamowienie;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;

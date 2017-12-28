@@ -1,20 +1,17 @@
 package com.StoreX.common.datatypes.bo;
 
-import com.StoreX.persistence.entity.Umieszczenie;
-
 public class LokalizacjaBO {
-    private int ID;
+    private Long ID;
     private String kod;
     private int numerRzedu;
     private int numerRegalu;
     private int numerSektora;
-    private boolean zajete;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -49,14 +46,5 @@ public class LokalizacjaBO {
     public void setNumerSektora(int numerSektora) {
         this.numerSektora = numerSektora;
     }
-
-    public boolean isZajete() {
-        return zajete;
-    }
-
-    public void setZajete(boolean zajete) {
-        this.zajete = zajete;
-    }
-
 }
 

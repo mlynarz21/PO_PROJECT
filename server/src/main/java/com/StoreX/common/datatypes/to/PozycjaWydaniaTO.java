@@ -1,19 +1,16 @@
 package com.StoreX.common.datatypes.to;
 
-import com.StoreX.persistence.entity.Towar;
-import com.StoreX.persistence.entity.WydanieZamowienia;
-
 public class PozycjaWydaniaTO {
-    private int ID;
+    private Long ID;
     private double ilosc;
     private TowarTO towar;
     private WydanieZamowieniaTO wydanieZamowienia;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

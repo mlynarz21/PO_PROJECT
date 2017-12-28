@@ -2,80 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f31e1de3-36f0-4a41-917e-a7e76ea92651" name="Default" comment="dodano obsluge shipmentData">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/ArtifactRestServiceClient.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/KlientRestServiceClient.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/ArtifactRestServiceClientImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/KlientRestServiceClientImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactListAdminController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactListController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LocalizationPickupController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LocalizationPickupController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKEmailController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKEmailController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKNoWaitingOrdersController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKNoWaitingOrdersController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKOutOfProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKOutOfProductController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongDateController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongDateController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongQuantityController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongQuantityController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/RegisterController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/WelcomeController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ArtifactTo.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/Category.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/Status.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/StatusWydania.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/StatusWydania.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ArtifactModel.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base.properties" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base_PL.properties" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base_PL.properties" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ArtifactList.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ArtifactListAdmin.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/BalanceAcceptance.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/BalanceAcceptance.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Login.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Login.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MainScreen.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MainScreen.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKEmail.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKEmail.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKNoWaitingOrders.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKNoWaitingOrders.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKOutOfProduct.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKOutOfProduct.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongDate.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongDate.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongQuantity.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongQuantity.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OrderPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OrderPickup.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/QuantityProduct.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/QuantityProduct.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Register.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ShipmentData.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ShipmentData.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Welcome.fxml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/ArtifactApi.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/KlientApi.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/ArtifactApiImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/BilansApiImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/BilansApiImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/KlientApiImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/ArtifactBo.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/BilansBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/BilansBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/JednostkaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/JednostkaBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/enumerations/Category.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/enumerations/Status.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/enumerations/StatusWydania.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/enumerations/StatusWydania.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/ArtifactTo.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/BilansTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/BilansTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/JednostkaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/JednostkaTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/exceptions/BookNotFoundException.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/exceptions/WrongStatusException.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Artifact.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Bilans.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Bilans.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/ArtifactRepository.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/impl/ArtifactRepositoryImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ArtifactBookingService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ArtifactCreationService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ArtifactSearchService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ArtifactBookingServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ArtifactCreationServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ArtifactSearchServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/test/java/com/StoreX/CreateArtifactTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/test/java/com/StoreX/persistance/repository/impl/ArtifactRepositoryTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/test/java/com/StoreX/service/impl/ArtifactBookingServiceTest.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/test/java/com/StoreX/service/impl/ArtifactSearchServiceTest.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/KlientBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/KlientBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/LokalizacjaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/LokalizacjaBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaBilansuBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaBilansuBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaPrzyjeciaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaPrzyjeciaBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaWydaniaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaWydaniaBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaZamowieniaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaZamowieniaBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PrzyjecieZamowieniaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PrzyjecieZamowieniaBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/TowarBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/TowarBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/UmieszczenieBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/UmieszczenieBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/WydanieZamowieniaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/WydanieZamowieniaBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/ZamowienieZakupuBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/ZamowienieZakupuBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/KlientTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/KlientTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/LokalizacjaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/LokalizacjaTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaBilansuTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaBilansuTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaPrzyjeciaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaPrzyjeciaTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaWydaniaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaWydaniaTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaZamowieniaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaZamowieniaTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PrzyjecieZamowieniaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PrzyjecieZamowieniaTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/TowarTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/TowarTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/UmieszczenieTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/UmieszczenieTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/WydanieZamowieniaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/WydanieZamowieniaTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/ZamowienieZakupuTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/ZamowienieZakupuTO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Klient.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Klient.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Lokalizacja.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Lokalizacja.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Towar.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Towar.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Zamowienie.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Zamowienie.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieZakupu.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieZakupu.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -585,7 +538,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />

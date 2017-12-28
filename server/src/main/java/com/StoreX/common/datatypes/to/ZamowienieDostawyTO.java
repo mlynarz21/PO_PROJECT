@@ -1,7 +1,6 @@
 package com.StoreX.common.datatypes.to;
 
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
-import com.StoreX.persistence.entity.Zamowienie;
 
 public class ZamowienieDostawyTO extends ZamowienieTO{
 

@@ -5,15 +5,15 @@ import com.StoreX.persistence.entity.ZamowienieDostawy;
 import java.util.Date;
 
 public class PrzyjecieZamowieniaBO {
-    private int ID;
+    private Long ID;
     private Date data;
     private ZamowienieDostawyBO zamowienie;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

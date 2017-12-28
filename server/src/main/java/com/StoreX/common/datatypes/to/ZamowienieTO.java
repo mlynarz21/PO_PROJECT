@@ -1,10 +1,8 @@
 package com.StoreX.common.datatypes.to;
 
-import com.StoreX.persistence.entity.PozycjaZamowienia;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
-import java.util.List;
 
 public abstract class ZamowienieTO {
     private Long ID;

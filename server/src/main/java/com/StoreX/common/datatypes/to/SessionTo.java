@@ -2,10 +2,6 @@ package com.StoreX.common.datatypes.to;
 
 import java.util.UUID;
 
-/**
- * Session Transport Object
- * @author CWOJTOWI
- */
 public class SessionTo {
     private UUID sessionId;
     private String userType;
