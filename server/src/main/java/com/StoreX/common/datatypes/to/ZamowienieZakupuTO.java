@@ -1,6 +1,7 @@
 package com.StoreX.common.datatypes.to;
 
 import com.StoreX.common.datatypes.enumerations.StatusDostawy;
+import com.StoreX.common.datatypes.enumerations.TypOdbioru;
 import com.StoreX.persistence.entity.Klient;
 import com.StoreX.persistence.entity.Zamowienie;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -13,6 +14,7 @@ public class ZamowienieZakupuTO extends ZamowienieTO{
     private KlientTO klient;
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd")
     private Date terminRealizacji;
+    private TypOdbioru typOdbioru;
 
     public StatusDostawy getStatus() {
         return status;
@@ -36,6 +38,14 @@ public class ZamowienieZakupuTO extends ZamowienieTO{
 
     public void setTerminRealizacji(Date terminRealizacji) {
         this.terminRealizacji = terminRealizacji;
+    }
+
+    public TypOdbioru getTypOdbioru() {
+        return typOdbioru;
+    }
+
+    public void setTypOdbioru(TypOdbioru typOdbioru) {
+        this.typOdbioru = typOdbioru;
     }
 }
 

@@ -2,6 +2,7 @@ package com.crashcourse.restclient.datatype;
 
 
 import com.crashcourse.restclient.datatype.enumeration.StatusDostawy;
+import com.crashcourse.restclient.datatype.enumeration.TypOdbioru;
 
 import java.util.Date;
 
@@ -10,6 +11,7 @@ public class ZamowienieZakupuTO extends ZamowienieTO{
     private StatusDostawy status;
     private KlientTO klient;
     private Date terminRealizacji;
+    private TypOdbioru typOdbioru;
 
     public StatusDostawy getStatus() {
         return status;
@@ -33,6 +35,14 @@ public class ZamowienieZakupuTO extends ZamowienieTO{
 
     public void setTerminRealizacji(Date terminRealizacji) {
         this.terminRealizacji = terminRealizacji;
+    }
+
+    public TypOdbioru getTypOdbioru() {
+        return typOdbioru;
+    }
+
+    public void setTypOdbioru(TypOdbioru typOdbioru) {
+        this.typOdbioru = typOdbioru;
     }
 }
 

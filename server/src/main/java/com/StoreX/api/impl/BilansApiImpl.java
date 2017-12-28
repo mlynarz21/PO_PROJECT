@@ -5,6 +5,7 @@ import com.StoreX.common.datatypes.bo.BilansBO;
 import com.StoreX.common.datatypes.bo.PozycjaZamowieniaBO;
 import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
+import com.StoreX.common.datatypes.enumerations.TypOdbioru;
 import com.StoreX.common.datatypes.to.BilansTO;
 import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
 import com.StoreX.persistence.entity.*;
@@ -166,6 +167,7 @@ public class BilansApiImpl implements BilansApi{
         t2.setJednostka(j);
         t2.setPotrzebujeZamowienia(false);
         z.setKlient(kl);
+        z.setTypOdbioru(TypOdbioru.Wysylka);
         zamowienieZakupuService.addZamowienie(sessionId, z);
 
         towarService.saveTowar(t);
