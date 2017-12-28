@@ -50,9 +50,7 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
         return new ResponseEntity<List<PozycjaZamowieniaTO>>(results, HttpStatus.OK);
     }
 
-
-
-
+    
     @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idUmieszczenia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
 
