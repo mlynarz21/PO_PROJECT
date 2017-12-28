@@ -3,7 +3,7 @@ package com.crashcourse.restclient.datatype;
 import java.util.List;
 
 public class TowarTO {
-    private int ID;
+    private Long ID;
     private String nazwa;
     private String kod;
     private double ilostan=0;
@@ -16,11 +16,11 @@ public class TowarTO {
     private KategoriaTO kategoria;
     private List<UmieszczenieTO> umieszczenia;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

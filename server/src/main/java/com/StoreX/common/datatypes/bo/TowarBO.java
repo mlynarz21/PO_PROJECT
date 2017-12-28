@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TowarBO {
-    private int ID;
+    private Long ID;
     private String nazwa;
     private String kod;
     private double ilostan=0;
@@ -21,11 +21,11 @@ public class TowarBO {
     private KategoriaBO kategoria;
     private List<UmieszczenieBO> umieszczenia;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

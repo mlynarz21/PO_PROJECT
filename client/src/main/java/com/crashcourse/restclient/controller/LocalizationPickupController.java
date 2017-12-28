@@ -25,6 +25,8 @@ public class LocalizationPickupController extends ArtifactsBaseController {
         this.pozycjaZamowienia = pozycjaZamowienia;
     }
 
+    
+
     @FXML
     public void close() {
         getDialog().close();

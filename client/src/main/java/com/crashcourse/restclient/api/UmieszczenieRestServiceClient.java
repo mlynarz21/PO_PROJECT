@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UmieszczenieRestServiceClient {
 
-    List<UmieszczenieTO> getUmieszczenieTowaru(TowarTO towar);
+    List<UmieszczenieTO> getUmieszczenieTowaru(Long IDTowaru);
 
     void updateUmieszczenie(UmieszczenieTO umieszczenie);
 }
