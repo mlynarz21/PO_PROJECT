@@ -14,10 +14,11 @@ public class ZamowienieZakupu extends Zamowienie{
 
     @Enumerated(EnumType.STRING)
     private StatusWydania status;
-    private Date terminRealizacji;
-
     @OneToOne
     private Klient klient;
+    private Date terminRealizacji;
+
+
 
     public ZamowienieZakupu(){}
 

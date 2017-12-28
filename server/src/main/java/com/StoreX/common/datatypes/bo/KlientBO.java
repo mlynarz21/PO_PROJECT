@@ -1,7 +1,7 @@
 package com.StoreX.common.datatypes.bo;
 
 public class KlientBO {
-    private int ID;
+    private Long ID;
     private String login;
     private String imie;
     private String nazwisko;
@@ -10,11 +10,22 @@ public class KlientBO {
     private String miasto;
     private String numerDomu;
 
-    public int getID() {
+    public KlientBO(){}
+    public KlientBO(Long ID, String login, String imie, String nazwisko, String kodPocztowy, String ulica, String miasto, String numerDomu){
+        this.ID=ID;
+        this.login=login;
+        this.imie=imie;
+        this.nazwisko=nazwisko;
+        this.kodPocztowy=kodPocztowy;
+        this.ulica=ulica;
+        this.miasto=miasto;
+        this.numerDomu=numerDomu;
+    }
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
