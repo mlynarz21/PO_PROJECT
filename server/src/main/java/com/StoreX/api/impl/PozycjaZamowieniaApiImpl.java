@@ -66,7 +66,7 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
     }
 
     @Override
-    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/proceedPozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idZamowienia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
 
         try {

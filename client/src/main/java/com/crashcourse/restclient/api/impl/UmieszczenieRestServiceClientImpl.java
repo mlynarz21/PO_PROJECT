@@ -25,14 +25,13 @@ public class UmieszczenieRestServiceClientImpl implements UmieszczenieRestServic
     private String serviceUrl;
     @Autowired
     private RestTemplate restTemplate;
-
     @Autowired
     private StoreXSecurityContext app;
 
 
     @Override
-    public List<UmieszczenieTO> getUmieszczenieTowaru(TowarTO towar) {
-        RequestEntity<TowarTO> requestEntity = buildRequest(buildGetUmieszczenieTowaruRequestUri(), towar, HttpMethod.POST);
+    public List<UmieszczenieTO> getUmieszczenieTowaru(Long IDTowaru) {
+        RequestEntity<Long> requestEntity = buildRequest(buildGetUmieszczenieTowaruRequestUri(), IDTowaru, HttpMethod.POST);
 
         ResponseEntity<List<UmieszczenieTO>> exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<List<UmieszczenieTO>>() {
         });

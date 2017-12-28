@@ -30,7 +30,7 @@ public class ShipmentDataController extends ArtifactsBaseController {
 
     @FXML
     public void proceed() {
-        FXMLDialog defaultDialog=getScreens().productPickupDialog(null);
+        FXMLDialog defaultDialog=getScreens().mainScreenDialog();
         getDialog().close();
         getScreens().showDialog(defaultDialog);
     }

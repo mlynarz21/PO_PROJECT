@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TowarModel {
-    private int ID;
+    private Long ID;
     private StringProperty nazwa;
     private StringProperty kod;
     private DoubleProperty ilostan;
@@ -20,11 +20,11 @@ public class TowarModel {
     private SimpleObjectProperty<JednostkaModel> jednostka;
     private SimpleObjectProperty<KategoriaModel> kategoria;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
@@ -110,7 +110,7 @@ public class TowarModel {
 
     public static TowarModel fromTowarTo(TowarTO towarTO) {
         TowarModel towarModel = new TowarModel();
-        towarModel.ID = towarModel.getID();
+        towarModel.ID = towarTO.getID();
         towarModel.czasZalegania = new SimpleIntegerProperty(towarTO.getCzasZalegania());
         towarModel.iloscMinimalna = new SimpleDoubleProperty(towarTO.getIloscMinimalna());
         towarModel.iloscZablokowana = new SimpleDoubleProperty(towarTO.getIloscZablokowana());

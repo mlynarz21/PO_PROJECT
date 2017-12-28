@@ -206,14 +206,14 @@ public class ScreensConfiguration {
 
     @Bean
     @Scope("prototype")
-    public FXMLDialog okOutOFProductDialog() {
-        return manager.initializeDialog(okOutOfProductController());
+    public FXMLDialog okOutOFProductDialog(ZamowienieZakupuModel zamowienieZakupu) {
+        return manager.initializeDialog(okOutOfProductController(zamowienieZakupu));
     }
 
     @Bean
     @Scope("prototype")
-    public OKOutOfProductController okOutOfProductController() {
-        return new OKOutOfProductController(primaryStage);
+    public OKOutOfProductController okOutOfProductController(ZamowienieZakupuModel zamowienieZakupu) {
+        return new OKOutOfProductController(primaryStage, zamowienieZakupu);
     }
 
     @Bean

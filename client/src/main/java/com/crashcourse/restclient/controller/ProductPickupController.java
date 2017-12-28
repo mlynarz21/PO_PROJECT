@@ -1,6 +1,7 @@
 package com.crashcourse.restclient.controller;
 
 import com.crashcourse.restclient.api.PozycjaZamowieniaRestServiceClient;
+import com.crashcourse.restclient.api.UmieszczenieRestServiceClient;
 import com.crashcourse.restclient.api.ZamowienieZakupuRestServiceClient;
 import com.crashcourse.restclient.datatype.PozycjaZamowieniaTO;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
@@ -28,6 +29,8 @@ public class ProductPickupController extends ArtifactsBaseController {
     private PozycjaZamowieniaRestServiceClient pozycjaZamowieniaRestServiceClient;
     @Autowired
     private ZamowienieZakupuRestServiceClient zamowienieZakupuRestServiceClient;
+    @Autowired
+    private UmieszczenieRestServiceClient umieszczenieRestServiceClient;
 
     private ZamowienieZakupuModel zamowienieZakupu;
 
@@ -98,9 +101,21 @@ public class ProductPickupController extends ArtifactsBaseController {
 
     @FXML
     public void proceed() {
+        FXMLDialog defaultDialog;
+
         if (productsTable.getSelectionModel().getSelectedItem() != null) {
+
             PozycjaZamowieniaModel pozycjaZamowienia = productsTable.getSelectionModel().getSelectedItem();
-            FXMLDialog defaultDialog = getScreens().localizationPickupDialog(zamowienieZakupu, pozycjaZamowienia);
+            if(umieszczenieRestServiceClient.getUmieszczenieTowaru(pozycjaZamowienia.getTowar().get().getID()).size()!=0) {
+
+                defaultDialog = getScreens().localizationPickupDialog(zamowienieZakupu, pozycjaZamowienia);
+
+            }
+            else{
+
+                defaultDialog = getScreens().okOutOFProductDialog(zamowienieZakupu);
+
+            }
             getDialog().close();
             getScreens().showDialog(defaultDialog);
         }

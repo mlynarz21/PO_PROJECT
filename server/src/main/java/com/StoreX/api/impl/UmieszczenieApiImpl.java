@@ -31,12 +31,13 @@ public class UmieszczenieApiImpl implements UmieszczenieApi{
 
     @Autowired
     UmieszczenieService umieszczenieService;
+
     @Override
     @RequestMapping(value = "/getUmieszczenieTowaru/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<UmieszczenieTO>> getUmieszczenieTowaru(@RequestBody Long ID, @RequestHeader(value = "SessionID") String sessionId){
+    public ResponseEntity<List<UmieszczenieTO>> getUmieszczenieTowaru(@RequestBody Long IDTowaru, @RequestHeader(value = "SessionID") String sessionId){
         List<UmieszczenieBO> umieszczeniaBO = null;
         try {
-            umieszczeniaBO = umieszczenieService.findAllForTowar(sessionId, ID);
+            umieszczeniaBO = umieszczenieService.findAllForTowar(sessionId, IDTowaru);
         } catch (AuthenticationException e) {
             return new ResponseEntity<List<UmieszczenieTO>>(HttpStatus.UNAUTHORIZED);
         }
