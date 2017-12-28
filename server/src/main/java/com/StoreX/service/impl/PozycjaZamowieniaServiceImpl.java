@@ -63,6 +63,11 @@ public class PozycjaZamowieniaServiceImpl implements PozycjaZamowieniaService {
         //todo alternatywa, jesli ilosc jest za duza
         getPozycjaZamowieniaRepository().realizacjaPozycjiZmowienia(idPozycji, iloscAktualnaPozycji + ilosc);
         getUmieszczenieRepository().realizacjaPozycjiZmowienia(idUmieszczenia, iloscAktualnaUmieszczenia - ilosc);
+        double iloscPo = getUmieszczenieRepository().findOne(idUmieszczenia).getIloscWLokalizacji();
+        if(iloscPo == 0)
+        {
+            getUmieszczenieRepository().delete(idUmieszczenia);
+        }
 
         return true;
 

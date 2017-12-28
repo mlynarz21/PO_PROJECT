@@ -122,10 +122,21 @@ public class BilansApiImpl implements BilansApi{
     UmieszczenieService umieszczenieService;
     @Autowired
     LokalizacjaService lokalizacjaService;
+    @Autowired
+    KlientService klientService;
 
     @Override
     @RequestMapping(value = "/addTest/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<PozycjaZamowieniaTO>> addTest(String sessionId) {
+        Klient kl = new Klient();
+        kl.setImie("Jan");
+        kl.setKodPocztowy("62-100");
+        kl.setNazwisko("BR");
+        kl.setLogin("user");
+        kl.setMiasto("Leszno");
+        kl.setNumerDomu("4");
+        kl.setUlica("Nowa");
+        klientService.add(kl);
         ZamowienieZakupu z = new ZamowienieZakupu();
         Towar t = new Towar();
         Kategoria k = new Kategoria(new Long(2), "Picie");
@@ -154,6 +165,7 @@ public class BilansApiImpl implements BilansApi{
         t2.setIlostan(20);
         t2.setJednostka(j);
         t2.setPotrzebujeZamowienia(false);
+        z.setKlient(kl);
         zamowienieZakupuService.addZamowienie(sessionId, z);
 
         towarService.saveTowar(t);
@@ -207,7 +219,7 @@ public class BilansApiImpl implements BilansApi{
 
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
         try {
-            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(new Long(33));
+            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(new Long(41));
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }

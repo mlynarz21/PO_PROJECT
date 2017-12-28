@@ -35,7 +35,7 @@ public class PozycjaZamowieniaBO {
         this.towar = towar;
     }
 
-    public ZamowienieBO getZamowienie() {
+    public ZamowienieZakupuBO getZamowienie() {
         return zamowienie;
     }
 

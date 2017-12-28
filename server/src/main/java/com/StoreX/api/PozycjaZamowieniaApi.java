@@ -11,9 +11,9 @@ public interface PozycjaZamowieniaApi {
 
     ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(Long ID, String sessionId);
 
-    ResponseEntity<Boolean> updatePozycjaZamowienia(PozycjaZamowieniaTO pozycjaZamowienia, String sessionId);
+    //ResponseEntity<Boolean> updatePozycjaZamowienia(PozycjaZamowieniaTO pozycjaZamowienia, String sessionId);
 
     ResponseEntity<Boolean> proceedPozycjaZamowienia(  Long idPozycji, Long idUmieszczniea, double ilosc, String sessionId);
-
+//ResponseEntity<Boolean> proceedPozycjaZamowienia(  String sessionId);
 }
 
