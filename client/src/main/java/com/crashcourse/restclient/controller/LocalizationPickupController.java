@@ -1,9 +1,6 @@
 package com.crashcourse.restclient.controller;
 
-import com.crashcourse.restclient.api.ArtifactRestServiceClient;
-import com.crashcourse.restclient.api.PozycjaZamowieniaRestServiceClient;
 import com.crashcourse.restclient.api.UmieszczenieRestServiceClient;
-import com.crashcourse.restclient.datatype.PozycjaZamowieniaTO;
 import com.crashcourse.restclient.datatype.UmieszczenieTO;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
@@ -18,15 +15,11 @@ import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class LocalizationPickupController extends ArtifactsBaseController {
 
-    @Autowired
-    private ArtifactRestServiceClient restServiceClient;
     @Autowired
     private StoreXSecurityContext context;
     @Autowired

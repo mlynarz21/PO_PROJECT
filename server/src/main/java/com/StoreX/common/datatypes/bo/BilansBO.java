@@ -1,10 +1,6 @@
 package com.StoreX.common.datatypes.bo;
 
-import com.StoreX.persistence.entity.PozycjaBilansu;
-
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class BilansBO {
 

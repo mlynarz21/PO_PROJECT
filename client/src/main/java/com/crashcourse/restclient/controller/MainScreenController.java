@@ -1,30 +1,14 @@
 package com.crashcourse.restclient.controller;
 
-import com.crashcourse.restclient.api.ArtifactRestServiceClient;
 import com.crashcourse.restclient.api.ZamowienieZakupuRestServiceClient;
-import com.crashcourse.restclient.datatype.ArtifactTo;
-import com.crashcourse.restclient.datatype.enumeration.Category;
-import com.crashcourse.restclient.datatype.enumeration.Status;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
-import com.crashcourse.restclient.model.ArtifactModel;
 import com.crashcourse.restclient.view.FXMLDialog;
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.swing.text.html.ImageView;
-import java.util.Date;
-import java.util.List;
-import java.util.stream.Collectors;
-
 public class MainScreenController extends ArtifactsBaseController {
 
-    @Autowired
-    private ArtifactRestServiceClient restServiceClient;
     @Autowired
     private StoreXSecurityContext context;
     @Autowired

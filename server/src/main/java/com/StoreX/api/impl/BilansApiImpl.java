@@ -9,8 +9,6 @@ import com.StoreX.common.datatypes.enumerations.TypOdbioru;
 import com.StoreX.common.datatypes.to.BilansTO;
 import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
 import com.StoreX.persistence.entity.*;
-import com.StoreX.persistence.repository.PozycjaBilansuRepository;
-import com.StoreX.persistence.repository.TowarRepository;
 import com.StoreX.service.*;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +16,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import sun.util.calendar.BaseCalendar;
 
 import javax.naming.AuthenticationException;
 import java.util.ArrayList;
