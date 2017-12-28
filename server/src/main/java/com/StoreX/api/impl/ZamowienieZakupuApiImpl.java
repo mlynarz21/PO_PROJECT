@@ -1,15 +1,8 @@
 package com.StoreX.api.impl;
 
-import com.StoreX.api.UmieszczenieApi;
 import com.StoreX.api.ZamowienieZakupuApi;
-import com.StoreX.common.datatypes.bo.KlientBO;
-import com.StoreX.common.datatypes.bo.ZamowienieBO;
 import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
-import com.StoreX.common.datatypes.to.KlientTO;
-import com.StoreX.common.datatypes.to.UmieszczenieTO;
-import com.StoreX.common.datatypes.to.ZamowienieTO;
 import com.StoreX.common.datatypes.to.ZamowienieZakupuTO;
-import com.StoreX.persistence.repository.ZamowienieZakupuRepository;
 import com.StoreX.service.ZamowienieZakupuService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,10 +52,10 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
         } catch (AuthenticationException e) {
             return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
         }
-
         if (updated) {
             return new ResponseEntity<Boolean>(true, HttpStatus.OK);
-        } else {
+        }
+        else {
             return new ResponseEntity<Boolean>(true, HttpStatus.FOUND);
         }
     }

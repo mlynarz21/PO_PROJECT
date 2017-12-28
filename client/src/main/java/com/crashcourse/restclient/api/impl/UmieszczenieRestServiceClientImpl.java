@@ -42,18 +42,6 @@ public class UmieszczenieRestServiceClientImpl implements UmieszczenieRestServic
         return URI.create(new StringBuilder().append(serviceUrl).append("/getUmieszczenieTowaru/").toString());
     }
 
-    @Override
-    public void updateUmieszczenie(UmieszczenieTO umieszczenie) {
-        RequestEntity<UmieszczenieTO> request = buildRequest(builUpdateUmieszczenieRequestUri(), umieszczenie, HttpMethod.POST);
-
-        restTemplate.exchange(request, new ParameterizedTypeReference<Boolean>() {
-        });
-    }
-
-    private URI builUpdateUmieszczenieRequestUri() {
-        return URI.create(new StringBuilder().append(serviceUrl).append("/updateUmieszczenie/").toString());
-    }
-
 
     private <T extends Object> RequestEntity<T> buildRequest(URI uri, T body, HttpMethod method) {
         HttpHeaders head = buildRequestHeader();

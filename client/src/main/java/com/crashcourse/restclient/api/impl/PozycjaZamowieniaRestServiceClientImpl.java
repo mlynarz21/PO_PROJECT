@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -44,15 +45,19 @@ public class PozycjaZamowieniaRestServiceClientImpl implements PozycjaZamowienia
     }
 
     @Override
-    public void updatePozycjaZamowienia(PozycjaZamowieniaTO pozycjaZamowienia) {
-        RequestEntity<PozycjaZamowieniaTO> request = buildRequest(builPozycjaZamowieniaRequestUri(), pozycjaZamowienia, HttpMethod.POST);
+    public void proceedPozycjaZamowienia(Long idPozycji, Long idUmieszcznia, double ilosc){
+        List<Double> transferList= new ArrayList<>();
+        transferList.add(idPozycji.doubleValue());
+        transferList.add(idUmieszcznia.doubleValue());
+        transferList.add(ilosc);
+        RequestEntity<List<Double>> request = buildRequest(builPozycjaZamowieniaRequestUri(), transferList, HttpMethod.POST);
 
         restTemplate.exchange(request, new ParameterizedTypeReference<Boolean>() {
         });
     }
 
     private URI builPozycjaZamowieniaRequestUri() {
-        return URI.create(new StringBuilder().append(serviceUrl).append("/updatePozycjaZamowienia/").toString());
+        return URI.create(new StringBuilder().append(serviceUrl).append("/proceedPozycjaZamowienia/").toString());
     }
 
 

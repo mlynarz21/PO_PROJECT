@@ -2,12 +2,7 @@ package com.StoreX.api.impl;
 
 import com.StoreX.api.PozycjaZamowieniaApi;
 import com.StoreX.common.datatypes.bo.PozycjaZamowieniaBO;
-import com.StoreX.common.datatypes.bo.ZamowienieBO;
-import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
 import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
-import com.StoreX.common.datatypes.to.ZamowienieTO;
-import com.StoreX.common.datatypes.to.ZamowienieZakupuTO;
-import com.StoreX.persistence.entity.Zamowienie;
 import com.StoreX.service.PozycjaZamowieniaService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,9 +46,11 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
     }
 
     
-    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idUmieszczenia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
-
+    @RequestMapping(value = "/proceedPozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody List<Double> transferList, @RequestHeader(value = "SessionID") String sessionId) {
+        Long idPozyjcji = transferList.get(0).longValue();
+        Long idUmieszczenia = transferList.get(1).longValue();
+        double ilosc = transferList.get(2);
 
         try {
            pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozyjcji, idUmieszczenia, ilosc);

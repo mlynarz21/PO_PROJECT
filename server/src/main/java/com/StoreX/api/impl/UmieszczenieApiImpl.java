@@ -50,23 +50,4 @@ public class UmieszczenieApiImpl implements UmieszczenieApi{
 
         return new ResponseEntity<List<UmieszczenieTO>>(results, HttpStatus.OK);
     }
-
-
-
-    @Override
-    @RequestMapping(value = "/updateUmieszczenie/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Boolean> updateUmieszczenie(@RequestBody UmieszczenieTO umieszczenie, @RequestHeader(value = "SessionID") String sessionId) {
-        boolean updated = false;
-//        try {
-//            updated = bookingService.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
-//        } catch (AuthenticationException e) {
-//            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
-//        }
-
-        if (updated) {
-            return new ResponseEntity<Boolean>(updated, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<Boolean>(updated, HttpStatus.FOUND);
-        }
-    }
 }
