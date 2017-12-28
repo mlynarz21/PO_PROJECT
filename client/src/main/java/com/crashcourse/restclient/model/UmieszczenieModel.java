@@ -6,16 +6,16 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
 public class UmieszczenieModel {
-    private int ID;
+    private Long ID;
     private DoubleProperty iloscWLokalizacji;
     private SimpleObjectProperty<TowarModel> towar;
     private SimpleObjectProperty<LokalizacjaModel> lokalizacja;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 

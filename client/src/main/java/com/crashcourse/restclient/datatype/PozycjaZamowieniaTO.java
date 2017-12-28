@@ -1,17 +1,17 @@
 package com.crashcourse.restclient.datatype;
 
 public class PozycjaZamowieniaTO {
-    private int ID;
+    private Long ID;
     private double ilosc;
     private double zrealizowano;
     private TowarTO towar;
     private ZamowienieZakupuTO zamowienie;
 
-    public int getID() {
+    public Long getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Long ID) {
         this.ID = ID;
     }
 
