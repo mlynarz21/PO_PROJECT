@@ -16,6 +16,8 @@ public class PrzyjecieZamowienia {
     @OneToOne
     private ZamowienieDostawy zamowienie;
 
+    public PrzyjecieZamowienia(){}
+
     public PrzyjecieZamowienia(Long ID, Date data, ZamowienieDostawy zamowienie){
         this.ID=ID;
         this.data=data;

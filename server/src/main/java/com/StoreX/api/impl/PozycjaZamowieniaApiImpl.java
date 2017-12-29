@@ -50,11 +50,7 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
         return new ResponseEntity<List<PozycjaZamowieniaTO>>(results, HttpStatus.OK);
     }
 
-    
-<<<<<<< HEAD
-    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idUmieszczenia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
-=======
+
 //    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 //    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idUmieszczenia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
 //
@@ -76,17 +72,11 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
         Long idUmieszcznia = transferList.get(1).longValue();
         double ilosc = transferList.get(2);
 
->>>>>>> 081f5fc2b39fe6147f3efd31793773f2188285f9
         boolean wykonano = false;
-
         try {
-<<<<<<< HEAD
-           pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozyjcji, idUmieszczenia, ilosc);
-=======
             pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszcznia, ilosc);
->>>>>>> 081f5fc2b39fe6147f3efd31793773f2188285f9
         } catch (AuthenticationException e) {
-            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<Boolean>(wykonano, HttpStatus.UNAUTHORIZED);
         }catch (Exception e){
             return new ResponseEntity<Boolean>(wykonano, HttpStatus.NOT_ACCEPTABLE);
         }
@@ -95,22 +85,5 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
         wykonano = true;
         return new ResponseEntity<Boolean>(wykonano, HttpStatus.OK);
     }
-
-//    @Override
-//    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity<Boolean> proceedPozycjaZamowienia( @RequestHeader(value = "SessionID") String sessionId) {
-//        boolean wykonano = false;
-//        try {
-//            pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId,new Long(48) ,new Long(16), 100);
-//        } catch (AuthenticationException e) {
-//            return new ResponseEntity<Boolean>(wykonano, HttpStatus.UNAUTHORIZED);
-//        }catch (Exception e){
-//            return new ResponseEntity<Boolean>(wykonano, HttpStatus.NOT_ACCEPTABLE);
-//        }
-//
-//
-//        wykonano = true;
-//        return new ResponseEntity<Boolean>(wykonano, HttpStatus.OK);
-//    }
 
 }

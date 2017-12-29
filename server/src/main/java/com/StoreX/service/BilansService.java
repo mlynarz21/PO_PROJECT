@@ -9,7 +9,7 @@ import java.util.Date;
 
 public interface BilansService {
 
-    public BilansBO addBilans(String sessionId, Date dataBilansowana) throws AuthenticationException;
+    public boolean addBilans(String sessionId, Date dataBilansowana) throws AuthenticationException, Exception;
 
     public BilansBO findLast(String sessionId) throws AuthenticationException;
 

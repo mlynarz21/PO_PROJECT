@@ -15,6 +15,8 @@ public class PozycjaWydania {
     @ManyToOne
     private WydanieZamowienia wydanieZamowienia;
 
+    public PozycjaWydania(){}
+
     public PozycjaWydania(Long ID, double ilosc, Towar towar, WydanieZamowienia wydanieZamowienia){
         this.ID=ID;
         this.ilosc=ilosc;
