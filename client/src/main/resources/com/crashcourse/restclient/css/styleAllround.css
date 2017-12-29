@@ -14,6 +14,7 @@
 .label{
     -fx-border-radius: 10 10 10 10;
     -fx-background-radius: 10 10 10 10;
+    -fx-text-fill:white;
 }
 
 .text-field{
@@ -27,4 +28,25 @@
     -fx-blend-mode: color-burn;
     -fx-opacity: 0.95;
     -fx-font-size: 26;
+}
+
+.text-input {
+    -fx-text-fill:white;
+}
+
+.table-cell{
+    -fx-background-color: #78bfff;
+    -fx-alignment: center;
+    -fx-text-fill: black;
+    -fx-font-size: 42;
+    -fx-opacity: 0.7;
+}
+
+.table-cell:empty {
+    -fx-background-color: #78bfff;
+}
+
+.table-cell:filled:selected:focused, .table-cell:filled:selected {
+    -fx-background-color: #2289ff;
+    -fx-text-fill: black;
 }

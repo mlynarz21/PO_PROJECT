@@ -5,6 +5,7 @@ import com.crashcourse.restclient.datatype.ZamowienieZakupuTO;
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 import com.crashcourse.restclient.model.ZamowienieZakupuModel;
 import com.crashcourse.restclient.view.FXMLDialog;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -12,6 +13,8 @@ import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,9 +30,9 @@ public class OrderPickupController extends ArtifactsBaseController {
     @FXML
     TableColumn<ZamowienieZakupuModel, String> numerZamowieniaColumn;
     @FXML
-    TableColumn<ZamowienieZakupuModel, Date> dataZamowieniaColumn;
+    TableColumn<ZamowienieZakupuModel, String> dataZamowieniaColumn;
     @FXML
-    TableColumn<ZamowienieZakupuModel, Date> terminRealizacjiColumn;
+    TableColumn<ZamowienieZakupuModel, String> terminRealizacjiColumn;
 
     public OrderPickupController(Stage primaryStage) {
         super(primaryStage);
@@ -48,9 +51,10 @@ public class OrderPickupController extends ArtifactsBaseController {
     @FXML
     public void initialize() {
         loadAllData();
+        DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
         numerZamowieniaColumn.setCellValueFactory(celldata -> celldata.getValue().getKod());
-        dataZamowieniaColumn.setCellValueFactory(celldata -> celldata.getValue().getDataZlozenia());
-        terminRealizacjiColumn.setCellValueFactory(celldata -> celldata.getValue().getTerminRealizacji());
+        dataZamowieniaColumn.setCellValueFactory(celldata -> new SimpleStringProperty(df.format(celldata.getValue().getDataZlozenia().get())));
+        terminRealizacjiColumn.setCellValueFactory(celldata -> new SimpleStringProperty(df.format(celldata.getValue().getTerminRealizacji().get())));
     }
 
     private void loadAllData() {

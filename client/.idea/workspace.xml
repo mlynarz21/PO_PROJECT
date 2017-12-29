@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f31e1de3-36f0-4a41-917e-a7e76ea92651" name="Default" comment="dodano obsluge shipmentData">
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/KlientBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/KlientBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/LokalizacjaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/LokalizacjaBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaBilansuBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaBilansuBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaPrzyjeciaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaPrzyjeciaBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaWydaniaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaWydaniaBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaZamowieniaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaZamowieniaBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PrzyjecieZamowieniaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PrzyjecieZamowieniaBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/TowarBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/TowarBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/UmieszczenieBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/UmieszczenieBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/WydanieZamowieniaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/WydanieZamowieniaBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/ZamowienieZakupuBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/ZamowienieZakupuBO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/KlientTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/KlientTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/LokalizacjaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/LokalizacjaTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaBilansuTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaBilansuTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaPrzyjeciaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaPrzyjeciaTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaWydaniaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaWydaniaTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaZamowieniaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PozycjaZamowieniaTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PrzyjecieZamowieniaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/PrzyjecieZamowieniaTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/TowarTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/TowarTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/UmieszczenieTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/UmieszczenieTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/WydanieZamowieniaTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/WydanieZamowieniaTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/ZamowienieZakupuTO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/to/ZamowienieZakupuTO.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Klient.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Klient.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Lokalizacja.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Lokalizacja.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Towar.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Towar.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Zamowienie.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Zamowienie.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieZakupu.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieZakupu.java" />
+    <list default="true" id="f31e1de3-36f0-4a41-917e-a7e76ea92651" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +26,81 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductPickupController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="57" column="45" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderPickupController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="55" column="139" lean-forward="false" selection-start-line="55" selection-start-column="139" selection-end-line="55" selection-end-column="139" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductPickup.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="302" lean-forward="false" selection-start-line="12" selection-start-column="302" selection-end-line="12" selection-end-column="302" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styleAllround.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="673">
+              <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styleNoround.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="37" column="34" lean-forward="true" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styleWindow.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="622">
+              <caret line="58" column="1" lean-forward="false" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -75,37 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/ZamowienieZakupuRestServiceClientImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ZamowienieModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ZamowienieTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MonthPickupController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/TowarTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/TowarModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/LokalizacjaModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongQuantityController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/UmieszczenieRestServiceClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/UmieszczenieRestServiceClientImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/PozycjaZamowieniaRestServiceClient.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/PozycjaZamowieniaRestServiceClientImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/QuantityProductController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/UmieszczenieTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PozycjaZamowieniaTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/UmieszczenieModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PozycjaZamowieniaModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ZamowienieZakupuTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ZamowienieZakupuModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/WelcomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ArtifactTo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base_PL.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LocalizationPickupController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKEmailController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongDateController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKOutOfProductController.java" />
@@ -113,7 +138,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Login.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/BalanceAcceptance.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ConfirmationDialog.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MainScreen.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKEmail.fxml" />
@@ -122,10 +146,42 @@
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongDate.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongQuantity.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OrderPickup.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/QuantityProduct.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ShipmentData.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/StatusWydania.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/BilansTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/JednostkaTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/KlientTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/LokalizacjaTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PozycjaBilansuTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PozycjaPrzyjeciaTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PozycjaWydaniaTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PozycjaZamowieniaTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/TowarTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/UmieszczenieTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/WydanieZamowieniaTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ZamowienieDostawyTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ZamowienieTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ZamowienieZakupuTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/JednostkaModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/KategoriaModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/KategoriaTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/KlientModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/LokalizacjaModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/BilansModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PozycjaBilansuModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PozycjaPrzyjeciaModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PozycjaWydaniaModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PrzyjecieZamowieniaModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PrzyjecieZamowieniaTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/WydanieZamowieniaModel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css" />
       </list>
     </option>
   </component>
@@ -135,8 +191,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -181,8 +237,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -224,13 +279,66 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
               <item name="datatype" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="datatype" type="462c0819:PsiDirectoryNode" />
+              <item name="enumeration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,7 +510,8 @@
       <workItem from="1514111772785" duration="3240000" />
       <workItem from="1514365649804" duration="18872000" />
       <workItem from="1514413450021" duration="2748000" />
-      <workItem from="1514453733862" duration="17000000" />
+      <workItem from="1514453733862" duration="17865000" />
+      <workItem from="1514498366222" duration="4803000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1513790968539</created>
@@ -530,14 +639,22 @@
       <option name="project" value="LOCAL" />
       <updated>1514465680030</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="UWAGA !!! Refactor obiektow zakonczony">
+      <created>1514485752216</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1514485752216</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88971000" />
+    <option name="totallyTimeSpent" value="94639000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -548,14 +665,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2916225" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25588864" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25344646" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40814197" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20364584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -568,6 +684,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="5.2083336E-4" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +706,8 @@
     <MESSAGE value="dodano obsługe orderControllera" />
     <MESSAGE value="dodano wydawanie zamowien" />
     <MESSAGE value="dodano obsluge shipmentData" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodano obsluge shipmentData" />
+    <MESSAGE value="UWAGA !!! Refactor obiektow zakonczony" />
+    <option name="LAST_COMMIT_MESSAGE" value="UWAGA !!! Refactor obiektow zakonczony" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -694,306 +812,356 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ZamowienieModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/LokalizacjaModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PozycjaBilansuModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PozycjaBilansuTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="39" column="1" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PozycjaPrzyjeciaTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PozycjaPrzyjeciaModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PozycjaWydaniaModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PozycjaWydaniaTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="39" column="1" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PozycjaZamowieniaModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PozycjaZamowieniaTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PrzyjecieZamowieniaModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PrzyjecieZamowieniaTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="68" lean-forward="false" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/SessionTo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/TowarTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/TowarModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-765">
+          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/UserTo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/UmieszczenieTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="39" column="1" lean-forward="false" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/UmieszczenieModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/WydanieZamowieniaTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="35" column="1" lean-forward="false" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/WydanieZamowieniaModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="17" column="26" lean-forward="false" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ZamowienieDostawyModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding />
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ZamowienieTO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ZamowienieDostawyTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ZamowienieZakupuModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ZamowienieZakupuTO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="39" column="39" lean-forward="false" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-          <folding>
-            <element signature="e#969#970#0" expanded="false" />
-            <element signature="e#1025#1026#0" expanded="false" />
-            <element signature="e#1069#1070#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ArtifactModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactsBaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactListAdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2047">
-          <caret line="25" column="50" lean-forward="false" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/WelcomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ArtifactTo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ArtifactList.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Welcome.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="66" lean-forward="false" selection-start-line="0" selection-start-column="51" selection-end-line="0" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="53" lean-forward="false" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/bundle/base_PL.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/KlientRestServiceClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="12" lean-forward="false" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LocalizationPickupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKEmailController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongDateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKOutOfProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKNoWaitingOrdersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="48" column="52" lean-forward="false" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/ArtifactRestServiceClientImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ZamowienieZakupuModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="42" lean-forward="false" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <caret line="14" column="55" lean-forward="true" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/StoreXApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ZamowienieModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="27" />
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/ZamowienieTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/BalanceAcceptance.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/tapeta.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ConfirmationDialog.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/StatusDostawy.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ShipmentData.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="300" lean-forward="false" selection-start-line="10" selection-start-column="300" selection-end-line="10" selection-end-column="300" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/QuantityProduct.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="305" lean-forward="false" selection-start-line="11" selection-start-column="305" selection-end-line="11" selection-end-column="305" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OrderPickup.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="299" lean-forward="false" selection-start-line="11" selection-start-column="299" selection-end-line="11" selection-end-column="299" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongQuantity.fxml">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" column="386" lean-forward="false" selection-start-line="8" selection-start-column="360" selection-end-line="8" selection-end-column="386" />
+          <caret line="8" column="301" lean-forward="false" selection-start-line="8" selection-start-column="301" selection-end-line="8" selection-end-column="301" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Default.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongDate.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="297" lean-forward="false" selection-start-line="8" selection-start-column="297" selection-end-line="8" selection-end-column="297" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/InformationError.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKOutOfProduct.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKNoWaitingOrders.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKEmail.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="136" lean-forward="true" selection-start-line="10" selection-start-column="136" selection-end-line="10" selection-end-column="136" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MainScreen.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Login.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1005,176 +1173,115 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="307" lean-forward="false" selection-start-line="12" selection-start-column="307" selection-end-line="12" selection-end-column="307" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Login.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="285" lean-forward="false" selection-start-line="13" selection-start-column="285" selection-end-line="13" selection-end-column="285" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/InformationError.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MainScreen.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="298" lean-forward="false" selection-start-line="13" selection-start-column="298" selection-end-line="13" selection-end-column="298" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Default.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ConfirmationDialog.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKEmail.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="295" lean-forward="false" selection-start-line="8" selection-start-column="295" selection-end-line="8" selection-end-column="295" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/BalanceAcceptance.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKNoWaitingOrders.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="303" lean-forward="false" selection-start-line="8" selection-start-column="303" selection-end-line="8" selection-end-column="303" />
+        <state relative-caret-position="622">
+          <caret line="58" column="1" lean-forward="false" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKOutOfProduct.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="300" lean-forward="false" selection-start-line="8" selection-start-column="300" selection-end-line="8" selection-end-column="300" />
+        <state relative-caret-position="673">
+          <caret line="51" column="1" lean-forward="false" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongDate.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="297" lean-forward="false" selection-start-line="8" selection-start-column="297" selection-end-line="8" selection-end-column="297" />
+        <state relative-caret-position="578">
+          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongQuantity.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="301" lean-forward="false" selection-start-line="8" selection-start-column="301" selection-end-line="8" selection-end-column="301" />
+        <state relative-caret-position="170">
+          <caret line="57" column="45" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OrderPickup.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="299" lean-forward="false" selection-start-line="11" selection-start-column="299" selection-end-line="11" selection-end-column="299" />
+        <state relative-caret-position="340">
+          <caret line="55" column="139" lean-forward="false" selection-start-line="55" selection-start-column="139" selection-end-line="55" selection-end-column="139" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="302" lean-forward="false" selection-start-line="12" selection-start-column="302" selection-end-line="12" selection-end-column="302" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/QuantityProduct.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="305" lean-forward="false" selection-start-line="11" selection-start-column="305" selection-end-line="11" selection-end-column="305" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ShipmentData.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="300" lean-forward="false" selection-start-line="10" selection-start-column="300" selection-end-line="10" selection-end-column="300" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/StatusWydania.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/StatusDostawy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/enumeration/TypOdbioru.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/BilansTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="16" lean-forward="true" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        <state relative-caret-position="520">
+          <caret line="37" column="34" lean-forward="true" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
           <folding />
         </state>
       </provider>
