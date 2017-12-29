@@ -276,19 +276,19 @@ public class BilansApiImpl implements BilansApi{
         zamowienieDostawyService.add(zd);
 
         Bilans staryBilans = new Bilans();
-        staryBilans.setDataBilansu(new Date(117,10,11));
+        staryBilans.setDataBilansu(new Date(117,9,11));
         bilansService.saveBilans(staryBilans);
 
         WydanieZamowienia wz1 = new WydanieZamowienia();
         WydanieZamowienia wz2 = new WydanieZamowienia();
         PrzyjecieZamowienia pz1 = new PrzyjecieZamowienia();
         PrzyjecieZamowienia pz2 = new PrzyjecieZamowienia();
-        wz1.setData(new Date(117,11,11));
-        wz2.setData(new Date(117,11,11));
+        wz1.setData(new Date(117,10,11));
+        wz2.setData(new Date(117,10,11));
         wz1.setZamowienie(zz);
         wz2.setZamowienie(zz);
-        pz1.setData(new Date(117,11,11));
-        pz2.setData(new Date(117,11,11));
+        pz1.setData(new Date(117,10,11));
+        pz2.setData(new Date(117,10,11));
         pz1.setZamowienie(zd);
         pz2.setZamowienie(zd);
         wydanieZamowieniaService.add(wz1);
