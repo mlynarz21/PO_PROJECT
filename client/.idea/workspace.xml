@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f31e1de3-36f0-4a41-917e-a7e76ea92651" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/MonthPickup.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -511,7 +503,7 @@
       <workItem from="1514365649804" duration="18872000" />
       <workItem from="1514413450021" duration="2748000" />
       <workItem from="1514453733862" duration="17865000" />
-      <workItem from="1514498366222" duration="4803000" />
+      <workItem from="1514498366222" duration="5418000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1513790968539</created>
@@ -646,11 +638,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514485752216</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="gui color changes">
+      <created>1514506807405</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1514506807405</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94639000" />
+    <option name="totallyTimeSpent" value="95254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -665,7 +664,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2916225" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25344646" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25344646" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -707,7 +706,8 @@
     <MESSAGE value="dodano wydawanie zamowien" />
     <MESSAGE value="dodano obsluge shipmentData" />
     <MESSAGE value="UWAGA !!! Refactor obiektow zakonczony" />
-    <option name="LAST_COMMIT_MESSAGE" value="UWAGA !!! Refactor obiektow zakonczony" />
+    <MESSAGE value="gui color changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="gui color changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
