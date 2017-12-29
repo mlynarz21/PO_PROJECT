@@ -47,7 +47,7 @@ public class BilansRestServiceClientImpl implements BilansRestServiceClient {
     public void addBilans(Date dataBilansowana){
         RequestEntity<Date> request = buildRequest(builAddBilansRequestUri(), dataBilansowana, HttpMethod.POST);
 
-        restTemplate.exchange(request, new ParameterizedTypeReference<Date>() {
+        restTemplate.exchange(request, new ParameterizedTypeReference<Boolean>() {
         });
     }
 
