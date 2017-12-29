@@ -32,6 +32,8 @@ public class BilansServiceImplementation implements BilansService {
 
     @Autowired
     PozycjaPrzyjeciaService pozycjaPrzyjeciaService;
+    @Autowired
+    TowarService towarService;
 
 
     @Autowired
@@ -51,7 +53,7 @@ public class BilansServiceImplementation implements BilansService {
        // if(numberOfBilansesWithGivenDate > 0)
        //     throw new Exception("BIlans już istnieje");
 
-        Map<TowarBO,Double> pozycjeDoBilansu = new HashMap<TowarBO, Double>();
+        Map<Long,Double> pozycjeDoBilansu = new HashMap<Long, Double>();
 
         Bilans nowyBilans = new Bilans();
         nowyBilans.setDataBilansu(dataBilansowana);
@@ -69,7 +71,7 @@ public class BilansServiceImplementation implements BilansService {
             Long latBilansBOId = lastBilansBO.getID();
             List<PozycjaBilansuBO> pozycjaBilansuBOList =  pozycjaBilansuService.findAllForBilans(latBilansBOId);
             for (PozycjaBilansuBO pozycjaBilansuBO: pozycjaBilansuBOList) {
-                pozycjeDoBilansu.put(pozycjaBilansuBO.getTowar(), pozycjaBilansuBO.getIlosc());
+                pozycjeDoBilansu.put(pozycjaBilansuBO.getTowar().getID(), pozycjaBilansuBO.getIlosc());
             }
         }
 
@@ -81,27 +83,29 @@ public class BilansServiceImplementation implements BilansService {
             pozycjaPrzyjeciaBOList = pozycjaPrzyjeciaService.findAllForMonthAndYear(newMonth, newYear);
 
         for (PozycjaPrzyjeciaBO pozycjaPrzyjeciaBO: pozycjaPrzyjeciaBOList) {
-            if(pozycjeDoBilansu.containsKey(pozycjaPrzyjeciaBO.getTowar()))
-                pozycjeDoBilansu.put(pozycjaPrzyjeciaBO.getTowar(), pozycjeDoBilansu.get(pozycjaPrzyjeciaBO.getTowar()) + pozycjaPrzyjeciaBO.getIlosc());
+            if(pozycjeDoBilansu.containsKey(pozycjaPrzyjeciaBO.getTowar().getID()))
+                pozycjeDoBilansu.put(pozycjaPrzyjeciaBO.getTowar().getID(), pozycjeDoBilansu.get(pozycjaPrzyjeciaBO.getTowar().getID()) + pozycjaPrzyjeciaBO.getIlosc());
             else
-                pozycjeDoBilansu.put(pozycjaPrzyjeciaBO.getTowar(), pozycjaPrzyjeciaBO.getIlosc());
+                pozycjeDoBilansu.put(pozycjaPrzyjeciaBO.getTowar().getID(), pozycjaPrzyjeciaBO.getIlosc());
         }
         List<PozycjaWydaniaBO> pozycjaWydaniaBOList = new ArrayList<>();
 
              pozycjaWydaniaBOList = pozycjaWydaniaService.findAllForMonthAndYear(newMonth, newYear);
 
         for (PozycjaWydaniaBO pozycjaWydaniaBO: pozycjaWydaniaBOList) {
-            if(pozycjeDoBilansu.containsKey(pozycjaWydaniaBO.getTowar()))
-                pozycjeDoBilansu.put(pozycjaWydaniaBO.getTowar(), pozycjeDoBilansu.get(pozycjaWydaniaBO.getTowar()) - pozycjaWydaniaBO.getIlosc());
+            if(pozycjeDoBilansu.containsKey(pozycjaWydaniaBO.getTowar().getID()))
+                pozycjeDoBilansu.put(pozycjaWydaniaBO.getTowar().getID(), pozycjeDoBilansu.get(pozycjaWydaniaBO.getTowar().getID()) - pozycjaWydaniaBO.getIlosc());
             else
                 //todo: posiible?
-                pozycjeDoBilansu.put(pozycjaWydaniaBO.getTowar(), -pozycjaWydaniaBO.getIlosc());
+                pozycjeDoBilansu.put(pozycjaWydaniaBO.getTowar().getID(), -pozycjaWydaniaBO.getIlosc());
         }
 
         List<PozycjaBilansuBO> pozycjaBilansuBOList = new ArrayList<>();
 
-        for (Map.Entry<TowarBO,Double> entry :pozycjeDoBilansu.entrySet()) {
-            TowarBO towar = entry.getKey();
+        for (Map.Entry<Long,Double> entry :pozycjeDoBilansu.entrySet()) {
+            Long idTowaru = entry.getKey();
+            Towar t = towarService.getById(idTowaru);
+            TowarBO towar = modelMapper.map(t, TowarBO.class);
             double ilosc = entry.getValue();
             PozycjaBilansuBO pozycjaBilansuBO = new PozycjaBilansuBO();
             pozycjaBilansuBO.setBilans(nowyBilansBO);
