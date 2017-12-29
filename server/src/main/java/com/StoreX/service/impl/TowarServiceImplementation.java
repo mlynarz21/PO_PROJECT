@@ -20,6 +20,11 @@ public class TowarServiceImplementation implements TowarService {
         return getTowarRepository().save(bilans);
     }
 
+    @Override
+    public Towar getById(Long id) {
+       return  getTowarRepository().findOne(id);
+    }
+
     public TowarRepository getTowarRepository() {
         return towarRepository;
     }

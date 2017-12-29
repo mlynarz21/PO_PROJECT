@@ -50,4 +50,5 @@ public class UmieszczenieApiImpl implements UmieszczenieApi{
 
         return new ResponseEntity<List<UmieszczenieTO>>(results, HttpStatus.OK);
     }
+
 }

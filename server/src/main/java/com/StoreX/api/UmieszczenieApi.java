@@ -9,4 +9,5 @@ public interface UmieszczenieApi {
 
     ResponseEntity<List<UmieszczenieTO>> getUmieszczenieTowaru(Long id, String sessionId);
 
+
 }

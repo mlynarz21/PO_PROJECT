@@ -13,6 +13,8 @@ public interface BilansApi {
 
     ResponseEntity<Boolean> addBilans(Date dataBilansowana, String sessionId);
 
+    //ResponseEntity<Boolean> addBilans( String sessionId);
+
     /*
     To be removed, created for test purposes
      */

@@ -19,6 +19,7 @@ public class PozycjaPrzyjecia {
     @ManyToOne
     private PrzyjecieZamowienia przyjecieZamowienia;
 
+    public PozycjaPrzyjecia(){}
     public PozycjaPrzyjecia(Long ID, double ilosc, Towar towar, PrzyjecieZamowienia przyjecieZamowienia){
         this.ID=ID;
         this.ilosc=ilosc;

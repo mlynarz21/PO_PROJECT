@@ -36,7 +36,7 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
     public ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(@RequestBody Long ID, @RequestHeader(value = "SessionID") String sessionId){
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
         try {
-            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(ID);
+            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(sessionId, ID);
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }
@@ -50,7 +50,7 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
         return new ResponseEntity<List<PozycjaZamowieniaTO>>(results, HttpStatus.OK);
     }
 
-    
+
 //    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 //    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idUmieszczenia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
 //

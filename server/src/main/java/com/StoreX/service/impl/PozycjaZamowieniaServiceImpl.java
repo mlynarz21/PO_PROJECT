@@ -37,7 +37,10 @@ public class PozycjaZamowieniaServiceImpl implements PozycjaZamowieniaService {
 
     //todo add sessionId
     @Override
-    public List<PozycjaZamowieniaBO> findAllforZamowienie(Long ID) throws AuthenticationException{
+    public List<PozycjaZamowieniaBO> findAllforZamowienie(String sessionId, Long ID) throws AuthenticationException{
+        //if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
+        // throw new AuthenticationException();
+        //}
         List<PozycjaZamowienia> pozycjaZamowieniaList = getPozycjaZamowieniaRepository().findAllForZamowienie(ID);
         List<PozycjaZamowieniaBO> resultBO = new ArrayList<>();
 
@@ -67,12 +70,14 @@ public class PozycjaZamowieniaServiceImpl implements PozycjaZamowieniaService {
         double iloscAktualnaUmieszczenia = umieszczenie.getIloscWLokalizacji();
         double iloscCalkowita = pozycjaZamowienia.getIlosc();
 
+        /*
+        Scenariusz alternatywny
+         */
         if(iloscJuzZrealizowana + iloscRealizowana > iloscCalkowita)
             throw new Exception("Podano za duzą ilosc");
         if(iloscAktualnaUmieszczenia - iloscRealizowana < 0)
             throw new Exception("Podano za duzą ilosc Nie ma tyle w lokalizacji");
 
-        //todo alternatywa, jesli ilosc jest za duza
         getPozycjaZamowieniaRepository().realizacjaPozycjiZmowienia(idPozycji, iloscJuzZrealizowana + iloscRealizowana);
         getUmieszczenieRepository().realizacjaPozycjiZmowienia(idUmieszczenia, iloscAktualnaUmieszczenia - iloscRealizowana);
 

@@ -15,7 +15,7 @@ import java.util.List;
 
 public interface PozycjaZamowieniaService {
 
-    List<PozycjaZamowieniaBO> findAllforZamowienie(Long ID) throws AuthenticationException;
+    List<PozycjaZamowieniaBO> findAllforZamowienie(String sessionId, Long ID) throws AuthenticationException;
 
     boolean ProceedPozycjaZamowienia(String sessionId, Long idPozycji, Long idUmieszczenia, double ilosc) throws AuthenticationException, Exception;
     /*
