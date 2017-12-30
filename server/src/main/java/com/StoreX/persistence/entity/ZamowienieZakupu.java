@@ -3,13 +3,11 @@ package com.StoreX.persistence.entity;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
 import com.StoreX.common.datatypes.enumerations.TypOdbioru;
 
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@DiscriminatorValue("ZamowienieZakupu")
 public class ZamowienieZakupu extends Zamowienie{
 
     @Enumerated(EnumType.STRING)

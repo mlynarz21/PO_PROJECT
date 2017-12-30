@@ -1,11 +1,11 @@
 package com.StoreX.persistence.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@DiscriminatorColumn
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Zamowienie {
 
     @Id
