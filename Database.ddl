@@ -1,0 +1,46 @@
+CREATE TABLE Towar (ID bigint(19) AUTO_INCREMENT NOT NULL, Nazwa varchar(255) NOT NULL UNIQUE, Kod varchar(255) NOT NULL UNIQUE, Ilostan double  NOT NULL, CzasZalegania int(10) NOT NULL, IloscZablokowana double  NOT NULL, Zalega bit(1) NOT NULL, PotrzebujeZamowienia bit(1) NOT NULL, IloścMinimalna double  NOT NULL, JednostkaID bigint(19) NOT NULL, KategoriaID bigint(19) NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE Lokalizacja (ID bigint(19) AUTO_INCREMENT NOT NULL, RegałID bigint(19) NOT NULL, Kod varchar(255) NOT NULL UNIQUE, NumerRzedu int(10) NOT NULL, NumerSektora int(10) NOT NULL, Zajeta bit(1) NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE Dostawca (ID bigint(19) AUTO_INCREMENT NOT NULL, Kod varchar(255) NOT NULL UNIQUE, Nazwa varchar(255) NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE Klient (ID bigint(19) AUTO_INCREMENT NOT NULL, Nazwa varchar(255) NOT NULL UNIQUE, Login varchar(255) NOT NULL UNIQUE, Haslo varchar(255) NOT NULL, KodPocztowy varchar(255), Ulica varchar(255), Miasto varchar(255), Numer int(10), PRIMARY KEY (ID));
+CREATE TABLE Umieszczenie (ID bigint(19) AUTO_INCREMENT NOT NULL, IloscWLokalizacji double  NOT NULL, LokalizacjaID bigint(19) NOT NULL UNIQUE, TowarID bigint(19) NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE Bilans (ID bigint(19) AUTO_INCREMENT NOT NULL, Datawykonania date NOT NULL, Databilansu date NOT NULL UNIQUE, PRIMARY KEY (ID));
+CREATE TABLE Regał (ID bigint(19) AUTO_INCREMENT NOT NULL, PrzestrzenMagazynowaID bigint(19) NOT NULL, Numer int(10) NOT NULL, WspolrzednaX int(10) NOT NULL, WspolrzednaY int(10) NOT NULL, Liczbasektorów int(10) NOT NULL, Liczbapółek int(10) NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE PrzestrzeńMagazynowa (ID bigint(19) AUTO_INCREMENT NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE PozycjaBilansu (ID bigint(19) AUTO_INCREMENT NOT NULL, BilansID bigint(19) NOT NULL, TowarID bigint(19) NOT NULL, Ilosc double  NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE PozycjaZamówienia (ID bigint(19) AUTO_INCREMENT NOT NULL, ZamówienieID bigint(19) NOT NULL, TowarID bigint(19) NOT NULL, Ilosc double  NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE WydanieZamówienia (ID bigint(19) AUTO_INCREMENT NOT NULL, Data date NOT NULL, ZamówienieZakupuZamówienieID bigint(19) UNIQUE, PRIMARY KEY (ID));
+CREATE TABLE PozycjaPrzyjęcia (ID bigint(19) AUTO_INCREMENT NOT NULL, PrzyjecieZamowieniaID bigint(19) NOT NULL, TowarID bigint(19) NOT NULL, Ilosc double  NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE PozycjaWydania (ID bigint(19) AUTO_INCREMENT NOT NULL, WydanieZamówieniaID bigint(19) NOT NULL, TowarID bigint(19) NOT NULL, Ilosc double  NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE Magazynier (ID bigint(19) AUTO_INCREMENT NOT NULL, PrzestrzenMagazynowaID bigint(19), Login varchar(255) NOT NULL UNIQUE, Haslo varchar(255) NOT NULL, NumerIdentyfikacyjny int(10) NOT NULL UNIQUE, PRIMARY KEY (ID));
+CREATE TABLE ZamówienieDostawy (ZamówienieID bigint(19) NOT NULL, DostawcaID bigint(19) NOT NULL, status varchar(255) NOT NULL, PRIMARY KEY (ZamówienieID));
+CREATE TABLE ZamówienieZakupu (ZamówienieID bigint(19) NOT NULL, KlientID bigint(19) NOT NULL, status nvarchar(255) NOT NULL, typOdbioru varchar(255) NOT NULL, terminRealizacji date NOT NULL, PRIMARY KEY (ZamówienieID));
+CREATE TABLE Jednostka (ID bigint(19) AUTO_INCREMENT NOT NULL, Rodzaj varchar(255) NOT NULL UNIQUE, PRIMARY KEY (ID));
+CREATE TABLE Kategoria (ID bigint(19) AUTO_INCREMENT NOT NULL, Kategoria varchar(255) NOT NULL UNIQUE, PRIMARY KEY (ID));
+CREATE TABLE Zamówienie (ID bigint(19) AUTO_INCREMENT NOT NULL, Kod varchar(255) NOT NULL UNIQUE, DataZlożenia date NOT NULL, Discriminator varchar(255) NOT NULL, PRIMARY KEY (ID));
+CREATE TABLE PrzyjęcieZamówienia (ID bigint(19) AUTO_INCREMENT NOT NULL, Data date NOT NULL, ZamówienieDostawyZamówienieID bigint(19) UNIQUE, PRIMARY KEY (ID));
+
+ALTER TABLE Umieszczenie ADD CONSTRAINT FKUmieszczen961 FOREIGN KEY (LokalizacjaID) REFERENCES Lokalizacja (ID);
+ALTER TABLE Umieszczenie ADD CONSTRAINT FKUmieszczen274711 FOREIGN KEY (TowarID) REFERENCES Towar (ID);
+ALTER TABLE Lokalizacja ADD CONSTRAINT JestPrzypisanaDo FOREIGN KEY (RegałID) REFERENCES Regał (ID);
+ALTER TABLE Regał ADD CONSTRAINT MiesciSieW FOREIGN KEY (PrzestrzenMagazynowaID) REFERENCES PrzestrzeńMagazynowa (ID);
+ALTER TABLE PozycjaBilansu ADD CONSTRAINT dotyczy FOREIGN KEY (TowarID) REFERENCES Towar (ID);
+ALTER TABLE PozycjaZamówienia ADD CONSTRAINT dotyczy2 FOREIGN KEY (TowarID) REFERENCES Towar (ID);
+ALTER TABLE PozycjaBilansu ADD CONSTRAINT FKPozycjaBil961893 FOREIGN KEY (BilansID) REFERENCES Bilans (ID);
+ALTER TABLE PozycjaPrzyjęcia ADD CONSTRAINT dotyczy3 FOREIGN KEY (TowarID) REFERENCES Towar (ID);
+ALTER TABLE PozycjaWydania ADD CONSTRAINT dotyczy4 FOREIGN KEY (TowarID) REFERENCES Towar (ID);
+ALTER TABLE PozycjaWydania ADD CONSTRAINT FKPozycjaWyd404343 FOREIGN KEY (WydanieZamówieniaID) REFERENCES WydanieZamówienia (ID);
+ALTER TABLE Magazynier ADD CONSTRAINT obsluguje FOREIGN KEY (PrzestrzenMagazynowaID) REFERENCES PrzestrzeńMagazynowa (ID);
+ALTER TABLE Towar ADD CONSTRAINT FKTowar339684 FOREIGN KEY (JednostkaID) REFERENCES Jednostka (ID);
+ALTER TABLE Towar ADD CONSTRAINT FKTowar422879 FOREIGN KEY (KategoriaID) REFERENCES Kategoria (ID);
+ALTER TABLE PozycjaZamówienia ADD CONSTRAINT FKPozycjaZam258943 FOREIGN KEY (ZamówienieID) REFERENCES Zamówienie (ID);
+ALTER TABLE ZamówienieDostawy ADD CONSTRAINT FKZamówienie847980 FOREIGN KEY (ZamówienieID) REFERENCES Zamówienie (ID);
+ALTER TABLE ZamówienieZakupu ADD CONSTRAINT FKZamówienie862025 FOREIGN KEY (ZamówienieID) REFERENCES Zamówienie (ID);
+ALTER TABLE WydanieZamówienia ADD CONSTRAINT FKWydanieZam839961 FOREIGN KEY (ZamówienieZakupuZamówienieID) REFERENCES ZamówienieZakupu (ZamówienieID);
+ALTER TABLE PozycjaPrzyjęcia ADD CONSTRAINT FKPozycjaPrz529802 FOREIGN KEY (PrzyjecieZamowieniaID) REFERENCES PrzyjęcieZamówienia (ID);
+ALTER TABLE PrzyjęcieZamówienia ADD CONSTRAINT FKPrzyjęcieZ30799 FOREIGN KEY (ZamówienieDostawyZamówienieID) REFERENCES ZamówienieDostawy (ZamówienieID);
+ALTER TABLE ZamówienieZakupu ADD CONSTRAINT FKZamówienie66373 FOREIGN KEY (KlientID) REFERENCES Klient (ID);
+ALTER TABLE ZamówienieDostawy ADD CONSTRAINT FKZamówienie764256 FOREIGN KEY (DostawcaID) REFERENCES Dostawca (ID);
+
+
+ALTER TABLE Towar ADD CONSTRAINT IlostanGTzablokowana CHECK (Ilostan >= IloscZablokowana);
+ALTER TABLE PozycjaBilansu ADD CONSTRAINT BilansTowar UNIQUE (BilansID, TowarID);

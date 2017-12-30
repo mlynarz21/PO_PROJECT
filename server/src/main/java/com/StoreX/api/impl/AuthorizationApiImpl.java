@@ -17,7 +17,7 @@ import com.StoreX.api.AuthorizationApi;
 import com.StoreX.common.datatypes.bo.UserBo;
 import com.StoreX.common.datatypes.to.SessionTo;
 import com.StoreX.common.datatypes.to.UserTo;
-import com.StoreX.service.AuthorizationService;
+import com.StoreX.service.AuthorizationServices.AuthorizationService;
 
 @CrossOrigin
 @RestController

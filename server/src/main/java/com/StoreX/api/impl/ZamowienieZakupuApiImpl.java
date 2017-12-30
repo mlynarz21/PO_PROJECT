@@ -3,7 +3,9 @@ package com.StoreX.api.impl;
 import com.StoreX.api.ZamowienieZakupuApi;
 import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
 import com.StoreX.common.datatypes.to.ZamowienieZakupuTO;
-import com.StoreX.service.ZamowienieZakupuService;
+import com.StoreX.service.HelperServices.ZamowienieZakupuService;
+import com.StoreX.service.ZamowienieServices.ZamowienieZakupuFindService;
+import com.StoreX.service.ZamowienieServices.ZamowienieZakupuUpdateService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,13 +25,16 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
     private ModelMapper modelMapper = new ModelMapper();
 
     @Autowired
-    ZamowienieZakupuService zamowienieZakupuService;
+    ZamowienieZakupuFindService zamowienieZakupuFindService;
+    @Autowired
+    ZamowienieZakupuUpdateService zamowienieZakupuUpdateService;
+
     @Override
     @RequestMapping(value = "/getAllZaakceptowane/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ZamowienieZakupuTO>> getAllZaakceptowane(@RequestHeader(value = "SessionID") String sessionId){
         List<ZamowienieZakupuBO> zamowieniaBO = null;
         try {
-            zamowieniaBO = zamowienieZakupuService.findAllAccepted(sessionId);
+            zamowieniaBO = zamowienieZakupuFindService.findAllAccepted(sessionId);
         } catch (AuthenticationException e) {
             return new ResponseEntity<List<ZamowienieZakupuTO>>(HttpStatus.UNAUTHORIZED);
         }
@@ -48,7 +53,7 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
     public ResponseEntity<Boolean> updateStatusZamowienieZakupu(@RequestBody Long ID, @RequestHeader(value = "SessionID") String sessionId) {
         boolean updated = false;
         try {
-            zamowienieZakupuService.updateStatusZamowienia(sessionId, ID);  //.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
+            zamowienieZakupuUpdateService.updateStatusZamowienia(sessionId, ID);  //.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
         } catch (AuthenticationException e) {
             return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
         }

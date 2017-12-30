@@ -2,13 +2,10 @@ package com.StoreX.api.impl;
 
 import com.StoreX.api.PozycjaZamowieniaApi;
 import com.StoreX.common.datatypes.bo.PozycjaZamowieniaBO;
-import com.StoreX.common.datatypes.bo.ZamowienieBO;
-import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
 import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
-import com.StoreX.common.datatypes.to.ZamowienieTO;
-import com.StoreX.common.datatypes.to.ZamowienieZakupuTO;
-import com.StoreX.persistence.entity.Zamowienie;
-import com.StoreX.service.PozycjaZamowieniaService;
+import com.StoreX.service.HelperServices.PozycjaZamowieniaService;
+import com.StoreX.service.ZamowienieServices.PozycjaZamowieniaFindService;
+import com.StoreX.service.ZamowienieServices.PozycjaZamowieniaProceedService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,14 +26,16 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
 
     private ModelMapper modelMapper = new ModelMapper();
     @Autowired
-    PozycjaZamowieniaService pozycjaZamowieniaService;
+    PozycjaZamowieniaFindService pozycjaZamowieniaFindService;
+    @Autowired
+    PozycjaZamowieniaProceedService pozycjaZamowieniaProceedService;
 
     @Override
     @RequestMapping(value = "/getPozycjeZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(@RequestBody Long ID, @RequestHeader(value = "SessionID") String sessionId){
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
         try {
-            pozycjeZamowieniaBO = pozycjaZamowieniaService.findAllforZamowienie(sessionId, ID);
+            pozycjeZamowieniaBO = pozycjaZamowieniaFindService.findAllforZamowienie(sessionId, ID);
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }
@@ -74,7 +73,7 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
 
         boolean wykonano = false;
         try {
-            pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszcznia, ilosc);
+            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszcznia, ilosc);
         } catch (AuthenticationException e) {
             return new ResponseEntity<Boolean>(wykonano, HttpStatus.UNAUTHORIZED);
         }catch (Exception e){

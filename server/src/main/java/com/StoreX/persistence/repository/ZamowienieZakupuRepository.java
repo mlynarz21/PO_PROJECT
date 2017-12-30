@@ -13,10 +13,10 @@ public interface ZamowienieZakupuRepository extends JpaRepository<ZamowienieZaku
     /*
     todo query statements needs to be changed probably
      */
-    @Query(value = "select * from Zamowienie_zakupu where  status = ?1", nativeQuery = true)
+    @Query(value = "select * from Zamowienie_zakupu natural join zamowienie where  status = ?1", nativeQuery = true)
     List<ZamowienieZakupu> findByStatus(String status);
 
     @Modifying
-    @Query(value = "update Zamowienie_Zakupu set status = ?2 where id = ?1", nativeQuery = true)
+    @Query(value = "update Zamowienie_Zakupu natural join zamowienie set status = ?2 where id = ?1", nativeQuery = true)
     void updateStatusZamowienia(Long ID, String statusWydania);
 }

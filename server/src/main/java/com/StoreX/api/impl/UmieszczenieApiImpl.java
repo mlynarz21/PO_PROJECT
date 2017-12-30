@@ -1,16 +1,10 @@
 package com.StoreX.api.impl;
 
-import com.StoreX.api.PozycjaZamowieniaApi;
 import com.StoreX.api.UmieszczenieApi;
-import com.StoreX.common.datatypes.bo.KlientBO;
-import com.StoreX.common.datatypes.bo.PozycjaZamowieniaBO;
 import com.StoreX.common.datatypes.bo.UmieszczenieBO;
-import com.StoreX.common.datatypes.to.KlientTO;
-import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
-import com.StoreX.common.datatypes.to.TowarTO;
 import com.StoreX.common.datatypes.to.UmieszczenieTO;
-import com.StoreX.persistence.entity.Umieszczenie;
-import com.StoreX.service.UmieszczenieService;
+import com.StoreX.service.HelperServices.UmieszczenieService;
+import com.StoreX.service.UmieszczenieServices.UmieszczenieFindService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -30,14 +24,14 @@ public class UmieszczenieApiImpl implements UmieszczenieApi{
     private ModelMapper modelMapper = new ModelMapper();
 
     @Autowired
-    UmieszczenieService umieszczenieService;
+    UmieszczenieFindService umieszczenieFindService;
 
     @Override
     @RequestMapping(value = "/getUmieszczenieTowaru/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<UmieszczenieTO>> getUmieszczenieTowaru(@RequestBody Long IDTowaru, @RequestHeader(value = "SessionID") String sessionId){
         List<UmieszczenieBO> umieszczeniaBO = null;
         try {
-            umieszczeniaBO = umieszczenieService.findAllForTowar(sessionId, IDTowaru);
+            umieszczeniaBO = umieszczenieFindService.findAllForTowar(sessionId, IDTowaru);
         } catch (AuthenticationException e) {
             return new ResponseEntity<List<UmieszczenieTO>>(HttpStatus.UNAUTHORIZED);
         }
