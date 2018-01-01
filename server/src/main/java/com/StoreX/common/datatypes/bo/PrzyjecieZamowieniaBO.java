@@ -1,7 +1,5 @@
 package com.StoreX.common.datatypes.bo;
 
-import com.StoreX.persistence.entity.ZamowienieDostawy;
-
 import java.util.Date;
 
 public class PrzyjecieZamowieniaBO {

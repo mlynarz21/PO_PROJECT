@@ -2,46 +2,92 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f31e1de3-36f0-4a41-917e-a7e76ea92651" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../POProject.ddl" afterPath="$PROJECT_DIR$/../POProject.ddl" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/AuthorizationApiImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/AuthorizationApiImpl.java" />
       <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/BilansApiImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/BilansApiImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/PozycjaZamowieniaApiImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/PozycjaZamowieniaApiImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/UmieszczenieApiImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/UmieszczenieApiImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/ZamowienieZakupuApiImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/ZamowienieZakupuApiImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/ZamowienieZakupuRepository.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/ZamowienieZakupuRepository.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/AuthorizationService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/JednostkaService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/KategoriaService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/KlientService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/LokalizacjaService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/PozycjaBilansuService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/PozycjaPrzyjeciaService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/PozycjaWydaniaService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/PozycjaZamowieniaService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/PrzyjecieZamowieniaService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/TowarService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/UmieszczenieService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/WydanieZamowieniaService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ZamowienieDostawyService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ZamowienieZakupuService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/AuthorizationServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServiceImplementation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/JednostkaServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/KategoriaServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/KlientServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/LokalizacjaServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/PozycjaBilansuServiceImplementation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/PozycjaPrzyjeciaServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/PozycjaWydaniaServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/PozycjaZamowieniaServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/PrzyjecieZamowieniaServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/TowarServiceImplementation.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/UmieszczenieServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/WydanieZamowieniaServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieDostawyServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieZakupuServiceImplementation.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaPrzyjeciaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PozycjaPrzyjeciaBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PrzyjecieZamowieniaBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/PrzyjecieZamowieniaBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/ZamowienieBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/ZamowienieBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/ZamowienieDostawyBO.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/bo/ZamowienieDostawyBO.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Bilans.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Jednostka.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Kategoria.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Klient.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Lokalizacja.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PozycjaBilansu.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PozycjaPrzyjecia.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PozycjaWydania.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PozycjaZamowienia.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieZamowienia.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Towar.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Umieszczenie.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/User.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/WydanieZamowienia.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/Zamowienie.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieDostawy.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieZakupu.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/BilansRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/JednostkaRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/KategoriaRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/KlientRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/LokalizacjaRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/PozycjaBilansuRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/PozycjaPrzyjeciaRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/PozycjaWydaniaRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/PozycjaZamowieniaRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/PrzyjecieZamowieniaRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/TowarRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/UmieszczenieRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/UserRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/WydanieZamowieniaRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/ZamowienieDostawyRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/ZamowienieRepositroy.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/ZamowienieZakupuRepository.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/impl/UserRepositoryImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/repository/impl/UserRepositoryImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/BilansService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/BilansService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/JednostkaService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/JednostkaService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/KategoriaService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/KategoriaService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/KlientService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/KlientService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/LokalizacjaService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/LokalizacjaService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PozycjaBilansuService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PozycjaBilansuService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PozycjaPrzyjeciaService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PozycjaPrzyjeciaService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PozycjaWydaniaService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PozycjaWydaniaService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PozycjaZamowieniaService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PozycjaZamowieniaService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PrzyjecieZamowieniaService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PrzyjecieZamowieniaService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/TowarService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/TowarService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/UmieszczenieService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/UmieszczenieService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/WydanieZamowieniaService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/WydanieZamowieniaService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/ZamowienieDostawyService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/ZamowienieDostawyService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/ZamowienieService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/ZamowienieService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/ZamowienieZakupuService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/ZamowienieZakupuService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/AuthorizationServicesImpl/AuthorizationServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/AuthorizationServicesImpl/AuthorizationServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServicesImpl/BilansAddServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServicesImpl/BilansFindServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServicesImpl/PozycjaBilansuFindServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServicesImpl/PozycjaBilansuSaveServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/BilansServiceImplementation.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/JednostkaServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/JednostkaServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/KategoriaServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/KategoriaServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/KlientServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/KlientServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/LokalizacjaServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/LokalizacjaServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/PozycjaBilansuServiceImplementation.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/PozycjaPrzyjeciaServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/PozycjaPrzyjeciaServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/PozycjaWydaniaServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/PozycjaWydaniaServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/PozycjaZamowieniaServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/PozycjaZamowieniaServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/PrzyjecieZamowieniaServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/PrzyjecieZamowieniaServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/TowarServiceImplementation.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/TowarServiceImplementation.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/UmieszczenieServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/UmieszczenieServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/WydanieZamowieniaServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/WydanieZamowieniaServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/ZamowienieDostawyServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/ZamowienieDostawyServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/ZamowienieServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/ZamowienieServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/ZamowienieZakupuServiceImplementation.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/PozycjaPrzyjeciaFindServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/PozycjaWydaniaFindServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/UmieszczenieServicesImpl/UmieszczenieFindServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieServicesImpl/PozycjaZamowieniaFindServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieServicesImpl/PozycjaZamowieniaProceedServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieServicesImpl/PozycjaZamowieniaProceedServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieServicesImpl/ZamowienieZakupuFindServiceImpl.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieServicesImpl/ZamowienieZakupuUpdateServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieServicesImpl/ZamowienieZakupuUpdateServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/test/java/com/StoreX/persistance/repository/impl/UserRepositoryTest.java" afterPath="$PROJECT_DIR$/../server/src/test/java/com/StoreX/persistance/repository/impl/UserRepositoryTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,18 +127,28 @@
       <file leaf-file-name="OrderPickupController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
+            <state relative-caret-position="672">
               <caret line="55" column="139" lean-forward="false" selection-start-line="55" selection-start-column="139" selection-end-line="55" selection-end-column="139" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuantityProductController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuantityProductController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/QuantityProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="672">
               <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -136,16 +192,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="84">
               <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZamowienieDostawyModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ZamowienieDostawyModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -252,7 +298,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -298,9 +344,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -338,6 +383,34 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="restclient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="restclient" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="client" type="b2602c69:ProjectViewProjectNode" />
@@ -413,6 +486,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -588,6 +662,8 @@
       <workItem from="1514453733862" duration="17865000" />
       <workItem from="1514498366222" duration="5418000" />
       <workItem from="1514644034888" duration="1523000" />
+      <workItem from="1514718183447" duration="500000" />
+      <workItem from="1514840121556" duration="636000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1513790968539</created>
@@ -733,15 +809,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100031000" />
+    <option name="totallyTimeSpent" value="101371000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3244963" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -753,43 +827,22 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41053787" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4114528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2916225" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4114528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3244963" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="5.2083336E-4" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2524698" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10104167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -904,13 +957,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/datatype/PozycjaPrzyjeciaTO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/PozycjaPrzyjeciaModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -979,7 +1025,7 @@
         <state relative-caret-position="-966">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1022,7 +1068,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/model/ZamowienieDostawyModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="24" column="35" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+          <caret line="24" column="35" lean-forward="false" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1310,7 +1356,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
+        <state relative-caret-position="672">
           <caret line="55" column="139" lean-forward="false" selection-start-line="55" selection-start-column="139" selection-end-line="55" selection-end-column="139" />
           <folding />
         </state>
@@ -1318,8 +1364,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/QuantityProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="672">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

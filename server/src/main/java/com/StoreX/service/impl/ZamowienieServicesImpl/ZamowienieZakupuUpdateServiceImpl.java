@@ -1,7 +1,7 @@
 package com.StoreX.service.impl.ZamowienieServicesImpl;
 
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
-import com.StoreX.persistence.repository.ZamowienieZakupuRepository;
+import com.StoreX.persistence.repository.ZamowienieRepository.ZamowienieZakupuRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
 import com.StoreX.service.ZamowienieServices.ZamowienieZakupuUpdateService;
 import org.modelmapper.ModelMapper;

@@ -1,8 +1,6 @@
 package com.StoreX.service.HelperServices;
 
-import com.StoreX.persistence.entity.Zamowienie;
-import com.StoreX.persistence.entity.ZamowienieDostawy;
-import org.springframework.stereotype.Repository;
+import com.StoreX.persistence.entity.ZamowienieEntities.ZamowienieDostawy;
 
 public interface ZamowienieDostawyService {
 

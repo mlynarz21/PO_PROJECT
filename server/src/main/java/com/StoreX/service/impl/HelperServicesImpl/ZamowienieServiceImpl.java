@@ -1,7 +1,7 @@
 package com.StoreX.service.impl.HelperServicesImpl;
 
-import com.StoreX.persistence.entity.Zamowienie;
-import com.StoreX.persistence.repository.ZamowienieRepositroy;
+import com.StoreX.persistence.entity.ZamowienieEntities.Zamowienie;
+import com.StoreX.persistence.repository.ZamowienieRepository.ZamowienieRepositroy;
 import com.StoreX.service.HelperServices.ZamowienieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

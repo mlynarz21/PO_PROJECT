@@ -1,9 +1,9 @@
 package com.StoreX.service.impl.ZamowienieServicesImpl;
 
-import com.StoreX.persistence.entity.PozycjaZamowienia;
-import com.StoreX.persistence.entity.Umieszczenie;
-import com.StoreX.persistence.repository.PozycjaZamowieniaRepository;
-import com.StoreX.persistence.repository.UmieszczenieRepository;
+import com.StoreX.persistence.entity.ZamowienieEntities.PozycjaZamowienia;
+import com.StoreX.persistence.entity.UmieszczenieEntities.Umieszczenie;
+import com.StoreX.persistence.repository.ZamowienieRepository.PozycjaZamowieniaRepository;
+import com.StoreX.persistence.repository.UmieszczenieRepository.UmieszczenieRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
 import com.StoreX.service.ZamowienieServices.PozycjaZamowieniaProceedService;
 import org.springframework.beans.factory.annotation.Autowired;

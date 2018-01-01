@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
 import com.StoreX.common.datatypes.bo.UserBo;
-import com.StoreX.persistence.entity.User;
-import com.StoreX.persistence.repository.UserRepository;
+import com.StoreX.persistence.entity.AuthorizationEntities.User;
+import com.StoreX.persistence.repository.AuthorizationRepository.UserRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
 
 @Service

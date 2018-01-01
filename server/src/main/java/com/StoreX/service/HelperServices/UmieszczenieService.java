@@ -1,10 +1,6 @@
 package com.StoreX.service.HelperServices;
 
-import com.StoreX.common.datatypes.bo.UmieszczenieBO;
-import com.StoreX.persistence.entity.Umieszczenie;
-
-import javax.naming.AuthenticationException;
-import java.util.List;
+import com.StoreX.persistence.entity.UmieszczenieEntities.Umieszczenie;
 
 public interface UmieszczenieService {
 

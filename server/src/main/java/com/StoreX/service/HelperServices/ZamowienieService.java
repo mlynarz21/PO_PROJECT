@@ -1,6 +1,6 @@
 package com.StoreX.service.HelperServices;
 
-import com.StoreX.persistence.entity.Zamowienie;
+import com.StoreX.persistence.entity.ZamowienieEntities.Zamowienie;
 
 public interface ZamowienieService {
 

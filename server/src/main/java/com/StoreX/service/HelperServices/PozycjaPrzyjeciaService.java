@@ -1,10 +1,6 @@
 package com.StoreX.service.HelperServices;
 
-import com.StoreX.common.datatypes.bo.PozycjaPrzyjeciaBO;
-import com.StoreX.persistence.entity.PozycjaPrzyjecia;
-
-import javax.naming.AuthenticationException;
-import java.util.List;
+import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.PozycjaPrzyjecia;
 
 public interface PozycjaPrzyjeciaService {
 

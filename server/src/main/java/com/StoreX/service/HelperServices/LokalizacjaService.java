@@ -1,6 +1,6 @@
 package com.StoreX.service.HelperServices;
 
-import com.StoreX.persistence.entity.Lokalizacja;
+import com.StoreX.persistence.entity.UmieszczenieEntities.Lokalizacja;
 
 public interface LokalizacjaService {
 

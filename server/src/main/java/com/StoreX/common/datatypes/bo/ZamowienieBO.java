@@ -1,10 +1,6 @@
 package com.StoreX.common.datatypes.bo;
 
-import com.StoreX.persistence.entity.PozycjaZamowienia;
-
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public abstract class ZamowienieBO {
     private Long ID;

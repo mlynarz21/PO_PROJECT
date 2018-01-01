@@ -1,7 +1,7 @@
 package com.StoreX.service.impl.HelperServicesImpl;
 
-import com.StoreX.persistence.entity.ZamowienieDostawy;
-import com.StoreX.persistence.repository.ZamowienieDostawyRepository;
+import com.StoreX.persistence.entity.ZamowienieEntities.ZamowienieDostawy;
+import com.StoreX.persistence.repository.ZamowienieRepository.ZamowienieDostawyRepository;
 import com.StoreX.service.HelperServices.ZamowienieDostawyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

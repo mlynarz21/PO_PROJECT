@@ -5,7 +5,7 @@ import java.util.UUID;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import com.StoreX.persistence.entity.User;
+import com.StoreX.persistence.entity.AuthorizationEntities.User;
 import com.StoreX.persistence.repository.impl.UserRepositoryImpl;
 
 

@@ -1,7 +1,7 @@
 package com.StoreX.service.impl.HelperServicesImpl;
 
-import com.StoreX.persistence.entity.Towar;
-import com.StoreX.persistence.repository.TowarRepository;
+import com.StoreX.persistence.entity.TowarEntities.Towar;
+import com.StoreX.persistence.repository.TowarRepository.TowarRepository;
 import com.StoreX.service.HelperServices.TowarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

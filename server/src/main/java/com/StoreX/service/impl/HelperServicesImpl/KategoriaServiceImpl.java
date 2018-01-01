@@ -1,7 +1,7 @@
 package com.StoreX.service.impl.HelperServicesImpl;
 
-import com.StoreX.persistence.entity.Kategoria;
-import com.StoreX.persistence.repository.KategoriaRepository;
+import com.StoreX.persistence.entity.TowarEntities.Kategoria;
+import com.StoreX.persistence.repository.TowarRepository.KategoriaRepository;
 import com.StoreX.service.HelperServices.KategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

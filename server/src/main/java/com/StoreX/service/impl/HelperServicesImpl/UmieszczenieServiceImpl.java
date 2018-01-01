@@ -1,7 +1,7 @@
 package com.StoreX.service.impl.HelperServicesImpl;
 
-import com.StoreX.persistence.entity.Umieszczenie;
-import com.StoreX.persistence.repository.UmieszczenieRepository;
+import com.StoreX.persistence.entity.UmieszczenieEntities.Umieszczenie;
+import com.StoreX.persistence.repository.UmieszczenieRepository.UmieszczenieRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
 import com.StoreX.service.HelperServices.UmieszczenieService;
 import org.springframework.beans.factory.annotation.Autowired;
