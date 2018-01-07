@@ -32,6 +32,18 @@ public class Klient {
         this.email=email;
     }
 
+    public Klient(String login, String imie, String nazwisko, String kodPocztowy, String ulica, String miasto, String numerDomu, String email){
+
+        this.login=login;
+        this.imie=imie;
+        this.nazwisko=nazwisko;
+        this.kodPocztowy=kodPocztowy;
+        this.ulica=ulica;
+        this.miasto=miasto;
+        this.numerDomu=numerDomu;
+        this.email=email;
+    }
+
     public Long getID() {
         return ID;
     }

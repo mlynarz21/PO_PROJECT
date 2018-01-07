@@ -26,6 +26,12 @@ public class WydanieZamowienia {
         this.zamowienie=zamowienie;
     }
 
+    public WydanieZamowienia( Date data, ZamowienieZakupu zamowienie){
+
+        this.data=data;
+        this.zamowienie=zamowienie;
+    }
+
     public Long getID() {
         return ID;
     }

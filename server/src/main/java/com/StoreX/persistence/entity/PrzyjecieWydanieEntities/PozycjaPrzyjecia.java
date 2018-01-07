@@ -29,6 +29,13 @@ public class PozycjaPrzyjecia {
         this.przyjecieZamowienia=przyjecieZamowienia;
     }
 
+    public PozycjaPrzyjecia( double ilosc, Towar towar, PrzyjecieZamowienia przyjecieZamowienia){
+
+        this.ilosc=ilosc;
+        this.towar=towar;
+        this.przyjecieZamowienia=przyjecieZamowienia;
+    }
+
     public Long getID() {
         return ID;
     }

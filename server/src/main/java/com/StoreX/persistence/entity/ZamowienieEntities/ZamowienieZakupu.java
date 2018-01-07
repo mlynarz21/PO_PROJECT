@@ -29,6 +29,15 @@ public class ZamowienieZakupu extends Zamowienie{
         this.typOdbioru = typOdbioru;
     }
 
+    public ZamowienieZakupu(String kod, Date dataZlozenia, StatusWydania status, Klient klient, TypOdbioru typOdbioru, Date terminRealizacji){
+        super(kod,dataZlozenia);
+        this.status=status;
+        this.klient=klient;
+        this.typOdbioru = typOdbioru;
+        this.terminRealizacji = terminRealizacji;
+    }
+
+
     public StatusWydania getStatus() {
         return status;
     }

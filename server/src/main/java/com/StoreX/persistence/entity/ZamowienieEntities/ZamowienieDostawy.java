@@ -21,6 +21,11 @@ public class ZamowienieDostawy extends Zamowienie{
         this.status=status;
     }
 
+    public ZamowienieDostawy(String kod, Date dataZlozenia, StatusDostawy status){
+        super(kod,dataZlozenia);
+        this.status=status;
+    }
+
     public StatusDostawy getStatus() {
         return status;
     }

@@ -35,6 +35,16 @@ public class Towar {
         this.kategoria=kategoria;
     }
 
+    public Towar(String kod,String nazwa, int czasZalegania, double iloscMinimalna,Jednostka jednostka,Kategoria kategoria, double ilostan){
+        this.ilostan = ilostan;
+        this.kod=kod;
+        this.nazwa=nazwa;
+        this.czasZalegania=czasZalegania;
+        this.iloscMinimalna=iloscMinimalna;
+        this.jednostka=jednostka;
+        this.kategoria=kategoria;
+    }
+
     public Towar() {
 
     }
