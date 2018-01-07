@@ -337,7 +337,7 @@ public class BilansApiImpl implements BilansApi{
         Random rand = new Random();
         List<Umieszczenie> umieszczenieList = new ArrayList<Umieszczenie>();
         for (int i = 0; i < 39; i ++ ) {
-            umieszczenieList.add(new Umieszczenie((double)rand.nextInt(30) + 1, towarList.get(i%13),lokalizacjaList.get(i)));
+            umieszczenieList.add(new Umieszczenie((double)rand.nextInt(30) + 20, towarList.get(i%13),lokalizacjaList.get(i)));
         }
 
         for (Umieszczenie pozycja: umieszczenieList) {
