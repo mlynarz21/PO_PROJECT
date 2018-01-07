@@ -1,5 +1,6 @@
 .root{
 -fx-background-image: url("tapeta.png");
+-fx-opacity: 0.85;
 -fx-background-color: black;
 -fx-background-blend-mode: screen;
 -fx-background-size: cover;
