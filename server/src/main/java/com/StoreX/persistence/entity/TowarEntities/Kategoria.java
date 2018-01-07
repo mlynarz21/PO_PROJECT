@@ -18,6 +18,10 @@ public class Kategoria {
         this.ID=ID;
         this.kategoria=kategoria;
     }
+    public Kategoria(String kategoria){
+
+        this.kategoria=kategoria;
+    }
 
     public Long getID() {
         return ID;

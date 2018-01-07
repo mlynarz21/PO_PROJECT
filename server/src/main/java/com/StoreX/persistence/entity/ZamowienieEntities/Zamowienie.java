@@ -21,6 +21,11 @@ public abstract class Zamowienie {
         this.dataZlozenia=dataZlozenia;
     }
 
+    public Zamowienie( String kod, Date dataZlozenia){
+
+        this.kod=kod;
+        this.dataZlozenia=dataZlozenia;
+    }
     public Long getID() {
         return ID;
     }

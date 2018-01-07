@@ -30,6 +30,13 @@ public class PozycjaBilansu {
         this.towar=towar;
     }
 
+    public PozycjaBilansu(double iosc, Towar towar, Bilans bilans){
+
+        this.ilosc=iosc;
+        this.bilans= bilans;
+        this.towar=towar;
+    }
+
     public Long getID() {
         return ID;
     }

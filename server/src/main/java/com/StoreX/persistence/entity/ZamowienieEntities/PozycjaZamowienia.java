@@ -31,6 +31,14 @@ public class PozycjaZamowienia {
         this.zamowienie=zamowienie;
     }
 
+    public PozycjaZamowienia( double ilosc,double zrealizowano, Towar towar, ZamowienieZakupu zamowienie){
+
+        this.ilosc=ilosc;
+        this.towar=towar;
+        this.zrealizowano=zrealizowano;
+        this.zamowienie=zamowienie;
+    }
+
     public Long getID() {
         return ID;
     }

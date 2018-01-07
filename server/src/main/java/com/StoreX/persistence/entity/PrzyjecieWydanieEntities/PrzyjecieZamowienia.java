@@ -26,6 +26,13 @@ public class PrzyjecieZamowienia {
         this.zamowienie=zamowienie;
     }
 
+    public PrzyjecieZamowienia( Date data, ZamowienieDostawy zamowienie){
+
+        this.data=data;
+        this.zamowienie=zamowienie;
+    }
+
+
     public Long getID() {
         return ID;
     }

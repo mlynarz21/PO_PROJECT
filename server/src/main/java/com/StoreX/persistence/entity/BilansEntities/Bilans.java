@@ -24,6 +24,11 @@ public class Bilans {
         this.dataWykonania=dataWykonania;
         this.dataBilansu=dataBilansu;
     }
+    public Bilans( Date dataWykonania, Date dataBilansu){
+
+        this.dataWykonania=dataWykonania;
+        this.dataBilansu=dataBilansu;
+    }
 
     public Long getID() {
         return ID;

@@ -23,6 +23,11 @@ public class Jednostka {
         this.rodzaj=rodzaj;
     }
 
+    public Jednostka( String rodzaj){
+
+        this.rodzaj=rodzaj;
+    }
+
     public Long getID() {
         return ID;
     }

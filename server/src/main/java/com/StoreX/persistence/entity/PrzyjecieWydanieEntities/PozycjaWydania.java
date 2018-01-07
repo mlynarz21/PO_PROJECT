@@ -26,6 +26,13 @@ public class PozycjaWydania {
         this.wydanieZamowienia=wydanieZamowienia;
     }
 
+    public PozycjaWydania(double ilosc, Towar towar, WydanieZamowienia wydanieZamowienia){
+
+        this.ilosc=ilosc;
+        this.towar=towar;
+        this.wydanieZamowienia=wydanieZamowienia;
+    }
+
     public Long getID() {
         return ID;
     }

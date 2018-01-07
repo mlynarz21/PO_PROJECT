@@ -19,8 +19,15 @@ public class Umieszczenie {
    private Lokalizacja lokalizacja;
 
    public Umieszczenie(){}
-    public Umieszczenie(Long ID, double iloscWLokalizacji, Towar towar, Lokalizacja lokalizacja, Lokalizacja lokalizacja1){
+    public Umieszczenie(Long ID, double iloscWLokalizacji, Towar towar, Lokalizacja lokalizacja1){
         this.ID=ID;
+        this.iloscWLokalizacji=iloscWLokalizacji;
+        this.towar=towar;
+        this.lokalizacja = lokalizacja1;
+    }
+
+    public Umieszczenie( double iloscWLokalizacji, Towar towar, Lokalizacja lokalizacja1){
+
         this.iloscWLokalizacji=iloscWLokalizacji;
         this.towar=towar;
         this.lokalizacja = lokalizacja1;

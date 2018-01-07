@@ -30,9 +30,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.naming.AuthenticationException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @CrossOrigin
 @RestController
@@ -157,203 +155,189 @@ public class BilansApiImpl implements BilansApi{
     @Override
     @RequestMapping(value = "/addTest/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<PozycjaZamowieniaTO>> addTest(String sessionId) {
-        Klient kl = new Klient();
-        kl.setImie("Jan");
-        kl.setKodPocztowy("62-100");
-        kl.setNazwisko("BR");
-        kl.setLogin("user");
-        kl.setMiasto("Leszno");
-        kl.setNumerDomu("4");
-        kl.setUlica("Nowa");
-        klientService.add(kl);
-        ZamowienieZakupu z = new ZamowienieZakupu();
-        Towar t = new Towar();
-        Kategoria k = new Kategoria(new Long(2), "Picie");
-        Jednostka j = new Jednostka(new Long(1),"Litry");
-        kategoriaService.add(k);
-        jednostkaService.add(j);
-        t.setNazwa("NazwaTowaru1");
-        t.setIloscMinimalna(10);
-        t.setKategoria(k);
-        t.setKod("kodTowaru");
-        t.setIlostan(100);
-        t.setJednostka(j);
-        t.setPotrzebujeZamowienia(false);
 
-        z.setStatus(StatusWydania.Zaakceptowane);
+        Klient klient1 = new Klient();
+        klient1.setImie("Jan");
+        klient1.setKodPocztowy("62-100");
+        klient1.setNazwisko("BR");
+        klient1.setLogin("user");
+        klient1.setMiasto("Leszno");
+        klient1.setNumerDomu("4");
+        klient1.setUlica("Nowa");
+        klient1.setEmail("jan.br@gmail.com");
+        klientService.add(klient1);
+        Klient klient2 = new Klient();
+        klient2.setImie("Jan");
+        klient2.setKodPocztowy("62-100");
+        klient2.setNazwisko("BR");
+        klient2.setLogin("user");
+        klient2.setMiasto("Leszno");
+        klient2.setNumerDomu("4");
+        klient2.setUlica("Nowa");
+        klient2.setEmail("jan.br@gmail.com");
+        klientService.add(klient2);
+        Klient klient3 = new Klient();
+        klient3.setImie("Jan");
+        klient3.setKodPocztowy("62-100");
+        klient3.setNazwisko("BR");
+        klient3.setLogin("user");
+        klient3.setMiasto("Leszno");
+        klient3.setNumerDomu("4");
+        klient3.setUlica("Nowa");
+        klient3.setEmail("jan.br@gmail.com");
+        klientService.add(klient3);
 
-        z.setTerminRealizacji(new Date(118,11,11));
-        z.setDataZlozenia(new Date(116,11,11));
-        PozycjaZamowienia pz = new PozycjaZamowienia();
+        Kategoria kategoria1 = new Kategoria();
+        kategoria1.setKategoria("Samochodowe");
+        kategoriaService.add(kategoria1);
+        Kategoria kategoria2 = new Kategoria();
+        kategoria2.setKategoria("Rowerowe");
+        kategoriaService.add(kategoria2);
+        Kategoria kategoria3 = new Kategoria();
+        kategoria3.setKategoria("Narzędzia");
+        kategoriaService.add(kategoria3);
 
-        Towar t2 = new Towar();
-        t2.setNazwa("NazwaTowaru2");
-        t2.setIloscMinimalna(10);
-        t2.setKategoria(k);
-        t2.setKod("drugiTwoar");
-        t2.setIlostan(20);
-        t2.setJednostka(j);
-        t2.setPotrzebujeZamowienia(false);
-        z.setKlient(kl);
-        z.setTypOdbioru(TypOdbioru.Wysylka);
-        zamowienieZakupuService.addZamowienie(sessionId, z);
+        Jednostka jednostka1 = new Jednostka();
+        jednostka1.setRodzaj("Opakowanie");
+        jednostkaService.add(jednostka1);
 
-        towarService.saveTowar(t);
+        Jednostka jednostka2 = new Jednostka();
+        jednostka2.setRodzaj("sztuki");
+        jednostkaService.add(jednostka2);
+
+
+        Towar t1 = new Towar("t1A48", "Rama", 0, 2,jednostka2,kategoria2,150);
+        Towar t2 = new Towar("t2B28", "Koło", 0, 2,jednostka2,kategoria2,150);
+        Towar t3 = new Towar("t3A38", "Dzwonek", 0, 2,jednostka2,kategoria2,200);
+        Towar t4 = new Towar("t4A47", "Korba", 0, 2,jednostka2,kategoria2,150);
+        Towar t5 = new Towar("t5U48", "Lańcuch", 0, 2,jednostka2,kategoria2,1140);
+        Towar t6 = new Towar("t6J48", "Pompka", 0, 2,jednostka2,kategoria2,1500);
+        Towar t7 = new Towar("t7A49", "Siodełko", 0, 2,jednostka2,kategoria2,200);
+        Towar t8 = new Towar("t8A50", "Fotel", 0, 2,jednostka2,kategoria1,150);
+        Towar t9 = new Towar("t9A48", "Kierownica", 0, 2,jednostka2,kategoria1,150);
+        Towar t10 = new Towar("t10A48", "Opona", 0, 2,jednostka2,kategoria1,150);
+        Towar t11 = new Towar("t11A78", "Wiertarka", 0, 2,jednostka2,kategoria3,150);
+        Towar t12 = new Towar("t12D48", "Srubki", 0, 2,jednostka1,kategoria3,150);
+        Towar t13 = new Towar("t13E48", "Młotek", 0, 2,jednostka2,kategoria3,150);
+
+        List<Towar> towarList = new ArrayList<Towar>();
+        towarList.add(t1);
+        towarList.add(t2);
+        towarList.add(t3);
+        towarList.add(t4);
+        towarList.add(t5);
+        towarList.add(t6);
+        towarList.add(t7);
+        towarList.add(t8);
+        towarList.add(t9);
+        towarList.add(t10);
+        towarList.add(t11);
+        towarList.add(t12);
+        towarList.add(t13);
+        towarService.saveTowar(t1);
         towarService.saveTowar(t2);
+        towarService.saveTowar(t3);
+        towarService.saveTowar(t4);
+        towarService.saveTowar(t5);
+        towarService.saveTowar(t6);
+        towarService.saveTowar(t7);
+        towarService.saveTowar(t8);
+        towarService.saveTowar(t9);
+        towarService.saveTowar(t10);
+        towarService.saveTowar(t11);
+        towarService.saveTowar(t12);
+        towarService.saveTowar(t13);
 
-        Lokalizacja l1 = new Lokalizacja();
-        l1.setKod("kod1");
-        l1.setNumerRegalu(1);
-        l1.setNumerRzedu(1);
-        l1.setNumerSektora(1);
-        lokalizacjaService.add(l1);
-        Lokalizacja l2 = new Lokalizacja();
-        l2.setKod("kod2");
-        l2.setNumerRegalu(2);
-        l2.setNumerRzedu(2);
-        l2.setNumerSektora(2);
-        lokalizacjaService.add(l2);
-        Lokalizacja l3 = new Lokalizacja();
-        l3.setKod("kod3");
-        l3.setNumerRegalu(3);
-        l3.setNumerRzedu(3);
-        l3.setNumerSektora(3);
-        lokalizacjaService.add(l3);
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2017,12,1);
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2018,01,15);
 
-        Umieszczenie umieszczenie = new Umieszczenie();
-        umieszczenie.setTowar(t);
-        umieszczenie.setLokalizacja(l1);
-        Umieszczenie umieszczenie2 = new Umieszczenie();
-        umieszczenie2.setLokalizacja(l2);
-        umieszczenie2.setTowar(t2);
-        Umieszczenie umieszczenie3 = new Umieszczenie();
-        umieszczenie3.setLokalizacja(l3);
-        umieszczenie3.setTowar(t);
-        umieszczenieService.addService(umieszczenie);
-        umieszczenieService.addService(umieszczenie2);
-        umieszczenieService.addService(umieszczenie3);
-        pz.setTowar(t);
-        pz.setZamowienie(z);
-        pz.setIlosc(10);
-        pz.setZrealizowano(0);
-        pozycjaZamowieniaService.add(pz);
-
-        PozycjaZamowienia pz2 = new PozycjaZamowienia();
-        pz2.setZamowienie(z);
-        pz2.setTowar(t2);
-        pz2.setIlosc(20);
-        pz2.setZrealizowano(0);
-        pozycjaZamowieniaService.add(pz2);
-
-        Bilans b = new Bilans();
-        b.setDataBilansu(new Date(117,11,11));
-        PozycjaBilansu pb1 = new PozycjaBilansu();
-        pb1.setBilans(b);
-        pb1.setIlosc(10.0);
-        PozycjaBilansu pb2 = new PozycjaBilansu();
-        pb2.setBilans(b);
-        pb2.setIlosc(20.0);
-        bilansService.saveBilans(b);
-
-        /*
-        Do testowania dodawania bilansów
-         */
-
-//        Towar t1 = new Towar();
-//        Kategoria k = new Kategoria();
-//        k.setKategoria("K1");
-//        Jednostka j = new Jednostka();
-//        j.setRodzaj("J1");
-//        kategoriaService.add(k);
-//        jednostkaService.add(j);
-//        t1.setNazwa("NazwaTestowaTowaru");
-//        t1.setIloscMinimalna(10);
-//        t1.setKategoria(k);
-//        t1.setKod("2449124");
-//        t1.setIlostan(100);
-//        t1.setJednostka(j);
-//        t1.setPotrzebujeZamowienia(false);
-//        Towar t2 = new Towar();
-//        t2.setNazwa("NazwaDrugiegoTest");
-//        t2.setIloscMinimalna(10);
-//        t2.setKategoria(k);
-//        t2.setKod("781242");
-//        t2.setIlostan(100);
-//        t2.setJednostka(j);
-//        t2.setPotrzebujeZamowienia(false);
-//
-//        towarService.saveTowar(t1);
-//        towarService.saveTowar(t2);
-//
-//
-//        ZamowienieZakupu zz = new ZamowienieZakupu();
-//        ZamowienieDostawy zd = new ZamowienieDostawy();
-//        zamowienieZakupuService.addZamowienie(sessionId,zz);
-//        zamowienieDostawyService.add(zd);
-//
-//        Bilans staryBilans = new Bilans();
-//        staryBilans.setDataBilansu(new Date(117,9,11));
-//        bilansService.saveBilans(staryBilans);
-//
-//        WydanieZamowienia wz1 = new WydanieZamowienia();
-//        WydanieZamowienia wz2 = new WydanieZamowienia();
-//        PrzyjecieZamowienia pz1 = new PrzyjecieZamowienia();
-//        PrzyjecieZamowienia pz2 = new PrzyjecieZamowienia();
-//        wz1.setData(new Date(117,10,11));
-//        wz2.setData(new Date(117,10,11));
-//        wz1.setZamowienie(zz);
-//        wz2.setZamowienie(zz);
-//        pz1.setData(new Date(117,10,11));
-//        pz2.setData(new Date(117,10,11));
-//        pz1.setZamowienie(zd);
-//        pz2.setZamowienie(zd);
-//        wydanieZamowieniaService.add(wz1);
-//        wydanieZamowieniaService.add(wz2);
-//        przyjecieZamowieniaService.add(pz1);
-//        przyjecieZamowieniaService.add(pz2);
-//
-//        PozycjaWydania pw1 = new PozycjaWydania();
-//        pw1.setTowar(t1);
-//        pw1.setIlosc(10);
-//        pw1.setWydanieZamowienia(wz1);
-//        PozycjaWydania pw2 = new PozycjaWydania();
-//        pw2.setTowar(t2);
-//        pw2.setIlosc(10);
-//        pw2.setWydanieZamowienia(wz1);
-//        PozycjaWydania pw3 = new PozycjaWydania();
-//        pw3.setTowar(t1);
-//        pw3.setIlosc(15);
-//        pw3.setWydanieZamowienia(wz2);
-//        PozycjaWydania pw4 = new PozycjaWydania();
-//        pw4.setTowar(t2);
-//        pw4.setIlosc(20);
-//        pw4.setWydanieZamowienia(wz2);
-//
-//        PozycjaPrzyjecia pp1 = new PozycjaPrzyjecia();
-//        pp1.setTowar(t1);
-//        pp1.setIlosc(100);
-//        pp1.setPrzyjecieZamowienia(pz1);
-//        PozycjaPrzyjecia pp2 = new PozycjaPrzyjecia();
-//        pp2.setTowar(t2);
-//        pp2.setIlosc(90);
-//        pp2.setPrzyjecieZamowienia(pz1);
-//        PozycjaPrzyjecia pp3 = new PozycjaPrzyjecia();
-//        pp3.setTowar(t1);
-//        pp3.setIlosc(40);
-//        pp3.setPrzyjecieZamowienia(pz2);
-//
-//        pozycjaPrzyjeciaService.add(pp1);
-//        pozycjaPrzyjeciaService.add(pp2);
-//        pozycjaPrzyjeciaService.add(pp3);
-//
-//        pozycjaWydaniaService.add(pw1);
-//        pozycjaWydaniaService.add(pw2);
-//        pozycjaWydaniaService.add(pw3);
-//        pozycjaWydaniaService.add(pw4);
+        ZamowienieZakupu z1 = new ZamowienieZakupu("Z1", c1.getTime(), StatusWydania.Zaakceptowane, klient1, TypOdbioru.Wysylka, c2.getTime());
+        ZamowienieZakupu z2 = new ZamowienieZakupu("Z2", c1.getTime(), StatusWydania.Gotowe, klient1, TypOdbioru.Osobiscie, c2.getTime());
+        ZamowienieZakupu z3 = new ZamowienieZakupu("Z3", c1.getTime(), StatusWydania.Oczekujące, klient1, TypOdbioru.Osobiscie, c2.getTime());
+        ZamowienieZakupu z4 = new ZamowienieZakupu("Z4", c1.getTime(), StatusWydania.Zaakceptowane, klient1, TypOdbioru.Wysylka, c2.getTime());
+        ZamowienieZakupu z5 = new ZamowienieZakupu("Z5", c1.getTime(), StatusWydania.Zaakceptowane, klient1, TypOdbioru.Osobiscie, c2.getTime());
+        ZamowienieZakupu z6 = new ZamowienieZakupu("Z6", c1.getTime(), StatusWydania.Zaakceptowane, klient1, TypOdbioru.Osobiscie, c2.getTime());
+        zamowienieZakupuService.addZamowienie(sessionId, z1);
+        zamowienieZakupuService.addZamowienie(sessionId, z2);
+        zamowienieZakupuService.addZamowienie(sessionId, z3);
+        zamowienieZakupuService.addZamowienie(sessionId, z4);
+        zamowienieZakupuService.addZamowienie(sessionId, z5);
+        zamowienieZakupuService.addZamowienie(sessionId, z6);
 
 
+        List<PozycjaZamowienia> pzList = new ArrayList<PozycjaZamowienia>();
+        pzList.add(new PozycjaZamowienia(20,0, t1, z1));
+        pzList.add( new PozycjaZamowienia(20,0, t2, z1));
+        pzList.add(new PozycjaZamowienia(10,0, t3, z1));
+        pzList.add( new PozycjaZamowienia(10,0, t4, z1));
+        pzList.add( new PozycjaZamowienia(20,0, t5, z1));
+        pzList.add( new PozycjaZamowienia(10,0, t6, z1));
+        pzList.add( new PozycjaZamowienia(20,0, t7, z1));
+        pzList.add( new PozycjaZamowienia(10,0, t8, z1));
+        pzList.add( new PozycjaZamowienia(10,0, t9, z1));
+        pzList.add( new PozycjaZamowienia(40,0, t10, z1));
 
+        pzList.add(new PozycjaZamowienia(20,0, t1, z2));
+        pzList.add(new PozycjaZamowienia(10,0, t2, z2));
+        pzList.add(new PozycjaZamowienia(20,0, t13, z2));
+        pzList.add( new PozycjaZamowienia(20,0, t11, z2));
+        pzList.add(new PozycjaZamowienia(30,0, t6, z2));
+        pzList.add( new PozycjaZamowienia(20,0, t7, z2));
 
+        pzList.add( new PozycjaZamowienia(10,0, t1, z3));
+        pzList.add(new PozycjaZamowienia(10,0, t2, z3));
+        pzList.add( new PozycjaZamowienia(20,0, t5, z3));
+        pzList.add(new PozycjaZamowienia(20,0, t4, z3));
+        pzList.add( new PozycjaZamowienia(40,0, t13, z3));
+        pzList.add(new PozycjaZamowienia(20,0, t12, z3));
+
+        pzList.add( new PozycjaZamowienia(10,0, t1, z4));
+        pzList.add(new PozycjaZamowienia(20,0, t11, z4));
+        pzList.add( new PozycjaZamowienia(10,0, t12, z4));
+        pzList.add( new PozycjaZamowienia(20,0, t13, z4));
+        pzList.add(new PozycjaZamowienia(10,0, t2, z4));
+        pzList.add(new PozycjaZamowienia(20,0, t3, z4));
+        pzList.add(new PozycjaZamowienia(10,0, t4, z4));
+
+        pzList.add( new PozycjaZamowienia(20,0, t10, z5));
+        pzList.add(new PozycjaZamowienia(30,0, t9, z5));
+        pzList.add( new PozycjaZamowienia(20,0, t7, z5));
+        pzList.add( new PozycjaZamowienia(10,0, t6, z5));
+        pzList.add( new PozycjaZamowienia(20,0, t1, z5));
+
+        pzList.add( new PozycjaZamowienia(20,0, t3, z6));
+        pzList.add( new PozycjaZamowienia(10,0, t2, z6));
+        pzList.add( new PozycjaZamowienia(20,0, t1, z6));
+
+        for (PozycjaZamowienia pozycja: pzList) {
+            pozycjaZamowieniaService.add(pozycja);
+        }
+
+        List<Lokalizacja> lokalizacjaList = new ArrayList<Lokalizacja>();
+        String kodL = "L1";
+        int regal = 0;
+        int rzad = 0;
+        for(int i = 0; i < 39; i++) {
+            regal = regal%8 == 0 ? regal : regal + 1;
+            rzad = rzad%5 == 0 ? rzad : rzad + 1;
+            lokalizacjaList.add(new Lokalizacja(kodL + i,regal,rzad,i%7));
+        }
+
+        for (Lokalizacja pozycja: lokalizacjaList) {
+            lokalizacjaService.add(pozycja);
+        }
+
+        Random rand = new Random();
+        List<Umieszczenie> umieszczenieList = new ArrayList<Umieszczenie>();
+        for (int i = 0; i < 39; i ++ ) {
+            umieszczenieList.add(new Umieszczenie((double)rand.nextInt(30) + 1, towarList.get(i%13),lokalizacjaList.get(i)));
+        }
+
+        for (Umieszczenie pozycja: umieszczenieList) {
+            umieszczenieService.addService(pozycja);
+        }
 
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
         try {

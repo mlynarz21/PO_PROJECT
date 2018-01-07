@@ -25,6 +25,13 @@ public class Lokalizacja {
         this.numerRegalu=numerRegalu;
         this.numerSektora=numerSektora;
     }
+    public Lokalizacja(String kod,int numerRegalu, int numerRzedu, int numerSektora){
+
+        this.kod=kod;
+        this.numerRzedu=numerRzedu;
+        this.numerRegalu=numerRegalu;
+        this.numerSektora=numerSektora;
+    }
 
     public Long getID() {
         return ID;
