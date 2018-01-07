@@ -172,24 +172,24 @@ public class BilansApiImpl implements BilansApi{
         klient1.setEmail("jan.br@gmail.com");
         klientService.add(klient1);
         Klient klient2 = new Klient();
-        klient2.setImie("Jan");
+        klient2.setImie("Adam");
         klient2.setKodPocztowy("62-100");
-        klient2.setNazwisko("BR");
+        klient2.setNazwisko("Kowalski");
         klient2.setLogin("user");
         klient2.setMiasto("Leszno");
-        klient2.setNumerDomu("4");
-        klient2.setUlica("Nowa");
-        klient2.setEmail("jan.br@gmail.com");
+        klient2.setNumerDomu("5");
+        klient2.setUlica("Stara");
+        klient2.setEmail("adam.br@gmail.com");
         klientService.add(klient2);
         Klient klient3 = new Klient();
-        klient3.setImie("Jan");
-        klient3.setKodPocztowy("62-100");
-        klient3.setNazwisko("BR");
+        klient3.setImie("Kamil");
+        klient3.setKodPocztowy("63-100");
+        klient3.setNazwisko("MK");
         klient3.setLogin("user");
-        klient3.setMiasto("Leszno");
+        klient3.setMiasto("Opole");
         klient3.setNumerDomu("4");
-        klient3.setUlica("Nowa");
-        klient3.setEmail("jan.br@gmail.com");
+        klient3.setUlica("Polma");
+        klient3.setEmail("mk@gmail.com");
         klientService.add(klient3);
 
         Kategoria kategoria1 = new Kategoria();
@@ -212,18 +212,18 @@ public class BilansApiImpl implements BilansApi{
 
 
         Towar t1 = new Towar("t1A48", "Rama", 0, 2,jednostka2,kategoria2,150);
-        Towar t2 = new Towar("t2B28", "Koło", 0, 2,jednostka2,kategoria2,150);
+        Towar t2 = new Towar("t2B28", "Kolo", 0, 2,jednostka2,kategoria2,150);
         Towar t3 = new Towar("t3A38", "Dzwonek", 0, 2,jednostka2,kategoria2,200);
         Towar t4 = new Towar("t4A47", "Korba", 0, 2,jednostka2,kategoria2,150);
-        Towar t5 = new Towar("t5U48", "Lańcuch", 0, 2,jednostka2,kategoria2,1140);
+        Towar t5 = new Towar("t5U48", "Lancuch", 0, 2,jednostka2,kategoria2,1140);
         Towar t6 = new Towar("t6J48", "Pompka", 0, 2,jednostka2,kategoria2,1500);
-        Towar t7 = new Towar("t7A49", "Siodełko", 0, 2,jednostka2,kategoria2,200);
+        Towar t7 = new Towar("t7A49", "Siodelko", 0, 2,jednostka2,kategoria2,200);
         Towar t8 = new Towar("t8A50", "Fotel", 0, 2,jednostka2,kategoria1,150);
         Towar t9 = new Towar("t9A48", "Kierownica", 0, 2,jednostka2,kategoria1,150);
         Towar t10 = new Towar("t10A48", "Opona", 0, 2,jednostka2,kategoria1,150);
         Towar t11 = new Towar("t11A78", "Wiertarka", 0, 2,jednostka2,kategoria3,150);
         Towar t12 = new Towar("t12D48", "Srubki", 0, 2,jednostka1,kategoria3,150);
-        Towar t13 = new Towar("t13E48", "Młotek", 0, 2,jednostka2,kategoria3,150);
+        Towar t13 = new Towar("t13E48", "Mlotek", 0, 2,jednostka2,kategoria3,150);
 
         List<Towar> towarList = new ArrayList<Towar>();
         towarList.add(t1);
@@ -410,7 +410,7 @@ public class BilansApiImpl implements BilansApi{
 
 
         Calendar c4 = Calendar.getInstance();
-        c4.set(2017,11,10);
+        c4.set(2017,10,10);
 
         Calendar c5 = Calendar.getInstance();
         c5.set(2017,12,10);
