@@ -72,7 +72,6 @@ public class OrderPickupController extends ArtifactsBaseController {
 
     @FXML
     public void proceed() {
-
         if(ordersTable.getSelectionModel().getSelectedItem()!=null) {
             ZamowienieZakupuModel zamowienieZakupu = ordersTable.getSelectionModel().getSelectedItem();
             FXMLDialog defaultDialog = getScreens().productPickupDialog(zamowienieZakupu);
@@ -80,5 +79,4 @@ public class OrderPickupController extends ArtifactsBaseController {
             getScreens().showDialog(defaultDialog);
         }
     }
-
 }

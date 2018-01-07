@@ -46,7 +46,8 @@ public class MonthPickupController extends ArtifactsBaseController {
         DateFormat df = new SimpleDateFormat("MM/yyyy");
 
         if(bilans==null) {
-            toReturn.add(new StringBuilder().append(getMonth(currentDate.get(Calendar.MONTH)-1)).append(" ").append(currentDate.get(Calendar.YEAR)).toString());
+            currentDate.add(Calendar.MONTH, -1);
+            toReturn.add(new StringBuilder().append(getMonth(currentDate.get(Calendar.MONTH))).append(" ").append(currentDate.get(Calendar.YEAR)).toString());
         }
         else {
             bilansDate.setTime(bilans.getDataBilansu());
