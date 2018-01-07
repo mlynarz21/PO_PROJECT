@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f31e1de3-36f0-4a41-917e-a7e76ea92651" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/BilansApiImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/BilansApiImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/BilansEntities/Bilans.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/BilansEntities/Bilans.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/BilansEntities/PozycjaBilansu.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/BilansEntities/PozycjaBilansu.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PozycjaPrzyjecia.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PozycjaPrzyjecia.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PozycjaWydania.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PozycjaWydania.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PrzyjecieZamowienia.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PrzyjecieZamowienia.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/WydanieZamowienia.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/WydanieZamowienia.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/TowarEntities/Jednostka.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/TowarEntities/Jednostka.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/TowarEntities/Kategoria.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/TowarEntities/Kategoria.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/TowarEntities/Towar.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/TowarEntities/Towar.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/UmieszczenieEntities/Lokalizacja.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/UmieszczenieEntities/Lokalizacja.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/UmieszczenieEntities/Umieszczenie.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/UmieszczenieEntities/Umieszczenie.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/Klient.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/Klient.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/PozycjaZamowienia.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/PozycjaZamowienia.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/Zamowienie.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/Zamowienie.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/ZamowienieDostawy.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/ZamowienieDostawy.java" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/ZamowienieZakupu.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/ZamowienieZakupu.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -231,10 +214,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="427" />
+    <option name="y" value="-11" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">

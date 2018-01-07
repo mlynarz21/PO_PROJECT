@@ -10,6 +10,10 @@ import com.StoreX.common.datatypes.to.BilansTO;
 import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
 import com.StoreX.persistence.entity.BilansEntities.Bilans;
 import com.StoreX.persistence.entity.BilansEntities.PozycjaBilansu;
+import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.PozycjaPrzyjecia;
+import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.PozycjaWydania;
+import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.PrzyjecieZamowienia;
+import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.WydanieZamowienia;
 import com.StoreX.persistence.entity.TowarEntities.Jednostka;
 import com.StoreX.persistence.entity.TowarEntities.Kategoria;
 import com.StoreX.persistence.entity.TowarEntities.Towar;
@@ -17,6 +21,7 @@ import com.StoreX.persistence.entity.UmieszczenieEntities.Lokalizacja;
 import com.StoreX.persistence.entity.UmieszczenieEntities.Umieszczenie;
 import com.StoreX.persistence.entity.ZamowienieEntities.Klient;
 import com.StoreX.persistence.entity.ZamowienieEntities.PozycjaZamowienia;
+import com.StoreX.persistence.entity.ZamowienieEntities.ZamowienieDostawy;
 import com.StoreX.persistence.entity.ZamowienieEntities.ZamowienieZakupu;
 import com.StoreX.service.BilansServices.BilansAddService;
 import com.StoreX.service.BilansServices.BilansFindService;
@@ -338,6 +343,79 @@ public class BilansApiImpl implements BilansApi{
         for (Umieszczenie pozycja: umieszczenieList) {
             umieszczenieService.addService(pozycja);
         }
+
+
+        Calendar c3 = Calendar.getInstance();
+        c3.set(2017,12,10);
+
+        List<WydanieZamowienia> wydanieZamowieniaList = new ArrayList<WydanieZamowienia>();
+
+        for (int i = 0; i < 10; i ++){
+            if(i%2 ==0 )
+                wydanieZamowieniaList.add(new WydanieZamowienia(c3.getTime(), z1));
+            else
+                wydanieZamowieniaList.add(new WydanieZamowienia(c3.getTime(), z2));
+        }
+
+        for (WydanieZamowienia pozycja: wydanieZamowieniaList) {
+            wydanieZamowieniaService.add(pozycja);
+        }
+
+        List<PozycjaWydania> pozycjaWydaniaList = new ArrayList<PozycjaWydania>();
+        int licznik = 0;
+        for (WydanieZamowienia pozycja: wydanieZamowieniaList) {
+            int ile = rand.nextInt(2) + 6;
+            for(int i = 0; i < ile; i ++){
+                pozycjaWydaniaList.add(new PozycjaWydania((double)rand.nextInt(20) + 1, towarList.get(licznik % 13),pozycja));
+                licznik++;
+            }
+
+        }
+
+        for (PozycjaWydania pozycja: pozycjaWydaniaList) {
+            pozycjaWydaniaService.add(pozycja);
+        }
+
+
+
+        ZamowienieDostawy zamowienieDostawy = new ZamowienieDostawy();
+        zamowienieDostawyService.add(zamowienieDostawy);
+        List<PrzyjecieZamowienia> przyjecieZamowieniaList = new ArrayList<PrzyjecieZamowienia>();
+
+        for (int i = 0; i < 10; i ++){
+            if(i%2 ==0 )
+                przyjecieZamowieniaList.add(new PrzyjecieZamowienia(c3.getTime(), zamowienieDostawy));
+            else
+                przyjecieZamowieniaList.add(new PrzyjecieZamowienia(c3.getTime(), zamowienieDostawy));
+        }
+
+        for (PrzyjecieZamowienia pozycja: przyjecieZamowieniaList) {
+            przyjecieZamowieniaService.add(pozycja);
+        }
+
+        List<PozycjaPrzyjecia> pozycjaPrzyjeciaList = new ArrayList<PozycjaPrzyjecia>();
+        licznik = 0;
+        for (PrzyjecieZamowienia pozycja: przyjecieZamowieniaList) {
+            int ile = rand.nextInt(2) + 6;
+            for(int i = 0; i < ile; i ++){
+                pozycjaPrzyjeciaList.add(new PozycjaPrzyjecia((double)rand.nextInt(20) + 1, towarList.get(licznik % 13),pozycja));
+                licznik++;
+            }
+
+        }
+
+        for (PozycjaPrzyjecia pozycja: pozycjaPrzyjeciaList) {
+            pozycjaPrzyjeciaService.add(pozycja);
+        }
+
+
+        Calendar c4 = Calendar.getInstance();
+        c4.set(2017,11,10);
+
+        Calendar c5 = Calendar.getInstance();
+        c5.set(2017,12,10);
+
+        bilansService.saveBilans(new Bilans(c5.getTime(),c4.getTime()));
 
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
         try {
