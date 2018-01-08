@@ -19,6 +19,10 @@ public class PozycjaBilansuServiceImpl implements PozycjaBilansuService{
         return getPozycjaBilansuRepository().findOne(id);
     }
 
+    @Override
+    public void add(PozycjaBilansu pozycjaBilansu) {
+        getPozycjaBilansuRepository().save(pozycjaBilansu);
+    }
 
 
     public PozycjaBilansuRepository getPozycjaBilansuRepository() {

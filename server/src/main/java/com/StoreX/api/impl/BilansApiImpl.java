@@ -254,9 +254,9 @@ public class BilansApiImpl implements BilansApi{
         towarService.saveTowar(t13);
 
         Calendar c1 = Calendar.getInstance();
-        c1.set(2017,12,1);
+        c1.set(2017,11,1);
         Calendar c2 = Calendar.getInstance();
-        c2.set(2018,01,15);
+        c2.set(2018,0,15);
 
         ZamowienieZakupu z1 = new ZamowienieZakupu("Z1", c1.getTime(), StatusWydania.Zaakceptowane, klient1, TypOdbioru.Wysylka, c2.getTime());
         ZamowienieZakupu z2 = new ZamowienieZakupu("Z2", c1.getTime(), StatusWydania.Gotowe, klient1, TypOdbioru.Osobiscie, c2.getTime());
@@ -346,7 +346,7 @@ public class BilansApiImpl implements BilansApi{
 
 
         Calendar c3 = Calendar.getInstance();
-        c3.set(2017,12,10);
+        c3.set(2017,11,10);
 
         List<WydanieZamowienia> wydanieZamowieniaList = new ArrayList<WydanieZamowienia>();
 
@@ -398,7 +398,7 @@ public class BilansApiImpl implements BilansApi{
         for (PrzyjecieZamowienia pozycja: przyjecieZamowieniaList) {
             int ile = rand.nextInt(2) + 6;
             for(int i = 0; i < ile; i ++){
-                pozycjaPrzyjeciaList.add(new PozycjaPrzyjecia((double)rand.nextInt(20) + 1, towarList.get(licznik % 13),pozycja));
+                pozycjaPrzyjeciaList.add(new PozycjaPrzyjecia((double)rand.nextInt(20) + 20, towarList.get(licznik % 13),pozycja));
                 licznik++;
             }
 
@@ -415,7 +415,12 @@ public class BilansApiImpl implements BilansApi{
         Calendar c5 = Calendar.getInstance();
         c5.set(2017,12,10);
 
-        bilansService.saveBilans(new Bilans(c5.getTime(),c4.getTime()));
+        Bilans b1 = new Bilans(c5.getTime(),c4.getTime());
+        bilansService.saveBilans(b1);
+        PozycjaBilansu pb = new PozycjaBilansu(10, t1, b1);
+        pozycjaBilansuService.add(pb);
+
+
 
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
         try {

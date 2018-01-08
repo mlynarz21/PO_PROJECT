@@ -6,5 +6,5 @@ public interface PozycjaBilansuService {
 
     public PozycjaBilansu findOne(Long id);
 
-
+    public void add(PozycjaBilansu pozycjaBilansu);
 }
