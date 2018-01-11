@@ -4,7 +4,7 @@ import com.StoreX.common.datatypes.bo.PozycjaZamowieniaBO;
 import com.StoreX.persistence.entity.ZamowienieEntities.PozycjaZamowienia;
 import com.StoreX.persistence.repository.ZamowienieRepository.PozycjaZamowieniaRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
-import com.StoreX.service.ZamowienieServices.PozycjaZamowieniaFindService;
+import com.StoreX.service.ZamowienieServices.PozycjaZamowieniaSearchService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class PozycjaZamowieniaSearchServiceImpl implements PozycjaZamowieniaFindService {
+public class PozycjaZamowieniaSearchServiceImpl implements PozycjaZamowieniaSearchService {
 
     @Autowired
     private AuthorizationService authorizationService;

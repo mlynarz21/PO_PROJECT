@@ -19,6 +19,7 @@ import com.StoreX.common.datatypes.to.SessionTo;
 import com.StoreX.common.datatypes.to.UserTo;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
 
+
 @CrossOrigin
 @RestController
 @RequestMapping("/rest/artifactlibrary/authorization/v1")
@@ -29,6 +30,12 @@ public class AuthorizationApiImpl implements AuthorizationApi {
 
     private ModelMapper mapper = new ModelMapper();
 
+    /**
+     * Loguje użytkownika. Jeżeli użytkownik zostanie zalogowany poprawnie, zwracane jest Id sesji
+     *
+     * @param user
+     * @return
+     */
     @Override
     @RequestMapping(value = "/login/", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<SessionTo> login(@RequestBody UserTo user) {
@@ -46,6 +53,12 @@ public class AuthorizationApiImpl implements AuthorizationApi {
         }
     }
 
+    /**
+     * Rejestruje nowego użytkownika
+     *
+     * @param user
+     * @return true if the user was correctly registered
+     */
     @Override
     @RequestMapping(value = "/register/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<?> register(@RequestBody UserTo user) {

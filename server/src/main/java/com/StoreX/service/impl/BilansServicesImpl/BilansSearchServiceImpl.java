@@ -4,7 +4,7 @@ import com.StoreX.common.datatypes.bo.BilansBO;
 import com.StoreX.persistence.entity.BilansEntities.Bilans;
 import com.StoreX.persistence.repository.BilansRepository.BilansRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
-import com.StoreX.service.BilansServices.BilansFindService;
+import com.StoreX.service.BilansServices.BilansSearchService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import javax.naming.AuthenticationException;
 import java.util.UUID;
 @Service
-public class BilansSearchServiceImpl implements BilansFindService {
+public class BilansSearchServiceImpl implements BilansSearchService {
 
     @Autowired
     private AuthorizationService authorizationService;

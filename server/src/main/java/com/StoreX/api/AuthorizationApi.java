@@ -12,7 +12,7 @@ import com.StoreX.common.datatypes.to.UserTo;
 public interface AuthorizationApi {
 
     /**
-     * Logs users in. If the user is logged in correctly a sessionID is returned.
+     * Loguje użytkownika. Jeżeli użytkownik zostanie zalogowany poprawnie, zwracane jest Id sesji
      *
      * @param user
      * @return
@@ -20,7 +20,7 @@ public interface AuthorizationApi {
     ResponseEntity<SessionTo> login(UserTo user);
 
     /**
-     * Used to register a new user. This method validates that all needed data is filled.
+     * Rejestruje nowego użytkownika
      *
      * @param user
      * @return true if the user was correctly registered

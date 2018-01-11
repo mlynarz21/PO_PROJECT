@@ -12,9 +12,6 @@ public interface AuthorizationService {
 
     /**
      * Logs users in. If the user is logged in correctly a sessionID is returned.
-     *
-     * @param username
-     * @param password
      * @return sessionId
      */
     public UUID login(UserBo user);

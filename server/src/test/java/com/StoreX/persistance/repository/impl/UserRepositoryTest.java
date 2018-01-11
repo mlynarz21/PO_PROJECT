@@ -69,7 +69,7 @@ public class UserRepositoryTest {
 	@Test
 	public void shouldCheckIfUserCanLogIn(){
 		
-		//NIE DZIAŁA
+		//NIE DZIALA
 		//given
 		String username = "user";
 		String password = "user";

@@ -5,12 +5,12 @@ import com.StoreX.persistence.entity.BilansEntities.Bilans;
 import com.StoreX.persistence.entity.TowarEntities.Towar;
 import com.StoreX.persistence.repository.BilansRepository.BilansRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
-import com.StoreX.service.BilansServices.BilansAddService;
-import com.StoreX.service.BilansServices.PozycjaBilansuFindService;
-import com.StoreX.service.BilansServices.PozycjaBilansuSaveService;
+import com.StoreX.service.BilansServices.BilansCreationService;
+import com.StoreX.service.BilansServices.PozycjaBilansuSearchService;
+import com.StoreX.service.BilansServices.PozycjaBilansuCreationService;
 import com.StoreX.service.HelperServices.TowarService;
-import com.StoreX.service.PozycjeWydanPrzyjecServices.PozycjaPrzyjeciaFindService;
-import com.StoreX.service.PozycjeWydanPrzyjecServices.PozycjaWydaniaFindService;
+import com.StoreX.service.PozycjeWydanPrzyjecServices.PozycjaPrzyjeciaSearchService;
+import com.StoreX.service.PozycjeWydanPrzyjecServices.PozycjaWydaniaSearchService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,21 +21,21 @@ import javax.naming.AuthenticationException;
 import java.util.*;
 
 @Service
-public class BilansCreationServiceImpl implements BilansAddService {
+public class BilansCreationServiceImpl implements BilansCreationService {
     @Autowired
     private AuthorizationService authorizationService;
 
     @Autowired
-    PozycjaBilansuFindService pozycjaBilansuFindService;
+    PozycjaBilansuSearchService pozycjaBilansuSearchService;
     @Autowired
-    PozycjaBilansuSaveService pozycjaBilansuSaveService;
+    PozycjaBilansuCreationService pozycjaBilansuCreationService;
 
     @Autowired
-    PozycjaWydaniaFindService pozycjaWydaniaFindService;
+    PozycjaWydaniaSearchService pozycjaWydaniaSearchService;
 
 
     @Autowired
-    PozycjaPrzyjeciaFindService pozycjaPrzyjeciaFindService;
+    PozycjaPrzyjeciaSearchService pozycjaPrzyjeciaSearchService;
     @Autowired
     TowarService towarService;
 
@@ -73,7 +73,7 @@ public class BilansCreationServiceImpl implements BilansAddService {
         {
             BilansBO lastBilansBO = modelMapper.map(lastBilans, BilansBO.class);
             Long latBilansBOId = lastBilansBO.getID();
-            List<PozycjaBilansuBO> pozycjaBilansuBOList =  pozycjaBilansuFindService.findAllForBilans(latBilansBOId);
+            List<PozycjaBilansuBO> pozycjaBilansuBOList =  pozycjaBilansuSearchService.findAllForBilans(latBilansBOId);
             for (PozycjaBilansuBO pozycjaBilansuBO: pozycjaBilansuBOList) {
                 pozycjeDoBilansu.put(pozycjaBilansuBO.getTowar().getID(), pozycjaBilansuBO.getIlosc());
             }
@@ -84,7 +84,7 @@ public class BilansCreationServiceImpl implements BilansAddService {
 
         List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<>();
 
-        pozycjaPrzyjeciaBOList = pozycjaPrzyjeciaFindService.findAllForMonthAndYear(newMonth, newYear);
+        pozycjaPrzyjeciaBOList = pozycjaPrzyjeciaSearchService.findAllForMonthAndYear(newMonth, newYear);
 
         for (PozycjaPrzyjeciaBO pozycjaPrzyjeciaBO: pozycjaPrzyjeciaBOList) {
             if(pozycjeDoBilansu.containsKey(pozycjaPrzyjeciaBO.getTowar().getID()))
@@ -94,7 +94,7 @@ public class BilansCreationServiceImpl implements BilansAddService {
         }
         List<PozycjaWydaniaBO> pozycjaWydaniaBOList = new ArrayList<>();
 
-        pozycjaWydaniaBOList = pozycjaWydaniaFindService.findAllForMonthAndYear(newMonth, newYear);
+        pozycjaWydaniaBOList = pozycjaWydaniaSearchService.findAllForMonthAndYear(newMonth, newYear);
 
         for (PozycjaWydaniaBO pozycjaWydaniaBO: pozycjaWydaniaBOList) {
             if(pozycjeDoBilansu.containsKey(pozycjaWydaniaBO.getTowar().getID()))
@@ -120,7 +120,7 @@ public class BilansCreationServiceImpl implements BilansAddService {
         }
 
         for (PozycjaBilansuBO pozycjaBilansuBo: pozycjaBilansuBOList) {
-            pozycjaBilansuSaveService.savePozycjaBilansu(pozycjaBilansuBo);
+            pozycjaBilansuCreationService.savePozycjaBilansu(pozycjaBilansuBo);
         }
 
         return true;

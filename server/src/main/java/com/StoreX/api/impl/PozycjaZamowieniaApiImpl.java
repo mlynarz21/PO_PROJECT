@@ -3,8 +3,7 @@ package com.StoreX.api.impl;
 import com.StoreX.api.PozycjaZamowieniaApi;
 import com.StoreX.common.datatypes.bo.PozycjaZamowieniaBO;
 import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
-import com.StoreX.service.HelperServices.PozycjaZamowieniaService;
-import com.StoreX.service.ZamowienieServices.PozycjaZamowieniaFindService;
+import com.StoreX.service.ZamowienieServices.PozycjaZamowieniaSearchService;
 import com.StoreX.service.ZamowienieServices.PozycjaZamowieniaProceedService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,16 +25,23 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
 
     private ModelMapper modelMapper = new ModelMapper();
     @Autowired
-    PozycjaZamowieniaFindService pozycjaZamowieniaFindService;
+    PozycjaZamowieniaSearchService pozycjaZamowieniaSearchService;
     @Autowired
     PozycjaZamowieniaProceedService pozycjaZamowieniaProceedService;
 
+
+    /**
+     * Pobiera wszystkie Pozycje Zamówienia dla Zamówienia o podanym Id
+     * @param ID IdZamówienia
+     * @param sessionId Id sesji
+     * @return Lista pozycji zamówień
+     */
     @Override
     @RequestMapping(value = "/getPozycjeZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<PozycjaZamowieniaTO>> getPozycjeZamowienia(@RequestBody Long ID, @RequestHeader(value = "SessionID") String sessionId){
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
         try {
-            pozycjeZamowieniaBO = pozycjaZamowieniaFindService.findAllforZamowienie(sessionId, ID);
+            pozycjeZamowieniaBO = pozycjaZamowieniaSearchService.findAllforZamowienie(sessionId, ID);
         } catch (AuthenticationException e) {
             e.printStackTrace();
         }
@@ -49,20 +55,13 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
         return new ResponseEntity<List<PozycjaZamowieniaTO>>(results, HttpStatus.OK);
     }
 
-
-//    @RequestMapping(value = "/updatePozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody Long idPozyjcji,  Long idUmieszczenia,  double ilosc, @RequestHeader(value = "SessionID") String sessionId) {
-//
-//
-//        try {
-//           pozycjaZamowieniaService.ProceedPozycjaZamowienia(sessionId, idPozyjcji, idUmieszczenia, ilosc);
-//        } catch (AuthenticationException e) {
-//            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
-//        }
-//        boolean updated = true;
-//        return new ResponseEntity<Boolean>(updated, HttpStatus.OK);
-//    }
-
+    /**
+     * Pobierea wskazaną ilośc towaru z lokalizacji i dodaje do ilości zrealizowanej w pozycji zamówienia.
+     * Metoda wykorzystywana przy kompletowaniu zamówienia.
+     * @param transferList Lista parametrów (Id Pozycji Bilansu, Id Umieszczenia, Ilość)
+     * @param sessionId Id sesji
+     * @return Informację o powodzeniu operacji
+     */
     @Override
     @RequestMapping(value = "/proceedPozycjaZamowienia/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> proceedPozycjaZamowienia(@RequestBody List<Double> transferList, @RequestHeader(value = "SessionID") String sessionId) {

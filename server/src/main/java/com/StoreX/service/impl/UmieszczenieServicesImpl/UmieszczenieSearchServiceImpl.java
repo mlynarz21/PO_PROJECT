@@ -4,7 +4,7 @@ import com.StoreX.common.datatypes.bo.UmieszczenieBO;
 import com.StoreX.persistence.entity.UmieszczenieEntities.Umieszczenie;
 import com.StoreX.persistence.repository.UmieszczenieRepository.UmieszczenieRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
-import com.StoreX.service.UmieszczenieServices.UmieszczenieFindService;
+import com.StoreX.service.UmieszczenieServices.UmieszczenieSearchService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class UmieszczenieSearchServiceImpl implements UmieszczenieFindService {
+public class UmieszczenieSearchServiceImpl implements UmieszczenieSearchService {
 
     @Autowired
     private AuthorizationService authorizationService;

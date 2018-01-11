@@ -5,7 +5,7 @@ import com.StoreX.common.datatypes.enumerations.StatusWydania;
 import com.StoreX.persistence.entity.ZamowienieEntities.ZamowienieZakupu;
 import com.StoreX.persistence.repository.ZamowienieRepository.ZamowienieZakupuRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
-import com.StoreX.service.ZamowienieServices.ZamowienieZakupuFindService;
+import com.StoreX.service.ZamowienieServices.ZamowienieZakupuSearchService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service
-public class ZamowienieZakupuSearchServiceImpl implements ZamowienieZakupuFindService {
+public class ZamowienieZakupuSearchServiceImpl implements ZamowienieZakupuSearchService {
 
     @Autowired
     private AuthorizationService authorizationService;

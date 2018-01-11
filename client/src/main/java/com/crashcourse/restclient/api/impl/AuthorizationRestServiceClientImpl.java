@@ -28,6 +28,7 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
     @Autowired
     private StoreXSecurityContext context;
 
+
     @Override
     public SessionTo login(String userName, String password) {
         UserTo userTo = buildUserTo(userName, password);

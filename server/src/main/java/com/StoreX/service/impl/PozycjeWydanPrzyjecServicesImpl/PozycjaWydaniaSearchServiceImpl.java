@@ -3,7 +3,7 @@ package com.StoreX.service.impl.PozycjeWydanPrzyjecServicesImpl;
 import com.StoreX.common.datatypes.bo.PozycjaWydaniaBO;
 import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.PozycjaWydania;
 import com.StoreX.persistence.repository.PrzyjecieWydanieRepository.PozycjaWydaniaRepository;
-import com.StoreX.service.PozycjeWydanPrzyjecServices.PozycjaWydaniaFindService;
+import com.StoreX.service.PozycjeWydanPrzyjecServices.PozycjaWydaniaSearchService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class PozycjaWydaniaSearchServiceImpl implements PozycjaWydaniaFindService {
+public class PozycjaWydaniaSearchServiceImpl implements PozycjaWydaniaSearchService {
 
     @Autowired
     PozycjaWydaniaRepository pozycjaWydaniaRepository;

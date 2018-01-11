@@ -3,8 +3,7 @@ package com.StoreX.api.impl;
 import com.StoreX.api.ZamowienieZakupuApi;
 import com.StoreX.common.datatypes.bo.ZamowienieZakupuBO;
 import com.StoreX.common.datatypes.to.ZamowienieZakupuTO;
-import com.StoreX.service.HelperServices.ZamowienieZakupuService;
-import com.StoreX.service.ZamowienieServices.ZamowienieZakupuFindService;
+import com.StoreX.service.ZamowienieServices.ZamowienieZakupuSearchService;
 import com.StoreX.service.ZamowienieServices.ZamowienieZakupuUpdateService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,16 +24,21 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
     private ModelMapper modelMapper = new ModelMapper();
 
     @Autowired
-    ZamowienieZakupuFindService zamowienieZakupuFindService;
+    ZamowienieZakupuSearchService zamowienieZakupuSearchService;
     @Autowired
     ZamowienieZakupuUpdateService zamowienieZakupuUpdateService;
 
+    /**
+     * Pobiera wszystkie zamowienia zakupu o statusie Zaakceptowane
+     * @param sessionId Id sesji
+     * @return Lista zamowien zakupu o statusie Zaakceptowane
+     */
     @Override
     @RequestMapping(value = "/getAllZaakceptowane/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<ZamowienieZakupuTO>> getAllZaakceptowane(@RequestHeader(value = "SessionID") String sessionId){
         List<ZamowienieZakupuBO> zamowieniaBO = null;
         try {
-            zamowieniaBO = zamowienieZakupuFindService.findAllAccepted(sessionId);
+            zamowieniaBO = zamowienieZakupuSearchService.findAllAccepted(sessionId);
         } catch (AuthenticationException e) {
             return new ResponseEntity<List<ZamowienieZakupuTO>>(HttpStatus.UNAUTHORIZED);
         }
@@ -48,6 +52,12 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
         return new ResponseEntity<List<ZamowienieZakupuTO>>(results, HttpStatus.OK);
     }
 
+    /**
+     * Zmienai status zamówienia zakupu o wskazanym Id na Gotowe
+     * @param ID Id Zamowienia zakupu
+     * @param sessionId Id sesji
+     * @return Informacja o powodzeniu operacji
+     */
     @Override
     @RequestMapping(value = "/updateStatusZamowienieZakupu/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> updateStatusZamowienieZakupu(@RequestBody Long ID, @RequestHeader(value = "SessionID") String sessionId) {

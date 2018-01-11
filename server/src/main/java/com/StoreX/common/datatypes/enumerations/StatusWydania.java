@@ -2,7 +2,7 @@ package com.StoreX.common.datatypes.enumerations;
 
 public enum StatusWydania {
     Wprowadzone,
-    Oczekujące,
+    Oczekujace,
     Zaakceptowane,
     Gotowe,
     Wydane;
