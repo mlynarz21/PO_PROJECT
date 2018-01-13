@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * klasa obsługująca za kontroler dialogu wyświetlającego informację o braku aktualnie oczekujących zamówień
+ */
 public class OKNoWaitingOrdersController extends ArtifactsBaseController {
 
     @Autowired
@@ -25,6 +28,9 @@ public class OKNoWaitingOrdersController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/OKNoWaitingOrders.fxml";
     }
 
+    /**
+     * metoda powracająca do głownego ektanu. przycisk OK
+     */
     @FXML
     public void proceed() {
         FXMLDialog defaultDialog=getScreens().mainScreenDialog();

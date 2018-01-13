@@ -18,6 +18,9 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * klasa kontrolera odpowiadająca za dialog wyboru miesiąca
+ */
 public class MonthPickupController extends ArtifactsBaseController {
 
     @Autowired
@@ -31,14 +34,21 @@ public class MonthPickupController extends ArtifactsBaseController {
         super(primaryStage);
     }
 
+    /**
+     * metoda inicjująca dane w dialogu i pobierająca ostatni bilans z severa
+     */
     @FXML
     public void initialize() {
         BilansTO bilans = bilansRestServiceClient.getLastBilans();
-
         ObservableList<String> items = FXCollections.observableArrayList(getMissingBalanceDates(bilans));
         datesList.setItems(items);
     }
 
+    /**
+     * metoda towrząca listę miesiący do wyświetlenia w tabeli
+     * @param bilans ostatni bilans
+     * @return Lista miesięcy do wyświetlenia w tabeli
+     */
     private List<String> getMissingBalanceDates(BilansTO bilans){
         List<String> toReturn= new ArrayList<>();
         Calendar currentDate = Calendar.getInstance();
@@ -60,6 +70,11 @@ public class MonthPickupController extends ArtifactsBaseController {
         return toReturn;
     }
 
+    /**
+     * metoda odpowiadająca za konwersję miesiąca numerycznego na string
+     * @param month mieiąc jako liczba
+     * @return miesiąc jako string
+     */
     private String getMonth(int month){
         switch (month){
             case 0:
@@ -101,6 +116,9 @@ public class MonthPickupController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/MonthPickup.fxml";
     }
 
+    /**
+     * metoda opowiadająca za powrót do ektanu głownego, przycisk anuluj
+     */
     @FXML
     public void back() {
         FXMLDialog defaultDialog = getScreens().mainScreenDialog();
@@ -108,6 +126,9 @@ public class MonthPickupController extends ArtifactsBaseController {
         getScreens().showDialog(defaultDialog);
     }
 
+    /**
+     * metoda do przejścia do ekranu akceptacji dialogu, przycisk OK
+     */
     @FXML
     public void proceed() {
         FXMLDialog defaultDialog;
@@ -132,6 +153,11 @@ public class MonthPickupController extends ArtifactsBaseController {
         getScreens().showDialog(defaultDialog);
     }
 
+    /**
+     * metoda konwersji miesiąca ze stringa do int
+     * @param month miesiąc jako string
+     * @return miesiąc jako int
+     */
     private int fromMonthString(String month){
         switch (month){
             case "Styczeń":

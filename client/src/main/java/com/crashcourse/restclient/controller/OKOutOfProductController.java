@@ -7,6 +7,9 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * klasa odpowiadająca za dialog informujący o braku danego prodtu na magazynie
+ */
 public class OKOutOfProductController extends ArtifactsBaseController {
 
     @Autowired
@@ -29,6 +32,9 @@ public class OKOutOfProductController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/OKOutOfProduct.fxml";
     }
 
+    /**
+     * metoda powracająca do ekranu z listą produktów, przycik OK
+     */
     @FXML
     public void proceed() {
         FXMLDialog defaultDialog=getScreens().productPickupDialog(zamowienieZakupu);

@@ -8,6 +8,9 @@ import com.crashcourse.restclient.view.FXMLDialog;
 
 import javafx.stage.Stage;
 
+/**
+ * klasa abstrakcyjna rozszerzana przez każdy kontroler
+ */
 public abstract class ArtifactsBaseController implements DialogController {
 
     private FXMLDialog dialog;
@@ -21,20 +24,36 @@ public abstract class ArtifactsBaseController implements DialogController {
         this.primaryStage = primaryStage;
     }
 
+    /**
+     * pobiera aktualny dialog
+     * @return dialog FXML
+     */
     protected FXMLDialog getDialog() {
         return dialog;
     }
 
+    /**
+     * metoda do ustawiania dialogu FXML
+     * @param dialog fxml dialog
+     */
     @Override
     public void setDialog(FXMLDialog dialog) {
         this.dialog = dialog;
     }
 
+    /**
+     * metoda do pobrania stage
+     * @return
+     */
     @Override
     public Stage getPrimaryStage() {
         return primaryStage;
     }
 
+    /**
+     * metoda dostępu do wszystkich konfiguracji ekranów w aplikacji
+     * @return
+     */
     protected ScreensConfiguration getScreens() {
         return screens;
     }

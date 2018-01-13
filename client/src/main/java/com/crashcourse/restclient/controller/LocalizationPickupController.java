@@ -18,6 +18,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * kontroler odpowiadający za wyświetlanie lokalizacji produktu
+ */
 public class LocalizationPickupController extends ArtifactsBaseController {
 
     @Autowired
@@ -43,6 +46,9 @@ public class LocalizationPickupController extends ArtifactsBaseController {
         this.pozycjaZamowienia = pozycjaZamowienia;
     }
 
+    /**
+     * metoda inicująca dane do wyświetlenia
+     */
     @FXML
     public void initialize() {
         loadAllData();
@@ -57,6 +63,9 @@ public class LocalizationPickupController extends ArtifactsBaseController {
         quantityColumn.setCellValueFactory(celldata -> celldata.getValue().getIloscWLokalizacji().asObject());
     }
 
+    /**
+     * metoda ustawiająca pobierająca dane z servera i ustawająca je do tabeli
+     */
     private void loadAllData() {
         List<UmieszczenieTO> umieszczenia = umieszczenieRestServiceClient.getUmieszczenieTowaru(pozycjaZamowienia.getTowar().get().getID());
         List<UmieszczenieModel> rows = umieszczenia.stream().map(UmieszczenieModel::fromUmieszenieTo).collect(Collectors.toList());
@@ -73,6 +82,9 @@ public class LocalizationPickupController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/LocalizationPickup.fxml";
     }
 
+    /**
+     * metoda powrotu do dialogu z produktami w zamówieniu. przycisk Anuluj
+     */
     @FXML
     public void back() {
         FXMLDialog defaultDialog=getScreens().productPickupDialog(zamowienieZakupu);
@@ -80,6 +92,9 @@ public class LocalizationPickupController extends ArtifactsBaseController {
         getScreens().showDialog(defaultDialog);
     }
 
+    /**
+     * metoda do wyświetlenia dialogu z pobieraniem ilości z lokalizacji, przycisk OK
+     */
     @FXML
     public void proceed() {
         FXMLDialog defaultDialog;

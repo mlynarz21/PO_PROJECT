@@ -18,6 +18,9 @@ import com.crashcourse.restclient.api.AuthorizationRestServiceClient;
 
 import com.crashcourse.restclient.main.config.StoreXSecurityContext;
 
+/**
+ * REST client odpowiadający za autoryzację (implementacja).
+ */
 @Component
 public class AuthorizationRestServiceClientImpl implements AuthorizationRestServiceClient {
     @Value("${application.authorization.url}")
@@ -28,7 +31,12 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
     @Autowired
     private StoreXSecurityContext context;
 
-
+    /**
+     * metoda odpowiadająca za autoryzację uzytkownika oraz jego zalofowanie
+     * @param userName username
+     * @param password haslo
+     * @return SessionTO identyfikujące potem usera
+     */
     @Override
     public SessionTo login(String userName, String password) {
         UserTo userTo = buildUserTo(userName, password);
@@ -48,6 +56,12 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
         }
     }
 
+    /**
+     * Metoda mapująca dane uzytkownika na klasę UserTO
+     * @param userName username
+     * @param password haslo
+     * @return userTo
+     */
     private UserTo buildUserTo(String userName, String password) {
         UserTo userTo = new UserTo();
         userTo.setUsername(userName);
@@ -55,31 +69,11 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
         return userTo;
     }
 
-    @Override
-    public int register(String userName, String password) {
-    	UserTo userTo = buildUserTo(userName, password);
-    	ResponseEntity exchange=null;
-        RequestEntity<UserTo> requestEntity =
-                new RequestEntity<>(userTo, HttpMethod.POST, builRegisterRequestUri());
-        try{
-        exchange = restTemplate.exchange(requestEntity, new ParameterizedTypeReference<SessionTo>() {
-        });
-        }catch(Exception e){
-        	e.printStackTrace();
-        }
-        HttpStatus code = exchange.getStatusCode();
-        if(code.equals(HttpStatus.OK)){
-        	return 200;
-        }else{
-            return 100;     	
-        }
-    }
-    
+    /**
+     * metoda budująca URI dla servera
+     * @return URI dla logowania
+     */
     private URI builLoginRequestUri() {
         return URI.create(new StringBuilder().append(serviceUrl).append("/login/").toString());
-    }
-    
-    private URI builRegisterRequestUri() {
-        return URI.create(new StringBuilder().append(serviceUrl).append("/register/").toString());
     }
 }

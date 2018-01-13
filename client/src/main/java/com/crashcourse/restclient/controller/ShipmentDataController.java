@@ -8,6 +8,9 @@ import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * klasa kontrolera odpowiedzialnego za dialog z danymi do adresowania zamówienia
+ */
 public class ShipmentDataController extends ArtifactsBaseController {
 
     @Autowired
@@ -29,6 +32,9 @@ public class ShipmentDataController extends ArtifactsBaseController {
         this.zamowienieZakupu=zamowienieZakupu;
     }
 
+    /**
+     * inicjalizacja danych w kontrolerze
+     */
     @FXML
     public void initialize() {
         nameLabel.setText(zamowienieZakupu.getKlient().get().getImie().get());
@@ -47,6 +53,10 @@ public class ShipmentDataController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/ShipmentData.fxml";
     }
 
+    /**
+     * przejście do głownego ekranu
+     * przycisk OK
+     */
     @FXML
     public void proceed() {
         FXMLDialog defaultDialog=getScreens().mainScreenDialog();

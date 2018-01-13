@@ -12,6 +12,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 import javax.security.auth.login.LoginException;
 
+/**
+ * klasa kontrolera dialogu odpowiadającego za logowanie
+ */
 public class LoginController extends ArtifactsBaseController {
 
     @Autowired
@@ -30,6 +33,10 @@ public class LoginController extends ArtifactsBaseController {
         super(primaryStage);
     }
 
+    /**
+     * metoda odpowiadająca za przycisk logowania
+     * @throws LoginException
+     */
     @FXML
     public void proceed() throws LoginException {
 

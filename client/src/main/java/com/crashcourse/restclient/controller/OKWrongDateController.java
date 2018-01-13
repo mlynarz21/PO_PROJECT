@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * klasa odpowiadająca za kontroler dialogu który informuje o niepoprawnie wybranej dacie bilansowania
+ */
 public class OKWrongDateController extends ArtifactsBaseController {
 
     @Autowired
@@ -25,6 +28,9 @@ public class OKWrongDateController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/OKWrongDate.fxml";
     }
 
+    /**
+     * metoda odpowiadająca za przejście do dialogu z wyborem miesiąca bilansowania, przycisk OK
+     */
     @FXML
     public void proceed() {
         FXMLDialog defaultDialog=getScreens().monthPickupDialog();

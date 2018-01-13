@@ -12,7 +12,7 @@ public class InformationErrorController extends ArtifactsBaseController {
 	Label informationText;
 	private String errorType;
 	private String text;
-	
+
 	
 	/*
 	public InformationErrorController(Stage primaryStage) {
@@ -45,10 +45,10 @@ public class InformationErrorController extends ArtifactsBaseController {
 	}
 
 	
-	void show () {
-		informationText.setText("This user name already exists");
-	}
-	
+//	void show () {
+//		informationText.setText("This user name already exists");
+//	}
+
 	 @FXML
 	   void initialize() {
 		System.out.println(text);

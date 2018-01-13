@@ -7,6 +7,7 @@ import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
 import com.crashcourse.restclient.model.UmieszczenieModel;
 import com.crashcourse.restclient.model.ZamowienieZakupuModel;
 import com.crashcourse.restclient.view.FXMLDialog;
+import javafx.beans.property.DoubleProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -15,7 +16,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.text.DecimalFormat;
 import java.text.ParseException;
+import java.util.regex.Pattern;
 
+/**
+ * klasa kontrolera odpowiadającego za ekran wyboru ilości pobranego towaru
+ */
 public class QuantityProductController extends ArtifactsBaseController {
 
     @Autowired
@@ -26,9 +31,11 @@ public class QuantityProductController extends ArtifactsBaseController {
     private ZamowienieZakupuModel zamowienieZakupu;
     private PozycjaZamowieniaModel pozycjaZamowienia;
     private UmieszczenieModel umieszczenie;
+    private static String MSG_QUANTITY_OVERFLOW = "Podano za dużą liczbę";
+    private static String MSG_QUANTITY_LESS_THAN_ZERO = "Podano za dużą liczbę";
 
     @FXML
-    private Label localizationLabel;
+    private Label quantityLabel;
     @FXML
     private TextField quantityTextField;
 
@@ -42,9 +49,17 @@ public class QuantityProductController extends ArtifactsBaseController {
         this.umieszczenie=umieszczenie;
     }
 
+    /**
+     * metoda inicjacji dialogu (label)
+     */
     @FXML
     public void initialize() {
-        localizationLabel.setText(localizationLabel.getText() + umieszczenie.getLokalizacja().get().getKod().get());
+        quantityLabel.setText("Towar: "
+                + pozycjaZamowienia.getTowar().get().getKod().get()
+                + " Nazwa: "
+                + pozycjaZamowienia.getTowar().get().getNazwa().get()
+                + " Potrzeba jeszcze: "
+                + (pozycjaZamowienia.getIlosc().get() - pozycjaZamowienia.getZrealizowano().get()));
     }
 
 
@@ -58,6 +73,9 @@ public class QuantityProductController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/QuantityProduct.fxml";
     }
 
+    /**
+     * metoda powrotu do dialogu z lokalizacjami towaru, przycisk anuluj
+     */
     @FXML
     public void back() {
         FXMLDialog defaultDialog=getScreens().localizationPickupDialog(zamowienieZakupu,pozycjaZamowienia);
@@ -65,23 +83,28 @@ public class QuantityProductController extends ArtifactsBaseController {
         getScreens().showDialog(defaultDialog);
     }
 
+    /**
+     * metoda do akceptacji ilości zmienionego towaru. przycisk OK
+     */
     @FXML
     public void proceed() {
         FXMLDialog defaultDialog;
         DecimalFormat decimalFormat = new DecimalFormat("#");
         try {
-            double number = decimalFormat.parse(quantityTextField.getText()).doubleValue();
-            if(number <= umieszczenie.getIloscWLokalizacji().get() && number<=pozycjaZamowienia.getIlosc().get()-pozycjaZamowienia.getZrealizowano().get()){
+            if(!Pattern.matches("[0-9.,]+", quantityTextField.getText()))
+                throw new ParseException("Not a number",0);
+            double number = decimalFormat.parse(quantityTextField.getText().replace(".",",")).doubleValue();
+            if(number <= umieszczenie.getIloscWLokalizacji().get() && number<=pozycjaZamowienia.getIlosc().get()-pozycjaZamowienia.getZrealizowano().get() && number>0){
                 pozycjaZamowieniaRestServiceClient.proceedPozycjaZamowienia(pozycjaZamowienia.getID(), umieszczenie.getID(), number);
                 defaultDialog=getScreens().productPickupDialog(zamowienieZakupu);
             }
             else {
-                defaultDialog=getScreens().okWrongQuantityDialog(zamowienieZakupu, pozycjaZamowienia, umieszczenie);
+                defaultDialog=getScreens().okWrongQuantityDialog(zamowienieZakupu, pozycjaZamowienia, umieszczenie, MSG_QUANTITY_OVERFLOW);
             }
             getDialog().close();
             getScreens().showDialog(defaultDialog);
         } catch (ParseException e) {
-            defaultDialog=getScreens().okWrongQuantityDialog(zamowienieZakupu, pozycjaZamowienia, umieszczenie);
+            defaultDialog=getScreens().okWrongQuantityDialog(zamowienieZakupu, pozycjaZamowienia, umieszczenie, null);
             getDialog().close();
             getScreens().showDialog(defaultDialog);
         }

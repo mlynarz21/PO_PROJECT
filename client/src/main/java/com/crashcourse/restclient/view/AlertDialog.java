@@ -4,6 +4,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
 
+/**
+ * klasa odpowiadająca za tworzenie instancji Alertów w programie
+ */
 public class AlertDialog {
 
     private Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -13,6 +16,10 @@ public class AlertDialog {
     public AlertDialog(){
     }
 
+    /**
+     * metoda dostępu do podstawowego alertu
+     * @return alert
+     */
     public Alert getAlert(){
         alert.setTitle("Wydanie zamówienia");
         alert.setHeaderText("Czy na pewno chcesz wydać to zamówienie?\nTa akcja jest nieodwracalna");
@@ -33,6 +40,10 @@ public class AlertDialog {
         return alert;
     }
 
+    /**
+     * metoda dostępu do alertu wydanie
+     * @return alert wydania
+     */
     public Alert getConfirmationAlert(){
         alert.setTitle("Wydanie zamówienia");
         alert.setHeaderText("Czy na pewno chcesz wydać to zamówienie?\nTa akcja jest nieodwracalna");

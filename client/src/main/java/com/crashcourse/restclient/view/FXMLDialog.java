@@ -17,8 +17,6 @@ import javafx.stage.Window;
 
 /**
  * Binding between an fxml file and our controller.
- *
- * @author Mateusz
  */
 public class FXMLDialog extends Stage {
     private String baseName = "com/crashcourse/restclient/bundle/base";

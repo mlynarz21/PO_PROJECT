@@ -60,6 +60,11 @@
             </HBox>
          </children>
       </VBox>
+      <Label fx:id="quantityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-136.0" prefWidth="2300.0" style="-fx-background-color: #FF0000; -fx-opacity: 0.95;" text="randomText" textFill="WHITE" AnchorPane.leftAnchor="-20.0" AnchorPane.rightAnchor="-20.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="52.0" />
+         </font>
+      </Label>
     </children>
    <padding>
       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

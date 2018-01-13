@@ -19,6 +19,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * klasa odpowiadająca za kontroler dialogu z wybieraniem zamówienia
+ */
 public class OrderPickupController extends ArtifactsBaseController {
 
     @Autowired
@@ -48,6 +51,9 @@ public class OrderPickupController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/OrderPickup.fxml";
     }
 
+    /**
+     * inicjalizacja danych dialogu
+     */
     @FXML
     public void initialize() {
         loadAllData();
@@ -57,12 +63,18 @@ public class OrderPickupController extends ArtifactsBaseController {
         terminRealizacjiColumn.setCellValueFactory(celldata -> new SimpleStringProperty(df.format(celldata.getValue().getTerminRealizacji().get())));
     }
 
+    /**
+     * metoda odpowiadająca za pobranie danych z severa i ustawienie kontentu tabeli
+     */
     private void loadAllData() {
         List<ZamowienieZakupuTO> zamowienia = zamowienieZakupuRestServiceClient.getAllZaakceptowane();
         List<ZamowienieZakupuModel> rows = zamowienia.stream().map(ZamowienieZakupuModel::fromZamowienieZakupuTo).collect(Collectors.toList());
         ordersTable.setItems(FXCollections.observableArrayList(rows));
     }
 
+    /**
+     * metoda odpowiadająca za powrót do głownego ektanu aplikacji. przycisk Anuluj
+     */
     @FXML
     public void back() {
         FXMLDialog defaultDialog=getScreens().mainScreenDialog();
@@ -70,6 +82,9 @@ public class OrderPickupController extends ArtifactsBaseController {
         getScreens().showDialog(defaultDialog);
     }
 
+    /**
+     * metoda odpowiadająca za przejście do ektanu z wyborem produktu. przycisk OK
+     */
     @FXML
     public void proceed() {
         if(ordersTable.getSelectionModel().getSelectedItem()!=null) {

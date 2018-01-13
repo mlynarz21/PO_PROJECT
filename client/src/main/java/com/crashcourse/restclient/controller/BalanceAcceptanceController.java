@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * kontroler odpowiadający za akceptację bilansu
+ */
 public class BalanceAcceptanceController extends ArtifactsBaseController {
 
     @Autowired
@@ -25,6 +28,9 @@ public class BalanceAcceptanceController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/BalanceAcceptance.fxml";
     }
 
+    /**
+     * metoda zmiany ekranu na głowny. przycisk OK
+     */
     @FXML
     public void goToMainScreen() {
         FXMLDialog defaultDialog = getScreens().mainScreenDialog();

@@ -22,6 +22,9 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+/**
+ * klasa kontrolera odpowiadającego za dialog z listą produktów w zamówieniu
+ */
 public class ProductPickupController extends ArtifactsBaseController {
 
     @Autowired
@@ -53,6 +56,9 @@ public class ProductPickupController extends ArtifactsBaseController {
         this.zamowienieZakupu = zamowienieZakupu;
     }
 
+    /**
+     * metoda inicjująca dane w dialogu
+     */
     @FXML
     public void initialize() {
         DateFormat df = new SimpleDateFormat("dd-MM-yyyy");
@@ -64,6 +70,9 @@ public class ProductPickupController extends ArtifactsBaseController {
         realizedColumn.setCellValueFactory(celldata -> celldata.getValue().getZrealizowano().asObject());
     }
 
+    /**
+     * metoda pobierająca dane z severa i ustawiająca je do tabeli
+     */
     private void loadAllData() {
         List<PozycjaZamowieniaTO> pozycje = pozycjaZamowieniaRestServiceClient.getPozycjeZamowienia(zamowienieZakupu.getID());
         List<PozycjaZamowieniaModel> rows = pozycje.stream().map(PozycjaZamowieniaModel::fromPozycjaZamowieniaTo).collect(Collectors.toList());
@@ -80,6 +89,10 @@ public class ProductPickupController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/ProductPickup.fxml";
     }
 
+    /**
+     * metoda do powrotu do dialogu z listą zamówień
+     * przycisk anuluj
+     */
     @FXML
     public void backToOrderPickup() {
         FXMLDialog defaultDialog = getScreens().orderPickupDialog();
@@ -87,6 +100,10 @@ public class ProductPickupController extends ArtifactsBaseController {
         getScreens().showDialog(defaultDialog);
     }
 
+    /**
+     * metoda służąca do wydania zamówienia co skutkuje zmianą jego statusu
+     * przycisk wydawana
+     */
     @FXML
     public void issue() {
         AlertDialog alertDialog = new AlertDialog();
@@ -106,6 +123,10 @@ public class ProductPickupController extends ArtifactsBaseController {
         }
     }
 
+    /**
+     * metoda przejścia do dialogu z wyborem lokalizacji produktu
+     * przycisk OK
+     */
     @FXML
     public void proceed() {
         FXMLDialog defaultDialog;

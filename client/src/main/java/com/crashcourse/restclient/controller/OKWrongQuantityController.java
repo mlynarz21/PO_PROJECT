@@ -6,9 +6,13 @@ import com.crashcourse.restclient.model.UmieszczenieModel;
 import com.crashcourse.restclient.model.ZamowienieZakupuModel;
 import com.crashcourse.restclient.view.FXMLDialog;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * klasa odpowiadająca za kontroler dialogu po wybraniu złej ilości produktu
+ */
 public class OKWrongQuantityController extends ArtifactsBaseController {
 
     @Autowired
@@ -17,14 +21,24 @@ public class OKWrongQuantityController extends ArtifactsBaseController {
     private ZamowienieZakupuModel zamowienieZakupu;
     private PozycjaZamowieniaModel pozycjaZamowienia;
     private UmieszczenieModel umieszczenie;
+    private String message;
 
-    public OKWrongQuantityController(Stage primaryStage, ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie) {
+    @FXML
+    private Label label;
+
+    public OKWrongQuantityController(Stage primaryStage, ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie, String message) {
         super(primaryStage);
         this.zamowienieZakupu=zamowienieZakupu;
         this.pozycjaZamowienia=pozycjaZamowienia;
         this.umieszczenie=umieszczenie;
+        this.message= message;
     }
 
+    @FXML
+    public void initialize() {
+        if (message != null)
+            label.setText(message);
+    }
     @FXML
     public void close() {
         getDialog().close();
@@ -35,6 +49,10 @@ public class OKWrongQuantityController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/OKWrongQuantity.fxml";
     }
 
+
+    /**
+     * powrót do wyboru ilości produktu. przycisk OK
+     */
     @FXML
     public void proceed() {
         FXMLDialog defaultDialog=getScreens().quantityProductDialog(zamowienieZakupu,pozycjaZamowienia,umieszczenie);

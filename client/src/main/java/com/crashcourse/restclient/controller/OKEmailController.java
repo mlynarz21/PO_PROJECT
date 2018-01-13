@@ -6,6 +6,9 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * klasa odpowiadająca za kontroler dilogu wyświetlającego informacje o wysłanym powiadomeniu Email
+ */
 public class OKEmailController extends ArtifactsBaseController {
 
     @Autowired
@@ -25,6 +28,9 @@ public class OKEmailController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/OKEmail.fxml";
     }
 
+    /**
+     * metoda powracająca do głownego ekranu, przycisk OK
+     */
     @FXML
     public void proceed() {
         FXMLDialog defaultDialog=getScreens().mainScreenDialog();

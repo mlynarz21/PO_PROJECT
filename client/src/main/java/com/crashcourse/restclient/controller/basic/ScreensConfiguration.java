@@ -16,6 +16,9 @@ import com.crashcourse.restclient.view.FXMLDialog;
 
 import javafx.stage.Stage;
 
+/**
+ * klasa zawierająca informacje o wszystkich dostępnych kontrolerach ekranów
+ */
 @Configuration
 @Lazy
 public class ScreensConfiguration {
@@ -183,14 +186,14 @@ public class ScreensConfiguration {
 
     @Bean
     @Scope("prototype")
-    public FXMLDialog okWrongQuantityDialog(ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie) {
-        return manager.initializeDialog(okWrongQuantityController(zamowienieZakupu, pozycjaZamowienia, umieszczenie));
+    public FXMLDialog okWrongQuantityDialog(ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie, String message) {
+        return manager.initializeDialog(okWrongQuantityController(zamowienieZakupu, pozycjaZamowienia, umieszczenie, message));
     }
 
     @Bean
     @Scope("prototype")
-    public OKWrongQuantityController okWrongQuantityController(ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie) {
-        return new OKWrongQuantityController(primaryStage, zamowienieZakupu, pozycjaZamowienia, umieszczenie);
+    public OKWrongQuantityController okWrongQuantityController(ZamowienieZakupuModel zamowienieZakupu, PozycjaZamowieniaModel pozycjaZamowienia, UmieszczenieModel umieszczenie, String message) {
+        return new OKWrongQuantityController(primaryStage, zamowienieZakupu, pozycjaZamowienia, umieszczenie, message);
     }
 
     @Bean

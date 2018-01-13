@@ -7,6 +7,9 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * kontroler odpowiadający za głowny ekran aplikacji
+ */
 public class MainScreenController extends ArtifactsBaseController {
 
     @Autowired
@@ -28,6 +31,10 @@ public class MainScreenController extends ArtifactsBaseController {
         return "/com/crashcourse/restclient/controller/MainScreen.fxml";
     }
 
+    /**
+     * metoda wylogowująca użytkownika
+     * przycisk w GUI
+     */
     @FXML
     public void logOut() {
         context.deleteSession();
@@ -36,12 +43,21 @@ public class MainScreenController extends ArtifactsBaseController {
         getScreens().showDialog(defaultDialog);
     }
 
+    /**
+     * metoda rozpoczynająca tworzenie nowego bilansu
+     * przycisk w GUI
+     */
     @FXML
     public void makeBalance() {
         FXMLDialog defaultDialog = getScreens().monthPickupDialog();
         getDialog().close();
         getScreens().showDialog(defaultDialog);
     }
+
+    /**
+     * metoda rozpoczynająca kompletowanie zamówienia
+     * przycisk w GUI
+     */
     @FXML
     public void completeOrder() {
         FXMLDialog defaultDialog;
