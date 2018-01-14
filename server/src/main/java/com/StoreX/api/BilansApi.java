@@ -26,7 +26,4 @@ public interface BilansApi {
      * @return Informacja o powodzeniu operacji dodawania bilansu
      */
     ResponseEntity<Boolean> addBilans(Date dataBilansowana, String sessionId);
-
-
-    ResponseEntity<List<PozycjaZamowieniaTO>> addTest(String sessionId);
 }
