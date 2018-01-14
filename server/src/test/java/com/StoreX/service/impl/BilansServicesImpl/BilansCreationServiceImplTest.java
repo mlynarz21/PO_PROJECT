@@ -60,14 +60,7 @@ public class BilansCreationServiceImplTest {
 
     @Before
     public void setUp() throws Exception {
-        Calendar dataBilansowana = Calendar.getInstance();
-        dataBilansowana.set(2017,10,10);
 
-        Calendar dataWykonania1 = Calendar.getInstance();
-        dataWykonania1.set(2017,10,10);
-        Calendar dataOstatniegoBilansu = Calendar.getInstance();
-        dataOstatniegoBilansu.set(2017,9,10);
-        Bilans lastBilans = new Bilans(1L,dataBilansowana.getTime(),dataOstatniegoBilansu.getTime() );
 
         Mockito.when(authorizationService.isUserAuthorized(UUID.fromString("53b37a38-7bf1-48dd-9b92-f14e1b691adf"))).thenReturn(true);
     }
@@ -274,4 +267,147 @@ public class BilansCreationServiceImplTest {
         Assert.assertEquals((int)25.0, (int)argument.getValue().getIlosc());
     }
 
+
+    /**
+     * Dodaje nowy bilans z pozycjami bilansu wynikającymi z poprzedniego bilansu, pozycji wydań, pozycji zamówień.
+     * Pozycje bilansu zawierają różne towary, operacja zapisania pozycji bilansu powinna zostać wykonana 3 razy
+     */
+    @Test
+    public void addBilans_PozycjeOstatniegoBilansuPozycjePrzyjecPozycjeWydanRozneTowary_AreEqual() {
+        Calendar dataOstatniegoBilansu = Calendar.getInstance();
+        dataOstatniegoBilansu.set(2017,9,10);
+        Calendar dataWykonaniaBilansu = Calendar.getInstance();
+        dataWykonaniaBilansu.set(2017,10,10);
+        Bilans ostatniBilans = new Bilans(1L,dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
+        Mockito.when(bilansRepository.findLastBilansByDate()).thenReturn(ostatniBilans);
+        TowarBO t = new TowarBO();
+        t.setID(1L);
+        Towar t11 = new Towar();
+        t11.setID(1L);
+        TowarBO t2 = new TowarBO();
+        t2.setID(2L);
+        Towar t22 = new Towar();
+        t22.setID(2L);
+        TowarBO t3 = new TowarBO();
+        t3.setID(3L);
+        Towar t33 = new Towar();
+        t33.setID(3L);
+
+        Mockito.when(towarService.getById(1L)).thenReturn(t11);
+        Mockito.when(towarService.getById(2L)).thenReturn(t22);
+        Mockito.when(towarService.getById(3L)).thenReturn(t33);
+
+        PozycjaBilansuBO pozycjaBilansuBO = new PozycjaBilansuBO();
+        pozycjaBilansuBO.setIlosc(10);
+        pozycjaBilansuBO.setTowar(t);
+        List<PozycjaBilansuBO> pozycjaBilansuBOList = new ArrayList<PozycjaBilansuBO>();
+        pozycjaBilansuBOList.add(pozycjaBilansuBO);
+        try {
+            Mockito.when(pozycjaBilansuSearchService.findAllForBilans(1L)).thenReturn(pozycjaBilansuBOList);
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        }
+
+        PozycjaPrzyjeciaBO pozycjaPrzyjeciaBO = new PozycjaPrzyjeciaBO();
+        pozycjaPrzyjeciaBO.setTowar(t2);
+        pozycjaPrzyjeciaBO.setID(2L);
+        pozycjaPrzyjeciaBO.setIlosc(20);
+        List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<PozycjaPrzyjeciaBO>();
+        pozycjaPrzyjeciaBOList.add(pozycjaPrzyjeciaBO);
+        try {
+            Mockito.when(pozycjaPrzyjeciaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaPrzyjeciaBOList);
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        }
+
+        PozycjaWydaniaBO pozycjaWydaniaaBO = new PozycjaWydaniaBO();
+        pozycjaWydaniaaBO.setTowar(t3);
+        pozycjaWydaniaaBO.setID(3L);
+        pozycjaWydaniaaBO.setIlosc(5);
+        List<PozycjaWydaniaBO> pozycjaWydaniaBOList = new ArrayList<PozycjaWydaniaBO>();
+        pozycjaWydaniaBOList.add(pozycjaWydaniaaBO);
+        try {
+            Mockito.when(pozycjaWydaniaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaWydaniaBOList);
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        }
+
+        Calendar dataBilansowana = Calendar.getInstance();
+        dataBilansowana.set(2017,10,10);
+        String errorMessage = "";
+
+        //act
+        try {
+            bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
+        } catch (Exception e) {
+            errorMessage = e.getMessage();
+        }
+
+        //assert
+        ArgumentCaptor<PozycjaBilansuBO> argument = ArgumentCaptor.forClass(PozycjaBilansuBO.class);
+        verify(pozycjaBilansuCreationService,  Mockito.times(3)).savePozycjaBilansu(any());
+
+    }
+
+
+    /**
+     *  Dodaje pierwszy bilans do bazy. Powinna zostać zapisana pozycja bilansu z różnicą ilośc w pozycji przyjecia
+     *  i pozycji wydania dla danego towaru.
+     */
+    @Test
+    public void addBilans_PierwszyBilans_AreEqual() {
+        Calendar dataOstatniegoBilansu = Calendar.getInstance();
+        dataOstatniegoBilansu.set(2017,9,10);
+        Calendar dataWykonaniaBilansu = Calendar.getInstance();
+        dataWykonaniaBilansu.set(2017,10,10);
+        Bilans ostatniBilans = new Bilans(1L,dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
+        Mockito.when(bilansRepository.findLastBilansByDate()).thenReturn(null);
+        TowarBO t = new TowarBO();
+        t.setID(1L);
+        Towar t11 = new Towar();
+        t11.setID(1L);
+
+        Mockito.when(towarService.getById(1L)).thenReturn(t11);
+
+
+        PozycjaPrzyjeciaBO pozycjaPrzyjeciaBO = new PozycjaPrzyjeciaBO();
+        pozycjaPrzyjeciaBO.setTowar(t);
+        pozycjaPrzyjeciaBO.setID(1L);
+        pozycjaPrzyjeciaBO.setIlosc(20);
+        List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<PozycjaPrzyjeciaBO>();
+        pozycjaPrzyjeciaBOList.add(pozycjaPrzyjeciaBO);
+        try {
+            Mockito.when(pozycjaPrzyjeciaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaPrzyjeciaBOList);
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        }
+
+        PozycjaWydaniaBO pozycjaWydaniaaBO = new PozycjaWydaniaBO();
+        pozycjaWydaniaaBO.setTowar(t);
+        pozycjaWydaniaaBO.setID(1L);
+        pozycjaWydaniaaBO.setIlosc(5);
+        List<PozycjaWydaniaBO> pozycjaWydaniaBOList = new ArrayList<PozycjaWydaniaBO>();
+        pozycjaWydaniaBOList.add(pozycjaWydaniaaBO);
+        try {
+            Mockito.when(pozycjaWydaniaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaWydaniaBOList);
+        } catch (AuthenticationException e) {
+            e.printStackTrace();
+        }
+
+        Calendar dataBilansowana = Calendar.getInstance();
+        dataBilansowana.set(2017,10,10);
+        String errorMessage = "";
+
+        //act
+        try {
+            bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
+        } catch (Exception e) {
+            errorMessage = e.getMessage();
+        }
+
+        //assert
+        ArgumentCaptor<PozycjaBilansuBO> argument = ArgumentCaptor.forClass(PozycjaBilansuBO.class);
+        verify(pozycjaBilansuCreationService).savePozycjaBilansu(argument.capture());
+        Assert.assertEquals((int)15.0, (int)argument.getValue().getIlosc());
+    }
 }

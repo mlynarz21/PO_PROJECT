@@ -1,0 +1,11 @@
+com.crashcourse.restclient.api
+com.crashcourse.restclient.api.impl
+com.crashcourse.restclient.common
+com.crashcourse.restclient.controller
+com.crashcourse.restclient.controller.basic
+com.crashcourse.restclient.datatype
+com.crashcourse.restclient.datatype.enumeration
+com.crashcourse.restclient.main
+com.crashcourse.restclient.main.config
+com.crashcourse.restclient.model
+com.crashcourse.restclient.view
