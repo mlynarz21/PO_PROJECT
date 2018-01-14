@@ -1,8 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f31e1de3-36f0-4a41-917e-a7e76ea92651" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../SkryptTestowy.docx" afterPath="" />
+    <list default="true" id="f31e1de3-36f0-4a41-917e-a7e76ea92651" name="Default" comment="??">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/css/maven-base.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/css/maven-theme.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/css/print.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/css/site.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/dependencies.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/dependency-convergence.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/dependency-info.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/close.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/collapsed.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/expanded.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/external.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/icon_error_sml.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/icon_info_sml.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/icon_success_sml.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/icon_warning_sml.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/logos/build-by-maven-black.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/logos/build-by-maven-white.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/logos/maven-feather.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/images/newwindow.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/jdepend-report.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/plugin-management.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/plugins.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/project-info.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/project-reports.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Jdepend/project-summary.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/css/maven-base.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/css/maven-theme.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/css/print.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/css/site.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/dependencies.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/dependency-info.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/dependency-management.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/close.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/collapsed.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/expanded.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/external.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/icon_error_sml.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/icon_info_sml.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/icon_success_sml.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/icon_warning_sml.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/logos/build-by-maven-black.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/logos/build-by-maven-white.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/logos/maven-feather.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/images/newwindow.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/jdepend-report.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/license.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/plugin-management.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/plugins.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/project-info.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/project-reports.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/project-summary.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/source-repository.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../server/Jdepend/team-list.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -48,11 +103,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jdepend-report.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="jdepend-report.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/jdepend-report.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -103,7 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/AuthorizationRestServiceClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/AuthorizationRestServiceClientImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/BilansRestServiceClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/config/StoreXSecurityContext.java" />
@@ -154,6 +218,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/StoreXApplicationTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ConfirmationDialog.fxml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -174,7 +239,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -379,6 +444,116 @@
       <recent name="C:\Users\mlynarz\Desktop\PO_MAGAZYN\client\src\main\resources\com\crashcourse\restclient\css" />
     </key>
   </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/../SkryptTestowy.docx</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -565,7 +740,7 @@
       <workItem from="1515108256687" duration="1398000" />
       <workItem from="1515842699693" duration="20434000" />
       <workItem from="1515885727558" duration="3780000" />
-      <workItem from="1515926495108" duration="4760000" />
+      <workItem from="1515926495108" duration="5014000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1513790968539</created>
@@ -757,14 +932,14 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156590000" />
+    <option name="totallyTimeSpent" value="156844000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2916225" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.49333334" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.49312714" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -778,9 +953,9 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36373276" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38282079" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.50666666" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.50687283" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9628844" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -939,13 +1114,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKNoWaitingOrdersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LocalizationPickupController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -1377,7 +1545,15 @@
     <entry file="file://$PROJECT_DIR$/target/jdepend-report.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="8" />
           <folding />
         </state>
       </provider>
