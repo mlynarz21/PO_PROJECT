@@ -13,7 +13,7 @@
                 <Font size="26.0" />
             </font>
         </Label>
-        <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" layoutY="208.0" mnemonicParsing="false" onAction="#proceed" style="-fx-background-color: #3C1E06; -fx-opacity: 0.95;" text="%ConfirmationDialog.cancel" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0">
+        <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" layoutY="208.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #3C1E06; -fx-opacity: 0.95;" text="%ConfirmationDialog.cancel" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0">
             <font>
                 <Font size="26.0" />
             </font>
