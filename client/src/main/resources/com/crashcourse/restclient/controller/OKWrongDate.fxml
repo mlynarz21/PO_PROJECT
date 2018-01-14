@@ -13,7 +13,7 @@
             <Font size="52.0" />
          </font>
       </Label>
-      <Button fx:id="OK" alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="900.0" layoutY="771.0" mnemonicParsing="false" onAction="#proceed" prefWidth="300.0" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-opacity: 0.95;" text="%BalanceAcceptance.ok" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="700.0" AnchorPane.rightAnchor="700.0">
+      <Button fx:id="OKDate" alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="900.0" layoutY="771.0" mnemonicParsing="false" onAction="#proceed" prefWidth="300.0" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-opacity: 0.95;" text="%BalanceAcceptance.ok" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="700.0" AnchorPane.rightAnchor="700.0">
          <font>
             <Font size="52.0" />
          </font>

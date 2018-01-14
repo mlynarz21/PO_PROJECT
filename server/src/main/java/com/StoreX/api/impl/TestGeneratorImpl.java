@@ -26,10 +26,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import javax.naming.AuthenticationException;
 import java.util.ArrayList;
@@ -78,8 +80,10 @@ public class TestGeneratorImpl {
     private ModelMapper modelMapper = new ModelMapper();
 
 
-    @RequestMapping(value = "/addTest/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<PozycjaZamowieniaTO>> addTest(String sessionId) {
+    @RequestMapping(value = "/addTest/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> addTest(String sessionId) {
+
+        turncate();
 
         Klient klient1 = new Klient();
         klient1.setImie("Jan");
@@ -131,19 +135,19 @@ public class TestGeneratorImpl {
         jednostkaService.add(jednostka2);
 
 
-        Towar t1 = new Towar("t1A48", "Rama", 0, 2,jednostka2,kategoria2,150);
-        Towar t2 = new Towar("t2B28", "Kolo", 0, 2,jednostka2,kategoria2,150);
-        Towar t3 = new Towar("t3A38", "Dzwonek", 0, 2,jednostka2,kategoria2,200);
-        Towar t4 = new Towar("t4A47", "Korba", 0, 2,jednostka2,kategoria2,150);
-        Towar t5 = new Towar("t5U48", "Lancuch", 0, 2,jednostka2,kategoria2,1140);
-        Towar t6 = new Towar("t6J48", "Pompka", 0, 2,jednostka2,kategoria2,1500);
-        Towar t7 = new Towar("t7A49", "Siodelko", 0, 2,jednostka2,kategoria2,200);
-        Towar t8 = new Towar("t8A50", "Fotel", 0, 2,jednostka2,kategoria1,150);
-        Towar t9 = new Towar("t9A48", "Kierownica", 0, 2,jednostka2,kategoria1,150);
-        Towar t10 = new Towar("t10A48", "Opona", 0, 2,jednostka2,kategoria1,150);
-        Towar t11 = new Towar("t11A78", "Wiertarka", 0, 2,jednostka2,kategoria3,150);
-        Towar t12 = new Towar("t12D48", "Srubki", 0, 2,jednostka1,kategoria3,150);
-        Towar t13 = new Towar("t13E48", "Mlotek", 0, 2,jednostka2,kategoria3,150);
+        Towar t1 = new Towar("t1A48", "Rama", 0, 2, jednostka2, kategoria2, 150);
+        Towar t2 = new Towar("t2B28", "Kolo", 0, 2, jednostka2, kategoria2, 150);
+        Towar t3 = new Towar("t3A38", "Dzwonek", 0, 2, jednostka2, kategoria2, 200);
+        Towar t4 = new Towar("t4A47", "Korba", 0, 2, jednostka2, kategoria2, 150);
+        Towar t5 = new Towar("t5U48", "Lancuch", 0, 2, jednostka2, kategoria2, 1140);
+        Towar t6 = new Towar("t6J48", "Pompka", 0, 2, jednostka2, kategoria2, 1500);
+        Towar t7 = new Towar("t7A49", "Siodelko", 0, 2, jednostka2, kategoria2, 200);
+        Towar t8 = new Towar("t8A50", "Fotel", 0, 2, jednostka2, kategoria1, 150);
+        Towar t9 = new Towar("t9A48", "Kierownica", 0, 2, jednostka2, kategoria1, 150);
+        Towar t10 = new Towar("t10A48", "Opona", 0, 2, jednostka2, kategoria1, 150);
+        Towar t11 = new Towar("t11A78", "Wiertarka", 0, 2, jednostka2, kategoria3, 150);
+        Towar t12 = new Towar("t12D48", "Srubki", 0, 2, jednostka1, kategoria3, 150);
+        Towar t13 = new Towar("t13E48", "Mlotek", 0, 2, jednostka2, kategoria3, 150);
 
         List<Towar> towarList = new ArrayList<Towar>();
         towarList.add(t1);
@@ -174,9 +178,9 @@ public class TestGeneratorImpl {
         towarService.saveTowar(t13);
 
         Calendar c1 = Calendar.getInstance();
-        c1.set(2017,11,1);
+        c1.set(2017, 11, 1);
         Calendar c2 = Calendar.getInstance();
-        c2.set(2018,0,15);
+        c2.set(2018, 0, 15);
 
         ZamowienieZakupu z1 = new ZamowienieZakupu("Z1", c1.getTime(), StatusWydania.Zaakceptowane, klient1, TypOdbioru.Wysylka, c2.getTime());
         ZamowienieZakupu z2 = new ZamowienieZakupu("Z2", c1.getTime(), StatusWydania.Gotowe, klient1, TypOdbioru.Osobiscie, c2.getTime());
@@ -193,50 +197,50 @@ public class TestGeneratorImpl {
 
 
         List<PozycjaZamowienia> pzList = new ArrayList<PozycjaZamowienia>();
-        pzList.add(new PozycjaZamowienia(20,0, t1, z1));
-        pzList.add( new PozycjaZamowienia(20,0, t2, z1));
-        pzList.add(new PozycjaZamowienia(10,0, t3, z1));
-        pzList.add( new PozycjaZamowienia(10,0, t4, z1));
-        pzList.add( new PozycjaZamowienia(20,0, t5, z1));
-        pzList.add( new PozycjaZamowienia(10,0, t6, z1));
-        pzList.add( new PozycjaZamowienia(20,0, t7, z1));
-        pzList.add( new PozycjaZamowienia(10,0, t8, z1));
-        pzList.add( new PozycjaZamowienia(10,0, t9, z1));
-        pzList.add( new PozycjaZamowienia(40,0, t10, z1));
+        pzList.add(new PozycjaZamowienia(20, 0, t1, z1));
+        pzList.add(new PozycjaZamowienia(20, 0, t2, z1));
+        pzList.add(new PozycjaZamowienia(10, 0, t3, z1));
+        pzList.add(new PozycjaZamowienia(10, 0, t4, z1));
+        pzList.add(new PozycjaZamowienia(20, 0, t5, z1));
+        pzList.add(new PozycjaZamowienia(10, 0, t6, z1));
+        pzList.add(new PozycjaZamowienia(20, 0, t7, z1));
+        pzList.add(new PozycjaZamowienia(10, 0, t8, z1));
+        pzList.add(new PozycjaZamowienia(10, 0, t9, z1));
+        pzList.add(new PozycjaZamowienia(40, 0, t10, z1));
 
-        pzList.add(new PozycjaZamowienia(20,0, t1, z2));
-        pzList.add(new PozycjaZamowienia(10,0, t2, z2));
-        pzList.add(new PozycjaZamowienia(20,0, t13, z2));
-        pzList.add( new PozycjaZamowienia(20,0, t11, z2));
-        pzList.add(new PozycjaZamowienia(30,0, t6, z2));
-        pzList.add( new PozycjaZamowienia(20,0, t7, z2));
+        pzList.add(new PozycjaZamowienia(20, 0, t1, z2));
+        pzList.add(new PozycjaZamowienia(10, 0, t2, z2));
+        pzList.add(new PozycjaZamowienia(20, 0, t13, z2));
+        pzList.add(new PozycjaZamowienia(20, 0, t11, z2));
+        pzList.add(new PozycjaZamowienia(30, 0, t6, z2));
+        pzList.add(new PozycjaZamowienia(20, 0, t7, z2));
 
-        pzList.add( new PozycjaZamowienia(10,0, t1, z3));
-        pzList.add(new PozycjaZamowienia(10,0, t2, z3));
-        pzList.add( new PozycjaZamowienia(20,0, t5, z3));
-        pzList.add(new PozycjaZamowienia(20,0, t4, z3));
-        pzList.add( new PozycjaZamowienia(40,0, t13, z3));
-        pzList.add(new PozycjaZamowienia(20,0, t12, z3));
+        pzList.add(new PozycjaZamowienia(10, 0, t1, z3));
+        pzList.add(new PozycjaZamowienia(10, 0, t2, z3));
+        pzList.add(new PozycjaZamowienia(20, 0, t5, z3));
+        pzList.add(new PozycjaZamowienia(20, 0, t4, z3));
+        pzList.add(new PozycjaZamowienia(40, 0, t13, z3));
+        pzList.add(new PozycjaZamowienia(20, 0, t12, z3));
 
-        pzList.add( new PozycjaZamowienia(10,0, t1, z4));
-        pzList.add(new PozycjaZamowienia(20,0, t11, z4));
-        pzList.add( new PozycjaZamowienia(10,0, t12, z4));
-        pzList.add( new PozycjaZamowienia(20,0, t13, z4));
-        pzList.add(new PozycjaZamowienia(10,0, t2, z4));
-        pzList.add(new PozycjaZamowienia(20,0, t3, z4));
-        pzList.add(new PozycjaZamowienia(10,0, t4, z4));
+        pzList.add(new PozycjaZamowienia(10, 0, t1, z4));
+        pzList.add(new PozycjaZamowienia(20, 0, t11, z4));
+        pzList.add(new PozycjaZamowienia(10, 0, t12, z4));
+        pzList.add(new PozycjaZamowienia(20, 0, t13, z4));
+        pzList.add(new PozycjaZamowienia(10, 0, t2, z4));
+        pzList.add(new PozycjaZamowienia(20, 0, t3, z4));
+        pzList.add(new PozycjaZamowienia(10, 0, t4, z4));
 
-        pzList.add( new PozycjaZamowienia(20,0, t10, z5));
-        pzList.add(new PozycjaZamowienia(30,0, t9, z5));
-        pzList.add( new PozycjaZamowienia(20,0, t7, z5));
-        pzList.add( new PozycjaZamowienia(10,0, t6, z5));
-        pzList.add( new PozycjaZamowienia(20,0, t1, z5));
+        pzList.add(new PozycjaZamowienia(20, 0, t10, z5));
+        pzList.add(new PozycjaZamowienia(30, 0, t9, z5));
+        pzList.add(new PozycjaZamowienia(20, 0, t7, z5));
+        pzList.add(new PozycjaZamowienia(10, 0, t6, z5));
+        pzList.add(new PozycjaZamowienia(20, 0, t1, z5));
 
-        pzList.add( new PozycjaZamowienia(20,0, t3, z6));
-        pzList.add( new PozycjaZamowienia(10,0, t2, z6));
-        pzList.add( new PozycjaZamowienia(20,0, t1, z6));
+        pzList.add(new PozycjaZamowienia(20, 0, t3, z6));
+        pzList.add(new PozycjaZamowienia(10, 0, t2, z6));
+        pzList.add(new PozycjaZamowienia(20, 0, t1, z6));
 
-        for (PozycjaZamowienia pozycja: pzList) {
+        for (PozycjaZamowienia pozycja : pzList) {
             pozycjaZamowieniaService.add(pozycja);
         }
 
@@ -244,118 +248,236 @@ public class TestGeneratorImpl {
         String kodL = "L1";
         int regal = 0;
         int rzad = 0;
-        for(int i = 0; i < 39; i++) {
-            regal = regal%8 == 0 ? regal : regal + 1;
-            rzad = rzad%5 == 0 ? rzad : rzad + 1;
-            lokalizacjaList.add(new Lokalizacja(kodL + i,regal,rzad,i%7));
+        for (int i = 0; i < 39; i++) {
+            regal = regal % 8 == 0 ? regal : regal + 1;
+            rzad = rzad % 5 == 0 ? rzad : rzad + 1;
+            lokalizacjaList.add(new Lokalizacja(kodL + i, regal, rzad, i % 7));
         }
 
-        for (Lokalizacja pozycja: lokalizacjaList) {
+        for (Lokalizacja pozycja : lokalizacjaList) {
             lokalizacjaService.add(pozycja);
         }
 
         Random rand = new Random();
         List<Umieszczenie> umieszczenieList = new ArrayList<Umieszczenie>();
-        for (int i = 0; i < 39; i ++ ) {
-            umieszczenieList.add(new Umieszczenie((double)rand.nextInt(30) + 20, towarList.get(i%13),lokalizacjaList.get(i)));
+        for (int i = 0; i < 39; i++) {
+            umieszczenieList.add(new Umieszczenie((double) rand.nextInt(30) + 20, towarList.get(i % 13), lokalizacjaList.get(i)));
         }
 
-        for (Umieszczenie pozycja: umieszczenieList) {
+        for (Umieszczenie pozycja : umieszczenieList) {
             umieszczenieService.addService(pozycja);
         }
 
 
         Calendar c3 = Calendar.getInstance();
-        c3.set(2017,10,10);
+        c3.set(2017, 10, 10);
 
         List<WydanieZamowienia> wydanieZamowieniaList = new ArrayList<WydanieZamowienia>();
 
-        for (int i = 0; i < 10; i ++){
-            if(i%2 ==0 )
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0)
                 wydanieZamowieniaList.add(new WydanieZamowienia(c3.getTime(), z1));
             else
                 wydanieZamowieniaList.add(new WydanieZamowienia(c3.getTime(), z2));
         }
 
-        for (WydanieZamowienia pozycja: wydanieZamowieniaList) {
+        for (WydanieZamowienia pozycja : wydanieZamowieniaList) {
             wydanieZamowieniaService.add(pozycja);
         }
 
         List<PozycjaWydania> pozycjaWydaniaList = new ArrayList<PozycjaWydania>();
         int licznik = 0;
-        for (WydanieZamowienia pozycja: wydanieZamowieniaList) {
+        for (WydanieZamowienia pozycja : wydanieZamowieniaList) {
             int ile = rand.nextInt(2) + 6;
-            for(int i = 0; i < ile; i ++){
-                pozycjaWydaniaList.add(new PozycjaWydania((double)rand.nextInt(20) + 1, towarList.get(licznik % 13),pozycja));
+            for (int i = 0; i < ile; i++) {
+                pozycjaWydaniaList.add(new PozycjaWydania((double) rand.nextInt(20) + 1, towarList.get(licznik % 13), pozycja));
                 licznik++;
             }
 
         }
 
-        for (PozycjaWydania pozycja: pozycjaWydaniaList) {
+        for (PozycjaWydania pozycja : pozycjaWydaniaList) {
             pozycjaWydaniaService.add(pozycja);
         }
-
 
 
         ZamowienieDostawy zamowienieDostawy = new ZamowienieDostawy();
         zamowienieDostawyService.add(zamowienieDostawy);
         List<PrzyjecieZamowienia> przyjecieZamowieniaList = new ArrayList<PrzyjecieZamowienia>();
 
-        for (int i = 0; i < 10; i ++){
-            if(i%2 ==0 )
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0)
                 przyjecieZamowieniaList.add(new PrzyjecieZamowienia(c3.getTime(), zamowienieDostawy));
             else
                 przyjecieZamowieniaList.add(new PrzyjecieZamowienia(c3.getTime(), zamowienieDostawy));
         }
 
-        for (PrzyjecieZamowienia pozycja: przyjecieZamowieniaList) {
+        for (PrzyjecieZamowienia pozycja : przyjecieZamowieniaList) {
             przyjecieZamowieniaService.add(pozycja);
         }
 
         List<PozycjaPrzyjecia> pozycjaPrzyjeciaList = new ArrayList<PozycjaPrzyjecia>();
         licznik = 0;
-        for (PrzyjecieZamowienia pozycja: przyjecieZamowieniaList) {
+        for (PrzyjecieZamowienia pozycja : przyjecieZamowieniaList) {
             int ile = rand.nextInt(2) + 6;
-            for(int i = 0; i < ile; i ++){
-                pozycjaPrzyjeciaList.add(new PozycjaPrzyjecia((double)rand.nextInt(20) + 20, towarList.get(licznik % 13),pozycja));
+            for (int i = 0; i < ile; i++) {
+                pozycjaPrzyjeciaList.add(new PozycjaPrzyjecia((double) rand.nextInt(20) + 20, towarList.get(licznik % 13), pozycja));
                 licznik++;
             }
 
         }
 
-        for (PozycjaPrzyjecia pozycja: pozycjaPrzyjeciaList) {
+        for (PozycjaPrzyjecia pozycja : pozycjaPrzyjeciaList) {
             pozycjaPrzyjeciaService.add(pozycja);
         }
 
 
         Calendar c4 = Calendar.getInstance();
-        c4.set(2017,9,10);
+        c4.set(2017, 9, 10);
 
         Calendar c5 = Calendar.getInstance();
-        c5.set(2017,11,10);
+        c5.set(2017, 11, 10);
 
-        Bilans b1 = new Bilans(c5.getTime(),c4.getTime());
+        Bilans b1 = new Bilans(c5.getTime(), c4.getTime());
         bilansService.saveBilans(b1);
         PozycjaBilansu pb = new PozycjaBilansu(10, t1, b1);
         pozycjaBilansuService.add(pb);
 
+        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+
+    }
 
 
-        List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
+    public void turncate() {
+
+        Connection connection = null;
         try {
-            pozycjeZamowieniaBO = pozycjaZamowieniaSearchService.findAllforZamowienie(sessionId,new Long(41));
-        } catch (AuthenticationException e) {
-            e.printStackTrace();
+
+            // Load the MySQL JDBC driver
+
+            String driverName = "com.mysql.jdbc.Driver";
+
+            Class.forName(driverName);
+
+
+            // Create a connection to the database
+
+            String serverName = "localhost:3306";
+
+            String schema = "db_PO_Project";
+
+            String url = "jdbc:mysql://" + serverName + "/" + schema;
+
+            String username = "springuser";
+
+            String password = "ThePassword";
+
+            connection = DriverManager.getConnection(url, username, password);
+
+
+            System.out.println("Successfully Connected to the database!");
+
+
+        } catch (ClassNotFoundException e) {
+
+            System.out.println("Could not find the database driver " + e.getMessage());
+        } catch (SQLException e) {
+
+            System.out.println("Could not connect to the database " + e.getMessage());
         }
 
-        List<PozycjaZamowieniaTO> results = new ArrayList<>();
+        try {
 
-        for (PozycjaZamowieniaBO pozycja : pozycjeZamowieniaBO) {
-            results.add(modelMapper.map(pozycja, PozycjaZamowieniaTO.class));
+            Statement statement = connection.createStatement();
+
+            statement.executeUpdate("SET FOREIGN_KEY_CHECKS = 0");
+
+            statement.executeUpdate("TRUNCATE bilans");
+            statement.executeUpdate("TRUNCATE jednostka");
+            statement.executeUpdate("TRUNCATE kategoria");
+            statement.executeUpdate("TRUNCATE klient");
+            statement.executeUpdate("TRUNCATE lokalizacja");
+            statement.executeUpdate("TRUNCATE pozycja_bilansu");
+            statement.executeUpdate("TRUNCATE pozycja_przyjecia");
+            statement.executeUpdate("TRUNCATE pozycja_wydania");
+            statement.executeUpdate("TRUNCATE pozycja_zamowienia");
+            statement.executeUpdate("TRUNCATE przyjecie_zamowienia");
+            statement.executeUpdate("TRUNCATE towar");
+            statement.executeUpdate("TRUNCATE umieszczenie");
+            statement.executeUpdate("TRUNCATE wydanie_zamowienia");
+            statement.executeUpdate("TRUNCATE zamowienie");
+            statement.executeUpdate("TRUNCATE zamowienie_dostawy");
+            statement.executeUpdate("TRUNCATE zamowienie_zakupu");
+            statement.executeUpdate("SET FOREIGN_KEY_CHECKS = 1");
+
+
+            System.out.println("Successfully truncated database");
+
+        } catch (SQLException e) {
+
+            System.out.println("Could not truncate database " + e.getMessage());
         }
 
-        return new ResponseEntity<List<PozycjaZamowieniaTO>>(results, HttpStatus.OK);
+    }
 
+
+    @RequestMapping(value = "/turncate/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> turncateSingle(@RequestBody String param, String sessionId) {
+
+        Connection connection = null;
+        try {
+
+            // Load the MySQL JDBC driver
+
+            String driverName = "com.mysql.jdbc.Driver";
+
+            Class.forName(driverName);
+
+
+            // Create a connection to the database
+
+            String serverName = "localhost:3306";
+
+            String schema = "db_PO_Project";
+
+            String url = "jdbc:mysql://" + serverName + "/" + schema;
+
+            String username = "springuser";
+
+            String password = "ThePassword";
+
+            connection = DriverManager.getConnection(url, username, password);
+
+
+            System.out.println("Successfully Connected to the database!");
+
+
+        } catch (ClassNotFoundException e) {
+
+            System.out.println("Could not find the database driver " + e.getMessage());
+        } catch (SQLException e) {
+
+            System.out.println("Could not connect to the database " + e.getMessage());
+        }
+
+        try {
+
+            Statement statement = connection.createStatement();
+
+            statement.executeUpdate("SET FOREIGN_KEY_CHECKS = 0");
+
+            statement.executeUpdate("TRUNCATE " + param);
+
+            statement.executeUpdate("SET FOREIGN_KEY_CHECKS = 1");
+
+
+            System.out.println("Successfully truncated database");
+
+        } catch (SQLException e) {
+
+            System.out.println("Could not truncate database " + e.getMessage());
+        }
+
+        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
     }
 }

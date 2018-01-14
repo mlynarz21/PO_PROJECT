@@ -1,16 +1,15 @@
 package com.crashcourse.restclient.main;
 
+import com.crashcourse.restclient.api.impl.TestGeneratorClientImpl;
 import com.crashcourse.restclient.controller.basic.ScreensConfiguration;
 import com.crashcourse.restclient.main.config.StoreXAppConfiguration;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import jdk.management.resource.internal.inst.StaticInstrumentation;
 import org.glassfish.jersey.internal.util.ExceptionUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -21,15 +20,14 @@ import org.springframework.stereotype.Component;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
 
-import javax.management.Query;
 import java.util.Locale;
-import java.util.Optional;
 
 @Component
 public class StoreXApplicationTest extends ApplicationTest {
 
     private ScreensConfiguration screens;
     private ApplicationContext context;
+    private TestGeneratorClientImpl testGeneratorClient;
 
     @Override
     public void start(Stage stage) throws Exception {
@@ -71,14 +69,16 @@ public class StoreXApplicationTest extends ApplicationTest {
     public void init() throws Exception {
         context = new AnnotationConfigApplicationContext(StoreXAppConfiguration.class);
         screens = context.getBean(ScreensConfiguration.class);
-
         context.getBean(ScreensConfiguration.class);
+        testGeneratorClient = new TestGeneratorClientImpl();
     }
 
 
     @Before
     public void setUp() throws Exception {
+        testGeneratorClient.addTest();
     }
+
     @After
     public void tearDown() throws Exception {
         FxToolkit.hideStage();
@@ -86,7 +86,34 @@ public class StoreXApplicationTest extends ApplicationTest {
         release(new MouseButton[]{});
     }
 
-    //@Test
+//    @Test
+//    public void testLogInFail() {
+//        clickOn("#username");
+//        write("admin");
+//        clickOn("#password");
+//        write("to");
+//        clickOn("#login");
+//        clickOn("#OK");
+//    }
+//
+//    @Test
+//    public void testLogInFailWithoutPassword() {
+//        clickOn("#username");
+//        write("admin");
+//        clickOn("#login");
+//        clickOn("#OK");
+//    }
+//
+//    @Test
+//    public void testLogSuccess() {
+//        clickOn("#username");
+//        write("admin");
+//        clickOn("#password");
+//        write("topsecret");
+//        clickOn("#login");
+//    }
+
+//    @Test
 //    public void testBalanceAddition() {
 //        clickOn("#username");
 //        write("admin");
@@ -94,58 +121,79 @@ public class StoreXApplicationTest extends ApplicationTest {
 //        write("topsecret");
 //        clickOn("#login");
 //        clickOn("#makeBalance");
-//        clickOn("#datesList");
-//        clickOn(".list-cell:first");
-//        clickOn(".list-cell:filled");
-//        clickOn(".list-cell:filled");
-//        clickOn(".list-cell:filled");
-//        clickOn(".list-cell:filled");
+//        clickOn(600,200);
 //        clickOn("#OK");
 //        clickOn("#OK");
 //    }
 
-    @Test
-    public void testLogInFail() {
-        clickOn("#username");
-        write("admin");
-        clickOn("#password");
-        write("to");
-        clickOn("#login");
-        clickOn("#OK");
-    }
+//    @Test
+//    public void testBalanceWrongDate() {
+//        clickOn("#username");
+//        write("admin");
+//        clickOn("#password");
+//        write("topsecret");
+//        clickOn("#login");
+//        clickOn("#makeBalance");
+//        clickOn(600,250);
+//        clickOn("#OK");
+//        clickOn("#OKDate");
+//    }
 
-    @Test
-    public void testLogInFailWithoutPassword() {
-        clickOn("#username");
-        write("admin");
-        clickOn("#login");
-        clickOn("#OK");
-    }
+//    @Test
+//    public void testNoWaitingOrders() {
+//        testGeneratorClient.turncate("zamowienie_zakupu");
+//        //logowanie
+//        clickOn("#username");
+//        write("admin");
+//        clickOn("#password");
+//        write("topsecret");
+//        clickOn("#login");
+//
+//        //kompletowanie
+//        clickOn("#completeOrder");
+//
+//        //akceptacja dialogu oczekiwania
+//        clickOn("#OKNoWaiting");
+//    }
 
-    @Test
-    public void testLogSuccess() {
-        clickOn("#username");
-        write("admin");
-        clickOn("#password");
-        write("topsecret");
-        clickOn("#login");
-        clickOn("#OK");
-    }
+//    @Test
+//    public void testNoSuchProductAvailable() {
+//        testGeneratorClient.turncate("umieszczenie");
+//        //logowanie
+//        clickOn("#username");
+//        write("admin");
+//        clickOn("#password");
+//        write("topsecret");
+//        clickOn("#login");
+//
+//        //kompletowanie
+//        clickOn("#completeOrder");
+//        //wybor zamowienia
+//        clickOn(600,200);
+//        clickOn("#OK");
+//        //wybor produktu
+//        clickOn(600,200);
+//        clickOn("#OK");
+//
+//        //akceptacja dialogu braku produktu
+//        clickOn("#OKNoProduct");
+//    }
 
-    @Test
-    public void testOrderCompletion() {
-        //logowanie
-        clickOn("#username");
-        write("admin");
-        clickOn("#password");
-        write("topsecret");
-        clickOn("#login");
 
-        //kompletowanie
-        clickOn("#completeOrder");
-        //wybor zamowienia
-        clickOn(600,200);
-        clickOn("#OK");
+//    @Test
+//    public void testOrderCompletionEmail() {
+//        //logowanie
+//        clickOn("#username");
+//        write("admin");
+//        clickOn("#password");
+//        write("topsecret");
+//        clickOn("#login");
+//
+//        //kompletowanie
+//        clickOn("#completeOrder");
+//        //wybor zamowienia
+//        clickOn(600,200);
+//        clickOn("#OK");
 //        //wybor produktu
 //        clickOn(600,200);
 //        clickOn("#OK");
@@ -156,29 +204,131 @@ public class StoreXApplicationTest extends ApplicationTest {
 //        clickOn("#quantityTextField");
 //        write("12");
 //        clickOn("#OK");
-
+//
 //        //wybor produktu
 //        clickOn(600,200);
 //        clickOn("#OK");
-          //wybor lokalizacji
+//        //wybor lokalizacji
 //        clickOn(600,200);
 //        clickOn("#OK");
 //        //wybor ilosci
 //        write("12");
 //        clickOn("#OK");
 //        //akceptacja dialogu o blednej ilosci
-//        clickOn("#OK");
+//        clickOn("#OKWrongQuantity");
 //
 //        //wybor ilosci
 //        clickOn("#quantityTextField");
 //        write("8");
 //        clickOn("#OK");
+//
+//        //wydawanie zamowienia
+//        clickOn("#send");
+//        clickOn(1200,500);
+//
+//        //akceptacja email
+//        clickOn("#OKEmail");
+//    }
 
-        //wydawanie zamowienia
-        clickOn("#send");
-        clickOn(1200,500);
+//    @Test
+//    public void testOrderCompletionDelivery() {
+//        //logowanie
+//        clickOn("#username");
+//        write("admin");
+//        clickOn("#password");
+//        write("topsecret");
+//        clickOn("#login");
+//
+//        //kompletowanie
+//        clickOn("#completeOrder");
+//        //wybor zamowienia
+//        clickOn(600,400);
+//        clickOn("#OK");
+//        //wybor produktu
+//        clickOn(600,200);
+//        clickOn("#OK");
+//        //wybor lokalizacji
+//        clickOn(600,200);
+//        clickOn("#OK");
+//        //wybor ilosci
+//        clickOn("#quantityTextField");
+//        write("12");
+//        clickOn("#OK");
+//
+//        //wybor produktu
+//        clickOn(600,200);
+//        clickOn("#OK");
+//        //wybor lokalizacji
+//        clickOn(600,200);
+//        clickOn("#OK");
+//        //wybor ilosci
+//        write("12");
+//        clickOn("#OK");
+//        //akceptacja dialogu o blednej ilosci
+//        clickOn("#OKWrongQuantity");
+//
+//        //wybor ilosci
+//        clickOn("#quantityTextField");
+//        write("8");
+//        clickOn("#OK");
+//
+//        //wydawanie zamowienia
+//        clickOn("#send");
+//        clickOn(1200,500);
+//
+//        //akceptacja wysylki
+//        clickOn("#OKShipment");
+//    }
+
+    @Test
+    public void testWrongQuantities() {
+        //logowanie
+        clickOn("#username");
+        write("admin");
+        clickOn("#password");
+        write("topsecret");
+        clickOn("#login");
+
+        //kompletowanie
+        clickOn("#completeOrder");
+        //wybor zamowienia
+        clickOn(600,400);
+        clickOn("#OK");
+        //wybor produktu
+        clickOn(600,200);
+        clickOn("#OK");
+
+        //wybor lokalizacji
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor ilosci
+        clickOn("#quantityTextField");
+        write("-1");
+        clickOn("#OK");
+        //akceptacja dialogu o blednej ilosci
+        clickOn("#OKWrongQuantity");
+
+        //wybor ilosci
+        clickOn("#quantityTextField");
+        write("0");
+        clickOn("#OK");
+        //akceptacja dialogu o blednej ilosci
+        clickOn("#OKWrongQuantity");
+
+        //wybor ilosci
+        clickOn("#quantityTextField");
+        write("37");
+        clickOn("#OK");
+        //akceptacja dialogu o blednej ilosci
+        clickOn("#OKWrongQuantity");
+
+        //wybor ilosci
+        clickOn("#quantityTextField");
+        write("21");
+        clickOn("#OK");
+        //akceptacja dialogu o blednej ilosci
+        clickOn("#OKWrongQuantity");
+        
     }
-
-
 
 }
