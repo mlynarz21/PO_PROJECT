@@ -84,7 +84,7 @@
                         <Insets top="30.0" />
                      </GridPane.margin>
                   </ImageView>
-                   <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#makeBalance" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%MainScreen.makeBalance" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                   <Button fx:id="makeBalance" alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#makeBalance" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%MainScreen.makeBalance" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                        <font>
                            <Font size="24.0" />
                        </font>
@@ -117,7 +117,7 @@
                         <Insets top="90.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#completeOrder" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%MainScreen.completeOrder" textFill="WHITE" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                  <Button fx:id="completeOrder" alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#completeOrder" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%MainScreen.completeOrder" textFill="WHITE" textOverrun="CLIP" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font>

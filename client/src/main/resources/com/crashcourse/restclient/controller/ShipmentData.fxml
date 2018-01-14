@@ -67,7 +67,7 @@
                   <Insets />
                </opaqueInsets>
                <children>
-                  <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#proceed" prefWidth="300.0" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%ShipmentData.ok" textFill="WHITE" textOverrun="CLIP">
+                  <Button fx:id="OK" alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#proceed" prefWidth="300.0" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%ShipmentData.ok" textFill="WHITE" textOverrun="CLIP">
                      <font>
                         <Font size="52.0" />
                      </font>

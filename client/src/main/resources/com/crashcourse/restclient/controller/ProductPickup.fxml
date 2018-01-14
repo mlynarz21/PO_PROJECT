@@ -39,7 +39,7 @@
       </VBox>
       <HBox alignment="TOP_CENTER" layoutX="-92.0" layoutY="1007.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
          <children>
-            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#issue" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%ProductPickup.send" textFill="WHITE" textOverrun="CLIP">
+            <Button fx:id="send" alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#issue" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%ProductPickup.send" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="36.0" />
                </font>
@@ -48,7 +48,7 @@
                </opaqueInsets>
             </Button>
             <HBox prefHeight="100.0" prefWidth="115.0" />
-            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#backToOrderPickup" prefWidth="300.0" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%ProductPickup.cancel" textFill="WHITE" textOverrun="CLIP">
+            <Button fx:id="back" alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#backToOrderPickup" prefWidth="300.0" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%ProductPickup.cancel" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="36.0" />
                </font>
@@ -57,7 +57,7 @@
                </opaqueInsets>
             </Button>
             <HBox prefHeight="100.0" prefWidth="127.0" />
-            <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#proceed" prefWidth="300.0" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%ProductPickup.ok" textFill="WHITE" textOverrun="CLIP">
+            <Button fx:id="OK" alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#proceed" prefWidth="300.0" style="-fx-background-color: #3C1E06; -fx-blend-mode: color-burn; -fx-alignment: center; -fx-opacity: 0.95;" text="%ProductPickup.ok" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="36.0" />
                </font>
