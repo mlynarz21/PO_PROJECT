@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.naming.AuthenticationException;
+import java.util.UUID;
 
 @Service
 public class PozycjaZamowieniaProceedServiceImpl implements PozycjaZamowieniaProceedService {
@@ -33,9 +34,7 @@ public class PozycjaZamowieniaProceedServiceImpl implements PozycjaZamowieniaPro
         // throw new AuthenticationException();
         //}
 
-        String type = getPozycjaZamowieniaRepository().getType(idPozycji);
-        if(!type.equalsIgnoreCase("zamowieniezakupu"))
-            return false;
+
         PozycjaZamowienia pozycjaZamowienia = getPozycjaZamowieniaRepository().findOne(idPozycji);
         Umieszczenie umieszczenie = getUmieszczenieRepository().findOne(idUmieszczenia);
         double iloscJuzZrealizowana = pozycjaZamowienia.getZrealizowano();
@@ -49,6 +48,8 @@ public class PozycjaZamowieniaProceedServiceImpl implements PozycjaZamowieniaPro
             throw new Exception("Podano za duzą ilosc");
         if(iloscAktualnaUmieszczenia - iloscRealizowana < 0)
             throw new Exception("Podano za duzą ilosc Nie ma tyle w lokalizacji");
+        if(iloscRealizowana < 0)
+            throw new Exception("Podana ilosc jest mniejsza od zera");
 
         getPozycjaZamowieniaRepository().realizacjaPozycjiZmowienia(idPozycji, iloscJuzZrealizowana + iloscRealizowana);
         getUmieszczenieRepository().realizacjaPozycjiZmowienia(idUmieszczenia, iloscAktualnaUmieszczenia - iloscRealizowana);
