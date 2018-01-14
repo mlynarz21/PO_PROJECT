@@ -15,9 +15,10 @@ public class PozycjaBilansuCreationServiceImpl implements PozycjaBilansuCreation
 
     ModelMapper modelMapper = new ModelMapper();
     @Override
-    public void savePozycjaBilansu(PozycjaBilansuBO pozycjaBilansuBO) {
+    public boolean savePozycjaBilansu(PozycjaBilansuBO pozycjaBilansuBO) {
         PozycjaBilansu pozycjaBilansu = modelMapper.map(pozycjaBilansuBO, PozycjaBilansu.class);
         getPozycjaBilansuRepository().save(pozycjaBilansu);
+        return true;
     }
 
     public PozycjaBilansuRepository getPozycjaBilansuRepository() {

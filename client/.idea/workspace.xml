@@ -3,40 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f31e1de3-36f0-4a41-917e-a7e76ea92651" name="Default" comment="gui color changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/AuthorizationRestServiceClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/AuthorizationRestServiceClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/BilansRestServiceClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/BilansRestServiceClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/PozycjaZamowieniaRestServiceClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/PozycjaZamowieniaRestServiceClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/UmieszczenieRestServiceClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/UmieszczenieRestServiceClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/ZamowienieZakupuRestServiceClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/ZamowienieZakupuRestServiceClient.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/AuthorizationRestServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/AuthorizationRestServiceClientImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/BilansRestServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/BilansRestServiceClientImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/PozycjaZamowieniaRestServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/PozycjaZamowieniaRestServiceClientImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/UmieszczenieRestServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/UmieszczenieRestServiceClientImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/ZamowienieZakupuRestServiceClientImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/ZamowienieZakupuRestServiceClientImpl.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactsBaseController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ArtifactsBaseController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/InformationErrorController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/InformationErrorController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LocalizationPickupController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LocalizationPickupController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/LoginController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MonthPickupController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MonthPickupController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKEmailController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKEmailController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKNoWaitingOrdersController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKNoWaitingOrdersController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKOutOfProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKOutOfProductController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongDateController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongDateController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongQuantityController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OKWrongQuantityController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/QuantityProductController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/QuantityProductController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/DialogController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/basic/ScreensConfiguration.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/config/StoreXSecurityContext.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/main/config/StoreXSecurityContext.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/AlertDialog.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/AlertDialog.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/FXMLDialog.java" afterPath="$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/view/FXMLDialog.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongQuantity.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongQuantity.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/QuantityProduct.fxml" afterPath="$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/QuantityProduct.fxml" />
-      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/BilansApiImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/BilansApiImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/pom.xml" afterPath="$PROJECT_DIR$/../server/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansServices/PozycjaBilansuCreationService.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansServices/PozycjaBilansuCreationService.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServicesImpl/PozycjaBilansuCreationServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServicesImpl/PozycjaBilansuCreationServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieServicesImpl/PozycjaZamowieniaProceedServiceImpl.java" afterPath="$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieServicesImpl/PozycjaZamowieniaProceedServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -53,7 +23,69 @@
     </SUITE>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Default.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Default.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BalanceAcceptanceController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
+                <element signature="e#642#643#0" expanded="true" />
+                <element signature="e#695#696#0" expanded="true" />
+                <element signature="e#781#782#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultDialogController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/DefaultDialogController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InformationErrorController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/InformationErrorController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#464#465#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+                <element signature="e#520#521#0" expanded="true" />
+                <element signature="e#543#544#0" expanded="true" />
+                <element signature="e#1546#1547#0" expanded="true" />
+                <element signature="e#1622#1623#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -145,9 +177,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -190,6 +223,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -297,17 +332,15 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../server" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -329,714 +362,6 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mlynarz\Desktop\PO_MAGAZYN\client\src\main\resources\com\crashcourse\restclient\images" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/misc.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/impl/AuthorizationRestServiceClientImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MonthPickupController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleAllround.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleWindow.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/AuthorizationApi.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/BilansApi.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/PozycjaZamowieniaApi.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/UmieszczenieApi.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/ZamowienieZakupuApi.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/AuthorizationApiImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/BilansApiImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/PozycjaZamowieniaApiImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/UmieszczenieApiImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/api/impl/ZamowienieZakupuApiImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/common/datatypes/enumerations/StatusWydania.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/BilansEntities/Bilans.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/BilansEntities/PozycjaBilansu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PozycjaPrzyjecia.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PozycjaWydania.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PrzyjecieZamowienia.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/WydanieZamowienia.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/TowarEntities/Jednostka.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/TowarEntities/Kategoria.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/TowarEntities/Towar.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/UmieszczenieEntities/Lokalizacja.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/UmieszczenieEntities/Umieszczenie.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/Klient.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/PozycjaZamowienia.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/Zamowienie.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/ZamowienieDostawy.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/persistence/entity/ZamowienieEntities/ZamowienieZakupu.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/AuthorizationServices/AuthorizationService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/HelperServices/PozycjaBilansuService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ZamowienieServices/PozycjaZamowieniaProceedService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ZamowienieServices/ZamowienieZakupuUpdateService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServicesImpl/BilansCreationServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServicesImpl/BilansSearchServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServicesImpl/PozycjaBilansuCreationServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/BilansServicesImpl/PozycjaBilansuSearchServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/HelperServicesImpl/PozycjaBilansuServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/PozycjaPrzyjeciaSearchServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/PozycjaWydaniaSearchServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/UmieszczenieServicesImpl/UmieszczenieSearchServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieServicesImpl/PozycjaZamowieniaSearchServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/impl/ZamowienieServicesImpl/ZamowienieZakupuSearchServiceImpl.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/resources/application.properties</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/test/java/com/StoreX/persistance/repository/impl/UserRepositoryTest.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/allclasses-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/allclasses-noframe.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/StoreXApplication.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/AuthorizationApi.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/BilansApi.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/PozycjaZamowieniaApi.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/UmieszczenieApi.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/ZamowienieZakupuApi.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/impl/AuthorizationApiImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/impl/BilansApiImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/impl/PozycjaZamowieniaApiImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/impl/UmieszczenieApiImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/impl/ZamowienieZakupuApiImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/impl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/impl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/impl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/api/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/BilansBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/JednostkaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/KategoriaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/KlientBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/LokalizacjaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/PozycjaBilansuBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/PozycjaPrzyjeciaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/PozycjaWydaniaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/PozycjaZamowieniaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/PrzyjecieZamowieniaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/TowarBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/UmieszczenieBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/UserBo.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/WydanieZamowieniaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/ZamowienieBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/ZamowienieDostawyBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/ZamowienieZakupuBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/bo/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/enumerations/StatusDostawy.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/enumerations/StatusWydania.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/enumerations/TypOdbioru.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/enumerations/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/enumerations/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/enumerations/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/BilansTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/JednostkaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/KategoriaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/KlientTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/LokalizacjaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/PozycjaBilansuTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/PozycjaPrzyjeciaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/PozycjaWydaniaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/PozycjaZamowieniaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/PrzyjecieZamowieniaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/SessionTo.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/TowarTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/UmieszczenieTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/UserTo.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/WydanieZamowieniaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/ZamowienieDostawyTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/ZamowienieTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/ZamowienieZakupuTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/common/datatypes/to/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/AuthorizationEntities/User.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/AuthorizationEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/AuthorizationEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/AuthorizationEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/BilansEntities/Bilans.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/BilansEntities/PozycjaBilansu.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/BilansEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/BilansEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/BilansEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PozycjaPrzyjecia.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PozycjaWydania.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PrzyjecieZamowienia.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/WydanieZamowienia.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/PrzyjecieWydanieEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/TowarEntities/Jednostka.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/TowarEntities/Kategoria.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/TowarEntities/Towar.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/TowarEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/TowarEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/TowarEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/UmieszczenieEntities/Lokalizacja.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/UmieszczenieEntities/Umieszczenie.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/UmieszczenieEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/UmieszczenieEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/UmieszczenieEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/ZamowienieEntities/Klient.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/ZamowienieEntities/PozycjaZamowienia.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/ZamowienieEntities/Zamowienie.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/ZamowienieEntities/ZamowienieDostawy.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/ZamowienieEntities/ZamowienieZakupu.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/ZamowienieEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/ZamowienieEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/entity/ZamowienieEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/AuthorizationRepository/UserRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/AuthorizationRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/AuthorizationRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/AuthorizationRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/BilansRepository/BilansRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/BilansRepository/PozycjaBilansuRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/BilansRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/BilansRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/BilansRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/PrzyjecieWydanieRepository/PozycjaPrzyjeciaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/PrzyjecieWydanieRepository/PozycjaWydaniaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/PrzyjecieWydanieRepository/PrzyjecieZamowieniaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/PrzyjecieWydanieRepository/WydanieZamowieniaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/PrzyjecieWydanieRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/PrzyjecieWydanieRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/PrzyjecieWydanieRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/TowarRepository/JednostkaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/TowarRepository/KategoriaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/TowarRepository/TowarRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/TowarRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/TowarRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/TowarRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/UmieszczenieRepository/LokalizacjaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/UmieszczenieRepository/UmieszczenieRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/UmieszczenieRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/UmieszczenieRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/UmieszczenieRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/ZamowienieRepository/KlientRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/ZamowienieRepository/PozycjaZamowieniaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/ZamowienieRepository/ZamowienieDostawyRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/ZamowienieRepository/ZamowienieRepositroy.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/ZamowienieRepository/ZamowienieZakupuRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/ZamowienieRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/ZamowienieRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/ZamowienieRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/impl/UserRepositoryImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/impl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/impl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/persistence/repository/impl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/AuthorizationServices/AuthorizationService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/AuthorizationServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/AuthorizationServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/AuthorizationServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/BilansAddService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/BilansCreationService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/BilansFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/BilansSearchService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/PozycjaBilansuCreationService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/PozycjaBilansuFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/PozycjaBilansuSaveService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/PozycjaBilansuSearchService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/BilansServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/BilansService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/JednostkaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/KategoriaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/KlientService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/LokalizacjaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/PozycjaBilansuService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/PozycjaPrzyjeciaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/PozycjaWydaniaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/PozycjaZamowieniaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/PrzyjecieZamowieniaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/TowarService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/UmieszczenieService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/WydanieZamowieniaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/ZamowienieDostawyService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/ZamowienieService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/ZamowienieZakupuService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/HelperServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/PozycjeWydanPrzyjecServices/PozycjaPrzyjeciaFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/PozycjeWydanPrzyjecServices/PozycjaPrzyjeciaSearchService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/PozycjeWydanPrzyjecServices/PozycjaWydaniaFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/PozycjeWydanPrzyjecServices/PozycjaWydaniaSearchService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/PozycjeWydanPrzyjecServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/PozycjeWydanPrzyjecServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/PozycjeWydanPrzyjecServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/UmieszczenieServices/UmieszczenieFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/UmieszczenieServices/UmieszczenieSearchService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/UmieszczenieServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/UmieszczenieServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/UmieszczenieServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/ZamowienieServices/PozycjaZamowieniaFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/ZamowienieServices/PozycjaZamowieniaProceedService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/ZamowienieServices/PozycjaZamowieniaSearchService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/ZamowienieServices/ZamowienieZakupuFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/ZamowienieServices/ZamowienieZakupuSearchService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/ZamowienieServices/ZamowienieZakupuUpdateService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/ZamowienieServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/ZamowienieServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/ZamowienieServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/AuthorizationServicesImpl/AuthorizationServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/AuthorizationServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/AuthorizationServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/AuthorizationServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/BilansServicesImpl/BilansCreationServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/BilansServicesImpl/BilansSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/BilansServicesImpl/PozycjaBilansuCreationServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/BilansServicesImpl/PozycjaBilansuSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/BilansServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/BilansServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/BilansServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/BilansServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/JednostkaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/KategoriaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/KlientServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/LokalizacjaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/PozycjaBilansuServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/PozycjaPrzyjeciaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/PozycjaWydaniaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/PozycjaZamowieniaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/PrzyjecieZamowieniaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/TowarServiceImplementation.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/UmieszczenieServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/WydanieZamowieniaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/ZamowienieDostawyServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/ZamowienieServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/ZamowienieZakupuServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/HelperServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/PozycjaPrzyjeciaSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/PozycjaWydaniaSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/UmieszczenieServicesImpl/UmieszczenieSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/UmieszczenieServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/UmieszczenieServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/UmieszczenieServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/ZamowienieServicesImpl/PozycjaZamowieniaProceedServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/ZamowienieServicesImpl/PozycjaZamowieniaSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/ZamowienieServicesImpl/ZamowienieZakupuSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/ZamowienieServicesImpl/ZamowienieZakupuUpdateServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/ZamowienieServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/ZamowienieServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/com/StoreX/service/impl/ZamowienieServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/constant-values.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/debug.log</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/deprecated-list.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/help-doc.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-1.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-10.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-11.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-12.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-13.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-14.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-15.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-16.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-17.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-18.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-19.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-2.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-3.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-4.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-5.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-6.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-7.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-8.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index-files/index-9.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/index.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/overview-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/overview-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/overview-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/package-list</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/script.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../Documentation/stylesheet.css</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/StoreXApplication.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/AuthorizationApi.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/BilansApi.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/PozycjaZamowieniaApi.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/UmieszczenieApi.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/ZamowienieZakupuApi.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/impl/AuthorizationApiImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/impl/BilansApiImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/impl/PozycjaZamowieniaApiImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/impl/UmieszczenieApiImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/impl/ZamowienieZakupuApiImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/impl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/impl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/impl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/api/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/BilansBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/JednostkaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/KategoriaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/KlientBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/LokalizacjaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/PozycjaBilansuBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/PozycjaPrzyjeciaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/PozycjaWydaniaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/PozycjaZamowieniaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/PrzyjecieZamowieniaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/TowarBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/UmieszczenieBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/UserBo.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/WydanieZamowieniaBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/ZamowienieBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/ZamowienieDostawyBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/ZamowienieZakupuBO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/bo/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/enumerations/StatusDostawy.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/enumerations/StatusWydania.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/enumerations/TypOdbioru.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/enumerations/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/enumerations/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/enumerations/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/BilansTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/JednostkaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/KategoriaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/KlientTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/LokalizacjaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/PozycjaBilansuTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/PozycjaPrzyjeciaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/PozycjaWydaniaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/PozycjaZamowieniaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/PrzyjecieZamowieniaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/SessionTo.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/TowarTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/UmieszczenieTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/UserTo.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/WydanieZamowieniaTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/ZamowienieDostawyTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/ZamowienieTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/ZamowienieZakupuTO.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/common/datatypes/to/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistance/repository/impl/UserRepositoryTest.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistance/repository/impl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistance/repository/impl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistance/repository/impl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/AuthorizationEntities/User.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/AuthorizationEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/AuthorizationEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/AuthorizationEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/BilansEntities/Bilans.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/BilansEntities/PozycjaBilansu.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/BilansEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/BilansEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/BilansEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PozycjaPrzyjecia.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PozycjaWydania.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/PrzyjecieWydanieEntities/PrzyjecieZamowienia.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/PrzyjecieWydanieEntities/WydanieZamowienia.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/PrzyjecieWydanieEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/PrzyjecieWydanieEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/PrzyjecieWydanieEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/TowarEntities/Jednostka.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/TowarEntities/Kategoria.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/TowarEntities/Towar.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/TowarEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/TowarEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/TowarEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/UmieszczenieEntities/Lokalizacja.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/UmieszczenieEntities/Umieszczenie.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/UmieszczenieEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/UmieszczenieEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/UmieszczenieEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/ZamowienieEntities/Klient.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/ZamowienieEntities/PozycjaZamowienia.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/ZamowienieEntities/Zamowienie.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/ZamowienieEntities/ZamowienieDostawy.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/ZamowienieEntities/ZamowienieZakupu.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/ZamowienieEntities/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/ZamowienieEntities/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/entity/ZamowienieEntities/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/AuthorizationRepository/UserRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/AuthorizationRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/AuthorizationRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/AuthorizationRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/BilansRepository/BilansRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/BilansRepository/PozycjaBilansuRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/BilansRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/BilansRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/BilansRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/PrzyjecieWydanieRepository/PozycjaPrzyjeciaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/PrzyjecieWydanieRepository/PozycjaWydaniaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/PrzyjecieWydanieRepository/PrzyjecieZamowieniaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/PrzyjecieWydanieRepository/WydanieZamowieniaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/PrzyjecieWydanieRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/PrzyjecieWydanieRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/PrzyjecieWydanieRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/TowarRepository/JednostkaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/TowarRepository/KategoriaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/TowarRepository/TowarRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/TowarRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/TowarRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/TowarRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/UmieszczenieRepository/LokalizacjaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/UmieszczenieRepository/UmieszczenieRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/UmieszczenieRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/UmieszczenieRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/UmieszczenieRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/ZamowienieRepository/KlientRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/ZamowienieRepository/PozycjaZamowieniaRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/ZamowienieRepository/ZamowienieDostawyRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/ZamowienieRepository/ZamowienieRepositroy.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/ZamowienieRepository/ZamowienieZakupuRepository.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/ZamowienieRepository/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/ZamowienieRepository/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/ZamowienieRepository/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/impl/UserRepositoryImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/impl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/impl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/persistence/repository/impl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/AuthorizationServices/AuthorizationService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/AuthorizationServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/AuthorizationServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/AuthorizationServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/BilansServices/BilansAddService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/BilansServices/BilansFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/BilansServices/PozycjaBilansuFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/BilansServices/PozycjaBilansuSaveService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/BilansServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/BilansServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/BilansServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/BilansService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/JednostkaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/KategoriaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/KlientService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/LokalizacjaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/PozycjaBilansuService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/PozycjaPrzyjeciaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/PozycjaWydaniaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/PozycjaZamowieniaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/PrzyjecieZamowieniaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/TowarService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/UmieszczenieService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/WydanieZamowieniaService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/ZamowienieDostawyService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/ZamowienieService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/ZamowienieZakupuService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/HelperServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/PozycjeWydanPrzyjecServices/PozycjaPrzyjeciaFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/PozycjeWydanPrzyjecServices/PozycjaWydaniaFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/PozycjeWydanPrzyjecServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/PozycjeWydanPrzyjecServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/PozycjeWydanPrzyjecServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/UmieszczenieServices/UmieszczenieFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/UmieszczenieServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/UmieszczenieServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/UmieszczenieServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/ZamowienieServices/PozycjaZamowieniaFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/ZamowienieServices/PozycjaZamowieniaProceedService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/ZamowienieServices/ZamowienieZakupuFindService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/ZamowienieServices/ZamowienieZakupuUpdateService.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/ZamowienieServices/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/ZamowienieServices/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/ZamowienieServices/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/AuthorizationServicesImpl/AuthorizationServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/AuthorizationServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/AuthorizationServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/AuthorizationServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/BilansServicesImpl/BilansCreationServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/BilansServicesImpl/BilansSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/BilansServicesImpl/PozycjaBilansuCreationServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/BilansServicesImpl/PozycjaBilansuSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/BilansServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/BilansServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/BilansServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/BilansServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/JednostkaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/KategoriaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/KlientServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/LokalizacjaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/PozycjaBilansuServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/PozycjaPrzyjeciaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/PozycjaWydaniaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/PozycjaZamowieniaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/PrzyjecieZamowieniaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/TowarServiceImplementation.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/UmieszczenieServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/WydanieZamowieniaServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/ZamowienieDostawyServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/ZamowienieServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/ZamowienieZakupuServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/HelperServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/PozycjaPrzyjeciaSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/PozycjaWydaniaSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/PozycjeWydanPrzyjecServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/UmieszczenieServicesImpl/UmieszczenieSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/UmieszczenieServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/UmieszczenieServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/UmieszczenieServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/ZamowienieServicesImpl/PozycjaZamowieniaProceedServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/ZamowienieServicesImpl/PozycjaZamowieniaSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/ZamowienieServicesImpl/ZamowienieZakupuSearchServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/ZamowienieServicesImpl/ZamowienieZakupuUpdateServiceImpl.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/ZamowienieServicesImpl/package-frame.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/ZamowienieServicesImpl/package-summary.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../com/StoreX/service/impl/ZamowienieServicesImpl/package-tree.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-1.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-10.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-11.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-12.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-13.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-14.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-15.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-16.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-17.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-18.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-19.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-2.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-3.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-4.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-5.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-6.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-7.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-8.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../index-files/index-9.html</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansServices/BilansCreationService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansServices/BilansSearchService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansServices/PozycjaBilansuCreationService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansServices/PozycjaBilansuSearchService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/PozycjeWydanPrzyjecServices/PozycjaPrzyjeciaSearchService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/PozycjeWydanPrzyjecServices/PozycjaWydaniaSearchService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/UmieszczenieServices/UmieszczenieSearchService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ZamowienieServices/PozycjaZamowieniaSearchService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ZamowienieServices/ZamowienieZakupuSearchService.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansServices/BilansAddService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansServices/BilansFindService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansServices/PozycjaBilansuFindService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/BilansServices/PozycjaBilansuSaveService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/PozycjeWydanPrzyjecServices/PozycjaPrzyjeciaFindService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/PozycjeWydanPrzyjecServices/PozycjaWydaniaFindService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/UmieszczenieServices/UmieszczenieFindService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ZamowienieServices/PozycjaZamowieniaFindService.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/../server/src/main/java/com/StoreX/service/ZamowienieServices/ZamowienieZakupuFindService.java</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1193,6 +518,7 @@
       <workItem from="1515093357941" duration="5056000" />
       <workItem from="1515108256687" duration="1398000" />
       <workItem from="1515842699693" duration="8691000" />
+      <workItem from="1515853307814" duration="4322000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1513790968539</created>
@@ -1338,10 +664,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136307000" />
+    <option name="totallyTimeSpent" value="140629000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1351,21 +678,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2916225" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.252386" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9628844" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25141564" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34635416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35123524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4114528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41109854" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1373,6 +699,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="5.2083336E-4" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Sequence" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9628844" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1480,13 +807,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="1" lean-forward="false" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/css/styleNoround.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -1508,66 +828,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="110" column="17" lean-forward="false" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_151/src.zip!/java/util/List.java" />
     <entry file="file://$PROJECT_DIR$/../com/StoreX/persistance/repository/impl/package-summary.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/OKWrongQuantity.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="301" lean-forward="false" selection-start-line="8" selection-start-column="301" selection-end-line="8" selection-end-column="301" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/ProductPickup.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="302" lean-forward="false" selection-start-line="12" selection-start-column="302" selection-end-line="12" selection-end-column="302" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/QuantityProduct.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/QuantityProduct.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="305" lean-forward="false" selection-start-line="11" selection-start-column="305" selection-end-line="11" selection-end-column="305" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/api/AuthorizationRestServiceClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="15" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1575,7 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1583,7 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1607,14 +911,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="33" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-          <folding>
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#406#407#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#593#594#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1622,9 +918,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11">
           <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1632,7 +925,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="50" lean-forward="false" selection-start-line="8" selection-start-column="50" selection-end-line="8" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1640,9 +932,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="22" column="50" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1650,7 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="69" column="5" lean-forward="true" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1658,7 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="73" column="7" lean-forward="false" selection-start-line="73" selection-start-column="7" selection-end-line="73" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1666,9 +953,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1676,9 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="20" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1686,9 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1547">
           <caret line="91" column="7" lean-forward="false" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1696,7 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
           <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="92" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1712,7 +989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1721,10 +997,10 @@
         <state relative-caret-position="476">
           <caret line="60" column="0" lean-forward="true" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding>
-            <element signature="e#2036#2037#0" expanded="true" />
-            <element signature="e#2071#2072#0" expanded="true" />
-            <element signature="e#2110#2111#0" expanded="true" />
-            <element signature="e#2141#2142#0" expanded="true" />
+            <element signature="e#2036#2037#0" expanded="false" />
+            <element signature="e#2071#2072#0" expanded="false" />
+            <element signature="e#2110#2111#0" expanded="false" />
+            <element signature="e#2141#2142#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1758,14 +1034,14 @@
         <state relative-caret-position="436">
           <caret line="53" column="68" lean-forward="false" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
           <folding>
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#1012#1013#0" expanded="true" />
-            <element signature="e#1048#1049#0" expanded="true" />
-            <element signature="e#1163#1164#0" expanded="true" />
-            <element signature="e#1198#1199#0" expanded="true" />
-            <element signature="e#1349#1350#0" expanded="true" />
-            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#831#832#0" expanded="false" />
+            <element signature="e#860#861#0" expanded="false" />
+            <element signature="e#1012#1013#0" expanded="false" />
+            <element signature="e#1048#1049#0" expanded="false" />
+            <element signature="e#1163#1164#0" expanded="false" />
+            <element signature="e#1198#1199#0" expanded="false" />
+            <element signature="e#1349#1350#0" expanded="false" />
+            <element signature="e#1379#1380#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1775,52 +1051,51 @@
         <state relative-caret-position="-2893">
           <caret line="32" column="40" lean-forward="false" selection-start-line="32" selection-start-column="40" selection-end-line="32" selection-end-column="40" />
           <folding>
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1031#1032#0" expanded="true" />
-            <element signature="e#1532#1533#0" expanded="true" />
-            <element signature="e#1588#1589#0" expanded="true" />
-            <element signature="e#2198#2199#0" expanded="true" />
-            <element signature="e#2259#2260#0" expanded="true" />
-            <element signature="e#2338#2339#0" expanded="true" />
-            <element signature="e#2410#2411#0" expanded="true" />
-            <element signature="e#2504#2505#0" expanded="true" />
-            <element signature="e#2566#2567#0" expanded="true" />
-            <element signature="e#2645#2646#0" expanded="true" />
-            <element signature="e#2717#2718#0" expanded="true" />
-            <element signature="e#2811#2812#0" expanded="true" />
-            <element signature="e#2873#2874#0" expanded="true" />
-            <element signature="e#5032#5033#0" expanded="true" />
-            <element signature="e#5110#5111#0" expanded="true" />
-            <element signature="e#5359#5360#0" expanded="true" />
-            <element signature="e#5427#5428#0" expanded="true" />
-            <element signature="e#5513#5514#0" expanded="true" />
-            <element signature="e#5571#5572#0" expanded="true" />
-            <element signature="e#6351#6352#0" expanded="true" />
-            <element signature="e#6423#6424#0" expanded="true" />
-            <element signature="e#6517#6518#0" expanded="true" />
-            <element signature="e#6579#6580#0" expanded="true" />
-            <element signature="e#7096#7097#0" expanded="true" />
-            <element signature="e#7174#7175#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="false" />
+            <element signature="e#1031#1032#0" expanded="false" />
+            <element signature="e#1532#1533#0" expanded="false" />
+            <element signature="e#1588#1589#0" expanded="false" />
+            <element signature="e#2198#2199#0" expanded="false" />
+            <element signature="e#2259#2260#0" expanded="false" />
+            <element signature="e#2338#2339#0" expanded="false" />
+            <element signature="e#2410#2411#0" expanded="false" />
+            <element signature="e#2504#2505#0" expanded="false" />
+            <element signature="e#2566#2567#0" expanded="false" />
+            <element signature="e#2645#2646#0" expanded="false" />
+            <element signature="e#2717#2718#0" expanded="false" />
+            <element signature="e#2811#2812#0" expanded="false" />
+            <element signature="e#2873#2874#0" expanded="false" />
+            <element signature="e#5032#5033#0" expanded="false" />
+            <element signature="e#5110#5111#0" expanded="false" />
+            <element signature="e#5359#5360#0" expanded="false" />
+            <element signature="e#5427#5428#0" expanded="false" />
+            <element signature="e#5513#5514#0" expanded="false" />
+            <element signature="e#5571#5572#0" expanded="false" />
+            <element signature="e#6351#6352#0" expanded="false" />
+            <element signature="e#6423#6424#0" expanded="false" />
+            <element signature="e#6517#6518#0" expanded="false" />
+            <element signature="e#6579#6580#0" expanded="false" />
+            <element signature="e#7096#7097#0" expanded="false" />
+            <element signature="e#7174#7175#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/LocalizationPickup.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1828,7 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1837,10 +1111,10 @@
         <state relative-caret-position="510">
           <caret line="35" column="65" lean-forward="false" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
           <folding>
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#870#871#0" expanded="true" />
-            <element signature="e#923#924#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="false" />
+            <element signature="e#870#871#0" expanded="false" />
+            <element signature="e#923#924#0" expanded="false" />
+            <element signature="e#1006#1007#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1850,10 +1124,10 @@
         <state relative-caret-position="765">
           <caret line="53" column="52" lean-forward="false" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
           <folding>
-            <element signature="e#1478#1479#0" expanded="true" />
-            <element signature="e#1513#1514#0" expanded="true" />
-            <element signature="e#1566#1567#0" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
+            <element signature="e#1478#1479#0" expanded="false" />
+            <element signature="e#1513#1514#0" expanded="false" />
+            <element signature="e#1566#1567#0" expanded="false" />
+            <element signature="e#1650#1651#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1863,12 +1137,12 @@
         <state relative-caret-position="85">
           <caret line="9" column="43" lean-forward="false" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
           <folding>
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#612#613#0" expanded="false" />
+            <element signature="e#649#650#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#737#738#0" expanded="false" />
+            <element signature="e#817#818#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1878,12 +1152,12 @@
         <state relative-caret-position="85">
           <caret line="9" column="57" lean-forward="false" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
           <folding>
-            <element signature="e#595#596#0" expanded="true" />
-            <element signature="e#630#631#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#595#596#0" expanded="false" />
+            <element signature="e#630#631#0" expanded="false" />
+            <element signature="e#667#668#0" expanded="false" />
+            <element signature="e#702#703#0" expanded="false" />
+            <element signature="e#755#756#0" expanded="false" />
+            <element signature="e#841#842#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1893,12 +1167,12 @@
         <state relative-caret-position="85">
           <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
           <folding>
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="false" />
+            <element signature="e#601#602#0" expanded="false" />
+            <element signature="e#638#639#0" expanded="false" />
+            <element signature="e#673#674#0" expanded="false" />
+            <element signature="e#726#727#0" expanded="false" />
+            <element signature="e#802#803#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1908,10 +1182,10 @@
         <state relative-caret-position="85">
           <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding>
-            <element signature="e#989#990#0" expanded="true" />
-            <element signature="e#1024#1025#0" expanded="true" />
-            <element signature="e#2257#2258#0" expanded="true" />
-            <element signature="e#2331#2332#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="false" />
+            <element signature="e#1024#1025#0" expanded="false" />
+            <element signature="e#2257#2258#0" expanded="false" />
+            <element signature="e#2331#2332#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1921,43 +1195,112 @@
         <state relative-caret-position="442">
           <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
           <folding>
-            <element signature="e#2965#2966#0" expanded="true" />
-            <element signature="e#3000#3001#0" expanded="true" />
-            <element signature="e#3053#3054#0" expanded="true" />
-            <element signature="e#3140#3141#0" expanded="true" />
+            <element signature="e#2965#2966#0" expanded="false" />
+            <element signature="e#3000#3001#0" expanded="false" />
+            <element signature="e#3053#3054#0" expanded="false" />
+            <element signature="e#3140#3141#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/InformationErrorController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="2" selection-end-line="49" selection-end-column="5" />
+        <state relative-caret-position="266">
+          <caret line="57" column="53" lean-forward="false" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#1546#1547#0" expanded="true" />
-            <element signature="e#1622#1623#0" expanded="true" />
+            <element signature="e#694#695#0" expanded="false" />
+            <element signature="e#729#730#0" expanded="false" />
+            <element signature="e#766#767#0" expanded="false" />
+            <element signature="e#801#802#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#933#934#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/DefaultDialogController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="368">
+          <caret line="85" column="82" lean-forward="false" selection-start-line="85" selection-start-column="82" selection-end-line="85" selection-end-column="82" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1465#1466#0" expanded="false" />
+            <element signature="e#1500#1501#0" expanded="false" />
+            <element signature="e#1537#1538#0" expanded="false" />
+            <element signature="e#1572#1573#0" expanded="false" />
+            <element signature="e#1625#1626#0" expanded="false" />
+            <element signature="e#1705#1706#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MonthPickupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="541">
+          <caret line="129" column="56" lean-forward="false" selection-start-line="129" selection-start-column="56" selection-end-line="129" selection-end-column="56" />
+          <folding>
+            <element signature="e#1063#1064#0" expanded="false" />
+            <element signature="e#1098#1099#0" expanded="false" />
+            <element signature="e#3738#3739#0" expanded="false" />
+            <element signature="e#3773#3774#0" expanded="false" />
+            <element signature="e#3826#3827#0" expanded="false" />
+            <element signature="e#3906#3907#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/QuantityProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="86" column="66" lean-forward="false" selection-start-line="86" selection-start-column="66" selection-end-line="86" selection-end-column="66" />
+          <folding>
+            <element signature="e#2470#2471#0" expanded="false" />
+            <element signature="e#2505#2506#0" expanded="false" />
+            <element signature="e#2558#2559#0" expanded="false" />
+            <element signature="e#2642#2643#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="126" column="65" lean-forward="false" selection-start-line="126" selection-start-column="65" selection-end-line="126" selection-end-column="65" />
+          <folding>
+            <element signature="e#3423#3424#0" expanded="false" />
+            <element signature="e#3458#3459#0" expanded="false" />
+            <element signature="e#3511#3512#0" expanded="false" />
+            <element signature="e#3593#3594#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+          <folding>
+            <element signature="e#1605#1606#0" expanded="false" />
+            <element signature="e#1640#1641#0" expanded="false" />
+            <element signature="e#1693#1694#0" expanded="false" />
+            <element signature="e#1774#1775#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/crashcourse/restclient/controller/Default.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/BalanceAcceptanceController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
+        <state relative-caret-position="535">
           <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1971,86 +1314,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MainScreenController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/DefaultDialogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="57" column="53" lean-forward="false" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
+        <state relative-caret-position="126">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#854#855#0" expanded="true" />
-            <element signature="e#933#934#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/OrderPickupController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/InformationErrorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="85" column="82" lean-forward="false" selection-start-line="85" selection-start-column="82" selection-end-line="85" selection-end-column="82" />
+        <state relative-caret-position="43">
+          <caret line="35" column="20" lean-forward="true" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
           <folding>
-            <element signature="e#1465#1466#0" expanded="true" />
-            <element signature="e#1500#1501#0" expanded="true" />
-            <element signature="e#1537#1538#0" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1625#1626#0" expanded="true" />
-            <element signature="e#1705#1706#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/MonthPickupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="541">
-          <caret line="129" column="56" lean-forward="false" selection-start-line="129" selection-start-column="56" selection-end-line="129" selection-end-column="56" />
-          <folding>
-            <element signature="e#1063#1064#0" expanded="true" />
-            <element signature="e#1098#1099#0" expanded="true" />
-            <element signature="e#3738#3739#0" expanded="true" />
-            <element signature="e#3773#3774#0" expanded="true" />
-            <element signature="e#3826#3827#0" expanded="true" />
-            <element signature="e#3906#3907#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/QuantityProductController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="86" column="66" lean-forward="false" selection-start-line="86" selection-start-column="66" selection-end-line="86" selection-end-column="66" />
-          <folding>
-            <element signature="e#2470#2471#0" expanded="true" />
-            <element signature="e#2505#2506#0" expanded="true" />
-            <element signature="e#2558#2559#0" expanded="true" />
-            <element signature="e#2642#2643#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ProductPickupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="126" column="65" lean-forward="false" selection-start-line="126" selection-start-column="65" selection-end-line="126" selection-end-column="65" />
-          <folding>
-            <element signature="e#3423#3424#0" expanded="true" />
-            <element signature="e#3458#3459#0" expanded="true" />
-            <element signature="e#3511#3512#0" expanded="true" />
-            <element signature="e#3593#3594#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/crashcourse/restclient/controller/ShipmentDataController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="e#1605#1606#0" expanded="true" />
-            <element signature="e#1640#1641#0" expanded="true" />
-            <element signature="e#1693#1694#0" expanded="true" />
-            <element signature="e#1774#1775#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#543#544#0" expanded="true" />
+            <element signature="e#1546#1547#0" expanded="true" />
+            <element signature="e#1622#1623#0" expanded="true" />
           </folding>
         </state>
       </provider>
