@@ -112,7 +112,7 @@ public class StoreXApplicationTest extends ApplicationTest {
 //        write("topsecret");
 //        clickOn("#login");
 //    }
-
+//
 //    @Test
 //    public void testBalanceAddition() {
 //        clickOn("#username");
@@ -125,7 +125,7 @@ public class StoreXApplicationTest extends ApplicationTest {
 //        clickOn("#OK");
 //        clickOn("#OK");
 //    }
-
+//
 //    @Test
 //    public void testBalanceWrongDate() {
 //        clickOn("#username");
@@ -138,7 +138,7 @@ public class StoreXApplicationTest extends ApplicationTest {
 //        clickOn("#OK");
 //        clickOn("#OKDate");
 //    }
-
+//
 //    @Test
 //    public void testNoWaitingOrders() {
 //        testGeneratorClient.turncate("zamowienie_zakupu");
@@ -155,7 +155,7 @@ public class StoreXApplicationTest extends ApplicationTest {
 //        //akceptacja dialogu oczekiwania
 //        clickOn("#OKNoWaiting");
 //    }
-
+//
 //    @Test
 //    public void testNoSuchProductAvailable() {
 //        testGeneratorClient.turncate("umieszczenie");
@@ -178,8 +178,8 @@ public class StoreXApplicationTest extends ApplicationTest {
 //        //akceptacja dialogu braku produktu
 //        clickOn("#OKNoProduct");
 //    }
-
-
+//
+//
 //    @Test
 //    public void testOrderCompletionEmail() {
 //        //logowanie
@@ -229,7 +229,7 @@ public class StoreXApplicationTest extends ApplicationTest {
 //        //akceptacja email
 //        clickOn("#OKEmail");
 //    }
-
+//
 //    @Test
 //    public void testOrderCompletionDelivery() {
 //        //logowanie
@@ -292,7 +292,7 @@ public class StoreXApplicationTest extends ApplicationTest {
         //kompletowanie
         clickOn("#completeOrder");
         //wybor zamowienia
-        clickOn(600,400);
+        clickOn(600,200);
         clickOn("#OK");
         //wybor produktu
         clickOn(600,200);
@@ -317,18 +317,30 @@ public class StoreXApplicationTest extends ApplicationTest {
 
         //wybor ilosci
         clickOn("#quantityTextField");
-        write("37");
-        clickOn("#OK");
-        //akceptacja dialogu o blednej ilosci
-        clickOn("#OKWrongQuantity");
-
-        //wybor ilosci
-        clickOn("#quantityTextField");
         write("21");
         clickOn("#OK");
         //akceptacja dialogu o blednej ilosci
         clickOn("#OKWrongQuantity");
-        
+
+        //powrot do dialogu z lokalizacjami
+        clickOn("#back");
+        //powrot do dialogu z produktami
+        clickOn("#back");
+
+        //wybor produktu
+        clickOn(600,300);
+        clickOn("#OK");
+
+        //wybor lokalizacji
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor ilosci
+        clickOn("#quantityTextField");
+        write("40");
+        clickOn("#OK");
+        //akceptacja dialogu o blednej ilosci
+        clickOn("#OKWrongQuantity");
+
     }
 
 }

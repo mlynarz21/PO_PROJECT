@@ -198,7 +198,7 @@ public class TestGeneratorImpl {
 
         List<PozycjaZamowienia> pzList = new ArrayList<PozycjaZamowienia>();
         pzList.add(new PozycjaZamowienia(20, 0, t1, z1));
-        pzList.add(new PozycjaZamowienia(20, 0, t2, z1));
+        pzList.add(new PozycjaZamowienia(40, 0, t2, z1));
         pzList.add(new PozycjaZamowienia(10, 0, t3, z1));
         pzList.add(new PozycjaZamowienia(10, 0, t4, z1));
         pzList.add(new PozycjaZamowienia(20, 0, t5, z1));
@@ -261,7 +261,7 @@ public class TestGeneratorImpl {
         Random rand = new Random();
         List<Umieszczenie> umieszczenieList = new ArrayList<Umieszczenie>();
         for (int i = 0; i < 39; i++) {
-            umieszczenieList.add(new Umieszczenie((double) rand.nextInt(30) + 20, towarList.get(i % 13), lokalizacjaList.get(i)));
+            umieszczenieList.add(new Umieszczenie((double) rand.nextInt(19) + 20, towarList.get(i % 13), lokalizacjaList.get(i)));
         }
 
         for (Umieszczenie pozycja : umieszczenieList) {
