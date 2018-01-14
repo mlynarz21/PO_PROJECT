@@ -3,8 +3,25 @@ package com.StoreX.api.impl;
 import com.StoreX.api.BilansApi;
 import com.StoreX.common.datatypes.bo.BilansBO;
 import com.StoreX.common.datatypes.bo.PozycjaZamowieniaBO;
+import com.StoreX.common.datatypes.enumerations.StatusWydania;
+import com.StoreX.common.datatypes.enumerations.TypOdbioru;
 import com.StoreX.common.datatypes.to.BilansTO;
 import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
+import com.StoreX.persistence.entity.BilansEntities.Bilans;
+import com.StoreX.persistence.entity.BilansEntities.PozycjaBilansu;
+import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.PozycjaPrzyjecia;
+import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.PozycjaWydania;
+import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.PrzyjecieZamowienia;
+import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.WydanieZamowienia;
+import com.StoreX.persistence.entity.TowarEntities.Jednostka;
+import com.StoreX.persistence.entity.TowarEntities.Kategoria;
+import com.StoreX.persistence.entity.TowarEntities.Towar;
+import com.StoreX.persistence.entity.UmieszczenieEntities.Lokalizacja;
+import com.StoreX.persistence.entity.UmieszczenieEntities.Umieszczenie;
+import com.StoreX.persistence.entity.ZamowienieEntities.Klient;
+import com.StoreX.persistence.entity.ZamowienieEntities.PozycjaZamowienia;
+import com.StoreX.persistence.entity.ZamowienieEntities.ZamowienieDostawy;
+import com.StoreX.persistence.entity.ZamowienieEntities.ZamowienieZakupu;
 import com.StoreX.service.BilansServices.BilansCreationService;
 import com.StoreX.service.BilansServices.BilansSearchService;
 import com.StoreX.service.HelperServices.*;
@@ -119,7 +136,7 @@ public class BilansApiImpl implements BilansApi{
     @Override
     @RequestMapping(value = "/addTest/", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<PozycjaZamowieniaTO>> addTest(String sessionId) {
-/*
+
         Klient klient1 = new Klient();
         klient1.setImie("Jan");
         klient1.setKodPocztowy("62-100");
@@ -380,7 +397,7 @@ public class BilansApiImpl implements BilansApi{
         pozycjaBilansuService.add(pb);
 
 
-*/
+
         List<PozycjaZamowieniaBO> pozycjeZamowieniaBO = null;
         try {
             pozycjeZamowieniaBO = pozycjaZamowieniaSearchService.findAllforZamowienie(sessionId,new Long(41));
