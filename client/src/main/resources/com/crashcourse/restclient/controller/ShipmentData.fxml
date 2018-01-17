@@ -14,7 +14,7 @@
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" prefWidth="1920.0" style="-fx-background-color: #9500ff; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%ShipmentData.label" textFill="WHITE">
+                  <Label alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" prefWidth="1920.0" style="-fx-background-color: #4A148C; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%ShipmentData.label" textFill="WHITE">
                      <font>
                         <Font size="52.0" />
                      </font>
@@ -23,7 +23,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="150.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" prefWidth="900.0" style="-fx-background-color: #9500ff; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%ShipmentData.name" textFill="WHITE">
+                  <Label fx:id="nameLabel" alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" prefWidth="900.0" style="-fx-background-color: #4A148C; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%ShipmentData.name" textFill="WHITE">
                      <font>
                         <Font size="52.0" />
                      </font>
@@ -32,7 +32,7 @@
                      </opaqueInsets>
                   </Label>
                   <VBox prefWidth="100.0" />
-                  <Label fx:id="surnameLabel" alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" prefWidth="900.0" style="-fx-background-color: #9500ff; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%ShipmentData.surname" textFill="WHITE">
+                  <Label fx:id="surnameLabel" alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" prefWidth="900.0" style="-fx-background-color: #4A148C; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%ShipmentData.surname" textFill="WHITE">
                      <font>
                         <Font size="52.0" />
                      </font>
@@ -42,7 +42,7 @@
                   <Insets />
                </opaqueInsets>
             </HBox>
-            <Label fx:id="streetLabel" alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" prefWidth="1920.0" style="-fx-background-color: #9500ff; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%ShipmentData.address" textFill="WHITE">
+            <Label fx:id="streetLabel" alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" prefWidth="1920.0" style="-fx-background-color: #4A148C; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%ShipmentData.address" textFill="WHITE">
                <font>
                   <Font size="52.0" />
                </font>
@@ -52,7 +52,7 @@
                   <Insets />
                </opaqueInsets>
             </HBox>
-            <Label fx:id="postalCodeLabel" alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" prefWidth="1920.0" style="-fx-background-color: #9500ff; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%ShipmentData.postcode" textFill="WHITE">
+            <Label fx:id="postalCodeLabel" alignment="CENTER" contentDisplay="CENTER" minHeight="100.0" prefWidth="1920.0" style="-fx-background-color: #4A148C; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%ShipmentData.postcode" textFill="WHITE">
                <font>
                   <Font size="52.0" />
                </font>

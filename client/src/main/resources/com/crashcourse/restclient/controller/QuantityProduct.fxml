@@ -13,7 +13,7 @@
     <children>
       <VBox alignment="CENTER" layoutX="910.0" layoutY="255.0" prefHeight="200.0" prefWidth="100.0" style="-fx-padding: 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="localizationLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="150.0" prefWidth="1910.0" style="-fx-background-color: #9500ff; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%QuantityProduct.label" textFill="WHITE">
+            <Label fx:id="localizationLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="150.0" prefWidth="1910.0" style="-fx-background-color: #4A148C; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%QuantityProduct.label" textFill="WHITE">
                <font>
                   <Font size="52.0" />
                </font>
@@ -60,7 +60,7 @@
             </HBox>
          </children>
       </VBox>
-      <Label fx:id="quantityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-136.0" prefWidth="2300.0" style="-fx-background-color: #FF0000; -fx-opacity: 0.95;" text="randomText" textFill="WHITE" AnchorPane.leftAnchor="-20.0" AnchorPane.rightAnchor="-20.0" AnchorPane.topAnchor="0.0">
+      <Label fx:id="quantityLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="-136.0" prefWidth="2300.0" style="-fx-background-color: #EF5350; -fx-opacity: 0.95;" text="randomText" textFill="WHITE" AnchorPane.leftAnchor="-20.0" AnchorPane.rightAnchor="-20.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font size="52.0" />
          </font>

@@ -19,7 +19,7 @@
 }
 .column-header {
     -fx-text-fill: white;
-    -fx-background-color:  #9500ff;
+    -fx-background-color:  #4A148C;
     -fx-blend-mode: color-burn;
     -fx-opacity: 0.95;
     -fx-font-size: 26;

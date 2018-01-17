@@ -12,7 +12,7 @@
     <children>
       <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="1070.0" prefWidth="1403.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="50.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="1500.0" style="-fx-background-color: #9500ff; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%MonthPickup.label" textFill="WHITE">
+            <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="1500.0" style="-fx-background-color: #4A148C; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%MonthPickup.label" textFill="WHITE">
                <font>
                   <Font size="52.0" />
                </font>

@@ -1,26 +1,28 @@
 .dialog-pane{
-    -fx-background-color: yellow;
+    -fx-background-color: #FFEE58;
 }
 
 /**Costumization of The Bar where the buttons are located**/
 .dialog-pane > .button-bar > .container {
-    -fx-background-color:yellow;
+    -fx-background-color: #FFEE58;
 }
 
 .dialog-pane > .content.label {
-    -fx-background-color: yellow;
+    -fx-background-color: #FFEE58;
     -fx-font-size:24.0px;
 }
 
 /**Costumization of DialogPane Header**/
 .dialog-pane:header .header-panel {
-    -fx-background-color: yellow;
+    -fx-background-color: #FFEE58;
 }
 
 .dialog-pane:header .header-panel .label{
-    -fx-background-color:#9500ff;
+    -fx-background-color:#4A148C;
     -fx-text-fill:white;
     -fx-font-size:24.0px;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
 }
 
 

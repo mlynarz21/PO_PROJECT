@@ -11,13 +11,13 @@
       <VBox alignment="CENTER" layoutX="665.0" layoutY="314.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
          <children>
       
-              <Label prefHeight="120.0" style="-fx-background-color: #FF0000; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%informationDialog.informationTitle" textFill="WHITE">
+              <Label prefHeight="120.0" style="-fx-background-color: #EF5350; -fx-blend-mode: color-burn; -fx-opacity: 0.95; -fx-blend-mode: DARKEN;" text="%informationDialog.informationTitle" textFill="WHITE">
                   <font>
                       <Font name="System Bold Italic" size="52.0" />
                   </font>
               </Label>
             <VBox prefHeight="100.0" prefWidth="100.0" />
-            <Label fx:id="informationText" prefHeight="120.0" style="-fx-background-color: #FF0000;" text="Label" textFill="WHITE">
+            <Label fx:id="informationText" prefHeight="120.0" style="-fx-background-color: #EF5350;" text="Label" textFill="WHITE">
                <font>
                   <Font size="52.0" />
                </font>

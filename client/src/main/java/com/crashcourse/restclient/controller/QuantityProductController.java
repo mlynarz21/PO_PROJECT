@@ -54,12 +54,20 @@ public class QuantityProductController extends ArtifactsBaseController {
      */
     @FXML
     public void initialize() {
+        String number;
         quantityLabel.setText("Towar: "
                 + pozycjaZamowienia.getTowar().get().getKod().get()
                 + " Nazwa: "
                 + pozycjaZamowienia.getTowar().get().getNazwa().get()
                 + " Potrzeba jeszcze: "
                 + (pozycjaZamowienia.getIlosc().get() - pozycjaZamowienia.getZrealizowano().get()));
+        if(umieszczenie.getIloscWLokalizacji().getValue()<(pozycjaZamowienia.getIlosc().getValue()-pozycjaZamowienia.getZrealizowano().getValue()))
+            number = umieszczenie.getIloscWLokalizacji().getValue().toString();
+        else {
+            number = String.valueOf(pozycjaZamowienia.getIlosc().get() - pozycjaZamowienia.getZrealizowano().get());
+        }
+
+        quantityTextField.setText(number);
     }
 
 
