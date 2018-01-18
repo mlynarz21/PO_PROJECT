@@ -80,6 +80,219 @@ public class TestGeneratorImpl {
     private ModelMapper modelMapper = new ModelMapper();
 
 
+    @RequestMapping(value = "/add002/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> add002(String sessionId) {
+
+        turncate();
+
+        Klient klient1 = new Klient();
+        klient1.setID(1L);
+        klient1.setImie("Jan");
+        klient1.setKodPocztowy("42-110");
+        klient1.setNazwisko("Borowiak");
+        klient1.setLogin("janbo");
+        klient1.setMiasto("Leszno");
+        klient1.setNumerDomu("1");
+        klient1.setUlica("Polna");
+        klient1.setEmail("jan.b@live.com");
+        klientService.add(klient1);
+
+
+        Kategoria kategoria1 = new Kategoria();
+        kategoria1.setID(1L);
+        kategoria1.setKategoria("Sport");
+        kategoriaService.add(kategoria1);
+
+        Jednostka jednostka1 = new Jednostka();
+        jednostka1.setID(1L);
+        jednostka1.setRodzaj("Sztuka");
+        jednostkaService.add(jednostka1);
+
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2017, 11, 1);
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2018, 3, 2);
+
+        ZamowienieZakupu z1 = new ZamowienieZakupu("Z1", c1.getTime(), StatusWydania.Zaakceptowane, klient1, TypOdbioru.Wysylka, c2.getTime());
+        z1.setID(1L);
+        zamowienieZakupuService.addZamowienie(sessionId, z1);
+
+
+        Towar t1 = new Towar("t01", "Rower", 0, 2, jednostka1, kategoria1, 20);
+        t1.setID(1L);
+        towarService.saveTowar(t1);
+
+        PozycjaZamowienia pz1 = new PozycjaZamowienia(1L,10,2,t1,z1);
+        pozycjaZamowieniaService.add(pz1);
+
+        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+    }
+
+
+    @RequestMapping(value = "/add0039/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> add0039(String sessionId) {
+
+        turncate();
+
+        Klient klient1 = new Klient();
+        klient1.setID(1L);
+        klient1.setImie("Jan");
+        klient1.setKodPocztowy("42-110");
+        klient1.setNazwisko("Borowiak");
+        klient1.setLogin("janbo");
+        klient1.setMiasto("Leszno");
+        klient1.setNumerDomu("1");
+        klient1.setUlica("Polna");
+        klient1.setEmail("jan.b@live.com");
+        klientService.add(klient1);
+
+
+        Kategoria kategoria1 = new Kategoria();
+        kategoria1.setID(1L);
+        kategoria1.setKategoria("Sport");
+        kategoriaService.add(kategoria1);
+
+        Jednostka jednostka1 = new Jednostka();
+        jednostka1.setID(1L);
+        jednostka1.setRodzaj("Sztuka");
+        jednostkaService.add(jednostka1);
+
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2017, 11, 1);
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2018, 3, 2);
+
+        ZamowienieZakupu z1 = new ZamowienieZakupu("Z1", c1.getTime(), StatusWydania.Zaakceptowane, klient1, TypOdbioru.Wysylka, c2.getTime());
+        z1.setID(1L);
+        zamowienieZakupuService.addZamowienie(sessionId, z1);
+
+
+        Towar t1 = new Towar("t01", "Rower", 0, 2, jednostka1, kategoria1, 20);
+        t1.setID(1L);
+        towarService.saveTowar(t1);
+
+        PozycjaZamowienia pz1 = new PozycjaZamowienia(1L,10,2,t1,z1);
+        pozycjaZamowieniaService.add(pz1);
+
+        Lokalizacja lokalizacja = new Lokalizacja(1L,"L01",1,2,3);
+        lokalizacjaService.add(lokalizacja);
+
+        Umieszczenie umieszczenie = new Umieszczenie(1L,5,t1,lokalizacja);
+        umieszczenieService.addService(umieszczenie);
+
+        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/add004_5_6_7_8_10/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> add004_5_6_7_8_10(String sessionId) {
+
+        turncate();
+
+        Klient klient1 = new Klient();
+        klient1.setID(1L);
+        klient1.setImie("Jan");
+        klient1.setKodPocztowy("42-110");
+        klient1.setNazwisko("Borowiak");
+        klient1.setLogin("janbo");
+        klient1.setMiasto("Leszno");
+        klient1.setNumerDomu("1");
+        klient1.setUlica("Polna");
+        klient1.setEmail("jan.b@live.com");
+        klientService.add(klient1);
+
+
+        Kategoria kategoria1 = new Kategoria();
+        kategoria1.setID(1L);
+        kategoria1.setKategoria("Sport");
+        kategoriaService.add(kategoria1);
+
+        Jednostka jednostka1 = new Jednostka();
+        jednostka1.setID(1L);
+        jednostka1.setRodzaj("Sztuka");
+        jednostkaService.add(jednostka1);
+
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2017, 11, 1);
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2018, 3, 2);
+
+        ZamowienieZakupu z1 = new ZamowienieZakupu("Z1", c1.getTime(), StatusWydania.Zaakceptowane, klient1, TypOdbioru.Osobiscie, c2.getTime());
+        z1.setID(1L);
+        zamowienieZakupuService.addZamowienie(sessionId, z1);
+
+
+        Towar t1 = new Towar("t01", "Rower", 0, 2, jednostka1, kategoria1, 20);
+        t1.setID(1L);
+        towarService.saveTowar(t1);
+
+        PozycjaZamowienia pz1 = new PozycjaZamowienia(1L,10,2,t1,z1);
+        pozycjaZamowieniaService.add(pz1);
+
+        Lokalizacja lokalizacja = new Lokalizacja(1L,"L01",1,2,3);
+        lokalizacjaService.add(lokalizacja);
+
+        Umieszczenie umieszczenie = new Umieszczenie(1L,20,t1,lokalizacja);
+        umieszczenieService.addService(umieszczenie);
+
+        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/add011/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> add011(String sessionId) {
+
+        turncate();
+
+        Klient klient1 = new Klient();
+        klient1.setID(1L);
+        klient1.setImie("Jan");
+        klient1.setKodPocztowy("42-110");
+        klient1.setNazwisko("Borowiak");
+        klient1.setLogin("janbo");
+        klient1.setMiasto("Leszno");
+        klient1.setNumerDomu("1");
+        klient1.setUlica("Polna");
+        klient1.setEmail("jan.b@live.com");
+        klientService.add(klient1);
+
+
+        Kategoria kategoria1 = new Kategoria();
+        kategoria1.setID(1L);
+        kategoria1.setKategoria("Sport");
+        kategoriaService.add(kategoria1);
+
+        Jednostka jednostka1 = new Jednostka();
+        jednostka1.setID(1L);
+        jednostka1.setRodzaj("Sztuka");
+        jednostkaService.add(jednostka1);
+
+        Calendar c1 = Calendar.getInstance();
+        c1.set(2017, 11, 1);
+        Calendar c2 = Calendar.getInstance();
+        c2.set(2018, 3, 2);
+
+        ZamowienieZakupu z1 = new ZamowienieZakupu("Z1", c1.getTime(), StatusWydania.Zaakceptowane, klient1, TypOdbioru.Wysylka, c2.getTime());
+        z1.setID(1L);
+        zamowienieZakupuService.addZamowienie(sessionId, z1);
+
+
+        Towar t1 = new Towar("t01", "Rower", 0, 2, jednostka1, kategoria1, 20);
+        t1.setID(1L);
+        towarService.saveTowar(t1);
+
+        PozycjaZamowienia pz1 = new PozycjaZamowienia(1L,10,2,t1,z1);
+        pozycjaZamowieniaService.add(pz1);
+
+        Lokalizacja lokalizacja = new Lokalizacja(1L,"L01",1,2,3);
+        lokalizacjaService.add(lokalizacja);
+
+        Umieszczenie umieszczenie = new Umieszczenie(1L,20,t1,lokalizacja);
+        umieszczenieService.addService(umieszczenie);
+
+        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+    }
+
+
+
     @RequestMapping(value = "/addTest/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> addTest(String sessionId) {
 
