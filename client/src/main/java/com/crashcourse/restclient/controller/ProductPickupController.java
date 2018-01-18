@@ -10,6 +10,7 @@ import com.crashcourse.restclient.model.PozycjaZamowieniaModel;
 import com.crashcourse.restclient.model.ZamowienieZakupuModel;
 import com.crashcourse.restclient.view.AlertDialog;
 import com.crashcourse.restclient.view.FXMLDialog;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -65,7 +66,8 @@ public class ProductPickupController extends ArtifactsBaseController {
         pickUpLabel.setText("Zamówienie: " + zamowienieZakupu.getKod().get() + " Termin realizacji: " + df.format(zamowienieZakupu.getTerminRealizacji().get()));
         loadAllData();
         codeColumn.setCellValueFactory(celldata -> celldata.getValue().getTowar().get().getKod());
-        nameColumn.setCellValueFactory(celldata -> celldata.getValue().getTowar().get().getNazwa());
+        nameColumn.setCellValueFactory(celldata -> new SimpleStringProperty(celldata.getValue().getTowar().get().getNazwa().get()
+                + " (" + celldata.getValue().getTowar().get().getJednostka().get().getRodzaj().get() + ")"));
         quantityColumn.setCellValueFactory(celldata -> celldata.getValue().getIlosc().asObject());
         realizedColumn.setCellValueFactory(celldata -> celldata.getValue().getZrealizowano().asObject());
     }

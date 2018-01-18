@@ -62,7 +62,6 @@ public class StoreXApplicationTest extends ApplicationTest {
         else {
             Platform.exit();
         }
-
     }
 
     @Override
@@ -86,199 +85,199 @@ public class StoreXApplicationTest extends ApplicationTest {
         release(new MouseButton[]{});
     }
 
-//    @Test
-//    public void testLogInFail() {
-//        clickOn("#username");
-//        write("admin");
-//        clickOn("#password");
-//        write("to");
-//        clickOn("#login");
-//        clickOn("#OK");
-//    }
-//
-//    @Test
-//    public void testLogInFailWithoutPassword() {
-//        clickOn("#username");
-//        write("admin");
-//        clickOn("#login");
-//        clickOn("#OK");
-//    }
-//
-//    @Test
-//    public void testLogSuccess() {
-//        clickOn("#username");
-//        write("admin");
-//        clickOn("#password");
-//        write("topsecret");
-//        clickOn("#login");
-//    }
-//
-//    @Test
-//    public void testBalanceAddition() {
-//        clickOn("#username");
-//        write("admin");
-//        clickOn("#password");
-//        write("topsecret");
-//        clickOn("#login");
-//        clickOn("#makeBalance");
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        clickOn("#OK");
-//    }
-//
-//    @Test
-//    public void testBalanceWrongDate() {
-//        clickOn("#username");
-//        write("admin");
-//        clickOn("#password");
-//        write("topsecret");
-//        clickOn("#login");
-//        clickOn("#makeBalance");
-//        clickOn(600,250);
-//        clickOn("#OK");
-//        clickOn("#OKDate");
-//    }
-//
-//    @Test
-//    public void testNoWaitingOrders() {
-//        testGeneratorClient.turncate("zamowienie_zakupu");
-//        //logowanie
-//        clickOn("#username");
-//        write("admin");
-//        clickOn("#password");
-//        write("topsecret");
-//        clickOn("#login");
-//
-//        //kompletowanie
-//        clickOn("#completeOrder");
-//
-//        //akceptacja dialogu oczekiwania
-//        clickOn("#OKNoWaiting");
-//    }
-//
-//    @Test
-//    public void testNoSuchProductAvailable() {
-//        testGeneratorClient.turncate("umieszczenie");
-//        //logowanie
-//        clickOn("#username");
-//        write("admin");
-//        clickOn("#password");
-//        write("topsecret");
-//        clickOn("#login");
-//
-//        //kompletowanie
-//        clickOn("#completeOrder");
-//        //wybor zamowienia
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        //wybor produktu
-//        clickOn(600,200);
-//        clickOn("#OK");
-//
-//        //akceptacja dialogu braku produktu
-//        clickOn("#OKNoProduct");
-//    }
-//
-//
-//    @Test
-//    public void testOrderCompletionEmail() {
-//        //logowanie
-//        clickOn("#username");
-//        write("admin");
-//        clickOn("#password");
-//        write("topsecret");
-//        clickOn("#login");
-//
-//        //kompletowanie
-//        clickOn("#completeOrder");
-//        //wybor zamowienia
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        //wybor produktu
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        //wybor lokalizacji
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        //wybor ilosci
-//        clickOn("#quantityTextField");
-//        write("12");
-//        clickOn("#OK");
-//
-//        //wybor produktu
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        //wybor lokalizacji
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        //wybor ilosci
-//        write("12");
-//        clickOn("#OK");
-//        //akceptacja dialogu o blednej ilosci
-//        clickOn("#OKWrongQuantity");
-//
-//        //wybor ilosci
-//        clickOn("#quantityTextField");
-//        write("8");
-//        clickOn("#OK");
-//
-//        //wydawanie zamowienia
-//        clickOn("#send");
-//        clickOn(1200,500);
-//
-//        //akceptacja email
-//        clickOn("#OKEmail");
-//    }
-//
-//    @Test
-//    public void testOrderCompletionDelivery() {
-//        //logowanie
-//        clickOn("#username");
-//        write("admin");
-//        clickOn("#password");
-//        write("topsecret");
-//        clickOn("#login");
-//
-//        //kompletowanie
-//        clickOn("#completeOrder");
-//        //wybor zamowienia
-//        clickOn(600,400);
-//        clickOn("#OK");
-//        //wybor produktu
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        //wybor lokalizacji
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        //wybor ilosci
-//        clickOn("#quantityTextField");
-//        write("12");
-//        clickOn("#OK");
-//
-//        //wybor produktu
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        //wybor lokalizacji
-//        clickOn(600,200);
-//        clickOn("#OK");
-//        //wybor ilosci
-//        write("12");
-//        clickOn("#OK");
-//        //akceptacja dialogu o blednej ilosci
-//        clickOn("#OKWrongQuantity");
-//
-//        //wybor ilosci
-//        clickOn("#quantityTextField");
-//        write("8");
-//        clickOn("#OK");
-//
-//        //wydawanie zamowienia
-//        clickOn("#send");
-//        clickOn(1200,500);
-//
-//        //akceptacja wysylki
-//        clickOn("#OKShipment");
-//    }
+    @Test
+    public void testLogInFail() {
+        clickOn("#username");
+        write("admin");
+        clickOn("#password");
+        write("to");
+        clickOn("#login");
+        clickOn("#OK");
+    }
+
+    @Test
+    public void testLogInFailWithoutPassword() {
+        clickOn("#username");
+        write("admin");
+        clickOn("#login");
+        clickOn("#OK");
+    }
+
+    @Test
+    public void testLogSuccess() {
+        clickOn("#username");
+        write("admin");
+        clickOn("#password");
+        write("topsecret");
+        clickOn("#login");
+    }
+
+    @Test
+    public void testBalanceAddition() {
+        clickOn("#username");
+        write("admin");
+        clickOn("#password");
+        write("topsecret");
+        clickOn("#login");
+        clickOn("#makeBalance");
+        clickOn(600,200);
+        clickOn("#OK");
+        clickOn("#OK");
+    }
+
+    @Test
+    public void testBalanceWrongDate() {
+        clickOn("#username");
+        write("admin");
+        clickOn("#password");
+        write("topsecret");
+        clickOn("#login");
+        clickOn("#makeBalance");
+        clickOn(600,250);
+        clickOn("#OK");
+        clickOn("#OKDate");
+    }
+
+    @Test
+    public void testNoWaitingOrders() {
+        testGeneratorClient.turncate("zamowienie_zakupu");
+        //logowanie
+        clickOn("#username");
+        write("admin");
+        clickOn("#password");
+        write("topsecret");
+        clickOn("#login");
+
+        //kompletowanie
+        clickOn("#completeOrder");
+
+        //akceptacja dialogu oczekiwania
+        clickOn("#OKNoWaiting");
+    }
+
+    @Test
+    public void testNoSuchProductAvailable() {
+        testGeneratorClient.turncate("umieszczenie");
+        //logowanie
+        clickOn("#username");
+        write("admin");
+        clickOn("#password");
+        write("topsecret");
+        clickOn("#login");
+
+        //kompletowanie
+        clickOn("#completeOrder");
+        //wybor zamowienia
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor produktu
+        clickOn(600,200);
+        clickOn("#OK");
+
+        //akceptacja dialogu braku produktu
+        clickOn("#OKNoProduct");
+    }
+
+
+    @Test
+    public void testOrderCompletionEmail() {
+        //logowanie
+        clickOn("#username");
+        write("admin");
+        clickOn("#password");
+        write("topsecret");
+        clickOn("#login");
+
+        //kompletowanie
+        clickOn("#completeOrder");
+        //wybor zamowienia
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor produktu
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor lokalizacji
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor ilosci
+        clickOn("#quantityTextField");
+        write("12");
+        clickOn("#OK");
+
+        //wybor produktu
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor lokalizacji
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor ilosci
+        write("12");
+        clickOn("#OK");
+        //akceptacja dialogu o blednej ilosci
+        clickOn("#OKWrongQuantity");
+
+        //wybor ilosci
+        clickOn("#quantityTextField");
+        write("8");
+        clickOn("#OK");
+
+        //wydawanie zamowienia
+        clickOn("#send");
+        clickOn(1200,500);
+
+        //akceptacja email
+        clickOn("#OKEmail");
+    }
+
+    @Test
+    public void testOrderCompletionDelivery() {
+        //logowanie
+        clickOn("#username");
+        write("admin");
+        clickOn("#password");
+        write("topsecret");
+        clickOn("#login");
+
+        //kompletowanie
+        clickOn("#completeOrder");
+        //wybor zamowienia
+        clickOn(600,400);
+        clickOn("#OK");
+        //wybor produktu
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor lokalizacji
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor ilosci
+        clickOn("#quantityTextField");
+        write("12");
+        clickOn("#OK");
+
+        //wybor produktu
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor lokalizacji
+        clickOn(600,200);
+        clickOn("#OK");
+        //wybor ilosci
+        write("12");
+        clickOn("#OK");
+        //akceptacja dialogu o blednej ilosci
+        clickOn("#OKWrongQuantity");
+
+        //wybor ilosci
+        clickOn("#quantityTextField");
+        write("8");
+        clickOn("#OK");
+
+        //wydawanie zamowienia
+        clickOn("#send");
+        clickOn(1200,500);
+
+        //akceptacja wysylki
+        clickOn("#OKShipment");
+    }
 
     @Test
     public void testWrongQuantities() {
@@ -342,5 +341,4 @@ public class StoreXApplicationTest extends ApplicationTest {
         clickOn("#OKWrongQuantity");
 
     }
-
 }

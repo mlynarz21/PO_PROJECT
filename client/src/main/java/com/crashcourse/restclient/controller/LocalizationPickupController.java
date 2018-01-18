@@ -59,7 +59,7 @@ public class LocalizationPickupController extends ArtifactsBaseController {
                 + " Potrzeba jeszcze: "
                 + (pozycjaZamowienia.getIlosc().get() - pozycjaZamowienia.getZrealizowano().get()));
 
-        codeColumn.setCellValueFactory(celldata -> celldata.getValue().getTowar().get().getKod());
+        codeColumn.setCellValueFactory(celldata -> celldata.getValue().getLokalizacja().get().getKod());
         quantityColumn.setCellValueFactory(celldata -> celldata.getValue().getIloscWLokalizacji().asObject());
     }
 
