@@ -4,6 +4,7 @@ import com.crashcourse.restclient.api.impl.TestGeneratorClientImpl;
 import com.crashcourse.restclient.controller.basic.ScreensConfiguration;
 import com.crashcourse.restclient.main.config.StoreXAppConfiguration;
 import javafx.application.Platform;
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
@@ -291,17 +292,17 @@ public class StoreXApplicationTest extends ApplicationTest {
         //kompletowanie
         clickOn("#completeOrder");
         //wybor zamowienia
-        clickOn(600,200);
+        clickOn((Node)lookup(".table-cell").nth(3).query());
         clickOn("#OK");
         //wybor produktu
-        clickOn(600,200);
+        clickOn((Node)lookup(".table-cell").nth(4).query());
         clickOn("#OK");
 
         //wybor lokalizacji
         clickOn(600,200);
         clickOn("#OK");
         //wybor ilosci
-        clickOn("#quantityTextField");
+        doubleClickOn("#quantityTextField");
         write("-1");
         clickOn("#OK");
         //akceptacja dialogu o blednej ilosci
