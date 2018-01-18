@@ -9,11 +9,11 @@ import javafx.scene.control.DialogPane;
  */
 public class AlertDialog {
 
-    private Alert alert = new Alert(Alert.AlertType.WARNING);
-    private ButtonType buttonCancel;
-    private ButtonType buttonOK;
+    private static Alert alert;
+    private static ButtonType buttonCancel;
+    private static ButtonType buttonOK;
 
-    public AlertDialog(){
+    private AlertDialog(){
     }
 
     /**
@@ -21,6 +21,9 @@ public class AlertDialog {
      * @return alert
      */
     public Alert getAlert(){
+        if (alert==null)
+            alert = new Alert(Alert.AlertType.WARNING);
+
         alert.setTitle("Wydanie zamówienia");
         alert.setHeaderText("Czy na pewno chcesz wydać to zamówienie?\nTa akcja jest nieodwracalna");
         DialogPane dialogPane = alert.getDialogPane();
@@ -30,7 +33,9 @@ public class AlertDialog {
         return alert;
     }
 
-    public Alert getImplementationAlert(){
+    public static Alert getImplementationAlert(){
+        if (alert==null)
+            alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Funkcjonalność nieobsługiwana");
         alert.setHeaderText("Wygląda na to, że dana funkcjonalność nie jest jeszcze dostępna!");
         DialogPane dialogPane = alert.getDialogPane();
@@ -44,7 +49,9 @@ public class AlertDialog {
      * metoda dostępu do alertu wydanie
      * @return alert wydania
      */
-    public Alert getConfirmationAlert(){
+    public static Alert getConfirmationAlert(){
+        if (alert==null)
+            alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Wydanie zamówienia");
         alert.setHeaderText("Czy na pewno chcesz wydać to zamówienie?\nTa akcja jest nieodwracalna");
         DialogPane dialogPane = alert.getDialogPane();
@@ -55,11 +62,11 @@ public class AlertDialog {
         return alert;
     }
 
-    public ButtonType getButtonCancel() {
+    public static ButtonType getButtonCancel() {
         return buttonCancel;
     }
 
-    public ButtonType getButtonOK() {
+    public static ButtonType getButtonOK() {
         return buttonOK;
     }
 }
