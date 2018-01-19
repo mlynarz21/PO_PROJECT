@@ -1,6 +1,9 @@
 package com.StoreX.service.impl.BilansServicesImpl;
 
-import com.StoreX.common.datatypes.bo.*;
+import com.StoreX.common.datatypes.bo.PozycjaBilansuBO;
+import com.StoreX.common.datatypes.bo.PozycjaPrzyjeciaBO;
+import com.StoreX.common.datatypes.bo.PozycjaWydaniaBO;
+import com.StoreX.common.datatypes.bo.TowarBO;
 import com.StoreX.persistence.entity.BilansEntities.Bilans;
 import com.StoreX.persistence.entity.TowarEntities.Towar;
 import com.StoreX.persistence.repository.BilansRepository.BilansRepository;
@@ -14,10 +17,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
+import org.mockito.*;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.modelmapper.ModelMapper;
 
@@ -67,9 +67,9 @@ public class BilansCreationServiceImplTest {
     public void addBilans_BilansAlreadyExist_AreEqual() {
         //arrange
         //+1, ze względu na indeksowanie od 0 przy ustalaniu daty
-        Mockito.when(bilansRepository.findBilansForMonthAndYear(9 + 1,2017)).thenReturn(1);
+        Mockito.when(bilansRepository.findBilansForMonthAndYear(9 + 1, 2017)).thenReturn(1);
         Calendar dataBilansowana = Calendar.getInstance();
-        dataBilansowana.set(2017,9,10);
+        dataBilansowana.set(2017, 9, 10);
         String errorMessage = "";
 
         //act
@@ -85,15 +85,71 @@ public class BilansCreationServiceImplTest {
     }
 
     /**
-     * Dodaje nowy bilans z pozyjcą z ilością równą ilości w poprzednim bilansie
+     * Istnieje bilans bez pozycji bilansu dla miesiąca 10-2017
+     * Dla kolejnego bilansowanego miesiaca nie ma pozycji wydan i przyjec
+     * Wewnątrz metody add bilans jeden raz zostaje wywolane metoda repozytorium zapisująca bilans dla miesiąca 11-2017
+     * oraz 0 razy metoda serwisowa zapisujaca pozyce bilansu
+     */
+    @Test
+    public void addBilans_BrakPozycjiBilansu_AreEqual() {
+        Calendar dataOstatniegoBilansu = Calendar.getInstance();
+        dataOstatniegoBilansu.set(2017, 9, 10);
+        Calendar dataWykonaniaBilansu = Calendar.getInstance();
+        dataWykonaniaBilansu.set(2017, 11, 10);
+        Bilans ostatniBilans = new Bilans(1L, dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
+        Mockito.when(bilansRepository.findLastBilansByDate()).thenReturn(ostatniBilans);
+
+        TowarBO t = new TowarBO();
+        t.setID(1L);
+
+        Towar t11 = new Towar();
+        t11.setID(1L);
+
+        Mockito.when(towarService.getById(1L)).thenReturn(t11);
+
+
+
+        Calendar dataBilansowana = Calendar.getInstance();
+        //parametr miesiaca dla bilansowanej daty jest rowny 10, ze wzgledu na indeksowanie od 0
+        dataBilansowana.set(2017, 10, 10);
+        String errorMessage = "";
+        boolean sukces = false;
+
+        //act
+        try {
+            sukces =  bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
+        } catch (Exception e) {
+            errorMessage = e.getMessage();
+        }
+
+        //assert
+        Calendar dataBilansu = Calendar.getInstance();
+        dataBilansu.set(2017, 10, 10);
+        verify(pozycjaBilansuCreationService, Mockito.times(0)).savePozycjaBilansu(any());
+
+
+        verify(bilansRepository, Mockito.times(1)).save(Matchers.<Bilans>any());
+        ArgumentCaptor<Bilans> argument2 = ArgumentCaptor.forClass(Bilans.class);
+        verify(bilansRepository).save(argument2.capture());
+        Assert.assertEquals(dataBilansu.getTime().getMonth(), argument2.getValue().getDataBilansu().getMonth());
+        Assert.assertEquals(dataBilansu.getTime().getYear(), argument2.getValue().getDataBilansu().getYear());
+
+        Assert.assertTrue(sukces);
+    }
+
+    /**
+     * Istnieje bilans  jedną pozycją bilansu z ilocią 10 dla miesiąca 10-2017
+     * Dla kolejnego bilansowanego miesiaca nie ma pozycji wydan i przyjec
+     * Wewnątrz metody add bilans jeden raz zostaje wywolane metoda repozytorium zapisująca bilans dla miesiąca 11-2017
+     * oraz jeden raz metoda serwisowa zapisujaca pozyce bilansu z iloscią 10
      */
     @Test
     public void addBilans_PozycjeOstatniegoBilansu_AreEqual() {
         Calendar dataOstatniegoBilansu = Calendar.getInstance();
-        dataOstatniegoBilansu.set(2017,9,10);
+        dataOstatniegoBilansu.set(2017, 9, 10);
         Calendar dataWykonaniaBilansu = Calendar.getInstance();
-        dataWykonaniaBilansu.set(2017,10,10);
-        Bilans ostatniBilans = new Bilans(1L,dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
+        dataWykonaniaBilansu.set(2017, 11, 10);
+        Bilans ostatniBilans = new Bilans(1L, dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
         Mockito.when(bilansRepository.findLastBilansByDate()).thenReturn(ostatniBilans);
 
         TowarBO t = new TowarBO();
@@ -116,33 +172,50 @@ public class BilansCreationServiceImplTest {
         }
 
         Calendar dataBilansowana = Calendar.getInstance();
-        dataBilansowana.set(2017,10,10);
+        //parametr miesiaca dla bilansowanej daty jest rowny 10, ze wzgledu na indeksowanie od 0
+        dataBilansowana.set(2017, 10, 10);
         String errorMessage = "";
+        boolean sukces = false;
 
         //act
         try {
-            bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
+           sukces =  bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
         } catch (Exception e) {
             errorMessage = e.getMessage();
         }
 
         //assert
+        Calendar dataBilansu = Calendar.getInstance();
+        dataBilansu.set(2017, 10, 10);
+        verify(pozycjaBilansuCreationService, Mockito.times(1)).savePozycjaBilansu(any());
         ArgumentCaptor<PozycjaBilansuBO> argument = ArgumentCaptor.forClass(PozycjaBilansuBO.class);
         verify(pozycjaBilansuCreationService).savePozycjaBilansu(argument.capture());
-        Assert.assertEquals((int)10.0, (int)argument.getValue().getIlosc());
+        Assert.assertEquals((int) 10.0, (int) argument.getValue().getIlosc());
+
+        verify(bilansRepository, Mockito.times(1)).save(Matchers.<Bilans>any());
+        ArgumentCaptor<Bilans> argument2 = ArgumentCaptor.forClass(Bilans.class);
+        verify(bilansRepository).save(argument2.capture());
+        Assert.assertEquals(dataBilansu.getTime().getMonth(), argument2.getValue().getDataBilansu().getMonth());
+        Assert.assertEquals(dataBilansu.getTime().getYear(), argument2.getValue().getDataBilansu().getYear());
+
+        Assert.assertTrue(sukces);
     }
 
 
     /**
-     * Dodaje nowy bilans z pozyjcą z ilością równą ilości w poprzednim bilansie plus ilosca z pozycji przyjec
+     * Istnieje bilans  jedną pozycją bilansu z ilocią 10 dla miesiąca 10-2017
+     * Dla kolejnego bilansowanego miesiaca istnieje jedna pozycja przyjcia z iloscia 20 dla tego samego towaru, co
+     * w pozycji bilasnu
+     * Wewnątrz metody add bilans jeden raz zostaje wywolane metoda repozytorium zapisująca bilans dla miesiąca 11-2017
+     * oraz jeden raz metoda serwisowa zapisujaca pozyce bilansu z iloscią 30
      */
     @Test
     public void addBilans_PozycjeOstatniegoBilansuPozycjePrzyjec_AreEqual() {
         Calendar dataOstatniegoBilansu = Calendar.getInstance();
-        dataOstatniegoBilansu.set(2017,9,10);
+        dataOstatniegoBilansu.set(2017, 9, 10);
         Calendar dataWykonaniaBilansu = Calendar.getInstance();
-        dataWykonaniaBilansu.set(2017,10,10);
-        Bilans ostatniBilans = new Bilans(1L,dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
+        dataWykonaniaBilansu.set(2017, 10, 10);
+        Bilans ostatniBilans = new Bilans(1L, dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
         Mockito.when(bilansRepository.findLastBilansByDate()).thenReturn(ostatniBilans);
         TowarBO t = new TowarBO();
         t.setID(1L);
@@ -175,33 +248,51 @@ public class BilansCreationServiceImplTest {
         }
 
         Calendar dataBilansowana = Calendar.getInstance();
-        dataBilansowana.set(2017,10,10);
+        //parametr miesiaca dla bilansowanej daty jest rowny 10, ze wzgledu na indeksowanie od 0
+        dataBilansowana.set(2017, 10, 10);
         String errorMessage = "";
+        boolean sukces = false;
 
         //act
         try {
-            bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
+            sukces = bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
         } catch (Exception e) {
             errorMessage = e.getMessage();
         }
 
         //assert
+        Calendar dataBilansu = Calendar.getInstance();
+        dataBilansu.set(2017, 10, 10);
+        verify(pozycjaBilansuCreationService, Mockito.times(1)).savePozycjaBilansu(any());
         ArgumentCaptor<PozycjaBilansuBO> argument = ArgumentCaptor.forClass(PozycjaBilansuBO.class);
         verify(pozycjaBilansuCreationService).savePozycjaBilansu(argument.capture());
-        Assert.assertEquals((int)30.0, (int)argument.getValue().getIlosc());
+        Assert.assertEquals((int) 30.0, (int) argument.getValue().getIlosc());
+
+        verify(bilansRepository, Mockito.times(1)).save(Matchers.<Bilans>any());
+        ArgumentCaptor<Bilans> argument2 = ArgumentCaptor.forClass(Bilans.class);
+        verify(bilansRepository).save(argument2.capture());
+        Assert.assertEquals(dataBilansu.getTime().getMonth(), argument2.getValue().getDataBilansu().getMonth());
+        Assert.assertEquals(dataBilansu.getTime().getYear(), argument2.getValue().getDataBilansu().getYear());
+
+        Assert.assertTrue(sukces);
     }
 
     /**
-     * Dodaje nowy bilans z pozyjcą z ilością równą ilości w poprzednim bilansie plus ilosca z pozycji przyjec oraz
-     * odjeta iloscia w pozycji wydania
+     * Istnieje bilans  jedną pozycją bilansu z ilocią 10 dla miesiąca 10-2017
+     * Dla kolejnego bilansowanego miesiaca istnieje jedna pozycja przyjcia z iloscia 20 dla tego samego towaru, co
+     * w pozycji bilasnu
+     * Dla kolejnego bilansowanego miesiaca istnieje jedna pozycja wydania z iloscia 5 dla tego samego towaru, co
+     * w pozycji bilasnu
+     * Wewnątrz metody add bilans jeden raz zostaje wywolane metoda repozytorium zapisująca bilans dla miesiąca 11-2017
+     * oraz jeden raz metoda serwisowa zapisujaca pozyce bilansu z iloscią 25
      */
     @Test
     public void addBilans_PozycjeOstatniegoBilansuPozycjePrzyjecPozycjeWydan_AreEqual() {
         Calendar dataOstatniegoBilansu = Calendar.getInstance();
-        dataOstatniegoBilansu.set(2017,9,10);
+        dataOstatniegoBilansu.set(2017, 9, 10);
         Calendar dataWykonaniaBilansu = Calendar.getInstance();
-        dataWykonaniaBilansu.set(2017,10,10);
-        Bilans ostatniBilans = new Bilans(1L,dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
+        dataWykonaniaBilansu.set(2017, 10, 10);
+        Bilans ostatniBilans = new Bilans(1L, dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
         Mockito.when(bilansRepository.findLastBilansByDate()).thenReturn(ostatniBilans);
         TowarBO t = new TowarBO();
         t.setID(1L);
@@ -246,34 +337,52 @@ public class BilansCreationServiceImplTest {
         }
 
         Calendar dataBilansowana = Calendar.getInstance();
-        dataBilansowana.set(2017,10,10);
+        //parametr miesiaca dla bilansowanej daty jest rowny 10, ze wzgledu na indeksowanie od 0
+        dataBilansowana.set(2017, 10, 10);
         String errorMessage = "";
+        boolean sukces = false;
 
         //act
         try {
-            bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
+            sukces = bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
         } catch (Exception e) {
             errorMessage = e.getMessage();
         }
 
         //assert
+        Calendar dataBilansu = Calendar.getInstance();
+        dataBilansu.set(2017, 10, 10);
+        verify(pozycjaBilansuCreationService, Mockito.times(1)).savePozycjaBilansu(any());
         ArgumentCaptor<PozycjaBilansuBO> argument = ArgumentCaptor.forClass(PozycjaBilansuBO.class);
         verify(pozycjaBilansuCreationService).savePozycjaBilansu(argument.capture());
-        Assert.assertEquals((int)25.0, (int)argument.getValue().getIlosc());
+        Assert.assertEquals((int) 25.0, (int) argument.getValue().getIlosc());
+
+        verify(bilansRepository, Mockito.times(1)).save(Matchers.<Bilans>any());
+        ArgumentCaptor<Bilans> argument2 = ArgumentCaptor.forClass(Bilans.class);
+        verify(bilansRepository).save(argument2.capture());
+        Assert.assertEquals(dataBilansu.getTime().getMonth(), argument2.getValue().getDataBilansu().getMonth());
+        Assert.assertEquals(dataBilansu.getTime().getYear(), argument2.getValue().getDataBilansu().getYear());
+
+        Assert.assertTrue(sukces);
     }
 
 
     /**
-     * Dodaje nowy bilans z pozycjami bilansu wynikającymi z poprzedniego bilansu, pozycji wydań, pozycji zamówień.
-     * Pozycje bilansu zawierają różne towary, operacja zapisania pozycji bilansu powinna zostać wykonana 3 razy
+     * Istnieje bilans  jedną pozycją bilansu z ilocią 10 dla miesiąca 10-2017
+     * Dla kolejnego bilansowanego miesiaca istnieje jedna pozycja przyjcia z iloscia 20 dla innego  towaru, niż
+     * w pozycji bilasnu
+     * Dla kolejnego bilansowanego miesiaca istnieje jedna pozycja wydania z iloscia 5 dla innego towaru, niż
+     * w pozycji bilasnu i pozycji przyjecia
+     * Wewnątrz metody add bilans jeden raz zostaje wywolane metoda repozytorium zapisująca bilans dla miesiąca 11-2017
+     * oraz jtrzy razy metoda serwisowa zapisujaca pozyce bilansu
      */
     @Test
     public void addBilans_PozycjeOstatniegoBilansuPozycjePrzyjecPozycjeWydanRozneTowary_AreEqual() {
         Calendar dataOstatniegoBilansu = Calendar.getInstance();
-        dataOstatniegoBilansu.set(2017,9,10);
+        dataOstatniegoBilansu.set(2017, 9, 10);
         Calendar dataWykonaniaBilansu = Calendar.getInstance();
-        dataWykonaniaBilansu.set(2017,10,10);
-        Bilans ostatniBilans = new Bilans(1L,dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
+        dataWykonaniaBilansu.set(2017, 10, 10);
+        Bilans ostatniBilans = new Bilans(1L, dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
         Mockito.when(bilansRepository.findLastBilansByDate()).thenReturn(ostatniBilans);
         TowarBO t = new TowarBO();
         t.setID(1L);
@@ -328,34 +437,50 @@ public class BilansCreationServiceImplTest {
         }
 
         Calendar dataBilansowana = Calendar.getInstance();
-        dataBilansowana.set(2017,10,10);
+        //parametr miesiaca dla bilansowanej daty jest rowny 10, ze wzgledu na indeksowanie od 0
+        dataBilansowana.set(2017, 10, 10);
         String errorMessage = "";
+        boolean sukces = false;
 
         //act
         try {
-            bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
+            sukces = bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
         } catch (Exception e) {
             errorMessage = e.getMessage();
         }
 
         //assert
         ArgumentCaptor<PozycjaBilansuBO> argument = ArgumentCaptor.forClass(PozycjaBilansuBO.class);
-        verify(pozycjaBilansuCreationService,  Mockito.times(3)).savePozycjaBilansu(any());
+        verify(pozycjaBilansuCreationService, Mockito.times(3)).savePozycjaBilansu(any());
+
+        Calendar dataBilansu = Calendar.getInstance();
+        dataBilansu.set(2017, 10, 10);
+        verify(bilansRepository, Mockito.times(1)).save(Matchers.<Bilans>any());
+        ArgumentCaptor<Bilans> argument2 = ArgumentCaptor.forClass(Bilans.class);
+        verify(bilansRepository).save(argument2.capture());
+        Assert.assertEquals(dataBilansu.getTime().getMonth(), argument2.getValue().getDataBilansu().getMonth());
+        Assert.assertEquals(dataBilansu.getTime().getYear(), argument2.getValue().getDataBilansu().getYear());
+
+        Assert.assertTrue(sukces);
 
     }
 
 
     /**
-     *  Dodaje pierwszy bilans do bazy. Powinna zostać zapisana pozycja bilansu z różnicą ilośc w pozycji przyjecia
-     *  i pozycji wydania dla danego towaru.
+     * W bazie nie istnieje bilans ani pozycje bilansu
+     * Dla  bilansowanego miesiaca istnieje jedna pozycja przyjcia z iloscia 20
+     * Dla  bilansowanego miesiaca istnieje jedna pozycja wydania z iloscia 5 dla tego samego towaru, co
+     * w pozycji przyjecia
+     * Wewnątrz metody add bilans jeden raz zostaje wywolane metoda repozytorium zapisująca bilans dla miesiąca 11-2017
+     * oraz jeden raz metoda serwisowa zapisujaca pozyce bilansu z iloscią 15
      */
     @Test
     public void addBilans_PierwszyBilans_AreEqual() {
         Calendar dataOstatniegoBilansu = Calendar.getInstance();
-        dataOstatniegoBilansu.set(2017,9,10);
+        dataOstatniegoBilansu.set(2017, 9, 10);
         Calendar dataWykonaniaBilansu = Calendar.getInstance();
-        dataWykonaniaBilansu.set(2017,10,10);
-        Bilans ostatniBilans = new Bilans(1L,dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
+        dataWykonaniaBilansu.set(2017, 10, 10);
+        Bilans ostatniBilans = new Bilans(1L, dataWykonaniaBilansu.getTime(), dataOstatniegoBilansu.getTime());
         Mockito.when(bilansRepository.findLastBilansByDate()).thenReturn(null);
         TowarBO t = new TowarBO();
         t.setID(1L);
@@ -390,19 +515,32 @@ public class BilansCreationServiceImplTest {
         }
 
         Calendar dataBilansowana = Calendar.getInstance();
-        dataBilansowana.set(2017,10,10);
+        //parametr miesiaca dla bilansowanej daty jest rowny 10, ze wzgledu na indeksowanie od 0
+        dataBilansowana.set(2017, 10, 10);
         String errorMessage = "";
+        boolean sukces = false;
 
         //act
         try {
-            bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
+            sukces = bilansCreationService.addBilans("53b37a38-7bf1-48dd-9b92-f14e1b691adf", dataBilansowana.getTime());
         } catch (Exception e) {
             errorMessage = e.getMessage();
         }
 
         //assert
+        Calendar dataBilansu = Calendar.getInstance();
+        dataBilansu.set(2017, 10, 10);
+        verify(pozycjaBilansuCreationService, Mockito.times(1)).savePozycjaBilansu(any());
         ArgumentCaptor<PozycjaBilansuBO> argument = ArgumentCaptor.forClass(PozycjaBilansuBO.class);
         verify(pozycjaBilansuCreationService).savePozycjaBilansu(argument.capture());
-        Assert.assertEquals((int)15.0, (int)argument.getValue().getIlosc());
+        Assert.assertEquals((int) 15.0, (int) argument.getValue().getIlosc());
+
+        verify(bilansRepository, Mockito.times(1)).save(Matchers.<Bilans>any());
+        ArgumentCaptor<Bilans> argument2 = ArgumentCaptor.forClass(Bilans.class);
+        verify(bilansRepository).save(argument2.capture());
+        Assert.assertEquals(dataBilansu.getTime().getMonth(), argument2.getValue().getDataBilansu().getMonth());
+        Assert.assertEquals(dataBilansu.getTime().getYear(), argument2.getValue().getDataBilansu().getYear());
+
+        Assert.assertTrue(sukces);
     }
 }
