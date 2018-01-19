@@ -1,7 +1,7 @@
 public enum StatusWydania {
-	Wprowadzone,
-	Oczekuj?ce,
-	Zaakceptowane,
-	Gotowe,
-	Wydane
+	Wprowadzone, 
+	Oczekuj?ce, 
+	Zaakceptowane, 
+	Gotowe, 
+	Wydane;
 }

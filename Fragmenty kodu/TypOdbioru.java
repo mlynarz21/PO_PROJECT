@@ -1,4 +1,4 @@
 public enum TypOdbioru {
-	Osobiscie,
-	Wysylka
+	Osobiscie, 
+	Wysylka;
 }

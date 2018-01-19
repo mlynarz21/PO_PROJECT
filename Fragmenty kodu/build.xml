@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<path id="build.classpath">
+		<pathelement location="classes"/>
+	</path>
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+	<target depends="init" name="build">
+		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
+			<classpath refid="build.classpath"/>
+			<include name="TypOdbioru.java"/>
+			<include name="StatusWydania.java"/>
+			<include name="Jednostka.java"/>
+			<include name="Kategoria.java"/>
+			<include name="Umieszczenie.java"/>
+			<include name="Magazynier.java"/>
+			<include name="Przestrze?_Magazynowa.java"/>
+			<include name="Rega?.java"/>
+			<include name="Lokalizacja.java"/>
+			<include name="Bilans.java"/>
+			<include name="PozycjaBilansu.java"/>
+			<include name="StatusDostawy.java"/>
+			<include name="Dostawca.java"/>
+			<include name="Pozycja_Przyj?cia.java"/>
+			<include name="Przyj?cie_Zamówienia.java"/>
+			<include name="Zamówienie_dostawy.java"/>
+			<include name="Zamówienie.java"/>
+			<include name="PozycjaZamówienia.java"/>
+			<include name="Towar.java"/>
+			<include name="Pozycja_Wydania.java"/>
+			<include name="Wydanie_Zamówienia.java"/>
+			<include name="Zamówienie_zakupu.java"/>
+			<include name="Klient.java"/>
+		</javac>
+	</target>
+</project>
