@@ -6,6 +6,9 @@ import com.StoreX.common.datatypes.enumerations.TypOdbioru;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * ZamowienieZakupu Entity - klasa reprezentacji obiektów bazy
+ */
 @Entity
 @DiscriminatorValue("ZamowienieZakupu")
 public class ZamowienieZakupu extends Zamowienie{

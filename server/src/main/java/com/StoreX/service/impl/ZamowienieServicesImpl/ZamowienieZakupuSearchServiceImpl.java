@@ -27,9 +27,8 @@ public class ZamowienieZakupuSearchServiceImpl implements ZamowienieZakupuSearch
     private ModelMapper modelMapper = new ModelMapper();
     @Override
     public List<ZamowienieZakupuBO> findAllAccepted(String sessionId) throws AuthenticationException {
-
         if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
-            // throw new AuthenticationException();
+            throw new AuthenticationException();
         }
 
         List<ZamowienieZakupu> result = getZamowienieZakupuRepository().findByStatus(StatusWydania.Zaakceptowane.toString());

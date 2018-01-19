@@ -90,6 +90,11 @@ public class KlientModel {
         this.email = email;
     }
 
+    /**
+     * metoda mapowania z obiektu transferowego do obiektu modelowego
+     * @param klientTO wejściowy obiekt transferowy
+     * @return wyjściowe obiekt modelu
+     */
     public static KlientModel fromKlientTo(KlientTO klientTO) {
         KlientModel klientModel = new KlientModel();
         klientModel.ID = klientTO.getID();

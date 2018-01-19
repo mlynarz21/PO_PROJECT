@@ -45,6 +45,12 @@ public class PozycjaWydaniaModel {
     public void setWydanieZamowienia(SimpleObjectProperty<WydanieZamowieniaModel> wydanieZamowienia) {
         this.wydanieZamowienia = wydanieZamowienia;
     }
+
+    /**
+     * metoda mapowania z obiektu transferowego do obiektu modelowego
+     * @param pozycjaWydaniaTO wejściowy obiekt transferowy
+     * @return wyjściowe obiekt modelu
+     */
     public static PozycjaWydaniaModel fromPozycjaWydaniaTo(PozycjaWydaniaTO pozycjaWydaniaTO) {
         PozycjaWydaniaModel pozycjaWydaniaModel = new PozycjaWydaniaModel();
         pozycjaWydaniaModel.wydanieZamowienia = new SimpleObjectProperty<>(WydanieZamowieniaModel.fromWydanieZamowieniaTo(pozycjaWydaniaTO.getWydanieZamowienia()));;

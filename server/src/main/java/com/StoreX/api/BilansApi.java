@@ -12,7 +12,7 @@ public interface BilansApi {
 
     /**
      * Pobiera bilans z najpóźniejszą datą bilansowaną
-     * @param sessionId sessionId
+     * @param sessionId Id sesji użytkownika wysyłąjącego żądanie
      * @return Bilans z najpóźniejszą datą bilansowaną
      */
     ResponseEntity<BilansTO> getLastBilans(String sessionId);
@@ -20,7 +20,7 @@ public interface BilansApi {
     /**
      * Dodaje bilans z aktualną datą jako data wykonania bilansu oraz datą bilansowaną przekazaną w parametrze
      * @param dataBilansowana bilansowana data
-     * @param sessionId sessionId
+     * @param sessionId Id sesji użytkownika wysyłąjącego żądanie
      * @return Informacja o powodzeniu operacji dodawania bilansu
      */
     ResponseEntity<Boolean> addBilans(Date dataBilansowana, String sessionId);

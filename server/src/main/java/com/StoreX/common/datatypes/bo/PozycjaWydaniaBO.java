@@ -1,5 +1,8 @@
 package com.StoreX.common.datatypes.bo;
 
+/**
+ * Obiekt biznesowy klasy PozycjaWydania - używany do operacji w warstwie logiki biznesowej
+ */
 public class PozycjaWydaniaBO {
     private Long ID;
     private double ilosc;

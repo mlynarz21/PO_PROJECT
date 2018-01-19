@@ -1,15 +1,13 @@
 package com.StoreX.persistence.repository.impl;
 
-import java.util.Comparator;
+import com.StoreX.persistence.entity.AuthorizationEntities.User;
+import com.StoreX.persistence.repository.AuthorizationRepository.UserRepository;
+import org.springframework.stereotype.Repository;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
-
-import org.springframework.stereotype.Repository;
-
-import com.StoreX.persistence.entity.AuthorizationEntities.User;
-import com.StoreX.persistence.repository.AuthorizationRepository.UserRepository;
 
 @Repository
 public class UserRepositoryImpl implements UserRepository {

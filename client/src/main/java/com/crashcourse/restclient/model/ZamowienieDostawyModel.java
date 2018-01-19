@@ -22,6 +22,11 @@ public class ZamowienieDostawyModel extends ZamowienieModel{
         this.status = status;
     }
 
+    /**
+     * metoda mapowania z obiektu transferowego do obiektu modelowego
+     * @param zamowienieDostawyTO wejściowy obiekt transferowy
+     * @return wyjściowe obiekt modelu
+     */
     public static ZamowienieDostawyModel fromZamowienieDostawyTo(ZamowienieDostawyTO zamowienieDostawyTO) {
         ZamowienieDostawyModel zamowienieDostawyModel = new ZamowienieDostawyModel();
         zamowienieDostawyModel.status = new SimpleObjectProperty<>(zamowienieDostawyTO.getStatus());

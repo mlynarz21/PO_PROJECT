@@ -38,6 +38,11 @@ public class PrzyjecieZamowieniaModel {
         this.zamowienie = zamowienie;
     }
 
+    /**
+     * metoda mapowania z obiektu transferowego do obiektu modelowego
+     * @param przyjecieZamowieniaTO wejściowy obiekt transferowy
+     * @return wyjściowe obiekt modelu
+     */
     public static PrzyjecieZamowieniaModel fromZamowienieZakupuTo(PrzyjecieZamowieniaTO przyjecieZamowieniaTO) {
         PrzyjecieZamowieniaModel przyjecieZamowieniaModel = new PrzyjecieZamowieniaModel();
         przyjecieZamowieniaModel.ID = przyjecieZamowieniaTO.getID();

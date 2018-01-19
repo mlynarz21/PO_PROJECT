@@ -8,9 +8,9 @@ import java.util.List;
 public interface UmieszczenieSearchService {
     /**
      * Wyszukuje wszystkie umieszczenia dla towaru o podanym Id
-     * @param sessionId Id sesji
-     * @param ID Id Towaru
-     * @return Lista umieszczeń
+     * @param sessionId Id sesji użytkownika wysyłąjącego zapytanie
+     * @param ID Id Towaru, którego dotyczy zapytanie
+     * @return Lista umieszczeń towaru
      * @throws AuthenticationException
      */
     List<UmieszczenieBO> findAllForTowar(String sessionId, Long ID) throws AuthenticationException;

@@ -17,7 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-//todo: change to pozycja zamowienia ZAKUPU?
+/**
+ * REST API Pozycji Zamówienia (implementacja)
+ */
 @CrossOrigin
 @RestController
 @RequestMapping("/rest/artifactlibrary/component/v1")
@@ -33,7 +35,7 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
     /**
      * Pobiera wszystkie Pozycje Zamówienia dla Zamówienia o podanym Id
      * @param ID IdZamówienia
-     * @param sessionId Id sesji
+     * @param sessionId Id sesji użytkownika wysyłąjącego żądanie
      * @return Lista pozycji zamówień
      */
     @Override
@@ -59,7 +61,7 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
      * Pobierea wskazaną ilośc towaru z lokalizacji i dodaje do ilości zrealizowanej w pozycji zamówienia.
      * Metoda wykorzystywana przy kompletowaniu zamówienia.
      * @param transferList Lista parametrów (Id Pozycji Bilansu, Id Umieszczenia, Ilość)
-     * @param sessionId Id sesji
+     * @param sessionId Id sesji użytkownika wysyłąjącego żądanie
      * @return Informację o powodzeniu operacji
      */
     @Override

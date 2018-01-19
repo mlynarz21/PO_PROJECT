@@ -5,6 +5,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
 
+/**
+ * Bilans Entity - klasa reprezentacji obiektów bazy
+ */
 @Entity
 public class Bilans {
 

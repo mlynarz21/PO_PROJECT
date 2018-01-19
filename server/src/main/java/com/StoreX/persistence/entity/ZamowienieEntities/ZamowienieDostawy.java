@@ -8,6 +8,9 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import java.util.Date;
 
+/**
+ * ZamowienieDostawy Entity - klasa reprezentacji obiektów bazy
+ */
 @Entity
 @DiscriminatorValue("ZamowienieDostawy")
 public class ZamowienieDostawy extends Zamowienie{

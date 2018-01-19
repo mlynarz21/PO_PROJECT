@@ -23,6 +23,9 @@ import com.StoreX.service.AuthorizationServices.AuthorizationService;
 @CrossOrigin
 @RestController
 @RequestMapping("/rest/artifactlibrary/authorization/v1")
+/**
+ * REST Api użwane do autoryzacji(implementacja)
+ */
 public class AuthorizationApiImpl implements AuthorizationApi {
 
     @Autowired
@@ -34,7 +37,7 @@ public class AuthorizationApiImpl implements AuthorizationApi {
      * Loguje użytkownika. Jeżeli użytkownik zostanie zalogowany poprawnie, zwracane jest Id sesji
      *
      * @param user
-     * @return
+     * @return Id sesji użytkownika
      */
     @Override
     @RequestMapping(value = "/login/", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
@@ -57,7 +60,7 @@ public class AuthorizationApiImpl implements AuthorizationApi {
      * Rejestruje nowego użytkownika
      *
      * @param user
-     * @return true if the user was correctly registered
+     * @return true jeśli użytkownik został poprawnie zarejestrowany
      */
     @Override
     @RequestMapping(value = "/register/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)

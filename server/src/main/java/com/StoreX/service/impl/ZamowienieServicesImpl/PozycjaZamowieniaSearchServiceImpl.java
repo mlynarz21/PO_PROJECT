@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import javax.naming.AuthenticationException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class PozycjaZamowieniaSearchServiceImpl implements PozycjaZamowieniaSearchService {
@@ -27,9 +28,10 @@ public class PozycjaZamowieniaSearchServiceImpl implements PozycjaZamowieniaSear
     //todo add sessionId
     @Override
     public List<PozycjaZamowieniaBO> findAllforZamowienie(String sessionId, Long ID) throws AuthenticationException{
-        //if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
-        // throw new AuthenticationException();
-        //}
+        if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
+            throw new AuthenticationException();
+        }
+
         List<PozycjaZamowienia> pozycjaZamowieniaList = getPozycjaZamowieniaRepository().findAllForZamowienie(ID);
         List<PozycjaZamowieniaBO> resultBO = new ArrayList<>();
 

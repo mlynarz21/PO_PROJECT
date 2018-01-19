@@ -55,6 +55,11 @@ public class PozycjaZamowieniaModel {
         this.zrealizowano = zrealizowano;
     }
 
+    /**
+     * metoda mapowania z obiektu transferowego do obiektu modelowego
+     * @param pozycjaZamowieniaTO wejściowy obiekt transferowy
+     * @return wyjściowe obiekt modelu
+     */
     public static PozycjaZamowieniaModel fromPozycjaZamowieniaTo(PozycjaZamowieniaTO pozycjaZamowieniaTO) {
         PozycjaZamowieniaModel pozycjaZamowieniaModel = new PozycjaZamowieniaModel();
         if(pozycjaZamowieniaTO.getZamowienie() instanceof ZamowienieDostawyTO)

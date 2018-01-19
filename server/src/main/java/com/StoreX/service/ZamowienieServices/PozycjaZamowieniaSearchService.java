@@ -8,9 +8,9 @@ import java.util.List;
 public interface PozycjaZamowieniaSearchService {
     /**
      * Wyszukuje wszyskie pozycje zamówienia dla zamówienia o podanym Id
-     * @param sessionId Id sesji
-     * @param ID Id Zamówienia
-     * @return Lista pozycji zamówienia
+     * @param sessionId Id sesji użytkownika wysyłąjącego zapytanie
+     * @param ID Id Zamówienia, którego dotyczy zapytanie
+     * @return Lista pozycji zamówienia o podanym ID
      * @throws AuthenticationException
      */
     List<PozycjaZamowieniaBO> findAllforZamowienie(String sessionId, Long ID) throws AuthenticationException;

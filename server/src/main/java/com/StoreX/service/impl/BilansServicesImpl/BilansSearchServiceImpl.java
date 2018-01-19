@@ -24,9 +24,10 @@ public class BilansSearchServiceImpl implements BilansSearchService {
 
     @Override
     public BilansBO findLast(String sessionId)throws AuthenticationException {
-        if (!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
-            //throw new AuthenticationException();
+        if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
+            throw new AuthenticationException();
         }
+
         Bilans lastBilans = getBilansRepository().findLastBilansByDate();
 
         if (lastBilans != null)

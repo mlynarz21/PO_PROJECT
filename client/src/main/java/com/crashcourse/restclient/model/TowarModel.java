@@ -107,6 +107,11 @@ public class TowarModel {
         this.kategoria = kategoria;
     }
 
+    /**
+     * metoda mapowania z obiektu transferowego do obiektu modelowego
+     * @param towarTO wejściowy obiekt transferowy
+     * @return wyjściowe obiekt modelu
+     */
     public static TowarModel fromTowarTo(TowarTO towarTO) {
         TowarModel towarModel = new TowarModel();
         towarModel.ID = towarTO.getID();

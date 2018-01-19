@@ -1,5 +1,8 @@
 package com.StoreX.common.datatypes.bo;
 
+/**
+ * Obiekt biznesowy klasy Umieszczenie - używany do operacji w warstwie logiki biznesowej
+ */
 public class UmieszczenieBO {
     private Long ID;
     private double iloscWLokalizacji;

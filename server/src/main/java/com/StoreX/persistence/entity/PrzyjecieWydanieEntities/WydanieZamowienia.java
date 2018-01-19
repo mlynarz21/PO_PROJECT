@@ -7,6 +7,9 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import java.util.Date;
 
+/**
+ * WydanieZamowienia Entity - klasa reprezentacji obiektów bazy
+ */
 @Entity
 public class WydanieZamowienia {
 

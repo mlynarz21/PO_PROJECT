@@ -7,7 +7,6 @@ import javax.validation.constraints.Size;
 
 /**
  * User Entity
- * @author CWOJTOWI
  */
 @Entity
 public class User {

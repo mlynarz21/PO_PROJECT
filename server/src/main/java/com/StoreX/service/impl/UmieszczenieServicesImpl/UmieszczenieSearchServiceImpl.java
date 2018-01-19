@@ -27,8 +27,9 @@ public class UmieszczenieSearchServiceImpl implements UmieszczenieSearchService 
     @Override
     public List<UmieszczenieBO> findAllForTowar(String sessionId, Long ID)throws AuthenticationException {
         if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
-            // throw new AuthenticationException();
+            throw new AuthenticationException();
         }
+
         List<Umieszczenie> umieszczenieList = getUmieszczenieRepository().findAllForTowar(ID);
 
         List<UmieszczenieBO> resultBO = new ArrayList<>();

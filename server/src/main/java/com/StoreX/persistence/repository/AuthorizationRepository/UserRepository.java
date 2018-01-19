@@ -5,34 +5,27 @@ import java.util.UUID;
 import com.StoreX.persistence.entity.AuthorizationEntities.User;
 
 /**
- * Repository used for Database actions with the User Entity.
- * @author CWOJTOWI
+ * Repozytorium używane do akcji z bazą danych oraz User Entity.
  */
 public interface UserRepository {
 
     /**
-     *  Checks if the given sessionID is valid - if the user is correctly authorized.
+     *  Sprawdza czy sessionID jest poprawne - czy użytkownik ma autoryzację
      *
-     * @param sessionID the sessionID of the User
+     * @param sessionID sessionID użytkownika
      * @return
      */
     boolean isUserAuthorized(UUID sessionID);
 
     /**
-     * Logs users in. If the user is logged in correctly a sessionID is returned.
+     * Loguje użytkownika. jeśli proces przebiega poprawnie - zwraca sessionID
      *
-     * @param username
+     * @param username nazwa użytkownika
      * @param password
-     * @return
+     * @return numer sesji użytkownika
      */
     UUID login(String username, String password);
 
-    /**
-     * Registers a new user
-     *
-     * @param newUser
-     * @return true if the user was correctly registered
-     */
     boolean register(User newUser);
     
     String getUserType(String username);

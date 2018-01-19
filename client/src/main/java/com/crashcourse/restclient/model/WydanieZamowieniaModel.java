@@ -38,6 +38,11 @@ public class WydanieZamowieniaModel {
         this.zamowienie = zamowienie;
     }
 
+    /**
+     * metoda mapowania z obiektu transferowego do obiektu modelowego
+     * @param wydanieZamowieniaTO wejściowy obiekt transferowy
+     * @return wyjściowe obiekt modelu
+     */
     public static WydanieZamowieniaModel fromWydanieZamowieniaTo(WydanieZamowieniaTO wydanieZamowieniaTO) {
         WydanieZamowieniaModel wydanieZamowieniaModel = new WydanieZamowieniaModel();
         wydanieZamowieniaModel.ID = wydanieZamowieniaTO.getID();

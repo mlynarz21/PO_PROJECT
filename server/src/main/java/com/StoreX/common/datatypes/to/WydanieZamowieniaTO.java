@@ -3,6 +3,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
+/**
+ * klasa WydanieZamowienia obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class WydanieZamowieniaTO {
     private Long ID;
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")

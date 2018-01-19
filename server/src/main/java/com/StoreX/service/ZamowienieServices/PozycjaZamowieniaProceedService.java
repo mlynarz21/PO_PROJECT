@@ -5,10 +5,10 @@ import javax.naming.AuthenticationException;
 public interface PozycjaZamowieniaProceedService {
     /**
      * Pobiera podaną ilość z podanej lokalizacji i zwiększa ilość zrealizowaną w podanej pozycji zamóienia
-     * @param sessionId Id sesji
-     * @param idPozycji Id pozycji zamówienia
-     * @param idUmieszczenia Id umieszczenia
-     * @param ilosc Ilosć
+     * @param sessionId Id sesji użytkownika wysyłąjącego zapytanie
+     * @param idPozycji Id pozycji zamówienia, którego dotyczy zapytanie
+     * @param idUmieszczenia Id umieszczenia, którgo dotyczy zapytanie
+     * @param ilosc Ilość dekrementowana w umieszczeniu, a zarazem inkrementowana w zamówieniu
      * @return Informacja o powodzeniu operacji
      * @throws AuthenticationException
      * @throws Exception

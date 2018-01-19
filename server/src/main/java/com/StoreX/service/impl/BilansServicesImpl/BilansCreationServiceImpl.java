@@ -50,7 +50,7 @@ public class BilansCreationServiceImpl implements BilansCreationService {
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
     public boolean addBilans(String sessionId, Date dataBilansowana)throws AuthenticationException , Exception{
         if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
-            // throw new AuthenticationException();
+            throw new AuthenticationException();
         }
 
         int numberOfBilansesWithGivenDate = getBilansRepository().findBilansForMonthAndYear(dataBilansowana.getMonth() + 1, dataBilansowana.getYear() + 1900);

@@ -3,6 +3,9 @@ package com.StoreX.persistence.entity.ZamowienieEntities;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * Zamowienie Entity - klasa reprezentacji obiektów bazy, abstrakcyjna , rozszerzana przez zamówienia zakupu oraz dostawy
+ */
 @Entity
 @DiscriminatorColumn
 @Inheritance(strategy = InheritanceType.JOINED)

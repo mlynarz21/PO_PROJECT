@@ -6,7 +6,6 @@ import com.StoreX.common.datatypes.bo.UserBo;
 
 /**
  * Service which is responsible for the logic of the authorization process of Users.
- * @author CWOJTOWI
  */
 public interface AuthorizationService {
 

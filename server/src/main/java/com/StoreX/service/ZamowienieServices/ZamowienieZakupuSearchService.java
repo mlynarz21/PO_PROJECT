@@ -8,7 +8,7 @@ import java.util.List;
 public interface ZamowienieZakupuSearchService {
     /**
      * Wyszukuje wszystkie zamówienia zakupu o statusie zaakceptowane
-     * @param sessionId Id sesji
+     * @param sessionId Id sesji użytkownika wysyłąjącego zapytanie
      * @return Lista zamówień zakupu o statusie zaakceptowane
      * @throws AuthenticationException
      */

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import javax.naming.AuthenticationException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class PozycjaWydaniaSearchServiceImpl implements PozycjaWydaniaSearchService {
@@ -22,9 +23,7 @@ public class PozycjaWydaniaSearchServiceImpl implements PozycjaWydaniaSearchServ
 
     @Override
     public List<PozycjaWydaniaBO> findAllForMonthAndYear(int Month, int Year) throws AuthenticationException {
-        //if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
-        // throw new AuthenticationException();
-        //}
+
         List<PozycjaWydania> pozycjaWydaniaList = getPozycjaWydaniaRepository().findAllForMonthAndYear(Month, Year);
 
 

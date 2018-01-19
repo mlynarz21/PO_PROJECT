@@ -1,8 +1,8 @@
 package com.StoreX.common.datatypes.to;
 
+
 /**
- * User Transport Object
- * @author CWOJTOWI
+ * klasa User obiektu transferowego - używana w komunikacji między serwerem a klientem
  */
 public class UserTo {
 

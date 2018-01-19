@@ -1,5 +1,8 @@
 package com.StoreX.common.datatypes.to;
 
+/**
+ * klasa Jednostka obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class JednostkaTO {
     private Long ID;
     private String rodzaj;

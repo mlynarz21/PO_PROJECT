@@ -46,6 +46,11 @@ public class UmieszczenieModel {
         this.lokalizacja = lokalizacja;
     }
 
+    /**
+     * metoda mapowania z obiektu transferowego do obiektu modelowego
+     * @param umieszczenieTO wejściowy obiekt transferowy
+     * @return wyjściowe obiekt modelu
+     */
     public static UmieszczenieModel fromUmieszenieTo(UmieszczenieTO umieszczenieTO) {
         UmieszczenieModel umieszczenieModel = new UmieszczenieModel();
         umieszczenieModel.ID = umieszczenieTO.getID();

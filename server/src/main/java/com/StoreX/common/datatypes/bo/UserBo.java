@@ -1,8 +1,7 @@
 package com.StoreX.common.datatypes.bo;
 
 /**
- * User Business Object
- * @author CWOJTOWI
+ * Obiekt biznesowy klasy User - używany do operacji w warstwie logiki biznesowej
  */
 public class UserBo {
 

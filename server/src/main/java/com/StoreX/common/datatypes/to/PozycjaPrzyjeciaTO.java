@@ -1,5 +1,8 @@
 package com.StoreX.common.datatypes.to;
 
+/**
+ * klasa PozycjaPrzyjęcia obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class PozycjaPrzyjeciaTO {
     private Long ID;
     private double ilosc;

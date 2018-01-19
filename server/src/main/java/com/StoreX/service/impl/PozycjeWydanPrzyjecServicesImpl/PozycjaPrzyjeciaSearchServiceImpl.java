@@ -23,9 +23,6 @@ public class PozycjaPrzyjeciaSearchServiceImpl implements PozycjaPrzyjeciaSearch
     @Override
     public List<PozycjaPrzyjeciaBO> findAllForMonthAndYear(int Month, int Year)throws AuthenticationException {
 
-        //if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
-        // throw new AuthenticationException();
-        //}
         List<PozycjaPrzyjecia> pozycjaPrzyjeciaList = getPozycjaPrzyjeciaRepository().findAllForMonthAndYear(Month, Year);
 
         List<PozycjaPrzyjeciaBO> resultBO = new ArrayList<>();

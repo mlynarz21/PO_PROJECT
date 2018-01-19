@@ -5,6 +5,9 @@ import com.StoreX.common.datatypes.enumerations.TypOdbioru;
 
 import java.util.Date;
 
+/**
+ * Obiekt biznesowy klasy ZamowienieZakupu - używany do operacji w warstwie logiki biznesowej
+ */
 public class ZamowienieZakupuBO extends ZamowienieBO{
 
     private StatusWydania status;

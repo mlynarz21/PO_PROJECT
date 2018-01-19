@@ -1,6 +1,9 @@
 package com.StoreX.common.datatypes.bo;
 import java.util.Date;
 
+/**
+ * Obiekt biznesowy klasy WydanieZamowienia - używany do operacji w warstwie logiki biznesowej
+ */
 public class WydanieZamowieniaBO {
     private Long ID;
     private Date data;

@@ -1,5 +1,8 @@
 package com.StoreX.common.datatypes.bo;
 
+/**
+ * Obiekt biznesowy klasy Bilans - używany do operacji w warstwie logiki biznesowej
+ */
 public class PozycjaBilansuBO {
     private Long ID;
     private double ilosc;

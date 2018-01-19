@@ -2,6 +2,9 @@ package com.StoreX.common.datatypes.bo;
 
 import java.util.Date;
 
+/**
+ * Obiekt biznesowy klasy Zamowienie - używany do operacji w warstwie logiki biznesowej - abstrakcyjny , rozszerzany przez zamówienia zakupu i dostawy
+ */
 public abstract class ZamowienieBO {
     private Long ID;
     private String kod;

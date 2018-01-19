@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * Kategoria Entity - klasa reprezentacji obiektów bazy
+ */
 @Entity
 public class Kategoria {
 

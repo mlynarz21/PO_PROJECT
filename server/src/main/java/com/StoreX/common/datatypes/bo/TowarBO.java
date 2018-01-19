@@ -1,5 +1,8 @@
 package com.StoreX.common.datatypes.bo;
 
+/**
+ * Obiekt biznesowy klasy Towar - używany do operacji w warstwie logiki biznesowej
+ */
 public class TowarBO {
     private Long ID;
     private String nazwa;

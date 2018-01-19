@@ -1,5 +1,8 @@
 package com.StoreX.common.datatypes.to;
 
+/**
+ * klasa PozycjaBilansu obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class PozycjaBilansuTO {
     private Long ID;
     private double ilosc;

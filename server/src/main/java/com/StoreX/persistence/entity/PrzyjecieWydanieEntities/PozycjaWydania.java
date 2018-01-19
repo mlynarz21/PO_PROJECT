@@ -4,6 +4,9 @@ import com.StoreX.persistence.entity.TowarEntities.Towar;
 
 import javax.persistence.*;
 
+/**
+ * PozycjaWydania Entity - klasa reprezentacji obiektów bazy
+ */
 @Entity
 public class PozycjaWydania {
 

@@ -6,6 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.Size;
 
+/**
+ * Jednostka Entity - klasa reprezentacji obiektów bazy
+ */
 @Entity
 public class Jednostka {
 

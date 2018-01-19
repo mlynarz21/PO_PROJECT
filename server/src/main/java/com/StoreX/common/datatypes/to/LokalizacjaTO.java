@@ -1,5 +1,8 @@
 package com.StoreX.common.datatypes.to;
 
+/**
+ * klasa Lokalizacja obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class LokalizacjaTO {
     private Long ID;
     private String kod;

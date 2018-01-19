@@ -68,7 +68,11 @@ public class ZamowienieZakupuModel extends ZamowienieModel{
         this.typOdbioru = typOdbioru;
     }
 
-
+    /**
+     * metoda mapowania z obiektu transferowego do obiektu modelowego
+     * @param zamowienieZakupuTO wejściowy obiekt transferowy
+     * @return wyjściowe obiekt modelu
+     */
     public static ZamowienieZakupuModel fromZamowienieZakupuTo(ZamowienieZakupuTO zamowienieZakupuTO) {
         ZamowienieZakupuModel zamowienieZakupuModel = new ZamowienieZakupuModel();
         if(zamowienieZakupuTO.getKlient()!=null)

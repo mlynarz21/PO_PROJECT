@@ -15,6 +15,9 @@ import javax.naming.AuthenticationException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * REST API Umieszczenia (implementacja)
+ */
 @CrossOrigin
 @RestController
 @RequestMapping("/rest/artifactlibrary/component/v1")
@@ -28,7 +31,7 @@ public class UmieszczenieApiImpl implements UmieszczenieApi{
     /**
      * Pobiera wszystkie umieszczenia wskazanego towaru
      * @param id Id Towaru
-     * @param sessionId Id sesji
+     * @param sessionId Id sesji użytkownika wysyłąjącego żądanie
      * @return Lista umieszczeń wskazanego towaru
      */
     @Override

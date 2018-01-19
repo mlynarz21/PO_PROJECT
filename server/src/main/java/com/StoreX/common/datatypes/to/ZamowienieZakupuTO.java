@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
+/**
+ * klasa ZamowienieZakupu obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class ZamowienieZakupuTO extends ZamowienieTO{
 
     private StatusDostawy status;

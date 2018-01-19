@@ -46,6 +46,11 @@ public class PozycjaPrzyjeciaModel {
         this.przyjecieZamowienia = przyjecieZamowienia;
     }
 
+    /**
+     * metoda mapowania z obiektu transferowego do obiektu modelowego
+     * @param pozycjaPrzyjeciaTO wejściowy obiekt transferowy
+     * @return wyjściowe obiekt modelu
+     */
     public static PozycjaPrzyjeciaModel fromPozycjaPrzyjeciaTo(PozycjaPrzyjeciaTO pozycjaPrzyjeciaTO) {
         PozycjaPrzyjeciaModel pozycjaPrzyjeciaModel = new PozycjaPrzyjeciaModel();
         pozycjaPrzyjeciaModel.przyjecieZamowienia = new SimpleObjectProperty<>(PrzyjecieZamowieniaModel.fromZamowienieZakupuTo(pozycjaPrzyjeciaTO.getPrzyjecieZamowienia()));;

@@ -5,6 +5,9 @@ import com.StoreX.persistence.entity.ZamowienieEntities.ZamowienieDostawy;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * PrzyjecieZamowienia Entity - klasa reprezentacji obiektów bazy
+ */
 @Entity
 public class PrzyjecieZamowienia {
 

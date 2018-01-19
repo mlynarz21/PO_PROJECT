@@ -16,6 +16,9 @@ import javax.naming.AuthenticationException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * REST API Zamówienia Zakupu (implementacja)
+ */
 @CrossOrigin
 @RestController
 @RequestMapping("/rest/artifactlibrary/component/v1")
@@ -30,7 +33,7 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
 
     /**
      * Pobiera wszystkie zamowienia zakupu o statusie Zaakceptowane
-     * @param sessionId Id sesji
+     * @param sessionId Id sesji użytkownika wysyłąjącego żądanie
      * @return Lista zamowien zakupu o statusie Zaakceptowane
      */
     @Override
@@ -53,9 +56,9 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
     }
 
     /**
-     * Zmienai status zamówienia zakupu o wskazanym Id na Gotowe
+     * Zmienia status zamówienia zakupu o wskazanym Id na Gotowe
      * @param ID Id Zamowienia zakupu
-     * @param sessionId Id sesji
+     * @param sessionId Id sesji użytkownika wysyłąjącego żądanie
      * @return Informacja o powodzeniu operacji
      */
     @Override

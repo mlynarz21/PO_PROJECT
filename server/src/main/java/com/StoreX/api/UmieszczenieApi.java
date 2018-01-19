@@ -13,7 +13,7 @@ public interface UmieszczenieApi {
     /**
      * Pobiera wszystkie umieszczenia wskazanego towaru
      * @param id Id Towaru
-     * @param sessionId Id sesji
+     * @param sessionId Id sesji użytkownika wysyłąjącego żądanie
      * @return Lista umieszczeń wskazanego towaru
      */
     ResponseEntity<List<UmieszczenieTO>> getUmieszczenieTowaru(Long id, String sessionId);

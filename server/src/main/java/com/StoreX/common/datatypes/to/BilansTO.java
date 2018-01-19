@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
+/**
+ * klasa Bilans obiektu transferowego - używanego w komunikacji między serwerem a klientem
+ */
 public class BilansTO {
 
     private Long ID;

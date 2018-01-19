@@ -16,7 +16,7 @@ import javax.naming.AuthenticationException;
 import java.util.Date;
 
 /**
- * Balance API
+ * REST API Bilansu (implementacja)
  */
 @CrossOrigin
 @RestController
@@ -33,7 +33,7 @@ public class BilansApiImpl implements BilansApi{
 
     /**
      * Pobiera bilans z najpóźniejszą datą bilansowaną
-     * @param sessionId sessionId
+     * @param sessionId Id sesji użytkownika wysyłąjącego żądanie
      * @return Bilans z najpóźniejszą datą bilansowaną
      */
     @Override
@@ -58,7 +58,7 @@ public class BilansApiImpl implements BilansApi{
     /**
      * Dodaje bilans z aktualną datą jako data wykonania bilansu oraz datą bilansowaną przekazaną w parametrze
      * @param dataBilansowana bilansowana data
-     * @param sessionId sessionId
+     * @param sessionId Id sesji użytkownika wysyłąjącego żądanie
      * @return Informacja o powodzeniu operacji dodawania bilansu
      */
     @Override

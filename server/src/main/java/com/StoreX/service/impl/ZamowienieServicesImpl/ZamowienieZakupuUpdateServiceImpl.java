@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.naming.AuthenticationException;
+import java.util.UUID;
 
 @Service
 public class ZamowienieZakupuUpdateServiceImpl implements ZamowienieZakupuUpdateService {
@@ -25,9 +26,9 @@ public class ZamowienieZakupuUpdateServiceImpl implements ZamowienieZakupuUpdate
     @Override
     @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
     public void updateStatusZamowienia(String sessionId, Long ID) throws AuthenticationException {
-        //  if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
-        // throw new AuthenticationException();
-        //  }
+        if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
+            throw new AuthenticationException();
+        }
 
         getZamowienieZakupuRepository().updateStatusZamowienia(ID, StatusWydania.Gotowe.toString());
     }

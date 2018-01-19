@@ -6,8 +6,7 @@ import com.StoreX.common.datatypes.to.SessionTo;
 import com.StoreX.common.datatypes.to.UserTo;
 
 /**
- * REST Api used for authorization.
- * @author CWOJTOWI
+ * REST Api użwane do autoryzacji
  */
 public interface AuthorizationApi {
 
@@ -23,7 +22,7 @@ public interface AuthorizationApi {
      * Rejestruje nowego użytkownika
      *
      * @param user
-     * @return true if the user was correctly registered
+     * @return true jeśli użytkownik został poprawnie zarejestrowany
      */
     ResponseEntity<?> register(UserTo user);
 }

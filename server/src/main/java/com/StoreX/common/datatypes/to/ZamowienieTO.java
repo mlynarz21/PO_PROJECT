@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
 
+/**
+ * klasa Zamowienie obiektu transferowego - używana w komunikacji między serwerem a klientem, obiekt abstrakcyjny rozszerzany przez zamówienia zakupu oraz dostawy
+ */
 public abstract class ZamowienieTO {
     private Long ID;
     private String kod;

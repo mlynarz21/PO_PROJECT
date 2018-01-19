@@ -1,5 +1,8 @@
 package com.StoreX.common.datatypes.to;
 
+/**
+ * klasa PozycjaWydania obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class PozycjaWydaniaTO {
     private Long ID;
     private double ilosc;

@@ -1,5 +1,8 @@
 package com.StoreX.common.datatypes.to;
 
+/**
+ * klasa Klient obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class KlientTO {
     private Long ID;
     private String login;

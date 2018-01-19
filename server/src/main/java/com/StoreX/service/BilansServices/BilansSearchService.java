@@ -7,8 +7,8 @@ import javax.naming.AuthenticationException;
 public interface BilansSearchService {
     /**
      * Wyszukuje bilans z najpóźniejszą datą
-     * @param sessionId Id sesji
-     * @return Bilans z najpóźniejsza datą
+     * @param sessionId Id sesji użytkownika wysyłąjącego zapytanie
+     * @return Bilans z najnowszą datą bilansowania
      * @throws AuthenticationException
      */
     BilansBO findLast(String sessionId) throws AuthenticationException;

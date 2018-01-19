@@ -2,6 +2,9 @@ package com.StoreX.common.datatypes.bo;
 
 import java.util.Date;
 
+/**
+ * Obiekt biznesowy klasy Bilans - używany do operacji w warstwie logiki biznesowej
+ */
 public class BilansBO {
 
     private Long ID;

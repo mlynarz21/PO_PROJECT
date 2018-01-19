@@ -7,6 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+/**
+ * PozycjaZamowienia Entity - klasa reprezentacji obiektów bazy
+ */
 @Entity
 public class PozycjaZamowienia {
 

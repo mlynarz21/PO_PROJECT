@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.naming.AuthenticationException;
+import java.util.UUID;
 
 @Service
 public class PozycjaZamowieniaProceedServiceImpl implements PozycjaZamowieniaProceedService {
@@ -29,9 +30,9 @@ public class PozycjaZamowieniaProceedServiceImpl implements PozycjaZamowieniaPro
     @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Exception.class, readOnly = false)
     public boolean ProceedPozycjaZamowienia(String sessionId, Long idPozycji, Long idUmieszczenia, double iloscRealizowana) throws AuthenticationException, Exception{
 
-        //if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
-        // throw new AuthenticationException();
-        //}
+        if(!authorizationService.isUserAuthorized(UUID.fromString(sessionId))) {
+            throw new AuthenticationException();
+        }
 
 
         PozycjaZamowienia pozycjaZamowienia = getPozycjaZamowieniaRepository().findOne(idPozycji);

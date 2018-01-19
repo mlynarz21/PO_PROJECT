@@ -7,7 +7,7 @@ import java.util.Date;
 public interface BilansCreationService {
     /**
      * Dodaje bilans z aktualną datą jako data wykonania bilansu oraz datą bilansowaną przekazaną w parametrze
-     * @param sessionId Id sesji
+     * @param sessionId Id sesji użytkownika wysyłąjącego zapytanie
      * @param dataBilansowana Data bilansowanego miesiąca
      * @return Informacja o powodzeniu operacji
      * @throws AuthenticationException
