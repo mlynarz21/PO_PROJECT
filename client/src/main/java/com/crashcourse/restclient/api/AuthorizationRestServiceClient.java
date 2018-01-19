@@ -9,10 +9,10 @@ import com.crashcourse.restclient.datatype.SessionTo;
 public interface AuthorizationRestServiceClient {
 
     /**
-     * metoda odpowiadająca za autoryzację uzytkownika oraz jego zalofowanie
-     * @param userName username
-     * @param password haslo
-     * @return SessionTO
+     * metoda odpowiadająca za autoryzację uzytkownika oraz jego zalogowanie
+     * @param userName nazwa użytkownika
+     * @param password haslo użytkownika
+     * @return SessionTO - parametr identyfikujący usera podczas autoryzacji
      */
     SessionTo login(String userName, String password);
 

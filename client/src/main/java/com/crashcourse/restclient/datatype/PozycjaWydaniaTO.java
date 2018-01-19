@@ -1,5 +1,8 @@
 package com.crashcourse.restclient.datatype;
 
+/**
+ * klasa PozycjaWydania obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class PozycjaWydaniaTO {
     private Long ID;
     private double ilosc;

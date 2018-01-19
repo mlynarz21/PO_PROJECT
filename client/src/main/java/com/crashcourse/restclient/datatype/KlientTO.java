@@ -1,5 +1,8 @@
 package com.crashcourse.restclient.datatype;
 
+/**
+ * klasa Klient obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class KlientTO {
     private Long ID;
     private String login;

@@ -12,7 +12,7 @@ public interface UmieszczenieRestServiceClient {
     /**
      * metoda pobierająca liste umieszczeń towaru o podanym ID
      * @param IDTowaru id towaru, którego mają dotyczyć umieszczenia
-     * @return lista umieszczeń towaru o podanym ID
+     * @return lista typu UmieszczenieTO umieszczeń towaru o podanym ID
      */
     List<UmieszczenieTO> getUmieszczenieTowaru(Long IDTowaru);
 

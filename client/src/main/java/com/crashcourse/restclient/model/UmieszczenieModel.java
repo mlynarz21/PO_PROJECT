@@ -5,6 +5,9 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
+/**
+ * klasa Umieszczenie modelowa - używana w warstwie prezentacji
+ */
 public class UmieszczenieModel {
     private Long ID;
     private DoubleProperty iloscWLokalizacji;

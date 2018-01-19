@@ -6,6 +6,9 @@ import javafx.beans.property.SimpleObjectProperty;
 
 import java.util.Date;
 
+/**
+ * klasa PrzyjecieZamowienia modelowa - używana w warstwie prezentacji
+ */
 public class PrzyjecieZamowieniaModel {
     private Long ID;
     private ObjectProperty<Date> data;

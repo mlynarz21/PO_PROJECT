@@ -6,7 +6,7 @@ import com.crashcourse.restclient.view.FXMLDialog;
 import javafx.stage.Stage;
 
 /**
- * interfejs kazdego kontrolera
+ * interfejs implementowany przez każdy kontroler
  */
 public interface DialogController {
 

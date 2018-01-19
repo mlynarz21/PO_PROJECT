@@ -10,6 +10,9 @@ import javafx.beans.property.SimpleStringProperty;
 
 import java.util.Date;
 
+/**
+ * klasa ZamowienieZakupu modelowa - używana w warstwie prezentacji
+ */
 public class ZamowienieZakupuModel extends ZamowienieModel{
 
     private SimpleObjectProperty<StatusDostawy> status;

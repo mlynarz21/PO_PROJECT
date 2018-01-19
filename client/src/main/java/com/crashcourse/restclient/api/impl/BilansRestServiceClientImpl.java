@@ -34,7 +34,7 @@ public class BilansRestServiceClientImpl implements BilansRestServiceClient {
 
     /**
      * metoda pobierająca Bilans za ostatni bilansowany miesiąc znajdujący się w bazie danych
-     * @return BilansTO zawierający dane o ostatnim bilansie
+     * @return BilansTO - obiekt transferowy Bilansu zawierający dane o ostatnim bilansie
      */
     @Override
     public BilansTO getLastBilans(){

@@ -1,5 +1,8 @@
 package com.crashcourse.restclient.datatype;
 
+/**
+ * klasa PozycjaZamowienia obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class PozycjaZamowieniaTO {
     private Long ID;
     private double ilosc;

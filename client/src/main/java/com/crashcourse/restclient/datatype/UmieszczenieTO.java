@@ -1,5 +1,8 @@
 package com.crashcourse.restclient.datatype;
 
+/**
+ * klasa Umieszczenie obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class UmieszczenieTO {
     private Long ID;
     private double iloscWLokalizacji;

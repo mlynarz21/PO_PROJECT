@@ -5,6 +5,9 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleObjectProperty;
 
+/**
+ * klasa PozycjaWydania modelowa - używana w warstwie prezentacji
+ */
 public class PozycjaWydaniaModel {
     private Long ID;
     private DoubleProperty ilosc;

@@ -33,6 +33,10 @@ public class AlertDialog {
         return alert;
     }
 
+    /**
+     * metoda dostępu do alertu braku implementacji
+     * @return alert implementacji
+     */
     public static Alert getImplementationAlert(){
         if (alert==null)
             alert = new Alert(Alert.AlertType.WARNING);
@@ -62,10 +66,18 @@ public class AlertDialog {
         return alert;
     }
 
+    /**
+     * metoda dostępu do przycisku cancel
+     * @return aktualnie ustawiony przycisk cancel
+     */
     public static ButtonType getButtonCancel() {
         return buttonCancel;
     }
 
+    /**
+     * metoda dostępu do przycisku ok
+     * @return aktualnie ustawiony przycisk OK
+     */
     public static ButtonType getButtonOK() {
         return buttonOK;
     }

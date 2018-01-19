@@ -4,6 +4,9 @@ import com.crashcourse.restclient.datatype.KlientTO;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+/**
+ * klasa Klient modelowa - używana w warstwie prezentacji
+ */
 public class KlientModel {
     private Long ID;
     private StringProperty login;

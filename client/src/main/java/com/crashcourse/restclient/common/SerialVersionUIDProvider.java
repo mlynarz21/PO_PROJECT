@@ -2,7 +2,7 @@ package com.crashcourse.restclient.common;
 
 public final class SerialVersionUIDProvider {
 
-    /** Default serialVersionUID for all Dto/Dts. */
+    /** Domyślny serialVersionUID dla wszystkich obiektów transferowych. */
     public static final long defaultSerialVersionUID = 1;
 
     private SerialVersionUIDProvider() {

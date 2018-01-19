@@ -5,6 +5,9 @@ import javafx.beans.property.StringProperty;
 
 import java.util.Date;
 
+/**
+ * klasa Zamowienie modelowa - używana w warstwie prezentacji, obiekt abstrakcyjny rozszerzany przez zamówienia zakupu oraz dostawy
+ */
 public abstract class ZamowienieModel {
     private Long ID;
     private StringProperty kod;

@@ -32,10 +32,10 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
     private StoreXSecurityContext context;
 
     /**
-     * metoda odpowiadająca za autoryzację uzytkownika oraz jego zalofowanie
-     * @param userName username
-     * @param password haslo
-     * @return SessionTO identyfikujące potem usera
+     * metoda odpowiadająca za autoryzację uzytkownika oraz jego zalogowanie
+     * @param userName nazwa użytkownika
+     * @param password haslo użytkownika
+     * @return SessionTO - parametr identyfikujący usera podczas autoryzacji
      */
     @Override
     public SessionTo login(String userName, String password) {
@@ -58,9 +58,9 @@ public class AuthorizationRestServiceClientImpl implements AuthorizationRestServ
 
     /**
      * Metoda mapująca dane uzytkownika na klasę UserTO
-     * @param userName username
-     * @param password haslo
-     * @return userTo
+     * @param userName nazwa użytkownika
+     * @param password haslo użytkownika
+     * @return userTo - obiekt transferowy typu User
      */
     private UserTo buildUserTo(String userName, String password) {
         UserTo userTo = new UserTo();

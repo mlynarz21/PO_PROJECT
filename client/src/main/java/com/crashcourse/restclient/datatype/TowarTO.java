@@ -1,5 +1,8 @@
 package com.crashcourse.restclient.datatype;
 
+/**
+ * klasa Towar obiektu transferowego - używana w komunikacji między serwerem a klientem
+ */
 public class TowarTO {
     private Long ID;
     private String nazwa;

@@ -34,7 +34,7 @@ public class LoginController extends ArtifactsBaseController {
     }
 
     /**
-     * metoda odpowiadająca za przycisk logowania
+     * metoda odpowiadająca za akcję przycisku logowania
      * @throws LoginException
      */
     @FXML

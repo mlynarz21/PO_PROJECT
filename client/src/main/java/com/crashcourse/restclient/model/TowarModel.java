@@ -3,6 +3,9 @@ package com.crashcourse.restclient.model;
 import com.crashcourse.restclient.datatype.TowarTO;
 import javafx.beans.property.*;
 
+/**
+ * klasa Towar modelowa - używana w warstwie prezentacji
+ */
 public class TowarModel {
     private Long ID;
     private StringProperty nazwa;
