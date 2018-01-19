@@ -40,21 +40,27 @@ public class PozycjaZamowieniaProceedServiceImplTest {
     PozycjaZamowieniaProceedServiceImpl pozycjaZamowieniaProceedService;
 
 
+    /**
+     * W bazie istnieje towar t o ilostanie 200, zamowienie zakupu zz, pozycja zamowienia o ilosci 20 oraz ilosci juz zrealizowanej 0,
+     * dla towaru t i zamwienia zakupu zz, 2 lokalizacje oraz 2 umieszczenia towaru t z ilosciami odpowiednio 10 i 100
+     */
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         Towar t = new Towar();
         t.setID(1L);
         t.setIlostan(200);
         ZamowienieZakupu zz = new ZamowienieZakupu();
         zz.setID(1L);
-        PozycjaZamowienia pozycjaZamowienia = new PozycjaZamowienia(1L, 20, IloscJuzZrealizowana,t,zz);
+        PozycjaZamowienia pozycjaZamowienia = new PozycjaZamowienia(1L, 20, IloscJuzZrealizowana, t, zz);
         Mockito.when(pozycjaZamowieniaRepository.findOne(1L)).thenReturn(pozycjaZamowienia);
         Lokalizacja lokalizacja = new Lokalizacja();
         lokalizacja.setID(1L);
-        Umieszczenie umieszczenie = new Umieszczenie(1L,IloswWUmieszczeniu1,t,lokalizacja);
+        Lokalizacja lokalizacja2 = new Lokalizacja();
+        lokalizacja.setID(2L);
+        Umieszczenie umieszczenie = new Umieszczenie(1L, IloswWUmieszczeniu1, t, lokalizacja);
         Mockito.when(umieszczenieRepository.findOne(1L)).thenReturn(umieszczenie);
 
-        Umieszczenie umieszczenie2 = new Umieszczenie(2L,IloscWUmieszczeniu2,t,lokalizacja);
+        Umieszczenie umieszczenie2 = new Umieszczenie(2L, IloscWUmieszczeniu2, t, lokalizacja2);
         Mockito.when(umieszczenieRepository.findOne(2L)).thenReturn(umieszczenie2);
 
         Mockito.when(pozycjaZamowieniaRepository.findOne(4L)).thenReturn(null);
@@ -64,21 +70,21 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
 
     /**
-     * Ilos podana w parametrze metody miesci się w przedziale 0 - ilość pozycji zamówienia
+     * Ilos podana w parametrze metody realizacji pozycji zamowienia miesci się w przedziale 0 - ilość pozostala do zrealizowania
      * Operacja wykonana poprawnie, zwraca true.
      */
     @Test
     public void proceedPozycjaZamowienia_IloscWPrzedziale_IsTrue() {
         //arrange
-       long idUmieszczenia = 1L;
-       long idPozycji = 1L;
-       String sessionId = "53b37a38-7bf1-48dd-9b92-f14e1b691adf";
-       int iloscRealizowana = 10;
+        long idUmieszczenia = 1L;
+        long idPozycji = 1L;
+        String sessionId = "53b37a38-7bf1-48dd-9b92-f14e1b691adf";
+        int iloscRealizowana = 10;
         boolean sukces = false;
 
         //act
         try {
-            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -102,13 +108,13 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
         //act
         try {
-            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             errorMessage = e.getMessage();
         }
 
         //assert
-        Assert.assertEquals(errorMessage,"Podano za duzą ilosc");
+        Assert.assertEquals(errorMessage, "Podano za duzą ilosc");
     }
 
 
@@ -128,19 +134,19 @@ public class PozycjaZamowieniaProceedServiceImplTest {
         //act
 
         try {
-            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             errorMessage = e.getMessage();
         }
 
         //assert
-        Assert.assertEquals(errorMessage,"Podana ilosc jest mniejsza od zera");
+        Assert.assertEquals(errorMessage, "Podana ilosc jest mniejsza od zera");
     }
 
 
     /**
      * WARUNEK BRZEGOWY
-     * Ilosc podana w parametrze metody jest równa ilosci w pozycji zamowienia
+     * Ilosc podana w parametrze metody jest równa ilosci pozostaej do realizacji
      * Operacja zostanie wykonana poprawnie, zwróci true
      */
     @Test
@@ -155,7 +161,7 @@ public class PozycjaZamowieniaProceedServiceImplTest {
         //act
 
         try {
-            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -180,7 +186,7 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
         //act
         try {
-            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -192,6 +198,7 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
     /**
      * Ilosc podana w parametrze metody jest wieksza niz w umieszczeniu
+     *  Operacja niewykonana poprawnie, zostanie rzucony wyjątek.
      */
     @Test
     public void proceedPozycjaZamowienia_IloscWiekszaNizWUmieszczeniu_ThrowsException() {
@@ -204,7 +211,7 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
         //act
         try {
-            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             errorMessage = e.getMessage();
         }
@@ -231,7 +238,7 @@ public class PozycjaZamowieniaProceedServiceImplTest {
         //act
 
         try {
-            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -257,7 +264,7 @@ public class PozycjaZamowieniaProceedServiceImplTest {
         //act
 
         try {
-            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             errorMessage = e.toString();
         }
@@ -284,7 +291,7 @@ public class PozycjaZamowieniaProceedServiceImplTest {
         //act
 
         try {
-            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             errorMessage = e.toString();
         }
@@ -296,6 +303,7 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
     /**
      * Sprawdza ile razy została wywołana metoda zmniejszająca odpowiednią ilosć towaru w umieszzceniu o podanym Id
+     *
      */
     @Test
     public void proceedPozycjaZamowienia_UmieszczenieWywolanaRealizacjaPozycjiZamowienia_AreEqual() {
@@ -308,7 +316,7 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
         //act
         try {
-            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -333,18 +341,20 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
         //act
         try {
-            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         //assert
-        verify(pozycjaZamowieniaRepository, Mockito.times(1)).realizacjaPozycjiZmowienia(idPozycji,  IloscJuzZrealizowana + 10 );
+        verify(pozycjaZamowieniaRepository, Mockito.times(1)).realizacjaPozycjiZmowienia(idPozycji, IloscJuzZrealizowana + 10);
 
     }
 
     /**
      * Sprawdza ile razy została wywołana metoda usunięcia umieszczenia
+     * Umiesczenie powinno zostac usuniete, gdy po pobraniu z niego okreslonej ilosci towaru, ilosc towaru w umieszczeniu
+     * bedzie wynosci 0
      */
     @Test
     public void proceedPozycjaZamowienia_WywolanoUsuniecieUmieszczenia_AreEqual() {
@@ -354,23 +364,21 @@ public class PozycjaZamowieniaProceedServiceImplTest {
         String sessionId = "53b37a38-7bf1-48dd-9b92-f14e1b691adf";
         int iloscRealizowana = 10;
 
-
         //act
         try {
-            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         //assert
-        verify(umieszczenieRepository, Mockito.times(1)).delete(idUmieszczenia );
-
+        verify(umieszczenieRepository, Mockito.times(1)).delete(idUmieszczenia);
     }
 
 
     /**
      * Sprawdza ile razy została wywołana metoda usunięcia umieszczenia
-     * Powinna zostac wywolana 0 razy, gdy w umieszczeniu zostaje wiecej niż 0 jednostki danego towaru
+     * Powinna zostac wywolana 0 razy, gdy w umieszczeniu pozostaje wiecej niż 0 jednostki danego towaru
      */
     @Test
     public void proceedPozycjaZamowienia_NieWywolanoUsuniecieUmieszczenia_AreEqual() {
@@ -383,19 +391,19 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
         //act
         try {
-            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
         //assert
-        verify(umieszczenieRepository, Mockito.times(0)).delete(idUmieszczenia );
+        verify(umieszczenieRepository, Mockito.times(0)).delete(idUmieszczenia);
 
     }
 
     /**
      * Sprawdza ile razy została wywołana metoda zwiększającą odpowiednią ilosć towaru w pozycji zamówienia o podanym Id
-     * Powinna zostać wywołana 0 razy, gdy ilosc realizowana jest za duza
+     * Powinna zostać wywołana 0 razy, gdy ilosc realizowana jest wieksza niz do zrealizowania
      */
     @Test
     public void proceedPozycjaZamowienia_NieWywolanaRealizacjaPozycjiZamowienia_AreEqual() {
@@ -408,18 +416,18 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
         //act
         try {
-            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
-            e.printStackTrace();
         }
 
         //assert
-        verify(pozycjaZamowieniaRepository, Mockito.times(0)).realizacjaPozycjiZmowienia(idPozycji,  IloscJuzZrealizowana + 50 );
+        verify(pozycjaZamowieniaRepository, Mockito.times(0)).realizacjaPozycjiZmowienia(idPozycji, IloscJuzZrealizowana + 50);
 
     }
+
     /**
      * Sprawdza ile razy została wywołana metoda zmniejszająca odpowiednią ilosć towaru w umieszzceniu o podanym Id
-     * Powinna zostać wywołana 0 razy, gdy ilosc realizowana jest za duza
+     * Powinna zostać wywołana 0 razy, gdy ilosc realizowana jest wieksza niz do zrealizowania
      */
     @Test
     public void proceedPozycjaZamowienia_UmieszczenieNieWywolanaRealizacjaPozycjiZamowienia_AreEqual() {
@@ -432,14 +440,106 @@ public class PozycjaZamowieniaProceedServiceImplTest {
 
         //act
         try {
-            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji,idUmieszczenia,iloscRealizowana);
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
         } catch (Exception e) {
-            e.printStackTrace();
         }
 
         //assert
         verify(umieszczenieRepository, Mockito.times(0)).realizacjaPozycjiZmowienia(idUmieszczenia, IloswWUmieszczeniu1 - 50);
+    }
+
+    /**
+     * Sprawdza ile razy została wywołana metoda zwiększającą odpowiednią ilosć towaru w pozycji zamówienia o podanym Id
+     * Powinna zostać wywołana 0 razy, gdy ilosc realizowana jest wieksza niz w umieszczeniu
+     */
+    @Test
+    public void proceedPozycjaZamowienia_NieWywolanaRealizacjaPozycjiZamowienia2_AreEqual() {
+        //arrange
+        long idUmieszczenia = 2L;
+        long idPozycji = 1L;
+        String sessionId = "53b37a38-7bf1-48dd-9b92-f14e1b691adf";
+        int iloscRealizowana = 11;
+        boolean sukces = false;
+
+        //act
+        try {
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
+        } catch (Exception e) {
+        }
+
+        //assert
+        verify(pozycjaZamowieniaRepository, Mockito.times(0)).realizacjaPozycjiZmowienia(idPozycji, IloscJuzZrealizowana + 11);
 
     }
 
+    /**
+     * Sprawdza ile razy została wywołana metoda zmniejszająca odpowiednią ilosć towaru w umieszzceniu o podanym Id
+     * Powinna zostać wywołana 0 razy, gdy ilosc realizowana jest wieksza niz w umieszczeniu
+     */
+    @Test
+    public void proceedPozycjaZamowienia_UmieszczenieNieWywolanaRealizacjaPozycjiZamowienia2_AreEqual() {
+        //arrange
+        long idUmieszczenia = 2L;
+        long idPozycji = 1L;
+        String sessionId = "53b37a38-7bf1-48dd-9b92-f14e1b691adf";
+        int iloscRealizowana = 11;
+        boolean sukces = false;
+
+        //act
+        try {
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
+        } catch (Exception e) {
+        }
+
+        //assert
+        verify(umieszczenieRepository, Mockito.times(0)).realizacjaPozycjiZmowienia(idUmieszczenia, IloswWUmieszczeniu1 - 11);
+    }
+
+
+    /**
+     * Sprawdza ile razy została wywołana metoda zwiększającą odpowiednią ilosć towaru w pozycji zamówienia o podanym Id
+     * Powinna zostać wywołana 0 razy, gdy ilosc realizowana jest ujemna
+     */
+    @Test
+    public void proceedPozycjaZamowienia_NieWywolanaRealizacjaPozycjiZamowieniaDlaUjemnej_AreEqual() {
+        //arrange
+        long idUmieszczenia = 2L;
+        long idPozycji = 1L;
+        String sessionId = "53b37a38-7bf1-48dd-9b92-f14e1b691adf";
+        int iloscRealizowana = -1;
+        boolean sukces = false;
+
+        //act
+        try {
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
+        } catch (Exception e) {
+        }
+
+        //assert
+        verify(pozycjaZamowieniaRepository, Mockito.times(0)).realizacjaPozycjiZmowienia(idPozycji, IloscJuzZrealizowana - 1);
+
+    }
+
+    /**
+     * Sprawdza ile razy została wywołana metoda zmniejszająca odpowiednią ilosć towaru w umieszzceniu o podanym Id
+     * Powinna zostać wywołana 0 razy, gdy ilosc realizowana jest ujemna
+     */
+    @Test
+    public void proceedPozycjaZamowienia_UmieszczenieNieWywolanaRealizacjaPozycjiZamowieniaDlaUjemnej_AreEqual() {
+        //arrange
+        long idUmieszczenia = 2L;
+        long idPozycji = 1L;
+        String sessionId = "53b37a38-7bf1-48dd-9b92-f14e1b691adf";
+        int iloscRealizowana = -1;
+        boolean sukces = false;
+
+        //act
+        try {
+            sukces = pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszczenia, iloscRealizowana);
+        } catch (Exception e) {
+        }
+
+        //assert
+        verify(umieszczenieRepository, Mockito.times(0)).realizacjaPozycjiZmowienia(idUmieszczenia, IloswWUmieszczeniu1 + 1);
+    }
 }
