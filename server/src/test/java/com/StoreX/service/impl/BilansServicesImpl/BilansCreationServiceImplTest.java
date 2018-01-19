@@ -2,7 +2,6 @@ package com.StoreX.service.impl.BilansServicesImpl;
 
 import com.StoreX.common.datatypes.bo.*;
 import com.StoreX.persistence.entity.BilansEntities.Bilans;
-import com.StoreX.persistence.entity.BilansEntities.PozycjaBilansu;
 import com.StoreX.persistence.entity.TowarEntities.Towar;
 import com.StoreX.persistence.repository.BilansRepository.BilansRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
@@ -11,8 +10,6 @@ import com.StoreX.service.BilansServices.PozycjaBilansuSearchService;
 import com.StoreX.service.HelperServices.TowarService;
 import com.StoreX.service.PozycjeWydanPrzyjecServices.PozycjaPrzyjeciaSearchService;
 import com.StoreX.service.PozycjeWydanPrzyjecServices.PozycjaWydaniaSearchService;
-import org.hamcrest.core.AnyOf;
-import org.hibernate.mapping.Any;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,7 +20,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.naming.AuthenticationException;
 import java.util.ArrayList;
@@ -31,7 +27,6 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.UUID;
 
-import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.verify;
 
@@ -112,7 +107,7 @@ public class BilansCreationServiceImplTest {
         PozycjaBilansuBO pozycjaBilansuBO = new PozycjaBilansuBO();
         pozycjaBilansuBO.setIlosc(10);
         pozycjaBilansuBO.setTowar(t);
-        List<PozycjaBilansuBO> pozycjaBilansuBOList = new ArrayList<PozycjaBilansuBO>();
+        List<PozycjaBilansuBO> pozycjaBilansuBOList = new ArrayList<>();
         pozycjaBilansuBOList.add(pozycjaBilansuBO);
         try {
             Mockito.when(pozycjaBilansuSearchService.findAllForBilans(1L)).thenReturn(pozycjaBilansuBOList);
@@ -159,7 +154,7 @@ public class BilansCreationServiceImplTest {
         PozycjaBilansuBO pozycjaBilansuBO = new PozycjaBilansuBO();
         pozycjaBilansuBO.setIlosc(10);
         pozycjaBilansuBO.setTowar(t);
-        List<PozycjaBilansuBO> pozycjaBilansuBOList = new ArrayList<PozycjaBilansuBO>();
+        List<PozycjaBilansuBO> pozycjaBilansuBOList = new ArrayList<>();
         pozycjaBilansuBOList.add(pozycjaBilansuBO);
         try {
             Mockito.when(pozycjaBilansuSearchService.findAllForBilans(1L)).thenReturn(pozycjaBilansuBOList);
@@ -171,7 +166,7 @@ public class BilansCreationServiceImplTest {
         pozycjaPrzyjeciaBO.setTowar(t);
         pozycjaPrzyjeciaBO.setID(1L);
         pozycjaPrzyjeciaBO.setIlosc(20);
-        List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<PozycjaPrzyjeciaBO>();
+        List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<>();
         pozycjaPrzyjeciaBOList.add(pozycjaPrzyjeciaBO);
         try {
             Mockito.when(pozycjaPrzyjeciaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaPrzyjeciaBOList);
@@ -218,7 +213,7 @@ public class BilansCreationServiceImplTest {
         PozycjaBilansuBO pozycjaBilansuBO = new PozycjaBilansuBO();
         pozycjaBilansuBO.setIlosc(10);
         pozycjaBilansuBO.setTowar(t);
-        List<PozycjaBilansuBO> pozycjaBilansuBOList = new ArrayList<PozycjaBilansuBO>();
+        List<PozycjaBilansuBO> pozycjaBilansuBOList = new ArrayList<>();
         pozycjaBilansuBOList.add(pozycjaBilansuBO);
         try {
             Mockito.when(pozycjaBilansuSearchService.findAllForBilans(1L)).thenReturn(pozycjaBilansuBOList);
@@ -230,7 +225,7 @@ public class BilansCreationServiceImplTest {
         pozycjaPrzyjeciaBO.setTowar(t);
         pozycjaPrzyjeciaBO.setID(1L);
         pozycjaPrzyjeciaBO.setIlosc(20);
-        List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<PozycjaPrzyjeciaBO>();
+        List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<>();
         pozycjaPrzyjeciaBOList.add(pozycjaPrzyjeciaBO);
         try {
             Mockito.when(pozycjaPrzyjeciaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaPrzyjeciaBOList);
@@ -242,7 +237,7 @@ public class BilansCreationServiceImplTest {
         pozycjaWydaniaaBO.setTowar(t);
         pozycjaWydaniaaBO.setID(1L);
         pozycjaWydaniaaBO.setIlosc(5);
-        List<PozycjaWydaniaBO> pozycjaWydaniaBOList = new ArrayList<PozycjaWydaniaBO>();
+        List<PozycjaWydaniaBO> pozycjaWydaniaBOList = new ArrayList<>();
         pozycjaWydaniaBOList.add(pozycjaWydaniaaBO);
         try {
             Mockito.when(pozycjaWydaniaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaWydaniaBOList);
@@ -300,7 +295,7 @@ public class BilansCreationServiceImplTest {
         PozycjaBilansuBO pozycjaBilansuBO = new PozycjaBilansuBO();
         pozycjaBilansuBO.setIlosc(10);
         pozycjaBilansuBO.setTowar(t);
-        List<PozycjaBilansuBO> pozycjaBilansuBOList = new ArrayList<PozycjaBilansuBO>();
+        List<PozycjaBilansuBO> pozycjaBilansuBOList = new ArrayList<>();
         pozycjaBilansuBOList.add(pozycjaBilansuBO);
         try {
             Mockito.when(pozycjaBilansuSearchService.findAllForBilans(1L)).thenReturn(pozycjaBilansuBOList);
@@ -312,7 +307,7 @@ public class BilansCreationServiceImplTest {
         pozycjaPrzyjeciaBO.setTowar(t2);
         pozycjaPrzyjeciaBO.setID(2L);
         pozycjaPrzyjeciaBO.setIlosc(20);
-        List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<PozycjaPrzyjeciaBO>();
+        List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<>();
         pozycjaPrzyjeciaBOList.add(pozycjaPrzyjeciaBO);
         try {
             Mockito.when(pozycjaPrzyjeciaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaPrzyjeciaBOList);
@@ -324,7 +319,7 @@ public class BilansCreationServiceImplTest {
         pozycjaWydaniaaBO.setTowar(t3);
         pozycjaWydaniaaBO.setID(3L);
         pozycjaWydaniaaBO.setIlosc(5);
-        List<PozycjaWydaniaBO> pozycjaWydaniaBOList = new ArrayList<PozycjaWydaniaBO>();
+        List<PozycjaWydaniaBO> pozycjaWydaniaBOList = new ArrayList<>();
         pozycjaWydaniaBOList.add(pozycjaWydaniaaBO);
         try {
             Mockito.when(pozycjaWydaniaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaWydaniaBOList);
@@ -374,7 +369,7 @@ public class BilansCreationServiceImplTest {
         pozycjaPrzyjeciaBO.setTowar(t);
         pozycjaPrzyjeciaBO.setID(1L);
         pozycjaPrzyjeciaBO.setIlosc(20);
-        List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<PozycjaPrzyjeciaBO>();
+        List<PozycjaPrzyjeciaBO> pozycjaPrzyjeciaBOList = new ArrayList<>();
         pozycjaPrzyjeciaBOList.add(pozycjaPrzyjeciaBO);
         try {
             Mockito.when(pozycjaPrzyjeciaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaPrzyjeciaBOList);
@@ -386,7 +381,7 @@ public class BilansCreationServiceImplTest {
         pozycjaWydaniaaBO.setTowar(t);
         pozycjaWydaniaaBO.setID(1L);
         pozycjaWydaniaaBO.setIlosc(5);
-        List<PozycjaWydaniaBO> pozycjaWydaniaBOList = new ArrayList<PozycjaWydaniaBO>();
+        List<PozycjaWydaniaBO> pozycjaWydaniaBOList = new ArrayList<>();
         pozycjaWydaniaBOList.add(pozycjaWydaniaaBO);
         try {
             Mockito.when(pozycjaWydaniaSearchService.findAllForMonthAndYear(11, 2017)).thenReturn(pozycjaWydaniaBOList);

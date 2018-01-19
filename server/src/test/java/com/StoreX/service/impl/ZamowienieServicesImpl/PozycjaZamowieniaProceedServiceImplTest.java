@@ -8,7 +8,6 @@ import com.StoreX.persistence.entity.ZamowienieEntities.ZamowienieZakupu;
 import com.StoreX.persistence.repository.UmieszczenieRepository.UmieszczenieRepository;
 import com.StoreX.persistence.repository.ZamowienieRepository.PozycjaZamowieniaRepository;
 import com.StoreX.service.AuthorizationServices.AuthorizationService;
-import com.StoreX.service.ZamowienieServices.PozycjaZamowieniaProceedService;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,13 +16,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.omg.CORBA.Any;
 
 import java.util.UUID;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
-import static org.springframework.test.web.client.ExpectedCount.times;
 
 @RunWith(MockitoJUnitRunner.class)
 public class PozycjaZamowieniaProceedServiceImplTest {

@@ -5,5 +5,5 @@ public enum StatusWydania {
     Oczekujace,
     Zaakceptowane,
     Gotowe,
-    Wydane;
+    Wydane
 }

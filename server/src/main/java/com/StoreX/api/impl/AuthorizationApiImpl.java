@@ -45,11 +45,11 @@ public class AuthorizationApiImpl implements AuthorizationApi {
         SessionTo body = new SessionTo(sessionId, userType, userName);
         if(sessionId != null) {
         	if(userType!= null)
-            return new ResponseEntity<SessionTo>(body, HttpStatus.OK);
+            return new ResponseEntity<>(body, HttpStatus.OK);
         	else 
-                return new ResponseEntity<SessionTo>(body, HttpStatus.FOUND);
+                return new ResponseEntity<>(body, HttpStatus.FOUND);
         } else {
-            return new ResponseEntity<SessionTo>(body, HttpStatus.FOUND);
+            return new ResponseEntity<>(body, HttpStatus.FOUND);
         }
     }
 

@@ -38,7 +38,7 @@ public class UmieszczenieApiImpl implements UmieszczenieApi{
         try {
             umieszczeniaBO = umieszczenieSearchService.findAllForTowar(sessionId, id);
         } catch (AuthenticationException e) {
-            return new ResponseEntity<List<UmieszczenieTO>>(HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
 
         List<UmieszczenieTO> results = new ArrayList<>();
@@ -47,7 +47,7 @@ public class UmieszczenieApiImpl implements UmieszczenieApi{
             results.add(modelMapper.map(umieszczenie, UmieszczenieTO.class));
         }
 
-        return new ResponseEntity<List<UmieszczenieTO>>(results, HttpStatus.OK);
+        return new ResponseEntity<>(results, HttpStatus.OK);
     }
 
 }

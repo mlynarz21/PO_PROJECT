@@ -11,5 +11,5 @@ public interface BilansSearchService {
      * @return Bilans z najpóźniejsza datą
      * @throws AuthenticationException
      */
-    public BilansBO findLast(String sessionId) throws AuthenticationException;
+    BilansBO findLast(String sessionId) throws AuthenticationException;
 }

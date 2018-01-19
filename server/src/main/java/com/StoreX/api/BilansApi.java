@@ -1,11 +1,9 @@
 package com.StoreX.api;
 
 import com.StoreX.common.datatypes.to.BilansTO;
-import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
 import org.springframework.http.ResponseEntity;
 
 import java.util.Date;
-import java.util.List;
 
 /**
  * REST API Bilansu

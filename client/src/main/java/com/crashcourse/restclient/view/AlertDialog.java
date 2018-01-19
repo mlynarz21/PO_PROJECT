@@ -57,7 +57,7 @@ public class AlertDialog {
         DialogPane dialogPane = alert.getDialogPane();
         dialogPane.getStylesheets().add("com/crashcourse/restclient/css/alert.css");
         buttonCancel = new ButtonType("Anuluj");
-        buttonOK = new ButtonType("OK");
+        buttonOK = new ButtonType("Potwierdź");
         alert.getButtonTypes().setAll(buttonCancel, buttonOK);
         return alert;
     }

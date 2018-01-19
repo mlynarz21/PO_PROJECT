@@ -40,7 +40,7 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
         try {
             zamowieniaBO = zamowienieZakupuSearchService.findAllAccepted(sessionId);
         } catch (AuthenticationException e) {
-            return new ResponseEntity<List<ZamowienieZakupuTO>>(HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
 
         List<ZamowienieZakupuTO> results = new ArrayList<>();
@@ -49,7 +49,7 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
             results.add(modelMapper.map(zamwienie, ZamowienieZakupuTO.class));
         }
 
-        return new ResponseEntity<List<ZamowienieZakupuTO>>(results, HttpStatus.OK);
+        return new ResponseEntity<>(results, HttpStatus.OK);
     }
 
     /**
@@ -65,13 +65,13 @@ public class ZamowienieZakupuApiImpl implements ZamowienieZakupuApi{
         try {
             zamowienieZakupuUpdateService.updateStatusZamowienia(sessionId, ID);  //.bookArtifactById(sessionId, modelMapper.map(incomingArtifactTo, ArtifactBo.class));
         } catch (AuthenticationException e) {
-            return new ResponseEntity<Boolean>(HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
         if (updated) {
-            return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+            return new ResponseEntity<>(true, HttpStatus.OK);
         }
         else {
-            return new ResponseEntity<Boolean>(true, HttpStatus.FOUND);
+            return new ResponseEntity<>(true, HttpStatus.FOUND);
         }
     }
 

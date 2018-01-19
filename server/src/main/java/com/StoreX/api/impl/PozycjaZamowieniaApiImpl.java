@@ -52,7 +52,7 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
             results.add(modelMapper.map(pozycja, PozycjaZamowieniaTO.class));
         }
 
-        return new ResponseEntity<List<PozycjaZamowieniaTO>>(results, HttpStatus.OK);
+        return new ResponseEntity<>(results, HttpStatus.OK);
     }
 
     /**
@@ -74,14 +74,14 @@ public class PozycjaZamowieniaApiImpl implements PozycjaZamowieniaApi{
         try {
             pozycjaZamowieniaProceedService.ProceedPozycjaZamowienia(sessionId, idPozycji, idUmieszcznia, ilosc);
         } catch (AuthenticationException e) {
-            return new ResponseEntity<Boolean>(wykonano, HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(wykonano, HttpStatus.UNAUTHORIZED);
         }catch (Exception e){
-            return new ResponseEntity<Boolean>(wykonano, HttpStatus.NOT_ACCEPTABLE);
+            return new ResponseEntity<>(wykonano, HttpStatus.NOT_ACCEPTABLE);
         }
 
 
         wykonano = true;
-        return new ResponseEntity<Boolean>(wykonano, HttpStatus.OK);
+        return new ResponseEntity<>(wykonano, HttpStatus.OK);
     }
 
 }

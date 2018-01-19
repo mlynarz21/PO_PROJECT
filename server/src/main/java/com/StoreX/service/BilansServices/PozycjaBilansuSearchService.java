@@ -12,5 +12,5 @@ public interface PozycjaBilansuSearchService {
      * @return Lista pozycji bilansu
      * @throws AuthenticationException
      */
-    public List<PozycjaBilansuBO> findAllForBilans(Long id) throws AuthenticationException;
+    List<PozycjaBilansuBO> findAllForBilans(Long id) throws AuthenticationException;
 }

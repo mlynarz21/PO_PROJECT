@@ -43,15 +43,15 @@ public class BilansApiImpl implements BilansApi{
         try {
             bilansBO = bilansfindService.findLast(sessionId);
         } catch (Exception e) {
-            return new ResponseEntity<BilansTO>(HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
         if (bilansBO!=null) {
             BilansTO result = modelMapper.map(bilansBO, BilansTO.class);
-            return new ResponseEntity<BilansTO>(result, HttpStatus.OK);
+            return new ResponseEntity<>(result, HttpStatus.OK);
         }
         else {
             BilansTO result = null;
-            return new ResponseEntity<BilansTO>(result, HttpStatus.OK);
+            return new ResponseEntity<>(result, HttpStatus.OK);
         }
     }
 
@@ -68,11 +68,11 @@ public class BilansApiImpl implements BilansApi{
         try {
             dodano = bilansCreationService.addBilans(sessionId,dataBilansowana);
         } catch (AuthenticationException e) {
-            return new ResponseEntity<Boolean>(dodano, HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<>(dodano, HttpStatus.UNAUTHORIZED);
         }catch (Exception e){
-            return new ResponseEntity<Boolean>(dodano, HttpStatus.NOT_ACCEPTABLE);
+            return new ResponseEntity<>(dodano, HttpStatus.NOT_ACCEPTABLE);
         }
 
-        return new ResponseEntity<Boolean>(dodano, HttpStatus.OK);
+        return new ResponseEntity<>(dodano, HttpStatus.OK);
     }
 }

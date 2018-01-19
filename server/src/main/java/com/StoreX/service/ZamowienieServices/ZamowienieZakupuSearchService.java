@@ -12,5 +12,5 @@ public interface ZamowienieZakupuSearchService {
      * @return Lista zamówień zakupu o statusie zaakceptowane
      * @throws AuthenticationException
      */
-    public List<ZamowienieZakupuBO> findAllAccepted(String sessionId) throws AuthenticationException;
+    List<ZamowienieZakupuBO> findAllAccepted(String sessionId) throws AuthenticationException;
 }

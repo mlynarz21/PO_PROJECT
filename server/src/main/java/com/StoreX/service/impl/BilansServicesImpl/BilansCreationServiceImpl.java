@@ -57,7 +57,7 @@ public class BilansCreationServiceImpl implements BilansCreationService {
         if(numberOfBilansesWithGivenDate > 0)
             throw new Exception("BIlans już istnieje");
 
-        Map<Long,Double> pozycjeDoBilansu = new HashMap<Long, Double>();
+        Map<Long,Double> pozycjeDoBilansu = new HashMap<>();
 
         Bilans nowyBilans = new Bilans();
         nowyBilans.setDataBilansu(dataBilansowana);

@@ -9,5 +9,5 @@ public interface ZamowienieZakupuUpdateService {
      * @param ID Id zamówienia zakupu
      * @throws AuthenticationException
      */
-    public void updateStatusZamowienia(String sessionId, Long ID) throws AuthenticationException;
+    void updateStatusZamowienia(String sessionId, Long ID) throws AuthenticationException;
 }

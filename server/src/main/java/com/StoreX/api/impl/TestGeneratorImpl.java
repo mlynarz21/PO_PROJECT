@@ -1,9 +1,7 @@
 package com.StoreX.api.impl;
 
-import com.StoreX.common.datatypes.bo.PozycjaZamowieniaBO;
 import com.StoreX.common.datatypes.enumerations.StatusWydania;
 import com.StoreX.common.datatypes.enumerations.TypOdbioru;
-import com.StoreX.common.datatypes.to.PozycjaZamowieniaTO;
 import com.StoreX.persistence.entity.BilansEntities.Bilans;
 import com.StoreX.persistence.entity.BilansEntities.PozycjaBilansu;
 import com.StoreX.persistence.entity.PrzyjecieWydanieEntities.PozycjaPrzyjecia;
@@ -33,7 +31,6 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import javax.naming.AuthenticationException;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -82,9 +79,6 @@ public class TestGeneratorImpl {
 
     @RequestMapping(value = "/add002/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> add002(String sessionId) {
-
-        turncate();
-
         Klient klient1 = new Klient();
         klient1.setID(1L);
         klient1.setImie("Jan");
@@ -125,14 +119,12 @@ public class TestGeneratorImpl {
         PozycjaZamowienia pz1 = new PozycjaZamowienia(1L,10,2,t1,z1);
         pozycjaZamowieniaService.add(pz1);
 
-        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+        return new ResponseEntity<>(true, HttpStatus.OK);
     }
 
 
-    @RequestMapping(value = "/add0039/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Boolean> add0039(String sessionId) {
-
-        turncate();
+    @RequestMapping(value = "/add003_9/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> add003_9(String sessionId) {
 
         Klient klient1 = new Klient();
         klient1.setID(1L);
@@ -180,13 +172,11 @@ public class TestGeneratorImpl {
         Umieszczenie umieszczenie = new Umieszczenie(1L,5,t1,lokalizacja);
         umieszczenieService.addService(umieszczenie);
 
-        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+        return new ResponseEntity<>(true, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/add004_5_6_7_8_10/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> add004_5_6_7_8_10(String sessionId) {
-
-        turncate();
 
         Klient klient1 = new Klient();
         klient1.setID(1L);
@@ -234,13 +224,11 @@ public class TestGeneratorImpl {
         Umieszczenie umieszczenie = new Umieszczenie(1L,20,t1,lokalizacja);
         umieszczenieService.addService(umieszczenie);
 
-        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+        return new ResponseEntity<>(true, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/add011/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> add011(String sessionId) {
-
-        turncate();
 
         Klient klient1 = new Klient();
         klient1.setID(1L);
@@ -288,15 +276,13 @@ public class TestGeneratorImpl {
         Umieszczenie umieszczenie = new Umieszczenie(1L,20,t1,lokalizacja);
         umieszczenieService.addService(umieszczenie);
 
-        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+        return new ResponseEntity<>(true, HttpStatus.OK);
     }
 
 
 
     @RequestMapping(value = "/addTest/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Boolean> addTest(String sessionId) {
-
-        turncate();
 
         Klient klient1 = new Klient();
         klient1.setImie("Jan");
@@ -362,7 +348,7 @@ public class TestGeneratorImpl {
         Towar t12 = new Towar("t12D48", "Srubki", 0, 2, jednostka1, kategoria3, 150);
         Towar t13 = new Towar("t13E48", "Mlotek", 0, 2, jednostka2, kategoria3, 150);
 
-        List<Towar> towarList = new ArrayList<Towar>();
+        List<Towar> towarList = new ArrayList<>();
         towarList.add(t1);
         towarList.add(t2);
         towarList.add(t3);
@@ -409,7 +395,7 @@ public class TestGeneratorImpl {
         zamowienieZakupuService.addZamowienie(sessionId, z6);
 
 
-        List<PozycjaZamowienia> pzList = new ArrayList<PozycjaZamowienia>();
+        List<PozycjaZamowienia> pzList = new ArrayList<>();
         pzList.add(new PozycjaZamowienia(20, 0, t1, z1));
         pzList.add(new PozycjaZamowienia(40, 0, t2, z1));
         pzList.add(new PozycjaZamowienia(10, 0, t3, z1));
@@ -457,7 +443,7 @@ public class TestGeneratorImpl {
             pozycjaZamowieniaService.add(pozycja);
         }
 
-        List<Lokalizacja> lokalizacjaList = new ArrayList<Lokalizacja>();
+        List<Lokalizacja> lokalizacjaList = new ArrayList<>();
         String kodL = "L1";
         int regal = 0;
         int rzad = 0;
@@ -472,7 +458,7 @@ public class TestGeneratorImpl {
         }
 
         Random rand = new Random();
-        List<Umieszczenie> umieszczenieList = new ArrayList<Umieszczenie>();
+        List<Umieszczenie> umieszczenieList = new ArrayList<>();
         for (int i = 0; i < 39; i++) {
             umieszczenieList.add(new Umieszczenie((double) rand.nextInt(19) + 20, towarList.get(i % 13), lokalizacjaList.get(i)));
         }
@@ -485,7 +471,7 @@ public class TestGeneratorImpl {
         Calendar c3 = Calendar.getInstance();
         c3.set(2017, 10, 10);
 
-        List<WydanieZamowienia> wydanieZamowieniaList = new ArrayList<WydanieZamowienia>();
+        List<WydanieZamowienia> wydanieZamowieniaList = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
             if (i % 2 == 0)
@@ -498,7 +484,7 @@ public class TestGeneratorImpl {
             wydanieZamowieniaService.add(pozycja);
         }
 
-        List<PozycjaWydania> pozycjaWydaniaList = new ArrayList<PozycjaWydania>();
+        List<PozycjaWydania> pozycjaWydaniaList = new ArrayList<>();
         int licznik = 0;
         for (WydanieZamowienia pozycja : wydanieZamowieniaList) {
             int ile = rand.nextInt(2) + 6;
@@ -516,7 +502,7 @@ public class TestGeneratorImpl {
 
         ZamowienieDostawy zamowienieDostawy = new ZamowienieDostawy();
         zamowienieDostawyService.add(zamowienieDostawy);
-        List<PrzyjecieZamowienia> przyjecieZamowieniaList = new ArrayList<PrzyjecieZamowienia>();
+        List<PrzyjecieZamowienia> przyjecieZamowieniaList = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
             if (i % 2 == 0)
@@ -529,7 +515,7 @@ public class TestGeneratorImpl {
             przyjecieZamowieniaService.add(pozycja);
         }
 
-        List<PozycjaPrzyjecia> pozycjaPrzyjeciaList = new ArrayList<PozycjaPrzyjecia>();
+        List<PozycjaPrzyjecia> pozycjaPrzyjeciaList = new ArrayList<>();
         licznik = 0;
         for (PrzyjecieZamowienia pozycja : przyjecieZamowieniaList) {
             int ile = rand.nextInt(2) + 6;
@@ -556,12 +542,12 @@ public class TestGeneratorImpl {
         PozycjaBilansu pb = new PozycjaBilansu(10, t1, b1);
         pozycjaBilansuService.add(pb);
 
-        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+        return new ResponseEntity<>(true, HttpStatus.OK);
 
     }
 
-
-    public void turncate() {
+    @RequestMapping(value = "/turncateAll/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Boolean> turncate(String SessionID) {
 
         Connection connection = null;
         try {
@@ -621,6 +607,7 @@ public class TestGeneratorImpl {
             statement.executeUpdate("TRUNCATE zamowienie");
             statement.executeUpdate("TRUNCATE zamowienie_dostawy");
             statement.executeUpdate("TRUNCATE zamowienie_zakupu");
+
             statement.executeUpdate("SET FOREIGN_KEY_CHECKS = 1");
 
 
@@ -630,7 +617,7 @@ public class TestGeneratorImpl {
 
             System.out.println("Could not truncate database " + e.getMessage());
         }
-
+        return new ResponseEntity<>(true, HttpStatus.OK);
     }
 
 
@@ -691,6 +678,6 @@ public class TestGeneratorImpl {
             System.out.println("Could not truncate database " + e.getMessage());
         }
 
-        return new ResponseEntity<Boolean>(true, HttpStatus.OK);
+        return new ResponseEntity<>(true, HttpStatus.OK);
     }
 }

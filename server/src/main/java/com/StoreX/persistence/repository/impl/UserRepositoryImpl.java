@@ -17,8 +17,8 @@ public class UserRepositoryImpl implements UserRepository {
     private static final Map<String, UUID> userSessions;
     private static final Map<Long, User> mockedUsers;
     static {
-        userSessions = new HashMap<String, UUID>();
-        mockedUsers = new HashMap<Long, User>();
+        userSessions = new HashMap<>();
+        mockedUsers = new HashMap<>();
         mockedUsers.put(1L, new User(1L, "admin", "topsecret", "admin"));
         mockedUsers.put(2L, new User(2L, "user", "user", "user"));
         mockedUsers.put(3L, new User(3L, "jan", "kowalski", "user"));
@@ -63,12 +63,7 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     private Long getNewIndex() {
-        return mockedUsers.keySet().stream().sorted(new Comparator<Long>() {
-            @Override
-            public int compare(Long o1, Long o2) {
-                return o2.compareTo(o1);
-            }
-        }).findFirst().get();
+        return mockedUsers.keySet().stream().sorted((o1, o2) -> o2.compareTo(o1)).findFirst().get();
     }
 
 	@Override

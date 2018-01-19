@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.naming.AuthenticationException;
-import java.util.UUID;
 
 @Service
 public class PozycjaZamowieniaProceedServiceImpl implements PozycjaZamowieniaProceedService {

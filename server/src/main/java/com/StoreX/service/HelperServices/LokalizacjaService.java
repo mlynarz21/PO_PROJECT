@@ -4,5 +4,5 @@ import com.StoreX.persistence.entity.UmieszczenieEntities.Lokalizacja;
 
 public interface LokalizacjaService {
 
-    public void add(Lokalizacja lokalizacja);
+    void add(Lokalizacja lokalizacja);
 }

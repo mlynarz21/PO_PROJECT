@@ -7,5 +7,5 @@ public interface PozycjaBilansuCreationService {
      * Dodaje pozycję Bilansu
      * @param pozycjaBilansu
      */
-    public boolean savePozycjaBilansu(PozycjaBilansuBO pozycjaBilansu);
+    boolean savePozycjaBilansu(PozycjaBilansuBO pozycjaBilansu);
 }

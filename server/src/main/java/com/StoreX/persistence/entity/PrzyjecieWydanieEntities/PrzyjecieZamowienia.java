@@ -3,9 +3,7 @@ package com.StoreX.persistence.entity.PrzyjecieWydanieEntities;
 import com.StoreX.persistence.entity.ZamowienieEntities.ZamowienieDostawy;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 public class PrzyjecieZamowienia {

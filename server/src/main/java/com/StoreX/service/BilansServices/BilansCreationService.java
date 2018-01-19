@@ -13,5 +13,5 @@ public interface BilansCreationService {
      * @throws AuthenticationException
      * @throws Exception
      */
-    public boolean addBilans(String sessionId, Date dataBilansowana) throws AuthenticationException, Exception;
+    boolean addBilans(String sessionId, Date dataBilansowana) throws AuthenticationException, Exception;
 }

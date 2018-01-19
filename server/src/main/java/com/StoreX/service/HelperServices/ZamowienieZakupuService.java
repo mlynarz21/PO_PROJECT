@@ -7,6 +7,6 @@ public interface ZamowienieZakupuService {
     /*
     test method, to be removed
      */
-    public Boolean addZamowienie(String sessionId ,ZamowienieZakupu zamowienieZakupu);
+    Boolean addZamowienie(String sessionId, ZamowienieZakupu zamowienieZakupu);
 
 }

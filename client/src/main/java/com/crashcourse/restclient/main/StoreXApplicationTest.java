@@ -20,6 +20,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.stereotype.Component;
 import org.testfx.api.FxToolkit;
 import org.testfx.framework.junit.ApplicationTest;
+import org.testfx.matcher.base.NodeMatchers;
 
 import java.util.Locale;
 
@@ -76,7 +77,7 @@ public class StoreXApplicationTest extends ApplicationTest {
 
     @Before
     public void setUp() throws Exception {
-        testGeneratorClient.addTest();
+        testGeneratorClient.turncateAll();
     }
 
     @After
@@ -87,259 +88,589 @@ public class StoreXApplicationTest extends ApplicationTest {
     }
 
     @Test
-    public void testLogInFail() {
+    public void testLogInFailWrongCredentials() {
         clickOn("#username");
+        sleep(1000);
         write("admin");
+        sleep(1000);
         clickOn("#password");
+        sleep(1000);
         write("to");
+        sleep(1000);
         clickOn("#login");
+        sleep(1000);
         clickOn("#OK");
     }
 
     @Test
     public void testLogInFailWithoutPassword() {
         clickOn("#username");
+        sleep(1000);
         write("admin");
+        sleep(1000);
         clickOn("#login");
+        sleep(1000);
         clickOn("#OK");
     }
+
+    @Test
+    public void testLogInFailWithoutUsername() {
+        clickOn("#password");
+        sleep(1000);
+        write("topsecret");
+        sleep(1000);
+        clickOn("#login");
+        sleep(1000);
+        clickOn("#OK");
+    }
+
 
     @Test
     public void testLogSuccess() {
         clickOn("#username");
+        sleep(1000);
         write("admin");
+        sleep(1000);
         clickOn("#password");
+        sleep(1000);
         write("topsecret");
+        sleep(1000);
         clickOn("#login");
     }
 
-    @Test
-    public void testBalanceAddition() {
-        clickOn("#username");
-        write("admin");
-        clickOn("#password");
-        write("topsecret");
-        clickOn("#login");
-        clickOn("#makeBalance");
-        clickOn(600,200);
-        clickOn("#OK");
-        clickOn("#OK");
-    }
-
-    @Test
-    public void testBalanceWrongDate() {
-        clickOn("#username");
-        write("admin");
-        clickOn("#password");
-        write("topsecret");
-        clickOn("#login");
-        clickOn("#makeBalance");
-        clickOn(600,250);
-        clickOn("#OK");
-        clickOn("#OKDate");
-    }
+//    @Test
+//    public void testBalanceAddition() {
+//        testGeneratorClient.addTest();
+//        clickOn("#username");
+//        sleep(1000);
+//        write("admin");
+//        sleep(1000);
+//        clickOn("#password");
+//        sleep(1000);
+//        write("topsecret");
+//        sleep(1000);
+//        clickOn("#login");
+//        sleep(1000);
+//        clickOn("#makeBalance");
+//        sleep(1000);
+//        clickOn((Node)lookup(".list-cell").nth(0).query());
+//        sleep(3000);
+//        clickOn("#OK");
+//        sleep(2000);
+//        clickOn("#OKAcceptance");
+//    }
+//
+//    @Test
+//    public void testBalanceAdditionWithNoBalanceInDB() {
+//        clickOn("#username");
+//        sleep(1000);
+//        write("admin");
+//        sleep(1000);
+//        clickOn("#password");
+//        sleep(1000);
+//        write("topsecret");
+//        sleep(1000);
+//        clickOn("#login");
+//        sleep(1000);
+//        clickOn("#makeBalance");
+//        sleep(1000);
+//        clickOn((Node)lookup(".list-cell").nth(0).query());
+//        sleep(3000);
+//        clickOn("#OK");
+//        sleep(2000);
+//        clickOn("#OKAcceptance");
+//    }
+//
+//    @Test
+//    public void testBalanceWrongDate() {
+//        testGeneratorClient.addTest();
+//        clickOn("#username");
+//        sleep(1000);
+//        write("admin");
+//        sleep(1000);
+//        clickOn("#password");
+//        sleep(1000);
+//        write("topsecret");
+//        sleep(1000);
+//        clickOn("#login");
+//        sleep(1000);
+//        clickOn("#makeBalance");
+//        sleep(1000);
+//        clickOn((Node)lookup(".list-cell").nth(1).query());
+//        sleep(3000);
+//        clickOn("#OK");
+//        sleep(2000);
+//        clickOn("#OKDate");
+//    }
 
     @Test
     public void testNoWaitingOrders() {
-        testGeneratorClient.turncate("zamowienie_zakupu");
         //logowanie
         clickOn("#username");
+        sleep(1000);
         write("admin");
+        sleep(1000);
         clickOn("#password");
+        sleep(1000);
         write("topsecret");
+        sleep(1000);
         clickOn("#login");
 
         //kompletowanie
+        sleep(3000);
         clickOn("#completeOrder");
 
         //akceptacja dialogu oczekiwania
+        sleep(3000);
         clickOn("#OKNoWaiting");
     }
 
     @Test
     public void testNoSuchProductAvailable() {
-        testGeneratorClient.turncate("umieszczenie");
+        testGeneratorClient.add002();
         //logowanie
         clickOn("#username");
+        sleep(1000);
         write("admin");
+        sleep(1000);
         clickOn("#password");
+        sleep(1000);
         write("topsecret");
+        sleep(1000);
         clickOn("#login");
 
         //kompletowanie
+        sleep(3000);
         clickOn("#completeOrder");
+
         //wybor zamowienia
-        clickOn(600,200);
+        sleep(2000);
+        clickOn((Node)lookup(".table-cell").nth(2).query());
+        sleep(3000);
         clickOn("#OK");
+
         //wybor produktu
-        clickOn(600,200);
+        sleep(2000);
+        clickOn((Node)lookup(".table-cell").nth(3).query());
+        sleep(3000);
         clickOn("#OK");
 
         //akceptacja dialogu braku produktu
+        sleep(2000);
         clickOn("#OKNoProduct");
     }
 
-
     @Test
-    public void testOrderCompletionEmail() {
+    public void testWrongQuantitiesAmountBiggerThanLocated() {
+        testGeneratorClient.add003_9();
         //logowanie
         clickOn("#username");
+        sleep(1000);
         write("admin");
+        sleep(1000);
         clickOn("#password");
+        sleep(1000);
         write("topsecret");
+        sleep(1000);
         clickOn("#login");
 
         //kompletowanie
+        sleep(1000);
         clickOn("#completeOrder");
+
         //wybor zamowienia
-        clickOn(600,200);
-        clickOn("#OK");
-        //wybor produktu
-        clickOn(600,200);
-        clickOn("#OK");
-        //wybor lokalizacji
-        clickOn(600,200);
-        clickOn("#OK");
-        //wybor ilosci
-        clickOn("#quantityTextField");
-        write("12");
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(2).query());
+        sleep(3000);
         clickOn("#OK");
 
         //wybor produktu
-        clickOn(600,200);
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(3).query());
+        sleep(3000);
         clickOn("#OK");
+
         //wybor lokalizacji
-        clickOn(600,200);
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(1).query());
+        sleep(3000);
         clickOn("#OK");
+
         //wybor ilosci
-        write("12");
+        sleep(3000);
+        doubleClickOn("#quantityTextField");
+        sleep(1000);
+        write("7");
+        sleep(3000);
         clickOn("#OK");
-        //akceptacja dialogu o blednej ilosci
+
+        //akceptacja dialogu o blednej
+        sleep(2000);
         clickOn("#OKWrongQuantity");
+    }
 
-        //wybor ilosci
-        clickOn("#quantityTextField");
-        write("8");
+    @Test
+    public void testWrongQuantitiesAmountBiggerThanOrdered() {
+        testGeneratorClient.add004_5_6_7_8_10();
+        //logowanie
+        clickOn("#username");
+        sleep(1000);
+        write("admin");
+        sleep(1000);
+        clickOn("#password");
+        sleep(1000);
+        write("topsecret");
+        sleep(1000);
+        clickOn("#login");
+
+        //kompletowanie
+        sleep(1000);
+        clickOn("#completeOrder");
+
+        //wybor zamowienia
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(2).query());
+        sleep(3000);
         clickOn("#OK");
 
-        //wydawanie zamowienia
-        clickOn("#send");
-        clickOn(1200,500);
+        //wybor produktu
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(3).query());
+        sleep(3000);
+        clickOn("#OK");
 
-        //akceptacja email
-        clickOn("#OKEmail");
+        //wybor lokalizacji
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(1).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor ilosci
+        sleep(3000);
+        doubleClickOn("#quantityTextField");
+        sleep(1000);
+        write("10");
+        sleep(3000);
+        clickOn("#OK");
+
+        //akceptacja dialogu o blednej
+        sleep(2000);
+        clickOn("#OKWrongQuantity");
+    }
+
+    @Test
+    public void testWrongQuantitiesAmountZero() {
+        testGeneratorClient.add004_5_6_7_8_10();
+        //logowanie
+        clickOn("#username");
+        sleep(1000);
+        write("admin");
+        sleep(1000);
+        clickOn("#password");
+        sleep(1000);
+        write("topsecret");
+        sleep(1000);
+        clickOn("#login");
+
+        //kompletowanie
+        sleep(1000);
+        clickOn("#completeOrder");
+
+        //wybor zamowienia
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(2).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor produktu
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(3).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor lokalizacji
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(1).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor ilosci
+        sleep(3000);
+        doubleClickOn("#quantityTextField");
+        sleep(1000);
+        write("0");
+        sleep(3000);
+        clickOn("#OK");
+
+        //akceptacja dialogu o blednej
+        sleep(2000);
+        clickOn("#OKWrongQuantity");
+    }
+
+    @Test
+    public void testWrongQuantitiesAmountLessThanZero() {
+        testGeneratorClient.add004_5_6_7_8_10();
+        //logowanie
+        clickOn("#username");
+        sleep(1000);
+        write("admin");
+        sleep(1000);
+        clickOn("#password");
+        sleep(1000);
+        write("topsecret");
+        sleep(1000);
+        clickOn("#login");
+
+        //kompletowanie
+        sleep(1000);
+        clickOn("#completeOrder");
+
+        //wybor zamowienia
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(2).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor produktu
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(3).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor lokalizacji
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(1).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor ilosci
+        sleep(3000);
+        doubleClickOn("#quantityTextField");
+        sleep(1000);
+        write("-1");
+        sleep(3000);
+        clickOn("#OK");
+
+        //akceptacja dialogu o blednej
+        sleep(2000);
+        clickOn("#OKWrongQuantity");
+    }
+
+    @Test
+    public void testWrongQuantitiesAmountNotNumeric() {
+        testGeneratorClient.add004_5_6_7_8_10();
+        //logowanie
+        clickOn("#username");
+        sleep(1000);
+        write("admin");
+        sleep(1000);
+        clickOn("#password");
+        sleep(1000);
+        write("topsecret");
+        sleep(1000);
+        clickOn("#login");
+
+        //kompletowanie
+        sleep(1000);
+        clickOn("#completeOrder");
+
+        //wybor zamowienia
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(2).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor produktu
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(3).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor lokalizacji
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(1).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor ilosci
+        sleep(3000);
+        doubleClickOn("#quantityTextField");
+        sleep(1000);
+        write("test1");
+        sleep(3000);
+        clickOn("#OK");
+
+        //akceptacja dialogu o blednej
+        sleep(2000);
+        clickOn("#OKWrongQuantity");
+    }
+
+    @Test
+    public void testOrderCompletionDefaultQuantity() {
+        testGeneratorClient.add004_5_6_7_8_10();
+        //logowanie
+        clickOn("#username");
+        sleep(1000);
+        write("admin");
+        sleep(1000);
+        clickOn("#password");
+        sleep(1000);
+        write("topsecret");
+        sleep(1000);
+        clickOn("#login");
+
+        //kompletowanie
+        sleep(1000);
+        clickOn("#completeOrder");
+
+        //wybor zamowienia
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(2).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor produktu
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(3).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor lokalizacji
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(1).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor ilosci
+        sleep(3000);
+        clickOn("#OK");
+
+        //powrot do ekranu z produktami
+        sleep(5000);
+
+    }
+
+    @Test
+    public void testOrderCompletionPlacementDeletion() {
+        testGeneratorClient.add003_9();
+        //logowanie
+        clickOn("#username");
+        sleep(1000);
+        write("admin");
+        sleep(1000);
+        clickOn("#password");
+        sleep(1000);
+        write("topsecret");
+        sleep(1000);
+        clickOn("#login");
+
+        //kompletowanie
+        sleep(1000);
+        clickOn("#completeOrder");
+
+        //wybor zamowienia
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(2).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor produktu
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(3).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor lokalizacji
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(1).query());
+        sleep(3000);
+        clickOn("#OK");
+
+        //wybor ilosci
+        sleep(3000);
+        clickOn("#OK");
+
+        //powrot do ekranu z produktem
+        sleep(2000);
+
+        //wybor produktu
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(3).query());
+        sleep(3000);
+        clickOn("#OK");
+        sleep(3000);
+
     }
 
     @Test
     public void testOrderCompletionDelivery() {
+        testGeneratorClient.add004_5_6_7_8_10();
         //logowanie
         clickOn("#username");
+        sleep(1000);
         write("admin");
+        sleep(1000);
         clickOn("#password");
+        sleep(1000);
         write("topsecret");
+        sleep(1000);
         clickOn("#login");
 
         //kompletowanie
+        sleep(1000);
         clickOn("#completeOrder");
+
         //wybor zamowienia
-        clickOn(600,400);
-        clickOn("#OK");
-        //wybor produktu
-        clickOn(600,200);
-        clickOn("#OK");
-        //wybor lokalizacji
-        clickOn(600,200);
-        clickOn("#OK");
-        //wybor ilosci
-        clickOn("#quantityTextField");
-        write("12");
-        clickOn("#OK");
-
-        //wybor produktu
-        clickOn(600,200);
-        clickOn("#OK");
-        //wybor lokalizacji
-        clickOn(600,200);
-        clickOn("#OK");
-        //wybor ilosci
-        write("12");
-        clickOn("#OK");
-        //akceptacja dialogu o blednej ilosci
-        clickOn("#OKWrongQuantity");
-
-        //wybor ilosci
-        clickOn("#quantityTextField");
-        write("8");
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(2).query());
+        sleep(3000);
         clickOn("#OK");
 
         //wydawanie zamowienia
+        sleep(1000);
         clickOn("#send");
-        clickOn(1200,500);
+        sleep(3000);
+        clickOn((Node)lookup(NodeMatchers.hasText("Potwierdź")).nth(0).query());
+        moveTo(12,12);
 
         //akceptacja wysylki
+        sleep(3000);
         clickOn("#OKShipment");
     }
 
     @Test
-    public void testWrongQuantities() {
+    public void testOrderCompletionEmail() {
+        testGeneratorClient.add011();
         //logowanie
         clickOn("#username");
+        sleep(1000);
         write("admin");
+        sleep(1000);
         clickOn("#password");
+        sleep(1000);
         write("topsecret");
+        sleep(1000);
         clickOn("#login");
 
         //kompletowanie
+        sleep(1000);
         clickOn("#completeOrder");
+
         //wybor zamowienia
-        clickOn((Node)lookup(".table-cell").nth(3).query());
-        clickOn("#OK");
-        //wybor produktu
-        clickOn((Node)lookup(".table-cell").nth(4).query());
-        clickOn("#OK");
-
-        //wybor lokalizacji
-        clickOn(600,200);
-        clickOn("#OK");
-        //wybor ilosci
-        doubleClickOn("#quantityTextField");
-        write("-1");
-        clickOn("#OK");
-        //akceptacja dialogu o blednej ilosci
-        clickOn("#OKWrongQuantity");
-
-        //wybor ilosci
-        clickOn("#quantityTextField");
-        write("0");
-        clickOn("#OK");
-        //akceptacja dialogu o blednej ilosci
-        clickOn("#OKWrongQuantity");
-
-        //wybor ilosci
-        clickOn("#quantityTextField");
-        write("21");
-        clickOn("#OK");
-        //akceptacja dialogu o blednej ilosci
-        clickOn("#OKWrongQuantity");
-
-        //powrot do dialogu z lokalizacjami
-        clickOn("#back");
-        //powrot do dialogu z produktami
-        clickOn("#back");
-
-        //wybor produktu
-        clickOn(600,300);
+        sleep(1000);
+        clickOn((Node)lookup(".table-cell").nth(1).query());
+        sleep(3000);
         clickOn("#OK");
 
-        //wybor lokalizacji
-        clickOn(600,200);
-        clickOn("#OK");
-        //wybor ilosci
-        clickOn("#quantityTextField");
-        write("40");
-        clickOn("#OK");
-        //akceptacja dialogu o blednej ilosci
-        clickOn("#OKWrongQuantity");
+        //wydawanie zamowienia
+        sleep(1000);
+        clickOn("#send");
+        sleep(3000);
+        clickOn((Node)lookup(NodeMatchers.hasText("Potwierdź")).nth(0).query());
+        moveTo(12,12);
 
+        //akceptacja wysylki
+        sleep(3000);
+        clickOn("#OKEmail");
     }
 }

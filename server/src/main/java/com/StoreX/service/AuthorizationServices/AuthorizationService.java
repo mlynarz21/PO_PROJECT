@@ -14,7 +14,7 @@ public interface AuthorizationService {
      * Logs users in. If the user is logged in correctly a sessionID is returned.
      * @return sessionId
      */
-    public UUID login(UserBo user);
+    UUID login(UserBo user);
 
     /**
      * Used to register a new user. This method validates that all needed data is filled.
@@ -22,7 +22,7 @@ public interface AuthorizationService {
      * @param newUser
      * @return true if the user was correctly registered
      */
-    public boolean register(UserBo newUser);
+    boolean register(UserBo newUser);
 
     /**
      *  Checks if the given sessionID is valid - if the user is correctly authorized.
@@ -32,6 +32,6 @@ public interface AuthorizationService {
      */
     boolean isUserAuthorized(UUID sessionID);
     
-    public String getUserType(String userName);
+    String getUserType(String userName);
 
 }
