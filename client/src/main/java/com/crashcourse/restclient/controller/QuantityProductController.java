@@ -37,6 +37,8 @@ public class QuantityProductController extends ArtifactsBaseController {
     @FXML
     private Label quantityLabel;
     @FXML
+    private Label localizationLabel;
+    @FXML
     private TextField quantityTextField;
 
     @Autowired
@@ -61,6 +63,8 @@ public class QuantityProductController extends ArtifactsBaseController {
                 + pozycjaZamowienia.getTowar().get().getNazwa().get()
                 + " Potrzeba jeszcze: "
                 + (pozycjaZamowienia.getIlosc().get() - pozycjaZamowienia.getZrealizowano().get()));
+        localizationLabel.setText(localizationLabel.getText()
+                + " " + umieszczenie.getLokalizacja().get().getKod().get());
         if(umieszczenie.getIloscWLokalizacji().getValue()<(pozycjaZamowienia.getIlosc().getValue()-pozycjaZamowienia.getZrealizowano().getValue()))
             number = umieszczenie.getIloscWLokalizacji().getValue().toString();
         else {
