@@ -5,7 +5,7 @@ package com.crashcourse.restclient.datatype.enumeration;
  */
 public enum StatusWydania {
     Wprowadzone,
-    Oczekujące,
+    Oczekujce,
     Zaakceptowane,
     Gotowe,
     Wydane;

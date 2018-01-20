@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="500.0" style="-fx-background-color: #f6ff00;" stylesheets="@../css/styleAllround.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.crashcourse.restclient.controller.InformationErrorController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: #4A148C;" text="%ConfirmationDialog.label" textFill="WHITE" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+            <font>
+                <Font size="26.0" />
+            </font>
+        </Label>
+        <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" layoutY="208.0" mnemonicParsing="false" onAction="#back" style="-fx-background-color: #3C1E06; -fx-opacity: 0.95;" text="%ConfirmationDialog.cancel" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="50.0">
+            <font>
+                <Font size="26.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Button>
+        <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" defaultButton="true" layoutX="186.0" layoutY="208.0" mnemonicParsing="false" onAction="#proceed" style="-fx-background-color: #3C1E06; -fx-opacity: 0.95;" text="%ConfirmationDialog.ok" textFill="WHITE" textOverrun="CLIP" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="50.0">
+            <font>
+                <Font size="26.0" />
+            </font>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Button>
+    </children>
+</AnchorPane>
